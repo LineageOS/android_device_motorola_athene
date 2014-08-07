@@ -269,3 +269,5 @@
 18:4294967295:1001:3004
 9:4294967295:1001:3004
 1:4294967295:1001:3004
+/* Allow MOTEX service to be used by radio processes and net_raw processes */
+228:4294967295:1001:3004
