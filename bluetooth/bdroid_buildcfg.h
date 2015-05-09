@@ -17,7 +17,26 @@
 #ifndef _BDROID_BUILDCFG_H
 #define _BDROID_BUILDCFG_H
 
-#define BTM_DEF_LOCAL_NAME   "MotoG3"
+#include <cutils/properties.h>
+#include <string.h>
+
+inline const char* BtmGetDefaultName()
+{
+	char device[PROPERTY_VALUE_MAX];
+	property_get("ro.boot.device", device, "");
+
+	if (!strcmp("surnia", device)) {
+		return "Moto E";
+	} else if (!strcmp("osprey", device)) {
+		return "Moto G";
+	} else if (!strcmp("lux", device)) {
+		return "Moto X Play";
+	}
+
+	return "Motorola";
+}
+
+#define BTM_DEF_LOCAL_NAME BtmGetDefaultName()
 #define BTA_DISABLE_DELAY 1000 /* in milliseconds */
 #define BLUETOOTH_QCOM_SW TRUE
 #define BLUETOOTH_QCOM_LE_INTL_SCAN TRUE
