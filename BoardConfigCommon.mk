@@ -13,9 +13,9 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
--include vendor/motorola/osprey/BoardConfigVendor.mk
+-include vendor/motorola/msm8916-common/BoardConfigVendor.mk
 
-DEVICE_PATH := device/motorola/osprey
+DEVICE_PATH := device/motorola/msm8916-common
 
 BOARD_VENDOR := motorola-qcom
 
@@ -44,10 +44,6 @@ BOARD_KERNEL_SEPARATED_DT := true
 BOARD_MKBOOTIMG_ARGS := --ramdisk_offset 0x01000000 --tags_offset 0x00000100
 TARGET_KERNEL_ARCH := arm
 TARGET_KERNEL_SOURCE := kernel/motorola/msm8916
-TARGET_KERNEL_CONFIG := osprey_defconfig
-
-# Asserts
-TARGET_OTA_ASSERT_DEVICE := osprey,osprey_umts,osprey_u2,osprey_ud2,osprey_uds,osprey_cdma,osprey_udstv,xt1540,xt1541,xt1542,xt1543,xt1544,xt1548,xt1550
 
 # Audio
 AUDIO_FEATURE_ENABLED_MULTI_VOICE_SESSIONS := true
@@ -89,18 +85,12 @@ TARGET_PROVIDES_GPS_LOC_API := true
 # Init
 TARGET_UNIFIED_DEVICE := true
 TARGET_INIT_VENDOR_LIB := libinit_msm
-TARGET_LIBINIT_DEFINES_FILE := $(DEVICE_PATH)/init/init_osprey.cpp
 
 # Lights
 TARGET_PROVIDES_LIBLIGHT := true
 
 # Partitions
 BOARD_FLASH_BLOCK_SIZE := 131072
-BOARD_BOOTIMAGE_PARTITION_SIZE := 16777216	# 16384 * 1024 mmcblk0p31
-BOARD_RECOVERYIMAGE_PARTITION_SIZE := 16879616	# 16484 * 1024 mmcblk0p32
-BOARD_SYSTEMIMAGE_PARTITION_SIZE := 2432696320	# 2375680 * 1024 mmcblk0p41
-BOARD_PERSISTIMAGE_PARTITION_SIZE := 8388608 	# 8192 * 1024 mmcblk0p29
-BOARD_USERDATAIMAGE_PARTITION_SIZE := 4865261568 # 4751232 * 1024 mmcblk0p42
 
 # Power
 TARGET_POWERHAL_VARIANT := qcom
@@ -115,10 +105,8 @@ TARGET_USERIMAGES_USE_EXT4 := true
 TARGET_USERIMAGES_USE_F2FS := true
 
 # SELinux
-
 include device/qcom/sepolicy/sepolicy.mk
-
-BOARD_SEPOLICY_DIRS += $(DEVICE_PATH)/sepolicy
+#BOARD_SEPOLICY_DIRS += $(DEVICE_PATH)/sepolicy
 
 # Vold
 TARGET_USE_CUSTOM_LUN_FILE_PATH := /sys/devices/platform/msm_hsusb/gadget/lun%d/file

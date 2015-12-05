@@ -1,7 +1,7 @@
 #!/bin/bash
 
 #set -e
-export DEVICE=osprey
+export DEVICE=msm8916-common
 export VENDOR=motorola
 
 if [ $# -eq 0 ]; then

@@ -1,4 +1,4 @@
-# system.prop for osprey
+# system.prop for msm8916-common
 
 # Audio
 audio.offload.24bit.enable=false
@@ -44,7 +44,6 @@ camera2.portability.force_api=1
 
 # Display
 ro.opengles.version=196608
-ro.sf.lcd_density=320
 
 # FRP
 ro.frp.pst=/dev/block/bootdevice/by-name/frp

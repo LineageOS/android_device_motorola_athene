@@ -1,4 +1,4 @@
-# Proprietary files for osprey
+# Proprietary files for msm8916-common
 
 # ADSP
 bin/adsprpcd
@@ -179,9 +179,6 @@ vendor/lib/libtzdrmgenprov.so
 vendor/lib/libwvdrm_L1.so
 vendor/lib/libwvm.so
 vendor/lib/libWVStreamControlAPI_L1.so
-
-# eMMC Firmware
-etc/firmware/emmc_ffu_fe_xx_P1J95K_00000000000000af.fw
 
 # GPS
 -priv-app/com.qualcomm.location/com.qualcomm.location.apk
@@ -368,11 +365,6 @@ vendor/lib/libthermalioctl.so
 bin/time_daemon
 vendor/lib/libtime_genoff.so
 vendor/lib/libTimeService.so
-
-# Touchscreen
-etc/firmware/synaptics-inx-s2726br_t-15052103-1d6479-osprey.tdat
-etc/firmware/synaptics-inx-s2726br_t-15060402-1dc9a8-osprey.tdat
-etc/firmware/synaptics-inx-s2726br_t-15062201-1dc9a8-osprey.tdat
 
 # USB
 etc/firmware/ice40.bin
