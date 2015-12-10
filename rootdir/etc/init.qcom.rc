@@ -26,6 +26,7 @@
 #
 
 import init.mmi.usb.rc
+import init.target.rc
 
 on early-init
 
@@ -268,22 +269,6 @@ on boot
     # Create moodle directory that MOT_MOODLE can write to
     mkdir /data/local/moodle 0770 graphics mot_tcmd
 
-    # AK09912 driver parameter permissions
-    chown system compass /sys/class/compass/akm09912/accel
-    chmod 0660 /sys/class/compass/akm09912/accel
-    chown system compass /sys/class/compass/akm09912/delay_acc
-    chmod 0660 /sys/class/compass/akm09912/delay_acc
-    chown system compass /sys/class/compass/akm09912/enable_acc
-    chmod 0660 /sys/class/compass/akm09912/enable_acc
-    chown system compass /sys/class/compass/akm09912/delay_fusion
-    chmod 0660 /sys/class/compass/akm09912/delay_fusion
-    chown system compass /sys/class/compass/akm09912/enable_fusion
-    chmod 0660 /sys/class/compass/akm09912/enable_fusion
-    chown system compass /sys/class/compass/akm09912/delay_mag
-    chmod 0660 /sys/class/compass/akm09912/delay_mag
-    chown system compass /sys/class/compass/akm09912/enable_mag
-    chmod 0660 /sys/class/compass/akm09912/enable_mag
-
 on post-fs
     mkdir /persist/camera 0755 mot_tcmd mot_tcmd
     mkdir /persist/camera/ledcal 0755 camera mot_tcmd
@@ -448,9 +433,6 @@ on post-fs-data
     # Setup folder for camera HAL subsystem
     mkdir /data/camera_dump 0750 media media
 
-    # AK09912 calibration file directory
-    mkdir /data/misc/akmd 0770 system compass
-
     mkdir /tombstones/modem 0771 system system
     mkdir /tombstones/lpass 0771 system system
     mkdir /tombstones/wcnss 0771 system system
@@ -461,12 +443,6 @@ on post-fs-data
     setprop ro.hw.device ${ro.boot.device}
     setprop ro.hw.hwrev ${ro.boot.hwrev}
     setprop ro.hw.radio ${ro.boot.radio}
-
-# Start AKM executable
-service akmd09912 /system/bin/akmd09912
-    class main
-    user compass
-    group compass misc input
 
 service batt_health /system/bin/batt_health
     class late_start

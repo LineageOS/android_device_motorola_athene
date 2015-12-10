@@ -317,7 +317,6 @@ etc/firmware/sensorhubfw.bin
 etc/firmware/sensorhubver.txt
 
 # Sensors
-bin/akmd09912
 lib/hw/sensorhub.msm8916.so
 lib/hw/sensors.msm8916.so
 lib/libmotocalibration.so
