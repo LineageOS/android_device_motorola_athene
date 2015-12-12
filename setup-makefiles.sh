@@ -24,7 +24,7 @@ OUTDIR=vendor/$VENDOR/$DEVICE
 
 LOCAL_PATH := \$(call my-dir)
 
-ifneq (\$(filter osprey surnia,\$(TARGET_DEVICE)),)
+ifneq (\$(filter lux osprey surnia,\$(TARGET_DEVICE)),)
 
 include \$(CLEAR_VARS)
 LOCAL_MODULE := MotGeoFenceSvc
