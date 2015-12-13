@@ -1,0 +1,1 @@
+allow mediaserver socket_device:sock_file write;
