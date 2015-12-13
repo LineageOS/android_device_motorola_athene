@@ -16,6 +16,7 @@
 
 package com.cyanogenmod.settings.device;
 
+import android.content.res.Resources;
 import android.app.IntentService;
 import android.content.Context;
 import android.content.Intent;
@@ -61,7 +62,13 @@ public class CMActionsService extends IntentService implements ScreenStateNotifi
 
         // Other actions that are always enabled
         mUpdatedStateNotifiers.add(new CameraActivationSensor(cmActionsSettings, mSensorHelper));
-        mUpdatedStateNotifiers.add(new ChopChopSensor(cmActionsSettings, mSensorHelper));
+        Resources res = context.getResources();
+        boolean hasChopChop = res.getBoolean(R.bool.config_hasChopChop);
+        if (hasChopChop){
+            mUpdatedStateNotifiers.add(new ChopChopSensor(cmActionsSettings, mSensorHelper));
+        } else {
+            Log.d(TAG, "No ChopChop");
+        }
 
         mPowerManager = (PowerManager) context.getSystemService(Context.POWER_SERVICE);
         updateState();
