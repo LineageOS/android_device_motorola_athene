@@ -48,6 +48,13 @@
             android:defaultValue="true"
             android:title="@string/chop_chop_gesture_title"
             android:summary="@string/chop_chop_gesture_summary" />
+
+        <SwitchPreference
+            android:key="gesture_ir_silencer"
+            android:defaultValue="true"
+            android:title="@string/ir_silencer_title"
+            android:summary="@string/ir_silencer_summary" />
+
     </PreferenceCategory>
 
 </PreferenceScreen>

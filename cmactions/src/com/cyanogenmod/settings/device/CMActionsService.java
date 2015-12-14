@@ -70,6 +70,8 @@ public class CMActionsService extends IntentService implements ScreenStateNotifi
             Log.d(TAG, "No ChopChop");
         }
 
+        mUpdatedStateNotifiers.add(new ProximitySilencer(cmActionsSettings, context, mSensorHelper));
+
         mPowerManager = (PowerManager) context.getSystemService(Context.POWER_SERVICE);
         updateState();
     }
