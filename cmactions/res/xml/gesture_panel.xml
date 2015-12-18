@@ -51,7 +51,7 @@
 
         <SwitchPreference
             android:key="gesture_ir_silencer"
-            android:defaultValue="true"
+            android:defaultValue="false"
             android:title="@string/ir_silencer_title"
             android:summary="@string/ir_silencer_summary" />
 
