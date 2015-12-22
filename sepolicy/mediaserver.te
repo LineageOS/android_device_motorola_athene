@@ -1,1 +1,2 @@
 allow mediaserver socket_device:sock_file write;
+allow mediaserver audiod:binder call;

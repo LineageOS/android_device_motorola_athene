@@ -2,6 +2,7 @@ allow mm-qcamerad debug_prop:property_service set;
 allow mm-qcamerad init:unix_stream_socket connectto;
 allow mm-qcamerad property_socket:sock_file write;
 allow mm-qcamerad persist_file:dir search;
+allow mm-qcamerad persist_file:file read;
 allow mm-qcamerad qdsp_device:chr_file r_file_perms;
 allow mm-qcamerad sysfs:file write;
 allow mm-qcamerad system_data_file:dir w_dir_perms;
