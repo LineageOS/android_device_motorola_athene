@@ -58,13 +58,29 @@ touch_path=/sys/devices/${touch_driver_link#*devices/}
 panel_path=/sys/devices/virtual/graphics/fb0
 debug "sysfs touch path: $touch_path"
 
+[ -f $touch_path/doreflash ] || error_and_leave 5
+[ -f $touch_path/poweron ] || error_and_leave 5
+
+selinux=$(getprop ro.boot.selinux 2> /dev/null)
+
+if [ "$selinux" == "permissive" ]; then
+	debug "loosen permissions to touch report sysfs entries"
+	touch_report_files="reporting query stats"
+	for entry in $touch_report_files; do
+		chmod 0666 $touch_path/$entry
+		debug "change permissions of $touch_path/$entry"
+	done
+	for entry in $(ls $touch_path/f54/ 2>/dev/null); do
+		chmod 0666 $touch_path/f54/$entry
+		debug "change permissions of $touch_path/f54/$entry"
+	done
+	unset touch_report_files
+fi
+
 # Set permissions to enable factory touch tests
 chown root:mot_tcmd $touch_path/drv_irq
 chown root:mot_tcmd $touch_path/hw_irqstat
 chown root:mot_tcmd $touch_path/reset
-
-[ -f $touch_path/doreflash ] || error_and_leave 5
-[ -f $touch_path/poweron ] || error_and_leave 5
 
 debug "wait until driver reports <ready to flash>..."
 while true; do
@@ -150,9 +166,6 @@ then
 	error_and_leave 3
 fi
 debug "touch product id: $touch_product_id"
-
-touch_product_id=${touch_product_id%[a-z]}
-debug "touch product id without vendor suffix: $touch_product_id"
 
 read_touch_property buildid || error_and_leave 1
 str_cfg_id_boot=${property#*-}

@@ -56,6 +56,9 @@ persist.gps.qc_nlp_in_use=1
 persist.loc.nlp_name=com.qualcomm.services.location
 persist.mot.gps.smart_battery=1
 
+# Hotspot WiFi
+sys.usb.rps_mask=10
+
 # Media
 vidc.enc.narrow.searchrange=1
 

@@ -267,12 +267,13 @@
 /dev/isdbt                0660  system     system
 
 # Permissions for tcmd
-/dev/i2c-1                0660   root       system
-/dev/i2c-2                0660   root       system
-/dev/i2c-4                0660   root       system
+/dev/i2c-*                0660   root       system
 
 # HOB
 /dev/mot_hob_ram          0660   radio      radio
 
 # Subsystem Restart Ramdump
 /dev/ramdump*             0660   radio      radio
+
+# haptic
+/dev/drv2605              0660   system     system
