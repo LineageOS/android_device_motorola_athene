@@ -38,16 +38,6 @@ LOCAL_MODULE_TAGS := optional
 
 include $(BUILD_SHARED_LIBRARY)
 
-# mdmcutback
-
-include $(CLEAR_VARS)
-
-LOCAL_SRC_FILES := moto_mdmcutback.c
-LOCAL_MODULE := libshim_mdmcutback
-LOCAL_MODULE_TAGS := optional
-
-include $(BUILD_SHARED_LIBRARY)
-
 # RIL
 
 include $(CLEAR_VARS)

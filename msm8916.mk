@@ -157,7 +157,6 @@ PRODUCT_PACKAGES += \
 # Shim libraries
 PRODUCT_PACKAGES += \
     libshim_log \
-    libshim_mdmcutback \
     libshim_ril
 
 # Stlport
