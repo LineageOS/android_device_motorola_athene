@@ -19,7 +19,6 @@
   <string name="user_aware_display_title">شاشة تراعي المستخدم</string>
   <string name="user_aware_display_summary">تظل الشاشة تعمل طالما ظل المستخدم أمامها</string>
   <string name="screen_gestures_panel_title">اختصارات الإيماءات</string>
-  <string name="screen_gestures_panel_summary">استخدام الإيماءات لتنفيذ الإجراءات</string>
   <string name="ambient_display_title">العرض المحيط</string>
   <string name="pick_up_gesture_title">الإمساك بالهاتف</string>
   <string name="pick_up_gesture_summary">الإشعارات بالذبذبة عند الإمساك بالهاتف أو إخراجه من مكانه</string>

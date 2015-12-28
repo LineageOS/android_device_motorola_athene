@@ -19,7 +19,6 @@
   <string name="user_aware_display_title">Pantalla en función \u0022presencia de usuario\u0022</string>
   <string name="user_aware_display_summary">Mantener la pantalla encendida mientras el usuario esté frente a ella</string>
   <string name="screen_gestures_panel_title">Atajos gestuales</string>
-  <string name="screen_gestures_panel_summary">Utilizar gestos para realizar acciones</string>
   <string name="ambient_display_title">Pantalla ambiental</string>
   <string name="pick_up_gesture_title">Levantar</string>
   <string name="pick_up_gesture_summary">Mostrar notificaciones al coger o dejar</string>

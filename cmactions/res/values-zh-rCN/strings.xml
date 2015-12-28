@@ -19,7 +19,6 @@
   <string name="user_aware_display_title">用户感知显示</string>
   <string name="user_aware_display_summary">当使用者在屏幕前时保持屏幕开启</string>
   <string name="screen_gestures_panel_title">快捷手势</string>
-  <string name="screen_gestures_panel_summary">使用手势来执行动作</string>
   <string name="ambient_display_title">环境显示</string>
   <string name="pick_up_gesture_title">拿起</string>
   <string name="pick_up_gesture_summary">拿起或放下时闪烁通知呼吸灯</string>

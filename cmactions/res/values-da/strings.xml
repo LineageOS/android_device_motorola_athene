@@ -19,7 +19,6 @@
   <string name="user_aware_display_title">Brugerbevidst visning</string>
   <string name="user_aware_display_summary">Hold skærmen tændt, mens en person sidder foran den</string>
   <string name="screen_gestures_panel_title">Bevægelsesgenveje</string>
-  <string name="screen_gestures_panel_summary">Anvend bevægelser til at udføre handlinger</string>
   <string name="ambient_display_title">Inaktivitetsvisning</string>
   <string name="pick_up_gesture_title">Samle op</string>
   <string name="pick_up_gesture_summary">Blink med notifikationerne ved opsamling</string>

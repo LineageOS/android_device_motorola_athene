@@ -19,7 +19,6 @@
   <string name="user_aware_display_title">Felhasználó-érzékelő kijelző</string>
   <string name="user_aware_display_summary">Tartsa bekapcsolva a képernyőt, míg a felhasználó a kijelző előtt van</string>
   <string name="screen_gestures_panel_title">Kézmozdulatok</string>
-  <string name="screen_gestures_panel_summary">Használjon mozdulatokat műveletek végrehajtásához</string>
   <string name="ambient_display_title">Környezeti kijelző</string>
   <string name="pick_up_gesture_title">Megfogás</string>
   <string name="pick_up_gesture_summary">Pulzáló értesítések megfogáskor, vagy elővételkor</string>

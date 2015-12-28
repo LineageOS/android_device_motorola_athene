@@ -19,7 +19,6 @@
   <string name="user_aware_display_title">Sledovať používateľa</string>
   <string name="user_aware_display_summary">Ponechať obrazovku zapnutú, pokiaľ je používateľ pred displejom</string>
   <string name="screen_gestures_panel_title">Skratky pomocou gést</string>
-  <string name="screen_gestures_panel_summary">Používajte gestá na vykonávanie akcií</string>
   <string name="ambient_display_title">Ambientné zobrazenie</string>
   <string name="pick_up_gesture_title">Zdvihnutie</string>
   <string name="pick_up_gesture_summary">Pulzné oznámenia pri zdvihnutí alebo vybratí</string>

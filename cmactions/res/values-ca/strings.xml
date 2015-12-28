@@ -19,7 +19,6 @@
   <string name="user_aware_display_title">Pantalla en presència de l\'usuari</string>
   <string name="user_aware_display_summary">Mantingues la pantalla encesa mentre l\'usuari sigui davant de la pantalla</string>
   <string name="screen_gestures_panel_title">Dreceres gestuals</string>
-  <string name="screen_gestures_panel_summary">Utilitza gestos per realitzar accions</string>
   <string name="ambient_display_title">Pantalla ambient</string>
   <string name="pick_up_gesture_title">Aixeca</string>
   <string name="pick_up_gesture_summary">Mostra notificacions en aixecar o deixar</string>

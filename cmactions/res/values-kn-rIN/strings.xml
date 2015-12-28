@@ -19,7 +19,6 @@
   <string name="user_aware_display_title">ಬಳಕೆದಾರ-ಅರಿವು ಪರದೆ</string>
   <string name="user_aware_display_summary">ಬಳಕೆದಾರ ಪರದೆಯ ಮುಂದಿರುವಾಗ ಪದೆಯನ್ನು ಆನ್ ಆಗಿ ಇಡು</string>
   <string name="screen_gestures_panel_title">ಸನ್ನೆ ಕಿರುಮಾರ್ಗ</string>
-  <string name="screen_gestures_panel_summary">ಕ್ರಿಯೆಗಳನ್ನು ನಿರ್ವಹಿಸಲು ಸನ್ನೆಗಳನ್ನು ಬಳಸಿ</string>
   <string name="ambient_display_title">ಆವರಿಸಿದ ಪರದೆ</string>
   <string name="pick_up_gesture_title">ಪಿಕ್-ಅಪ್</string>
   <string name="pick_up_gesture_summary">ಪಿಕ್‍-ಅಪ್ ಮಾಡಿದಾಗ ಅಥವ ಬಿಟ್ಟಾಗ ಅಧಿಸೂಚನೆಗಳನ್ನು ಪಲ್ಸ್ ಮಾಡು</string>

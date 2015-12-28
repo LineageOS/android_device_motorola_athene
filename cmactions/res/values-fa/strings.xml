@@ -19,7 +19,6 @@
   <string name="user_aware_display_title">صفحه نمایش کاربر آگاه</string>
   <string name="user_aware_display_summary">روشن نگه داشتن صفحه زمانی که کاربری جلوی صفحه نمایش است</string>
   <string name="screen_gestures_panel_title">میانبرهای حرکتی</string>
-  <string name="screen_gestures_panel_summary">استفاده از حرکات برای انجام عملیات</string>
   <string name="ambient_display_title">نمایش محیط</string>
   <string name="pick_up_gesture_title">برداشتن</string>
   <string name="pick_up_gesture_summary">چشمک زدن اعلان‌ها هنگام برداشتن یا گذاشتن</string>

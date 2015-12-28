@@ -19,7 +19,6 @@
   <string name="user_aware_display_title">Benotzerbewosst Uweis</string>
   <string name="user_aware_display_summary">De Schierm waakreghalen, soulaang e virun engem Benutzer ass</string>
   <string name="screen_gestures_panel_title">Steierung mat Gesten</string>
-  <string name="screen_gestures_panel_summary">Geste benotze fir Aktiounen auszeféieren</string>
   <string name="ambient_display_title">Ambiente Schierm</string>
   <string name="pick_up_gesture_title">Ophiewen</string>
   <string name="pick_up_gesture_summary">Puls-Notifikatioune beim Ophiewen oder Eraushuelen</string>

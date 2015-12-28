@@ -19,7 +19,6 @@
   <string name="user_aware_display_title">תצוגה מודעת-משתמש</string>
   <string name="user_aware_display_summary">השאר את המסך פעיל כאשר המשתמש נמצא מולו</string>
   <string name="screen_gestures_panel_title">קיצורי מחוות</string>
-  <string name="screen_gestures_panel_summary">השתמש במחוות לביצוע פעולות</string>
   <string name="ambient_display_title">התראות ברקע</string>
   <string name="pick_up_gesture_title">הרמה</string>
   <string name="pick_up_gesture_summary">הצג התראות בעת הרמה או הוצאה מאחסון</string>

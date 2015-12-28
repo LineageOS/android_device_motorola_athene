@@ -19,7 +19,6 @@
   <string name="user_aware_display_title">Brukerbevisst skjerm</string>
   <string name="user_aware_display_summary">Hold skjermen påslått når en bruker er foran skjermen</string>
   <string name="screen_gestures_panel_title">Bevegelsessnarveier</string>
-  <string name="screen_gestures_panel_summary">Bruk bevegelser til å utføre handlinger</string>
   <string name="ambient_display_title">Ambient skjerm</string>
   <string name="pick_up_gesture_title">Oppløfting</string>
   <string name="pick_up_gesture_summary">Vibrer varsler ved oppløfting eller fremhenting</string>

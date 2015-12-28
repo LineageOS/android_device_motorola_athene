@@ -19,7 +19,6 @@
   <string name="user_aware_display_title">Gebruikersbewust scherm</string>
   <string name="user_aware_display_summary">Scherm aan houden als de gebruiker voor het scherm zit</string>
   <string name="screen_gestures_panel_title">Gebarensnelkoppelingen</string>
-  <string name="screen_gestures_panel_summary">Gebaren gebruiken om acties uit te voeren</string>
   <string name="ambient_display_title">Omgevingsdisplay</string>
   <string name="pick_up_gesture_title">Oppakken</string>
   <string name="pick_up_gesture_summary">Meldingen laten knipperen bij oppakken of tevoorschijn halen</string>

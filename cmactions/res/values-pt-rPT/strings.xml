@@ -19,7 +19,6 @@
   <string name="user_aware_display_title">Deteção de rosto</string>
   <string name="user_aware_display_summary">Manter o ecrã ligado enquanto o utilizador estiver em frente ao visor</string>
   <string name="screen_gestures_panel_title">Atalhos gestuais</string>
-  <string name="screen_gestures_panel_summary">Utilize gestos para executar ações</string>
   <string name="ambient_display_title">Visualização de ambiente</string>
   <string name="pick_up_gesture_title">Pegar</string>
   <string name="pick_up_gesture_summary">Notificações led quando pegar ou desarrumar o dipositivo</string>

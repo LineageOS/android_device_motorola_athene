@@ -18,7 +18,6 @@
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
   <string name="user_aware_display_summary">Den Bildschirm aktiv halten, solange sich vor ihm ein Benutzer befindet</string>
   <string name="screen_gestures_panel_title">Gesten-Steuerung</string>
-  <string name="screen_gestures_panel_summary">Gesten verwenden, um Aktionen auszuführen</string>
   <string name="ambient_display_title">Inaktivitätsdisplay</string>
   <string name="pick_up_gesture_title">Aufheben</string>
   <string name="pick_up_gesture_summary">Beim Aufheben oder Herausnehmen Benachrichtigungen kurzzeitig einblenden</string>

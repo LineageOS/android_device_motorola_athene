@@ -19,7 +19,6 @@
   <string name="user_aware_display_title">Naudotoją suprantantis ekranas</string>
   <string name="user_aware_display_summary">Išlaikyti ekraną įjungtą, kai naudotojas žiūri į jį</string>
   <string name="screen_gestures_panel_title">Gestų nuorodos</string>
-  <string name="screen_gestures_panel_summary">Naudoti gestus veiksmams atlikti</string>
   <string name="ambient_display_title">Ambient display</string>
   <string name="pick_up_gesture_title">Paimti</string>
   <string name="pick_up_gesture_summary">Pulsuoti pranešimą paimant arba padėdant</string>

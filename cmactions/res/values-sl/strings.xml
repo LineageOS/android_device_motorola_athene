@@ -19,7 +19,6 @@
   <string name="user_aware_display_title">Zaslon z zaznavanjem uporabnika</string>
   <string name="user_aware_display_summary">Ohrani zaslon vklopljen, ko je uporabnik pred zaslonom</string>
   <string name="screen_gestures_panel_title">Bližnjice potez</string>
-  <string name="screen_gestures_panel_summary">Uporabi poteze za opravljanje dejanj</string>
   <string name="ambient_display_title">Okoliški zaslon</string>
   <string name="pick_up_gesture_title">Dvig</string>
   <string name="pick_up_gesture_summary">Utripaj obvestila ob dvigu ali odstranitvi</string>

@@ -19,7 +19,6 @@
   <string name="user_aware_display_title">Tampilan sensitif pengguna</string>
   <string name="user_aware_display_summary">Biarkan layar menyala selama pengguna berada didepan layar</string>
   <string name="screen_gestures_panel_title">Pintasan gerakan</string>
-  <string name="screen_gestures_panel_summary">Gunakan gerakan untuk melakukan sesuatu</string>
   <string name="ambient_display_title">Layar Ambient</string>
   <string name="pick_up_gesture_title">Ambil</string>
   <string name="pick_up_gesture_summary">Tampilkan pemberitahuan saat mengambil atau menutup pembicaraan</string>

@@ -19,7 +19,6 @@
   <string name="user_aware_display_title">Käyttäjän tunnistava näyttö</string>
   <string name="user_aware_display_summary">Pidä näyttö päällä kun käyttäjä on näytön edessä</string>
   <string name="screen_gestures_panel_title">Ele-komennot</string>
-  <string name="screen_gestures_panel_summary">Käytä eleitä suorittaaksesi toimintoja</string>
   <string name="ambient_display_title">Ambient-näyttö</string>
   <string name="pick_up_gesture_title">Nosto</string>
   <string name="pick_up_gesture_summary">Näytä ilmoitukset nostaessa laitetta</string>

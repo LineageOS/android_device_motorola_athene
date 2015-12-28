@@ -17,7 +17,6 @@
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
   <string name="screen_gestures_panel_title">Scurtături gesturi</string>
-  <string name="screen_gestures_panel_summary">Utilizați gesturi pentru a efectua acțiuni</string>
   <string name="actions_title">Acțiuni</string>
   <string name="action_torch">Comutare lanternă</string>
   <string name="feedback_intensity_none">Dezactivat</string>

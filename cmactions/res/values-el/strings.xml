@@ -19,7 +19,6 @@
   <string name="user_aware_display_title">Εντοπισμός προσώπου</string>
   <string name="user_aware_display_summary">Η οθόνη θα παραμένει ενεργή ενώ ο χρήστης είναι μπροστά από την οθόνη</string>
   <string name="screen_gestures_panel_title">Συντομεύσεις χειρονομιών</string>
-  <string name="screen_gestures_panel_summary">Χρησιμοποιήστε χειρονομίες για να εκτελέσετε ενέργειες</string>
   <string name="ambient_display_title">Οθόνη ambient</string>
   <string name="pick_up_gesture_title">Σήκωμα συσκευής</string>
   <string name="pick_up_gesture_summary">Παλμός ειδοποιήσεων κατά το σήκωμα της συσκευής</string>

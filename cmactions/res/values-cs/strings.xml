@@ -19,7 +19,6 @@
   <string name="user_aware_display_title">Všímat si uživatele</string>
   <string name="user_aware_display_summary">Pokud je uživatel před obrazovkou, nechat ji zapnutou</string>
   <string name="screen_gestures_panel_title">Rychlá gesta</string>
-  <string name="screen_gestures_panel_summary">Používat gesta k provedení akce</string>
   <string name="ambient_display_title">Ambientní zobrazení</string>
   <string name="pick_up_gesture_title">Při sebrání</string>
   <string name="pick_up_gesture_summary">Upozornit pulsováním při sebrání</string>

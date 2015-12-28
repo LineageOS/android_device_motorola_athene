@@ -19,7 +19,6 @@
   <string name="user_aware_display_title">Affichage selon l\'utilisateur</string>
   <string name="user_aware_display_summary">Garder l\'écran allumé tant qu\'un utilisateur le regarde</string>
   <string name="screen_gestures_panel_title">Raccourcis gestuels</string>
-  <string name="screen_gestures_panel_summary">Utiliser des gestes pour effectuer des actions</string>
   <string name="ambient_display_title">Affichage ambiant</string>
   <string name="pick_up_gesture_title">Prise en main</string>
   <string name="pick_up_gesture_summary">Afficher les notifications à la prise en main ou la sortie de poche</string>

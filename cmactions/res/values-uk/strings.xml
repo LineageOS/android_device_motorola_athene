@@ -19,7 +19,6 @@
   <string name="user_aware_display_title">Розумний екран</string>
   <string name="user_aware_display_summary">Тримати екран увімкненим, коли користувач знаходиться перед ним</string>
   <string name="screen_gestures_panel_title">Налаштування жестів</string>
-  <string name="screen_gestures_panel_summary">Користуйтеся жестами для виконання дій</string>
   <string name="ambient_display_title">Ambient display</string>
   <string name="pick_up_gesture_title">Піднімання</string>
   <string name="pick_up_gesture_summary">Пульсуючі сповіщення про підніманні або перевертанні пристрою</string>

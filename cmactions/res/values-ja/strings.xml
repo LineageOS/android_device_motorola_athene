@@ -19,7 +19,6 @@
   <string name="user_aware_display_title">使用認識ディスプレイ</string>
   <string name="user_aware_display_summary">ユーザーがディスプレイの前にいる間は画面を点灯し続ける</string>
   <string name="screen_gestures_panel_title">ジェスチャーショートカット</string>
-  <string name="screen_gestures_panel_summary">ジェスチャーを使用してアクションを実行する</string>
   <string name="ambient_display_title">常時オンディスプレイ</string>
   <string name="pick_up_gesture_title">持ち上げ</string>
   <string name="pick_up_gesture_summary">端末を持ち上げたり取り出したときに通知を表示する</string>

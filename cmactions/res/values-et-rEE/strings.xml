@@ -19,7 +19,6 @@
   <string name="user_aware_display_title">Kasutaja teadlik ekraan</string>
   <string name="user_aware_display_summary">Hoia ekraan sees, kui kasutaja on ekraani ees</string>
   <string name="screen_gestures_panel_title">Žestide otseteed</string>
-  <string name="screen_gestures_panel_summary">Kasuta žeste toimingute sooritamiseks</string>
   <string name="ambient_display_title">Ambient kuva</string>
   <string name="pick_up_gesture_title">Tõsta üles</string>
   <string name="pick_up_gesture_summary">Kuva teatised seadme kättevõtmisel</string>

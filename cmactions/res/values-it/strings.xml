@@ -19,7 +19,6 @@
   <string name="user_aware_display_title">Visualizzazione utente</string>
   <string name="user_aware_display_summary">Tiene lo schermo accesso quando l\'utente lo guarda</string>
   <string name="screen_gestures_panel_title">Scorciatoie gesture</string>
-  <string name="screen_gestures_panel_summary">Utilizza le gesture per compiere azioni</string>
   <string name="ambient_display_title">Ambient display</string>
   <string name="pick_up_gesture_title">Sollevamento</string>
   <string name="pick_up_gesture_summary">Mostra notifiche al sollevamento</string>

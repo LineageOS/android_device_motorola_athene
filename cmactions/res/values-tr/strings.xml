@@ -19,7 +19,6 @@
   <string name="user_aware_display_title">Etkileşimli ekran</string>
   <string name="user_aware_display_summary">Kullanıcı ekranın önündeyken ekranı açık tutar</string>
   <string name="screen_gestures_panel_title">Hareket kısayolları</string>
-  <string name="screen_gestures_panel_summary">Eylemleri gerçekleştirmek için hareketleri kullanın</string>
   <string name="ambient_display_title">Bildirim ekranı</string>
   <string name="pick_up_gesture_title">Telefonu tut</string>
   <string name="pick_up_gesture_summary">Telefon ele alındığında bildirimleri at</string>

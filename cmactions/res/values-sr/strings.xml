@@ -19,7 +19,6 @@
   <string name="user_aware_display_title">Дисплеј свестан корисника</string>
   <string name="user_aware_display_summary">Држи екран укљученим док је корисник испред дисплеја</string>
   <string name="screen_gestures_panel_title">Пречице покретима</string>
-  <string name="screen_gestures_panel_summary">Користи гестове да обавиш акције</string>
   <string name="ambient_display_title">Амбијент приказ</string>
   <string name="pick_up_gesture_title">Купљење</string>
   <string name="pick_up_gesture_summary">Пулсно обавештење при купљењу</string>

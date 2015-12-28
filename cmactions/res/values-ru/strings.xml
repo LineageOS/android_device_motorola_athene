@@ -19,7 +19,6 @@
   <string name="user_aware_display_title">Интеллектуальное откл. дисплея</string>
   <string name="user_aware_display_summary">Держать экран включённым, пока пользователь находится перед ним</string>
   <string name="screen_gestures_panel_title">Включить жесты</string>
-  <string name="screen_gestures_panel_summary">Использовать жесты для действий</string>
   <string name="ambient_display_title">Индикация событий</string>
   <string name="pick_up_gesture_title">Поднять</string>
   <string name="pick_up_gesture_summary">Отображать уведомления при поднятии устройства или извлечении его из кармана</string>
