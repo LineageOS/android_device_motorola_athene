@@ -46,7 +46,7 @@ lib/libmmjpeg_interface.so
 lib/libmot-qc-fd-offline.so
 lib/libmot_sensorlistener.so
 lib/libqomx_core.so
-lib/hw/camera.msm8916.so
+lib/hw/camera.msm8916.so:lib/hw/camera.vendor.msm8916.so
 vendor/lib/libactuator_ak7345.so
 vendor/lib/libactuator_ak7345_camcorder.so
 vendor/lib/libactuator_ak7345_camera.so
