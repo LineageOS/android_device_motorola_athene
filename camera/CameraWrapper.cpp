@@ -113,10 +113,10 @@ static char *camera_fixup_getparams(int id, const char *settings)
     params.dump();
 #endif
 
-    params.set("face-detection-values", "off,on");
+    params.set(CameraParameters::KEY_QC_SUPPORTED_FACE_DETECTION, "off,on");
 
     if (id == BACK_CAMERA) {
-        params.set("touch-af-aec-values", "touch-off,touch-on");
+        params.set(CameraParameters::KEY_QC_SUPPORTED_TOUCH_AF_AEC, "touch-off,touch-on");
     }
 
 #if !LOG_NDEBUG
@@ -143,7 +143,7 @@ static char *camera_fixup_setparams(int id, const char *settings)
     const char *sceneMode = params.get(CameraParameters::KEY_SCENE_MODE);
     if (sceneMode != NULL) {
         if (!strcmp(sceneMode, CameraParameters::SCENE_MODE_HDR)) {
-            params.remove("zsl");
+            params.remove(CameraParameters::KEY_QC_ZSL);
         }
     }
 
