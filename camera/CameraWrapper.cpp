@@ -111,6 +111,8 @@ static char *camera_fixup_getparams(int id, const char *settings)
     params.dump();
 #endif
 
+    params.set("face-detection-values", "off,on");
+
     if (id == BACK_CAMERA) {
         params.set("touch-af-aec-values", "touch-off,touch-on");
     }
