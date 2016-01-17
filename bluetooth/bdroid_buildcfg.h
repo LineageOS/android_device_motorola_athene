@@ -29,6 +29,8 @@ inline const char* BtmGetDefaultName()
 		return "Moto E";
 	} else if (!strcmp("osprey", device)) {
 		return "Moto G";
+	} else if (!strcmp("merlin", device)) {
+		return "Moto G Turbo";
 	} else if (!strcmp("lux", device)) {
 		return "Moto X Play";
 	}
