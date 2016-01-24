@@ -1,5 +1,13 @@
 #!/system/bin/sh
 
+start_copying_prebuilt_qcril_db()
+{
+   if [ -f /system/vendor/qcril.db -a ! -f /data/misc/radio/qcril.db ]; then
+      cp /system/vendor/qcril.db /data/misc/radio/qcril.db
+      chown -h radio.radio /data/misc/radio/qcril.db
+   fi
+}
+
 # We take this from cpuinfo because hex "letters" are lowercase there
 set -A cinfo `cat /proc/cpuinfo | /system/bin/grep Revision`
 hw=${cinfo[2]#?}
@@ -37,6 +45,10 @@ if [[ "$t" != *release* ]]; then
 	done
 fi
 unset p v a b t
+
+# Copy qcril.db if needed for RIL
+start_copying_prebuilt_qcril_db
+echo 1 > /data/misc/radio/db_check_done
 
 # Let kernel know our image version/variant/crm_version
 image_version="10:"

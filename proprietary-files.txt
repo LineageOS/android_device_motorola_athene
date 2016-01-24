@@ -64,7 +64,6 @@ etc/gps.conf
 etc/sap.conf
 lib/libloc_api_v02.so
 lib/libloc_ds_api.so
-vendor/bin/slim_ap_daemon
 vendor/lib/hw/flp.default.so
 vendor/lib/libgeofence.so
 vendor/lib/libizat_core.so
@@ -144,7 +143,7 @@ vendor/lib/libqmiservices.so
 vendor/lib/libsmemlog.so
 
 # Radio
--app/qcrilmsgtunnel/qcrilmsgtunnel.apk
+-priv-app/qcrilmsgtunnel/qcrilmsgtunnel.apk
 bin/netmgrd
 bin/qmuxd
 bin/radish
@@ -164,8 +163,10 @@ lib/libmdmcutback.so
 lib/libmotext_inf.so
 lib/libqmimotext.so
 lib/libril.so
+vendor/qcril.db
 vendor/lib/libcneapiclient.so
 vendor/lib/libconfigdb.so
+vendor/lib/liblqe.so
 vendor/lib/libmdmdetect.so
 vendor/lib/libmmrtpdecoder.so
 vendor/lib/libmmrtpencoder.so
@@ -183,10 +184,8 @@ etc/firmware/sensorhubfw.bin
 etc/firmware/sensorhubver.txt
 
 # Sensors
-lib/hw/sensorhub.msm8916.so
-
-# STML0XX
 bin/stml0xx
+lib/hw/sensorhub.msm8916.so
 
 # Thermal
 bin/thermal-engine
@@ -207,6 +206,3 @@ etc/firmware/venus.b03
 etc/firmware/venus.b04
 etc/firmware/venus.mbn
 etc/firmware/venus.mdt
-
-# WCNSS
-etc/firmware/wlan/prima/WCNSS_qcom_wlan_nv.bin

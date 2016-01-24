@@ -150,7 +150,6 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     fstab.qcom \
     init.mmi.boot.sh \
-    init.mmi.early_boot.sh \
     init.mmi.touch.sh \
     init.mmi.usb.rc \
     init.qcom.rc \
@@ -161,11 +160,6 @@ PRODUCT_PACKAGES += \
     libcnefeatureconfig \
     librmnetctl \
     libxml2
-
-# Shim libraries
-PRODUCT_PACKAGES += \
-    libshim_log \
-    libshim_ril
 
 # Stlport
 PRODUCT_PACKAGES += \
