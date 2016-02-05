@@ -114,10 +114,7 @@ static char *camera_fixup_getparams(int id, const char *settings)
 #endif
 
     params.set(CameraParameters::KEY_QC_SUPPORTED_FACE_DETECTION, "off,on");
-
-    if (id == BACK_CAMERA) {
-        params.set(CameraParameters::KEY_QC_SUPPORTED_TOUCH_AF_AEC, "touch-off,touch-on");
-    }
+    params.set(CameraParameters::DENOISE_ON_OFF_MODES_MAP, "denoise-off,denoise-on");
 
 #if !LOG_NDEBUG
     ALOGV("%s: fixed parameters:", __FUNCTION__);

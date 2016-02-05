@@ -16,12 +16,12 @@
 
 #define CAMERA_PARAMETERS_EXTRA_C \
 const char CameraParameters::KEY_QC_SUPPORTED_FACE_DETECTION[] = "face-detection-values"; \
-const char CameraParameters::KEY_QC_SUPPORTED_TOUCH_AF_AEC[] = "touch-af-aec-values"; \
 const char CameraParameters::KEY_QC_ZSL[] = "zsl"; \
+const char CameraParameters::DENOISE_ON_OFF_MODES_MAP[] = "denoise-values"; \
 \
 
 #define CAMERA_PARAMETERS_EXTRA_H \
 static const char KEY_QC_SUPPORTED_FACE_DETECTION[]; \
-static const char KEY_QC_SUPPORTED_TOUCH_AF_AEC[]; \
 static const char KEY_QC_ZSL[]; \
+static const char DENOISE_ON_OFF_MODES_MAP[]; \
 \
