@@ -113,8 +113,8 @@ static char *camera_fixup_getparams(int id, const char *settings)
     params.dump();
 #endif
 
-    params.set(CameraParameters::KEY_QC_SUPPORTED_FACE_DETECTION, "off,on");
-    params.set(CameraParameters::DENOISE_ON_OFF_MODES_MAP, "denoise-off,denoise-on");
+    params.set("face-detection-values", "off,on");
+    params.set("denoise-values", "denoise-off,denoise-on");
 
 #if !LOG_NDEBUG
     ALOGV("%s: fixed parameters:", __FUNCTION__);
@@ -140,7 +140,7 @@ static char *camera_fixup_setparams(int id, const char *settings)
     const char *sceneMode = params.get(CameraParameters::KEY_SCENE_MODE);
     if (sceneMode != NULL) {
         if (!strcmp(sceneMode, CameraParameters::SCENE_MODE_HDR)) {
-            params.remove(CameraParameters::KEY_QC_ZSL);
+            params.remove("zsl");
         }
     }
 
