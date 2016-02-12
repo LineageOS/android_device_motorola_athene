@@ -3,9 +3,6 @@
 # ADSP
 bin/adsprpcd
 vendor/lib/libadsprpc.so
-vendor/lib/libfastcvopt.so
-vendor/lib/libscve.so
-vendor/lib/libscve_mv.so
 
 # Audio
 vendor/lib/soundfx/libqcbassboost.so
@@ -28,7 +25,10 @@ vendor/lib/libbtnv.so
 # Camera
 lib/libmot-qc-fd-offline.so
 lib/libmot_sensorlistener.so
+vendor/lib/libfastcvopt.so
 vendor/lib/libmmipl.so
+vendor/lib/libscve.so
+vendor/lib/libscve_mv.so
 
 # Camera firmware
 etc/firmware/cpp_firmware_v1_1_1.fw
@@ -66,6 +66,7 @@ bin/xtwifi-client
 bin/xtwifi-inet-agent
 etc/permissions/com.qualcomm.location.xml
 etc/cacert_location.pem
+etc/flp.conf
 etc/gps.conf
 etc/izat.conf
 etc/quipc.conf
