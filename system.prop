@@ -1,6 +1,7 @@
 # system.prop for msm8916-common
 
 # Audio
+audio.dolby.ds2.enabled=true
 audio.offload.24bit.enable=false
 audio.offload.buffer.size.kb=64
 audio.offload.gapless.enabled=true
@@ -16,11 +17,6 @@ persist.audio.calfile4=/etc/acdbdata/Hdmi_cal.acdb
 persist.audio.calfile5=/etc/acdbdata/Headset_cal.acdb
 persist.audio.calfile6=/etc/acdbdata/Speaker_cal.acdb
 
-persist.audio.fluence.voicecall=true
-persist.audio.fluence.voicerec=false
-persist.audio.fluence.speaker=true
-
-ro.qc.sdk.audio.fluencetype=none
 ro.qc.sdk.audio.ssr=false
 
 use.voice.path.for.pcm.voip=true
