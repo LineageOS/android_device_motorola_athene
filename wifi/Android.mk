@@ -3,7 +3,6 @@ LOCAL_PATH:= $(call my-dir)
 #----------------------------------------------------------------------
 # Copy additional target-specific files
 #----------------------------------------------------------------------
-ifeq ($(strip $(BOARD_HAS_QCOM_WLAN)),true)
 
 include $(CLEAR_VARS)
 LOCAL_MODULE       := hostapd_default.conf
@@ -45,4 +44,3 @@ $(LOCAL_BUILT_MODULE):
 	$(hide) ln -sf $(TARGET) $(SYMLINK)
 	$(hide) touch $@
 
-endif
