@@ -533,24 +533,6 @@ service qseecomd /system/bin/qseecomd
    user root
    group root
 
-service location_mq /system/bin/location-mq
-    class late_start
-    user gps
-    group gps
-    disabled
-
-service xtwifi_client /system/bin/xtwifi-client
-    class late_start
-    user gps
-    group net_admin wifi inet gps
-    disabled
-
-service xtwifi_inet /system/bin/xtwifi-inet-agent
-    class late_start
-    user gps
-    group inet gps
-    disabled
-
 service thermal-engine /system/bin/thermal-engine
    class main
    user root
