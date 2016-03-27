@@ -16,28 +16,5 @@
      limitations under the License.
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
-  <string name="user_aware_display_title">شاشة تراعي المستخدم</string>
-  <string name="user_aware_display_summary">تظل الشاشة تعمل طالما ظل المستخدم أمامها</string>
-  <string name="screen_gestures_panel_title">اختصارات الإيماءات</string>
-  <string name="ambient_display_title">العرض المحيط</string>
-  <string name="pick_up_gesture_title">الإمساك بالهاتف</string>
-  <string name="pick_up_gesture_summary">الإشعارات بالذبذبة عند الإمساك بالهاتف أو إخراجه من مكانه</string>
-  <string name="ir_wake_up_title">التلويح باليد</string>
-  <string name="ir_wake_up_summary">إشعارات بالنبضات عند تحريك يدك أمام الشاشة</string>
-  <string name="actions_title">الاجراءات</string>
-  <string name="camera_gesture_title">تدوير مزدوج</string>
-  <string name="camera_gesture_summary">الإجراء في حالة إيماءة التدوير المزدوج </string>
-  <string name="chop_chop_gesture_title">إيماءة التقطيع</string>
-  <string name="chop_chop_gesture_summary">الإجراء في حالة إيماءة التقطيع</string>
-  <string name="ir_silencer_title">التلويح باليد للإسكات</string>
-  <string name="ir_silencer_summary">إسكات المكالمات الواردة بالتلويح بيدك أمام الشاشة</string>
-  <string name="action_none">تعطيل</string>
-  <string name="action_launch_camera">تشغيل الكاميرا</string>
-  <string name="action_torch">تبديل الشعلة</string>
-  <string name="feedback_intensity_title">شدة الاستجابة اللمسية</string>
-  <string name="feedback_intensity_summary">شدة الاستجابة اللمسية في حالتي التدوير المزدوج والتقطيع</string>
-  <string name="feedback_intensity_none">تعطيل</string>
-  <string name="feedback_intensity_low">منخفضة</string>
-  <string name="feedback_intensity_medium">متوسطة</string>
-  <string name="feedback_intensity_high">عالية</string>
+  <!-- Gesture shortcuts -->
 </resources>

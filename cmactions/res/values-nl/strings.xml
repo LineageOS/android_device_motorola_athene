@@ -16,28 +16,5 @@
      limitations under the License.
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
-  <string name="user_aware_display_title">Gebruikersbewust scherm</string>
-  <string name="user_aware_display_summary">Scherm aan houden als de gebruiker voor het scherm zit</string>
-  <string name="screen_gestures_panel_title">Gebarensnelkoppelingen</string>
-  <string name="ambient_display_title">Omgevingsdisplay</string>
-  <string name="pick_up_gesture_title">Oppakken</string>
-  <string name="pick_up_gesture_summary">Meldingen laten knipperen bij oppakken of tevoorschijn halen</string>
-  <string name="ir_wake_up_title">Handgebaar</string>
-  <string name="ir_wake_up_summary">Meldingen laten knipperen bij handgebaar over het scherm</string>
-  <string name="actions_title">Acties</string>
-  <string name="camera_gesture_title">Double-twist</string>
-  <string name="camera_gesture_summary">Actie bij \'double twist\' gebaar</string>
-  <string name="chop_chop_gesture_title">Chop-chop</string>
-  <string name="chop_chop_gesture_summary">Actie bij \'chop-chop\'-gebaar (twee hakkende bewegingen met uw apparaat)</string>
-  <string name="ir_silencer_title">Handgebaar voor stil</string>
-  <string name="ir_silencer_summary">Inkomende oproepen dempen bij handgebaar over het scherm</string>
-  <string name="action_none">Uitschakelen</string>
-  <string name="action_launch_camera">Camera openen</string>
-  <string name="action_torch">Zaklamp aan/uit</string>
-  <string name="feedback_intensity_title">Trilintensiteit</string>
-  <string name="feedback_intensity_summary">Trilintensiteit voor de \'double-twist\' en \'chop-chop\' acties</string>
-  <string name="feedback_intensity_none">Uitgeschakeld</string>
-  <string name="feedback_intensity_low">Laag</string>
-  <string name="feedback_intensity_medium">Gemiddeld</string>
-  <string name="feedback_intensity_high">Hoog</string>
+  <!-- Gesture shortcuts -->
 </resources>

@@ -16,11 +16,5 @@
      limitations under the License.
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
-  <string name="ir_wake_up_title">Våg</string>
-  <string name="camera_gesture_title">Double-twist</string>
-  <string name="action_launch_camera">Starta kamera</string>
-  <string name="action_torch">Växla ficklampa</string>
-  <string name="feedback_intensity_low">Låg</string>
-  <string name="feedback_intensity_medium">Medel</string>
-  <string name="feedback_intensity_high">Hög</string>
+  <!-- Gesture shortcuts -->
 </resources>

@@ -16,28 +16,5 @@
      limitations under the License.
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
-  <string name="user_aware_display_title">Etkileşimli ekran</string>
-  <string name="user_aware_display_summary">Kullanıcı ekranın önündeyken ekranı açık tutar</string>
-  <string name="screen_gestures_panel_title">Hareket kısayolları</string>
-  <string name="ambient_display_title">Bildirim ekranı</string>
-  <string name="pick_up_gesture_title">Telefonu tut</string>
-  <string name="pick_up_gesture_summary">Telefon ele alındığında bildirimleri at</string>
-  <string name="ir_wake_up_title">Salla</string>
-  <string name="ir_wake_up_summary">Elinizi ekranın önünde salladığınızda bildirimleri atar</string>
-  <string name="actions_title">Eylemler</string>
-  <string name="camera_gesture_title">Çift-salla</string>
-  <string name="camera_gesture_summary">Çift sallama etkinliği eylemi</string>
-  <string name="chop_chop_gesture_title">Tak-tak</string>
-  <string name="chop_chop_gesture_summary">Tak-tak etkinliği eylemi</string>
-  <string name="ir_silencer_title">Sessize almak için sallayın</string>
-  <string name="ir_silencer_summary">Ekranın önünde elinizi salladığınızda gelen çağrıları susturur</string>
-  <string name="action_none">Devre dışı</string>
-  <string name="action_launch_camera">Kamerayı başlat</string>
-  <string name="action_torch">El fenerini aç/kapat</string>
-  <string name="feedback_intensity_title">Dokunmatik geri bildirim yoğunluğu</string>
-  <string name="feedback_intensity_summary">Çift sallama ve tak tak işlemleri için dokunmatik geri bildirim gücü</string>
-  <string name="feedback_intensity_none">Devre dışı</string>
-  <string name="feedback_intensity_low">Düşük</string>
-  <string name="feedback_intensity_medium">Orta</string>
-  <string name="feedback_intensity_high">Yüksek</string>
+  <!-- Gesture shortcuts -->
 </resources>

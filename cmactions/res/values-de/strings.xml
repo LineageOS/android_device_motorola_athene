@@ -16,27 +16,5 @@
      limitations under the License.
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
-  <string name="user_aware_display_summary">Den Bildschirm aktiv halten, solange sich vor ihm ein Benutzer befindet</string>
-  <string name="screen_gestures_panel_title">Gesten-Steuerung</string>
-  <string name="ambient_display_title">Inaktivitätsdisplay</string>
-  <string name="pick_up_gesture_title">Aufheben</string>
-  <string name="pick_up_gesture_summary">Beim Aufheben oder Herausnehmen Benachrichtigungen kurzzeitig einblenden</string>
-  <string name="ir_wake_up_title">Winken</string>
-  <string name="ir_wake_up_summary">Benachrichtigungen kurzzeitig einblenden, wenn Sie mit Ihrer Hand über den Bildschirm winken</string>
-  <string name="actions_title">Aktionen</string>
-  <string name="camera_gesture_title">Doppel-Drehung</string>
-  <string name="camera_gesture_summary">Aktion bei Verwendung der Doppel-Drehung-Geste</string>
-  <string name="chop_chop_gesture_title">Schwenken</string>
-  <string name="chop_chop_gesture_summary">Aktion bei Verwendung der Schwenk-Geste</string>
-  <string name="ir_silencer_title">Winken zum Stummschalten</string>
-  <string name="ir_silencer_summary">Schalten Sie eingehende Anrufe durch Winken über den Bildschirm stumm</string>
-  <string name="action_none">Deaktivieren</string>
-  <string name="action_launch_camera">Kamera starten</string>
-  <string name="action_torch">Taschenlampe</string>
-  <string name="feedback_intensity_title">Intensität des haptischen Feedbacks</string>
-  <string name="feedback_intensity_summary">Stärke des haptischen Feedbacks für Doppel-Drehung- und Schwenk-Aktionen</string>
-  <string name="feedback_intensity_none">Deaktiviert</string>
-  <string name="feedback_intensity_low">Schwach</string>
-  <string name="feedback_intensity_medium">Normal</string>
-  <string name="feedback_intensity_high">Stark</string>
+  <!-- Gesture shortcuts -->
 </resources>

@@ -16,28 +16,5 @@
      limitations under the License.
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
-  <string name="user_aware_display_title">صفحه نمایش کاربر آگاه</string>
-  <string name="user_aware_display_summary">روشن نگه داشتن صفحه زمانی که کاربری جلوی صفحه نمایش است</string>
-  <string name="screen_gestures_panel_title">میانبرهای حرکتی</string>
-  <string name="ambient_display_title">نمایش محیط</string>
-  <string name="pick_up_gesture_title">برداشتن</string>
-  <string name="pick_up_gesture_summary">چشمک زدن اعلان‌ها هنگام برداشتن یا گذاشتن</string>
-  <string name="ir_wake_up_title">حرکت</string>
-  <string name="ir_wake_up_summary">چشمک زدن اعلان‌ها هنگامی که دست خود را روی صفحه حرکت می‌دهید</string>
-  <string name="actions_title">اقدامات</string>
-  <string name="camera_gesture_title">دوبار پیچش</string>
-  <string name="camera_gesture_summary">عمل هنگام استفاده از دوبار پیچش</string>
-  <string name="chop_chop_gesture_title">حرکت چاپ چاپ</string>
-  <string name="chop_chop_gesture_summary">عمل هنگام استفاده از حرکت چاپ چاپ</string>
-  <string name="ir_silencer_title">حرکت برای سکوت</string>
-  <string name="ir_silencer_summary">ساکت کردن تماس‌ها با حرکت دست شما روی صفحه</string>
-  <string name="action_none">غیرفعال کردن</string>
-  <string name="action_launch_camera">اجرای دوربین</string>
-  <string name="action_torch">سوئیچ چراغ‌قوه</string>
-  <string name="feedback_intensity_title">شدت بازخورد لمسی</string>
-  <string name="feedback_intensity_summary">شدت بازخورد لمسی برای حرکات دوبار پیچش و چاپ چاپ</string>
-  <string name="feedback_intensity_none">غیرفعال</string>
-  <string name="feedback_intensity_low">کم</string>
-  <string name="feedback_intensity_medium">متوسط</string>
-  <string name="feedback_intensity_high">زیاد</string>
+  <!-- Gesture shortcuts -->
 </resources>
