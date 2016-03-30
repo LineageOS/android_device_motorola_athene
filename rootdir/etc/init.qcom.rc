@@ -29,7 +29,6 @@ import init.mmi.usb.rc
 import init.target.rc
 
 on early-init
-
     chown system graphics /sys/devices/virtual/graphics/fb0/idle_time
 
     mkdir /system 0777 root root
@@ -69,6 +68,16 @@ on init
 
     # ESDFS
     chown mot_esdfs root /proc/fs/esdfs/packages
+
+    # Full speed for bootup
+    write /sys/devices/system/cpu/cpu1/online 1
+    write /sys/devices/system/cpu/cpu2/online 1
+    write /sys/devices/system/cpu/cpu3/online 1
+    write /sys/module/msm_thermal/core_control/enabled 0
+    write /sys/devices/system/cpu/cpu0/cpufreq/scaling_governor "performance"
+    write /sys/module/msm_thermal/core_control/enabled 1
+    write /sys/class/devfreq/1c00000.qcom,kgsl-3d0/governor "performance"
+    write /sys/class/devfreq/qcom,cpubw.30/governor "performance"
 
 on fs
     mount_all fstab.qcom
@@ -807,13 +816,3 @@ on moto-charger
     start batt_health
     start thermal-com
     write /sys/module/lpm_levels/parameters/sleep_disabled 0
-
-on property:init.svc.bootanim=running
-    write /sys/devices/system/cpu/cpu1/online 1
-    write /sys/devices/system/cpu/cpu2/online 1
-    write /sys/devices/system/cpu/cpu3/online 1
-    write /sys/module/msm_thermal/core_control/enabled 0
-    write /sys/devices/system/cpu/cpu0/cpufreq/scaling_governor "performance"
-    write /sys/module/msm_thermal/core_control/enabled 1
-    write /sys/class/devfreq/1c00000.qcom,kgsl-3d0/governor "performance"
-    write /sys/class/devfreq/qcom,cpubw.30/governor "performance"
