@@ -30,14 +30,13 @@
     <string name="actions_title">Actions</string>
 
     <string name="camera_gesture_title">Double-twist</string>
-    <string name="camera_gesture_summary">Open Camera when using the double twist gesture</string>
+    <string name="camera_gesture_summary">Open camera when using the double twist gesture</string>
 
     <string name="chop_chop_gesture_title">Chop-chop</string>
-    <string name="chop_chop_gesture_summary">Enable/Disable Torch when using the chop-chop gesture</string>
+    <string name="chop_chop_gesture_summary">Toggle flashlight when using the chop-chop gesture</string>
 
     <string name="ir_silencer_title">Wave to silence</string>
     <string name="ir_silencer_summary">Silence incoming calls by waving your hand across the screen</string>
-
 
 </resources>
 
