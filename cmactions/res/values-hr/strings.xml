@@ -17,4 +17,15 @@
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
   <!-- Gesture shortcuts -->
+  <string name="screen_gestures_panel_title">Prečaci pokreta</string>
+  <string name="ambient_display_title">Ambijentni zaslon</string>
+  <string name="pick_up_gesture_title">Podizanje</string>
+  <string name="pick_up_gesture_summary">Prikaži obavijesti pri podizanju</string>
+  <string name="ir_wake_up_title">Val</string>
+  <string name="ir_wake_up_summary">Prikaži obavijesti kada mahnete rukom preko zaslona</string>
+  <string name="actions_title">Radnje</string>
+  <string name="camera_gesture_title">Dvostruki zaokret</string>
+  <string name="chop_chop_gesture_title">Chop-chop</string>
+  <string name="ir_silencer_title">Mahni za tišinu</string>
+  <string name="ir_silencer_summary">Utišaj dolazne pozive mahanjem preko zaslona</string>
 </resources>

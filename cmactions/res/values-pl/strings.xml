@@ -17,4 +17,9 @@
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
   <!-- Gesture shortcuts -->
+  <string name="pick_up_gesture_title">Podnieś</string>
+  <string name="pick_up_gesture_summary">Pulsujące powiadomienia podczas podnoszenia lub odkładania</string>
+  <string name="actions_title">Akcje</string>
+  <string name="camera_gesture_title">Obróć dwa razy</string>
+  <string name="chop_chop_gesture_title">Podwójne potrząśnięcie</string>
 </resources>

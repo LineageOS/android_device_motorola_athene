@@ -17,4 +17,17 @@
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
   <!-- Gesture shortcuts -->
+  <string name="screen_gestures_panel_title">Dreceres gestuals</string>
+  <string name="ambient_display_title">Pantalla ambient</string>
+  <string name="pick_up_gesture_title">Contesta</string>
+  <string name="pick_up_gesture_summary">Mostra notificacions en contestar o penjar</string>
+  <string name="ir_wake_up_title">Passa la mà</string>
+  <string name="ir_wake_up_summary">Mostra notificacions quan passis la mà per la pantalla</string>
+  <string name="actions_title">Accions</string>
+  <string name="camera_gesture_title">Doble gir</string>
+  <string name="camera_gesture_summary">Obre la càmera quan s\'utilitzi el gest de doble gir</string>
+  <string name="chop_chop_gesture_title">Doble sacsejada</string>
+  <string name="chop_chop_gesture_summary">Commuta la llanterna quan es faci el gest de doble sacsejada</string>
+  <string name="ir_silencer_title">Passa la mà per silenciar</string>
+  <string name="ir_silencer_summary">Silencia les trucades entrants en passar la mà per la pantalla</string>
 </resources>

@@ -17,4 +17,17 @@
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
   <!-- Gesture shortcuts -->
+  <string name="screen_gestures_panel_title">快捷手势</string>
+  <string name="ambient_display_title">环境显示</string>
+  <string name="pick_up_gesture_title">拿起</string>
+  <string name="pick_up_gesture_summary">拿起或放下时显示通知</string>
+  <string name="ir_wake_up_title">挥动</string>
+  <string name="ir_wake_up_summary">当手挥过屏幕时显示通知</string>
+  <string name="actions_title">操作</string>
+  <string name="camera_gesture_title">扭动两次</string>
+  <string name="camera_gesture_summary">当摇动两次时打开相机</string>
+  <string name="chop_chop_gesture_title">摇动两次</string>
+  <string name="chop_chop_gesture_summary">当左右摇动时切换手电筒</string>
+  <string name="ir_silencer_title">挥动以静音</string>
+  <string name="ir_silencer_summary">来电时用手挥过屏幕以静音</string>
 </resources>

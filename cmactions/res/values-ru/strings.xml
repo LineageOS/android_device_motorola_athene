@@ -17,4 +17,15 @@
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
   <!-- Gesture shortcuts -->
+  <string name="screen_gestures_panel_title">Жесты</string>
+  <string name="ambient_display_title">Индикация событий</string>
+  <string name="pick_up_gesture_title">Поднять</string>
+  <string name="pick_up_gesture_summary">Отображать уведомления при поднятии устройства или извлечении его из кармана</string>
+  <string name="ir_wake_up_title">Взмахнуть</string>
+  <string name="ir_wake_up_summary">Проведите ладонью над экраном для просмотра уведомлений</string>
+  <string name="actions_title">Действия</string>
+  <string name="camera_gesture_title">Вращение</string>
+  <string name="chop_chop_gesture_title">Встряхивание</string>
+  <string name="ir_silencer_title">Взмах для отключения звука</string>
+  <string name="ir_silencer_summary">Проведите рукой над экраном, чтобы приглушить звук входящего звонка</string>
 </resources>

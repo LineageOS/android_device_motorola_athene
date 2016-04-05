@@ -17,4 +17,15 @@
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
   <!-- Gesture shortcuts -->
+  <string name="screen_gestures_panel_title">ئىشارەت قىسقا يوللىرى</string>
+  <string name="ambient_display_title">مۇھىتنى كۆرسىتىدۇ</string>
+  <string name="pick_up_gesture_title">ئېلىش</string>
+  <string name="pick_up_gesture_summary">تېلېفوننى ئالغاندا ياكى قويغاندا ئۇقتۇرۇش قىلسۇن</string>
+  <string name="ir_wake_up_title">پولاڭلىتىش</string>
+  <string name="ir_wake_up_summary">قولىڭىز ئېكران ئۈستىدە پولاڭلىغاندا، ئۇقتۇرۇش قىلسۇن</string>
+  <string name="actions_title">ھەرىكەت</string>
+  <string name="camera_gesture_title">ئىككى قېتىم تەۋرىتىش</string>
+  <string name="chop_chop_gesture_title">دەرھال</string>
+  <string name="ir_silencer_title">تەۋرىتىپ ئاۋازسىز قىلىش</string>
+  <string name="ir_silencer_summary">تېلېفون كەلگەندە قولنى پولاڭلىتىپ ئاۋازىنى ئۆچىرىش</string>
 </resources>

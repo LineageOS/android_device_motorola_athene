@@ -17,4 +17,17 @@
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
   <!-- Gesture shortcuts -->
+  <string name="screen_gestures_panel_title">Преки пътища с жестове</string>
+  <string name="ambient_display_title">Атмосферен екран</string>
+  <string name="pick_up_gesture_title">Повдигане</string>
+  <string name="pick_up_gesture_summary">Светлинна индикация при входящо повикване или критичен капацитет на батерията</string>
+  <string name="ir_wake_up_title">Размахване</string>
+  <string name="ir_wake_up_summary">Прекарайте ръката над екрана, за да видите уведомленията</string>
+  <string name="actions_title">Действия</string>
+  <string name="camera_gesture_title">Двойно завъртане</string>
+  <string name="camera_gesture_summary">Стартирай камерата при двукратно-завъртане</string>
+  <string name="chop_chop_gesture_title">Двукратно тръскане</string>
+  <string name="chop_chop_gesture_summary">Активиране на фенерчето с разтърсване нагоре-надолу</string>
+  <string name="ir_silencer_title">Размахване за преминаване в тих режим</string>
+  <string name="ir_silencer_summary">Спри звука на входящо повикване, помахвайки с ръка над екрана</string>
 </resources>

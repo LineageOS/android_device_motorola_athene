@@ -17,4 +17,16 @@
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
   <!-- Gesture shortcuts -->
+  <string name="screen_gestures_panel_title">Scurtături gesturi</string>
+  <string name="ambient_display_title">Afișare ambientală</string>
+  <string name="pick_up_gesture_title">Ridicare</string>
+  <string name="pick_up_gesture_summary">Pulsează notificările la ridicare sau mutarea de pe birou</string>
+  <string name="ir_wake_up_title">Unduire</string>
+  <string name="ir_wake_up_summary">Pulsează notificările când unduiți mâna peste ecran</string>
+  <string name="actions_title">Acțiuni</string>
+  <string name="camera_gesture_title">Dublu-răsucire</string>
+  <string name="camera_gesture_summary">Deschide camera prin răsucirea dublă a mâinii</string>
+  <string name="chop_chop_gesture_title">Chop-Chop</string>
+  <string name="ir_silencer_title">Unduire pentru silențios</string>
+  <string name="ir_silencer_summary">Pune pe mut apelurile de intrare mișcând mâna desupra ecranului</string>
 </resources>

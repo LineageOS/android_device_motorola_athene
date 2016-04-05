@@ -17,4 +17,17 @@
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
   <!-- Gesture shortcuts -->
+  <string name="screen_gestures_panel_title">Scorciatoie gesture</string>
+  <string name="ambient_display_title">Display Ambient</string>
+  <string name="pick_up_gesture_title">Solleva</string>
+  <string name="pick_up_gesture_summary">Mostra notifiche al sollevamento</string>
+  <string name="ir_wake_up_title">Onda</string>
+  <string name="ir_wake_up_summary">Mostra notifiche quando passi la mano sopra lo schermo</string>
+  <string name="actions_title">Azioni</string>
+  <string name="camera_gesture_title">Doppio scuotimento</string>
+  <string name="camera_gesture_summary">Apri la fotocamera quando scuoti due volte</string>
+  <string name="chop_chop_gesture_title">Chop-chop</string>
+  <string name="chop_chop_gesture_summary">Accendi la torcia quando utilizzi la gesture chop-chop</string>
+  <string name="ir_silencer_title">Scorri la mano per silenziare</string>
+  <string name="ir_silencer_summary">Silenza le chiamate in arrivo agitando la mano sopra lo schermo</string>
 </resources>

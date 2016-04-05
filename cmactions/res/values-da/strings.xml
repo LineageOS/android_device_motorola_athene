@@ -17,4 +17,17 @@
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
   <!-- Gesture shortcuts -->
+  <string name="screen_gestures_panel_title">Bevægelsesgenveje</string>
+  <string name="ambient_display_title">Inaktivitetsvisning</string>
+  <string name="pick_up_gesture_title">Samle op</string>
+  <string name="pick_up_gesture_summary">Blink med notifikationerne ved opsamling</string>
+  <string name="ir_wake_up_title">Vink</string>
+  <string name="ir_wake_up_summary">Vibrér, hvis der er notifikationer, når du vinker over skærmen</string>
+  <string name="actions_title">Handlinger</string>
+  <string name="camera_gesture_title">Dobbelt-drej</string>
+  <string name="camera_gesture_summary">Åben kameraet når du bruger dobbelt-drej bevægelsen</string>
+  <string name="chop_chop_gesture_title">Hak-hak</string>
+  <string name="chop_chop_gesture_summary">Tænd/sluk lommelygten når du bruger hak-hak bevægelsen</string>
+  <string name="ir_silencer_title">Vink for lydløs</string>
+  <string name="ir_silencer_summary">Gør indgående opkald lydløse ved at vinke med din hånd over skærmen</string>
 </resources>

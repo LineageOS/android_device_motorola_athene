@@ -25,7 +25,9 @@
   <string name="ir_wake_up_summary">Παλμός ειδοποιήσεων αιωρώντας το χέρι σας πάνω από την οθόνη</string>
   <string name="actions_title">Λειτουργίες</string>
   <string name="camera_gesture_title">Διπλή συστροφή</string>
+  <string name="camera_gesture_summary">Άνοιγμα φωτογρ. μηχανής με την χειρονομία της διπλής συστροφής</string>
   <string name="chop_chop_gesture_title">Chop-chop</string>
+  <string name="chop_chop_gesture_summary">Εναλλαγή φακού κατά τη χρήση της χειρονομίας chop-chop</string>
   <string name="ir_silencer_title">Αιώρηση για σίγαση</string>
   <string name="ir_silencer_summary">Σίγαση εισερχόμενων κλήσεων αιωρώντας το χέρι σας πάνω από την οθόνη</string>
 </resources>
