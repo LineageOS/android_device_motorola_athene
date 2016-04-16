@@ -27,6 +27,7 @@
   <string name="camera_gesture_title">Doppel-Drehung</string>
   <string name="camera_gesture_summary">Kamera starten bei Verwendung der Geste Doppeldrehung</string>
   <string name="chop_chop_gesture_title">Schwenken</string>
+  <string name="chop_chop_gesture_summary">Taschenlampe mit der Schwenk-Geste ein-/ausschalten</string>
   <string name="ir_silencer_title">Winken zum Stummschalten</string>
   <string name="ir_silencer_summary">Eingehende Anrufe durch Winken über den Bildschirm stummschalten</string>
 </resources>

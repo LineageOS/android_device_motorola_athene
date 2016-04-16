@@ -25,7 +25,9 @@
   <string name="ir_wake_up_summary">قولىڭىز ئېكران ئۈستىدە پولاڭلىغاندا، ئۇقتۇرۇش قىلسۇن</string>
   <string name="actions_title">ھەرىكەت</string>
   <string name="camera_gesture_title">ئىككى قېتىم تەۋرىتىش</string>
+  <string name="camera_gesture_summary">ئىككى قېتىم تەۋرەتكەندە كامېرا قوزىغىلىدۇ</string>
   <string name="chop_chop_gesture_title">دەرھال</string>
+  <string name="chop_chop_gesture_summary">ئوڭ سولغا تەۋرەتكەندە قول چىراق يورۇيدۇ</string>
   <string name="ir_silencer_title">تەۋرىتىپ ئاۋازسىز قىلىش</string>
   <string name="ir_silencer_summary">تېلېفون كەلگەندە قولنى پولاڭلىتىپ ئاۋازىنى ئۆچىرىش</string>
 </resources>
