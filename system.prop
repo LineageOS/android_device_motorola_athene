@@ -1,5 +1,8 @@
 # system.prop for msm8916-common
 
+# Android Run Time
+ro.sys.fw.dex2oat_thread_count=4
+
 # Audio
 audio.dolby.ds2.enabled=true
 audio.offload.24bit.enable=false
