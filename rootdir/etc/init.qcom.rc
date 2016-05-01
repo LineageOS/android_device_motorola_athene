@@ -210,10 +210,6 @@ on boot
     chmod 0644 /sys/class/timed_output/vibrator/vtg_max
     chmod 0644 /sys/class/timed_output/vibrator/vtg_min
 
-    # High brightness mode
-    chown system system /sys/devices/virtual/graphics/fb0/sre
-    chmod 0660 /sys/devices/virtual/graphics/fb0/sre
-
     # set permission for Dynamic-CABC feature
     chown system system /sys/class/graphics/fb0/cabc_mode
 
