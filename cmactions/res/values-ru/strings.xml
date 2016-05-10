@@ -24,7 +24,7 @@
   <string name="ir_wake_up_title">Взмахнуть</string>
   <string name="ir_wake_up_summary">Проведите ладонью над экраном для просмотра уведомлений</string>
   <string name="actions_title">Действия</string>
-  <string name="camera_gesture_title">Вращение</string>
+  <string name="camera_gesture_title">Двойное вращение</string>
   <string name="camera_gesture_summary">Запускать приложение камеры при двойном вращении</string>
   <string name="chop_chop_gesture_title">Встряхивание</string>
   <string name="chop_chop_gesture_summary">Включать или выключать фонарик при постукивании</string>
