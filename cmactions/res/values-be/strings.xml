@@ -17,4 +17,7 @@
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
   <!-- Gesture shortcuts -->
+  <string name="screen_gestures_panel_title">Жэсты</string>
+  <string name="ambient_display_title">Індыкацыя падзей</string>
+  <string name="pick_up_gesture_title">Падняць</string>
 </resources>
