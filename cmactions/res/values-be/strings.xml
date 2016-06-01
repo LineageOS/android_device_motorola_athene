@@ -20,4 +20,7 @@
   <string name="screen_gestures_panel_title">Жэсты</string>
   <string name="ambient_display_title">Індыкацыя падзей</string>
   <string name="pick_up_gesture_title">Падняць</string>
+  <string name="ir_wake_up_title">Узмах</string>
+  <string name="actions_title">Дзеянне</string>
+  <string name="chop_chop_gesture_title">Уструс</string>
 </resources>
