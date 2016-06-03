@@ -50,7 +50,6 @@ on init
 
     # Support legacy paths
     symlink /sdcard /mnt/sdcard
-    symlink /sdcard /storage/sdcard0
 
     # Configure coredump
     write /proc/sys/kernel/core_pattern "|/system/bin/coredump %e %p %t"
