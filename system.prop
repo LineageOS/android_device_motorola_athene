@@ -43,6 +43,7 @@ camera2.portability.force_api=1
 
 # Display
 ro.opengles.version=196608
+persist.hwc.mdpcomp.enable=1
 
 # FRP
 ro.frp.pst=/dev/block/bootdevice/by-name/frp
