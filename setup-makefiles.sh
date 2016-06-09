@@ -78,7 +78,7 @@ EOF
 # limitations under the License.
 EOF
 
-export DEVICE=msm8916-common
+export DEVICE=msm8952-common
 
 OUTDIR=vendor/$VENDOR/$DEVICE
 MAKEFILE=../../../$OUTDIR/$DEVICE-vendor-blobs.mk
@@ -102,10 +102,10 @@ PRODUCT_COPY_FILES += \\
 EOF
 
 LINEEND=" \\"
-COUNT=`wc -l ../msm8916-common/proprietary-files.txt | awk {'print $1'}`
-DISM=`egrep -c '(^#|^$)' ../msm8916-common/proprietary-files.txt`
+COUNT=`wc -l ../msm8952-common/proprietary-files.txt | awk {'print $1'}`
+DISM=`egrep -c '(^#|^$)' ../msm8952-common/proprietary-files.txt`
 COUNT=`expr $COUNT - $DISM`
-for FILE in `egrep -v '(^#|^$)' ../msm8916-common/proprietary-files.txt`; do
+for FILE in `egrep -v '(^#|^$)' ../msm8952-common/proprietary-files.txt`; do
   COUNT=`expr $COUNT - 1`
   if [ $COUNT = "0" ]; then
     LINEEND=""
@@ -181,7 +181,7 @@ EOF
 
 LOCAL_PATH := \$(call my-dir)
 
-ifneq (\$(filter lux merlin osprey surnia,\$(TARGET_DEVICE)),)
+ifneq (\$(filter athene,\$(TARGET_DEVICE)),)
 
 include \$(CLEAR_VARS)
 LOCAL_MODULE := TimeService
