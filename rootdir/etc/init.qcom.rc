@@ -807,13 +807,13 @@ on charger
     class_stop late_start
 
 on moto-charger
-    setprop ro.board.platform msm8916
+    setprop ro.board.platform msm8952
 
     # HMP scheduler settings
     write /proc/sys/kernel/sched_ravg_hist_size 3
     write /proc/sys/kernel/sched_window_stats_policy 3
 
-    # HMP Task packing settings for 8916
+    # HMP Task packing settings for 8952
     write /proc/sys/kernel/sched_small_task 50
 
     # disable thermal core_control to update scaling_min_freq

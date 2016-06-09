@@ -66,11 +66,9 @@ PRODUCT_PACKAGES += \
     libqcompostprocbundle \
     tinymix
 
-# Only build audio HAL on non-lux devices
-ifeq ($(filter lux,$(TARGET_DEVICE)),)
+# Audio
 PRODUCT_PACKAGES += \
-    audio.primary.msm8916
-endif
+    audio.primary.msm8952
 
 PRODUCT_COPY_FILES +=  \
     $(LOCAL_PATH)/audio/audio_effects.conf:system/vendor/etc/audio_effects.conf \
@@ -82,7 +80,7 @@ PRODUCT_PACKAGES += \
 
 # Camera
 PRODUCT_PACKAGES += \
-    camera.msm8916 \
+    camera.msm8952 \
     libbson \
     Snap
 
@@ -92,10 +90,10 @@ PRODUCT_PACKAGES += \
 
 # Display
 PRODUCT_PACKAGES += \
-    gralloc.msm8916 \
-    copybit.msm8916 \
-    hwcomposer.msm8916 \
-    memtrack.msm8916
+    gralloc.msm8952 \
+    copybit.msm8952 \
+    hwcomposer.msm8952 \
+    memtrack.msm8952
 
 # Ebtables
 PRODUCT_PACKAGES += \
@@ -110,7 +108,7 @@ PRODUCT_PACKAGES += \
 
 # GPS
 PRODUCT_PACKAGES += \
-    gps.msm8916
+    gps.msm8952
 
 # IRSC
 PRODUCT_COPY_FILES += \
@@ -118,11 +116,11 @@ PRODUCT_COPY_FILES += \
 
 # Keystore
 PRODUCT_PACKAGES += \
-    keystore.msm8916
+    keystore.msm8952
 
 # Lights
 PRODUCT_PACKAGES += \
-    lights.msm8916
+    lights.msm8952
 
 # Media
 PRODUCT_COPY_FILES += \
@@ -144,7 +142,7 @@ PRODUCT_PACKAGES += \
 
 # Power
 PRODUCT_PACKAGES += \
-    power.msm8916
+    power.msm8952
 
 # Ramdisk
 PRODUCT_PACKAGES += \
@@ -197,13 +195,13 @@ PRODUCT_PACKAGES += \
     wcnss_service
 
 PRODUCT_COPY_FILES += \
-    kernel/motorola/msm8916/drivers/staging/prima/firmware_bin/WCNSS_cfg.dat:system/etc/firmware/wlan/prima/WCNSS_cfg.dat \
-    kernel/motorola/msm8916/drivers/staging/prima/firmware_bin/WCNSS_qcom_cfg.ini:system/etc/firmware/wlan/prima/WCNSS_qcom_cfg.ini
+    kernel/motorola/msm8952/drivers/staging/prima/firmware_bin/WCNSS_cfg.dat:system/etc/firmware/wlan/prima/WCNSS_cfg.dat \
+    kernel/motorola/msm8952/drivers/staging/prima/firmware_bin/WCNSS_qcom_cfg.ini:system/etc/firmware/wlan/prima/WCNSS_qcom_cfg.ini
 
 PRODUCT_BUILD_PROP_OVERRIDES += BUILD_UTC_DATE=0
 
 PRODUCT_GMS_CLIENTID_BASE := android-motorola
 
-$(call inherit-product-if-exists, vendor/motorola/msm8916-common/msm8916-common-vendor.mk)
+$(call inherit-product-if-exists, vendor/motorola/msm8952-common/msm8952-common-vendor.mk)
 $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 $(call inherit-product, vendor/cm/config/common_full_phone.mk)

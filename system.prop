@@ -1,4 +1,4 @@
-# system.prop for msm8916-common
+# system.prop for msm8952-common
 
 # Android Run Time
 ro.sys.fw.dex2oat_thread_count=4

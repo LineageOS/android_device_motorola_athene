@@ -1,4 +1,4 @@
-# Proprietary files for msm8916-common
+# Proprietary files for msm8952-common
 
 # ADSP
 bin/adsprpcd
@@ -185,7 +185,7 @@ etc/firmware/sensorhubver.txt
 
 # Sensors
 bin/stml0xx
-lib/hw/sensorhub.msm8916.so
+lib/hw/sensorhub.msm8952.so
 
 # Thermal
 bin/thermal-engine

@@ -1,5 +1,5 @@
 #
-# Copyright (C) 2014 The CyanogenMod Project
+# Copyright (C) 2016 The CyanogenMod Project
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -18,12 +18,7 @@ LOCAL_PATH:= $(call my-dir)
 # hw/<COPYPIX_HARDWARE_MODULE_ID>.<ro.board.platform>.so
 include $(CLEAR_VARS)
 
-ifneq ($(filter lux merlin surnia, $(TARGET_DEVICE)),)
 LOCAL_SRC_FILES := lights.c
-else ifneq ($(filter osprey, $(TARGET_DEVICE)),)
-LOCAL_SRC_FILES := lights_osprey.c
-endif
-
 LOCAL_CLANG := true
 LOCAL_MODULE_PATH := $(TARGET_OUT_SHARED_LIBRARIES)/hw
 LOCAL_SHARED_LIBRARIES := liblog
