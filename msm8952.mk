@@ -185,8 +185,6 @@ PRODUCT_PACKAGES += \
     wpa_supplicant_overlay.conf
 
 PRODUCT_PACKAGES += \
-	WCNSS_cfg.dat \
-	WCNSS_qcom_cfg.ini \
     WCNSS_wlan_dictionary.dat
 
 PRODUCT_PACKAGES += \
@@ -196,9 +194,9 @@ PRODUCT_PACKAGES += \
     tcpdump \
     wcnss_service
 
-#PRODUCT_COPY_FILES += \
-#    kernel/motorola/msm8952/drivers/staging/prima/firmware_bin/WCNSS_cfg.dat:system/etc/firmware/wlan/prima/WCNSS_cfg.dat \
-#    kernel/motorola/msm8952/drivers/staging/prima/firmware_bin/WCNSS_qcom_cfg.ini:system/etc/firmware/wlan/prima/WCNSS_qcom_cfg.ini
+PRODUCT_COPY_FILES += \
+    kernel/motorola/msm8952/drivers/staging/prima/firmware_bin/WCNSS_cfg.dat:system/etc/firmware/wlan/prima/WCNSS_cfg.dat \
+    kernel/motorola/msm8952/drivers/staging/prima/firmware_bin/WCNSS_qcom_cfg.ini:system/etc/firmware/wlan/prima/WCNSS_qcom_cfg.ini
 
 PRODUCT_BUILD_PROP_OVERRIDES += BUILD_UTC_DATE=0
 
