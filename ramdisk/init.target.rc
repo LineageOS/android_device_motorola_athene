@@ -37,7 +37,6 @@ on early-init
     mkdir /dsp 0771 media media
 
 on post-fs
-    export LD_PRELOAD libNimsWrap.so
 
 on fs
     wait /dev/block/bootdevice

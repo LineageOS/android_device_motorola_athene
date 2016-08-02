@@ -29,6 +29,7 @@
 #import init.qcom.usb.rc
 import init.target.rc
 import init.qcom.factory.rc
+import init.mmi.rc
 
 on early-init
     mount debugfs debugfs /sys/kernel/debug
@@ -455,13 +456,13 @@ on property:wc_transport.start_root=false
 #    group bluetooth qcom_diag system
 #    disabled
 
-service config_bluetooth /system/bin/sh /system/etc/init.qcom.bt.sh "onboot"
+service config_bluetooth /system/bin/sh /init.qcom.bt.sh "onboot"
     class core
     user bluetooth
     group bluetooth system
     oneshot
 
-service hciattach /system/bin/sh /system/etc/init.qcom.bt.sh
+service hciattach /system/bin/sh /init.qcom.bt.sh
     class late_start
     user bluetooth
     group bluetooth net_bt_admin
@@ -474,7 +475,7 @@ on property:bluetooth.hciattach=true
 on property:bluetooth.hciattach=false
     setprop bluetooth.status off
 
-service hciattach_ath3k /system/bin/sh /system/etc/init.ath3k.bt.sh
+service hciattach_ath3k /system/bin/sh /init.ath3k.bt.sh
      class late_start
      user bluetooth
      group system bluetooth net_bt_admin misc
@@ -578,7 +579,7 @@ on property:ro.data.large_tcp_window_size=true
 on property:sys.sysctl.tcp_adv_win_scale=*
     write /proc/sys/net/ipv4/tcp_adv_win_scale ${sys.sysctl.tcp_adv_win_scale}
 
-service btwlancoex /system/bin/sh /system/etc/init.qcom.coex.sh
+service btwlancoex /system/bin/sh /init.qcom.coex.sh
     class late_start
     user bluetooth
     group bluetooth net_bt_admin inet net_admin net_raw
@@ -723,7 +724,7 @@ service loc_launcher /system/bin/loc_launcher
     class late_start
     group gps inet net_raw qcom_diag net_admin wifi
 
-service fm_dl /system/bin/sh /system/etc/init.qcom.fm.sh
+service fm_dl /system/bin/sh /init.qcom.fm.sh
     class late_start
     user system
     group system
@@ -751,7 +752,7 @@ service qcom-sh /system/bin/sh /init.qcom.sh
     user root
     oneshot
 
-service qcom-post-boot /system/bin/sh /system/etc/init.qcom.post_boot.sh
+service qcom-post-boot /system/bin/sh /init.qcom.post_boot.sh
     class late_start
     user root
     disabled
@@ -764,19 +765,19 @@ service qcom-post-boot /system/bin/sh /system/etc/init.qcom.post_boot.sh
 #    oneshot
 #    seclabel u:r:qti-testscripts:s0
 
-service wifi-sdio-on /system/bin/sh /system/etc/init.qcom.sdio.sh
+service wifi-sdio-on /system/bin/sh /init.qcom.sdio.sh
     class late_start
     group wifi inet
     disabled
     oneshot
 
-service wifi-crda /system/bin/sh /system/etc/init.crda.sh
+service wifi-crda /system/bin/sh /init.crda.sh
    class late_start
    user root
    disabled
    oneshot
 
-service config-zram /system/bin/sh /system/etc/init.qcom.zram.sh
+service config-zram /system/bin/sh /init.qcom.zram.sh
    class late_start
    user root
    disabled
@@ -832,7 +833,7 @@ service ril-daemon3 /system/bin/rild -c 3
     disabled
     group radio cache inet misc audio sdcard_r sdcard_rw qcom_diag diag log
 
-service usb_uicc_enable /system/bin/sh /system/etc/init.qcom.uicc.sh
+service usb_uicc_enable /system/bin/sh /init.qcom.uicc.sh
     class late_start
     user root
     disabled
@@ -856,7 +857,7 @@ on property:sys.usb_uicc.enabled=0
 #    group root
 #    disabled
 
-service hcidump /system/bin/sh /system/etc/hcidump.sh
+service hcidump /system/bin/sh /hcidump.sh
     user bluetooth
     group bluetooth system net_bt_admin net_admin
     disabled
@@ -981,7 +982,7 @@ service fidodaemon /system/vendor/bin/fidodaemon
     group system
 
 # Coresight early boot service
-service cs-early-boot /system/bin/sh /persist/coresight/qdss.agent.sh early-boot /system/etc/init.qcom.debug.sh
+service cs-early-boot /system/bin/sh /persist/coresight/qdss.agent.sh early-boot /init.qcom.debug.sh
     class core
     user root
     oneshot
