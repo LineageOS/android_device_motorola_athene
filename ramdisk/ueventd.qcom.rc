@@ -1,4 +1,4 @@
-# Copyright (c) 2012-2014, The Linux Foundation. All rights reserved.
+# Copyright (c) 2012-2015, The Linux Foundation. All rights reserved.
 #
 # Redistribution and use in source and binary forms, with or without
 # modification, are permitted provided that the following conditions are met:
@@ -25,21 +25,6 @@
 # ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 #
 
-/dev/null                 0666   root       root
-/dev/zero                 0666   root       root
-/dev/full                 0666   root       root
-/dev/ptmx                 0666   root       root
-/dev/tty                  0666   root       root
-/dev/random               0666   root       root
-/dev/urandom              0666   root       root
-
-/dev/ashmem               0666   root       root
-/dev/binder               0666   root       root
-/dev/tspdrv               0666   root       root
-/dev/ttyHSL0             0660   radio      system
-# logger should be world writable (for logging) but not readable
-/dev/log/*                0666   root       log
-
 # the DIAG device node is not world writable/readable.
 /dev/diag                 0660   system     qcom_diag
 /dev/ttydiag0             0660   system     qcom_diag
@@ -60,9 +45,11 @@
 /dev/smd6                 0660   system     system
 /dev/smd7                 0660   bluetooth  bluetooth
 /dev/ccid_bridge          0660   system     system
-/dev/ipa                  0660   net_admin  net_admin
-/dev/wwan_ioctl           0660   net_admin  net_admin
+/dev/ipa                  0660   system     net_admin
+/dev/wwan_ioctl           0660   system     net_admin
 /dev/ipaNatTable          0660   net_admin  net_admin
+/dev/rmnet_ctrl           0660   usb        usb
+/dev/dpl_ctrl             0660   usb        usb
 
 /dev/block/bootdevice/by-name/frp 0600 system system
 
@@ -124,8 +111,9 @@
 /dev/video*               0660   system     camera
 /dev/media*               0660   system     camera
 /dev/v4l-subdev*          0660   system     camera
-/dev/qseecom              0660   system     drmrpc
-/dev/sec                  0660   system     drmrpc
+/dev/qseecom              0660   system     mot_tpapi
+/dev/sec                  0660   system     mot_tpapi
+/dev/seemplog             0660   system     system
 /dev/pft                  0660   system     drmrpc
 /dev/gemini0              0660   system     camera
 /dev/jpeg0                0660   system     camera
@@ -133,6 +121,12 @@
 /dev/jpeg2                0660   system     camera
 /dev/jpeg3                0660   system     camera
 /dev/adsprpc-smd          0664   system     system
+/dev/system_health_monitor 0640  radio      system
+# wlan
+/dev/wcnss_wlan           0660   system     system
+/dev/wcnss_ctrl           0660   system     system
+/sys/devices/soc.0/a000000.qcom,wcnss-wlan/net/wlan0/queues/rx-* rps_cpus           0660   system     system
+/sys/devices/soc.0/a000000.qcom,wcnss-wlan/net/p2p0/queues/rx-* rps_cpus            0660   system     system
 /dev/msm_camera/*         0660   system     camera
 /dev/gemini/              0660   system     camera
 /dev/mercury0             0660   system     camera
@@ -142,6 +136,7 @@
 /dev/msm_vidc_enc         0660   system     audio
 /dev/msm_rotator          0660   system     system
 /dev/hw_random            0600   root       root
+/dev/adsprpc-smd          0664   system     system
 
 #permissions for audio
 /dev/audio_slimslave      0660   system     audio
@@ -149,6 +144,8 @@
 /dev/msm_evrc             0660   system     audio
 /dev/msm_wma              0660   system     audio
 /dev/msm_wmapro           0660   system     audio
+/dev/msm_alac             0660   system     audio
+/dev/msm_ape              0660   system     audio
 /dev/msm_amrnb            0660   system     audio
 /dev/msm_amrwb            0660   system     audio
 /dev/msm_amrwbplus        0660   system     audio
@@ -161,6 +158,7 @@
 /dev/msm_a2dp_in          0660   system     audio
 /dev/msm_ac3              0660   system     audio
 /dev/msm_audio_cal        0660   system     audio
+/dev/msm_hweffects        0660   system     audio
 /dev/msm_cad              0660   system     audio
 /dev/msm_fm               0660   system     audio
 /dev/msm_mvs              0660   system     audio
@@ -168,7 +166,6 @@
 /dev/msm_preproc_ctl      0660   system     audio
 /dev/msm_rtac             0660   system     audio
 /dev/msm_voicememo        0660   system     audio
-/dev/radio0               0640   fm_radio   fm_radio
 /dev/smd3                 0660   bluetooth  net_bt_stack
 /dev/smd2                 0660   bluetooth  net_bt_stack
 /dev/ttyHSL1              0660   system     system
@@ -180,20 +177,12 @@
 /dev/ttyGS0               0660   system     system
 /dev/i2c-5                0660   media       media
 /dev/voice_svc            0660   system     audio
+/dev/avtimer              0660   system     audio
 
 # DVB devices
 /dev/dvb/adapter0/demux*  0440   media       media
 /dev/dvb/adapter0/dvr*    0660   media       media
 /dev/dvb/adapter0/video*  0660   media       media
-
-# Block devices
-/dev/block/bootdevice/by-name/hob          0660 root radio
-/dev/block/bootdevice/by-name/dhob         0660 root radio
-/dev/block/bootdevice/by-name/clogo        0660 root mot_tcmd
-/dev/block/bootdevice/by-name/cid          0660 root mot_dbvc
-/dev/block/bootdevice/by-name/logs         0640 root system
-/dev/block/bootdevice/by-name/utags        0660 mot_tcmd system
-/dev/block/bootdevice/by-name/utagsBackup  0660 mot_tcmd system
 
 # Broadcast devices
 /dev/tsc_mux0             0660   media       media
@@ -215,18 +204,22 @@
 /sys/devices/soc.0/78b5000.i2c/i2c-1/1-*            max_latency    0660    input    system
 /sys/devices/soc.0/78b5000.i2c/i2c-1/1-*            flush          0660    input    system
 /sys/devices/soc.0/78b5000.i2c/i2c-1/1-*            calibrate      0660    input    system
-/sys/devices/soc.0/78b6000.i2c/i2c-2/2-*            enable         0660    input    system
-/sys/devices/soc.0/78b6000.i2c/i2c-2/2-*            poll_delay     0660    input    system
-/sys/devices/soc.0/78b6000.i2c/i2c-2/2-*            enable_wakeup  0660    input    system
-/sys/devices/soc.0/78b6000.i2c/i2c-2/2-*            max_latency    0660    input    system
-/sys/devices/soc.0/78b6000.i2c/i2c-2/2-*            flush          0660    input    system
-/sys/devices/soc.0/78b6000.i2c/i2c-2/2-*            calibrate      0660    input    system
 /sys/devices/virtual/optical_sensors/proximity      ps_adc         0660    input    system
 /sys/devices/virtual/optical_sensors/proximity      ps_poll_delay  0660    input    system
 /sys/devices/virtual/optical_sensors/lightsensor    ls_auto        0660    input    system
 /sys/devices/virtual/optical_sensors/lightsensor    ls_poll_delay  0660    input    system
 /sys/devices/virtual/input/input*                   poll           0660    input    system
 /sys/devices/virtual/input/input*                   pollrate_ms    0660    input    system
+
+# ctp
+/sys/devices/soc.0/78b9000.i2c/i2c-5/5-0038/sensors/ft5x06-proximity	enable	0660	input	system
+/sys/devices/virtual/gesture/gesture*		enable	0660	input	system
+/sys/devices/virtual/gesture/gesture*		pocket	0660	input	system
+
+# led
+/sys/devices/soc.0/78b5000.i2c/i2c-1/1-0045/leds/red		blink	0660	input	system
+/sys/devices/soc.0/78b5000.i2c/i2c-1/1-0045/leds/green		blink	0660	input	system
+/sys/devices/soc.0/78b5000.i2c/i2c-1/1-0045/leds/blue		blink	0660	input	system
 
 # vm_bms
 /dev/vm_bms               0660   system     system
@@ -235,9 +228,9 @@
 # wlan
 /dev/wcnss_wlan           0660   system     system
 /dev/wcnss_ctrl           0660   system     system
-
 #nfc permissions
 /dev/nfc-nci              0660    nfc         nfc
+/dev/nq-nci               0660    nfc         nfc
 /dev/assd                 0660    nfc         nfc
 /dev/bcm2079x-i2c         0660    nfc         nfc
 
@@ -249,30 +242,32 @@
 # SSR devices
 /dev/subsys_*         0640   system     system
 
-# Ultrasound device
-/dev/usf1                 0660   system     system
-
 # Ramdump devices
-/dev/ramdump*             0640   system     system
+/dev/ramdump*             0660   radio      radio
+
+
+# I2C
+/dev/i2c-*                0660   root       system
+
+#Improve Touch
+/dev/hbtp_input           0660   system     system
+/dev/hbtp_vm              0660   system     system
+/dev/jdi-bu21150          0660   system     system
+
+# Fingerprint device
+/dev/ontario              0640   system     system
+
+# Add device block for FRP
+/dev/block/platform/soc.0/7824900.sdhci/by-name/config    0660   system     system
+/dev/block/bootdevice/by-name/frp 0600 system system
 
 # Moto Sensors
 /dev/stml0xx               0660  system     compass
 /dev/stml0xx_as            0660  compass    compass
 /dev/stml0xx_ms            0660  compass    compass
-/dev/akm09912              0660  compass    compass
-/dev/akm09912_dev          0660  compass    compass
 
 #DTV
-/dev/isdbt                0660  system     system
+/dev/isdbt                 0660 mot_dtv  mot_dtv
 
-# Permissions for tcmd
-/dev/i2c-*                0660   root       system
-
-# HOB
-/dev/mot_hob_ram          0660   radio      radio
-
-# Subsystem Restart Ramdump
-/dev/ramdump*             0660   radio      radio
-
-# haptic
-/dev/drv2605              0660   system     system
+# Laser device
+/dev/laser                 0660   system     camera

@@ -1,5 +1,5 @@
 #
-# Copyright (C) 2015 The CyanogenMod Project
+# Copyright (C) 2016 The CyanogenMod Project
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -145,18 +145,8 @@ PRODUCT_PACKAGES += \
     power.msm8952
 
 # Ramdisk
-PRODUCT_PACKAGES += \
-    init.qcom.bt.sh \
-    init.qcom.ril.sh \
-    stml0xx_wrapper.sh
-
-PRODUCT_PACKAGES += \
-    fstab.qcom \
-    init.mmi.boot.sh \
-    init.mmi.touch.sh \
-    init.mmi.usb.rc \
-    init.qcom.rc \
-    ueventd.qcom.rc
+PRODUCT_COPY_FILES += \
+	$(call find-copy-subdir-files,*,${LOCAL_PATH}/ramdisk,root)
 
 # RIL
 PRODUCT_PACKAGES += \
