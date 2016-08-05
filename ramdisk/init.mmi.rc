@@ -1,12 +1,8 @@
 import init.mmi.overlay.rc
-import init.oem.rc
 import init.mmi.common.rc
 
 # Moto USB configuration
 import init.mmi.usb.rc
-import init.mmi.debug.rc
-# Moto diag_mdlog configuration
-import init.mmi.diag_mdlog.rc
 
 on early-init
     # Create modem FSG mount point
@@ -32,9 +28,6 @@ on init
     chown system log /sys/fs/pstore/dmesg-ramoops-0
     chmod 0640 /sys/fs/pstore/dmesg-ramoops-0
 
-
-    copy /module_hashes /sys/kernel/module_whitelist
-
     # Setup kernel dropbox permissions so that dropboxd can utilize it
     chown root diag /sys/kernel/dropbox/event
     chown root diag /sys/kernel/dropbox/data
@@ -45,6 +38,9 @@ on init
 
     #ESDFS
     chown mot_esdfs root /proc/fs/esdfs/packages
+
+	# Mount point for oem partition
+	mkdir /oem 0550 root root
 
 on boot
     # STML0XX driver parameter permissions
@@ -207,14 +203,6 @@ on boot
     insmod /system/lib/modules/touchx.ko
 
 on fs
-    # Mount modem FSG partition
-    wait /dev/block/bootdevice/by-name/fsg
-    mount ext4 /dev/block/bootdevice/by-name/fsg /fsg ro nosuid nodev barrier=0 context=u:object_r:fsg_file:s0
-
-    #Mount customize partion
-    wait /dev/block/bootdevice/by-name/customize
-    mount ext4 /dev/block/bootdevice/by-name/customize /customize ro discard nosuid nodev noatime nodiratime noexec defcontext=u:object_r:user_config_file:s0
-
     # use /persist as phony PDS partition
     symlink /persist /pds
 

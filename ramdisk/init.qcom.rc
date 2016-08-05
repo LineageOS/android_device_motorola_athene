@@ -317,11 +317,6 @@ service qfintverify /sbin/qfintverify
     seclabel u:r:qfips:s0
     oneshot
 
-#service qcomsysd /system/bin/qcom-system-daemon
-#    class main
-#    user root
-#    group root qcom_diag
-
 service ssr_setup /system/bin/ssr_setup
     oneshot
     disabled
@@ -421,11 +416,6 @@ service rmt_storage /system/bin/rmt_storage
     class core
     user root
 
-#service rfs_access /system/bin/rfs_access
-#   class core
-#   user root
-#   group system net_raw
-
 service tftp_server /system/bin/tftp_server
    class main
    user root
@@ -436,25 +426,11 @@ on property:wc_transport.start_hci=true
 on property:wc_transport.start_hci=false
     stop start_hci_filter
 
-# Service not used
-#service start_hci_filter /system/bin/wcnss_filter
-#    class late_start
-#    user bluetooth
-#    group bluetooth qcom_diag
-#    disabled
-
 on property:wc_transport.start_root=true
     start hci_filter_root
 
 on property:wc_transport.start_root=false
     stop hci_filter_root
-
-# Service not used
-#service hci_filter_root /system/bin/wcnss_filter
-#    class late_start
-#    user bluetooth
-#    group bluetooth qcom_diag system
-#    disabled
 
 service config_bluetooth /system/bin/sh /init.qcom.bt.sh "onboot"
     class core
@@ -489,14 +465,6 @@ service bt-dun /system/bin/dun-server /dev/smd7 /dev/rfcomm0
     disabled
     oneshot
 
-# Service not used
-#service bt-sap /system/bin/sapd 15
-#    user bluetooth
-#    group bluetooth net_bt_admin
-#    class late_start
-#    disabled
-#    oneshot
-
 service btsnoop /system/bin/btsnoop
    user bluetooth
    group bluetooth net_bt_admin sdcard_rw sdcard_r media_rw
@@ -511,24 +479,12 @@ service ftmd /system/bin/logwrapper /system/bin/ftmdaemon
     disabled
     oneshot
 
-#service bridgemgrd /system/bin/bridgemgrd
-#    class late_start
-#    user radio
-#    group radio qcom_diag
-#    disabled
-
 service port-bridge /system/bin/port-bridge /dev/mhi_pipe_32 /dev/ttyGS0
     class main
     user radio system
     group radio system inet
     disabled
     oneshot
-
-#service qmiproxy /system/bin/qmiproxy
-#    class main
-#    user radio
-#    group radio qcom_diag
-#    disabled
 
 # QMUX must be in multiple groups to support external process connections
 service qmuxd /system/bin/qmuxd
@@ -560,13 +516,6 @@ service qti /system/vendor/bin/qti
     group radio net_raw qcom_diag usb net_admin
     disabled
 
-# Service not used
-#service sensors /system/bin/sensors.qcom
-#    class late_start
-#    user root
-#    group root
-#    disabled
-
 on property:ro.use_data_netmgrd=false
     # netmgr not supported on specific target
     stop netmgrd
@@ -585,24 +534,6 @@ service btwlancoex /system/bin/sh /init.qcom.coex.sh
     group bluetooth net_bt_admin inet net_admin net_raw
     disabled
     oneshot
-
-#service amp_init /system/bin/amploader -i
-#    class late_start
-#    user root
-#    disabled
-#    oneshot
-
-#service amp_load /system/bin/amploader -l 7000
-#    class late_start
-#    user root
-#    disabled
-#    oneshot
-
-#service amp_unload /system/bin/amploader -u
-#    class late_start
-#    user root
-#    disabled
-#    oneshot
 
 service p2p_supplicant /system/bin/wpa_supplicant \
     -ip2p0 -Dnl80211 -c/data/misc/wifi/p2p_supplicant.conf \
@@ -670,13 +601,6 @@ service ptt_ffbm /system/bin/ptt_socket_app -f -d
     disabled
     oneshot
 
-#service wifi_ftmd /system/bin/wifi_ftmd
-#    user system
-#    group system inet net_admin
-#    socket wififtmd_server dgram 0660 system system
-#    disabled
-#    oneshot
-
 on property:wifi.ftmd.load=true
     insmod /system/lib/modules/wlan.ko con_mode=5
 
@@ -735,18 +659,6 @@ on property:crypto.driver.load=1
      insmod /system/lib/modules/qce.ko
      insmod /system/lib/modules/qcedev.ko
 
-#service drmdiag /system/bin/drmdiagapp
-#    class late_start
-#     user root
-#     disabled
-#     oneshot
-
-#on property:drmdiag.load=1
-#    start drmdiag
-
-#on property:drmdiag.load=0
-#    stop drmdiag
-
 service qcom-sh /system/bin/sh /init.qcom.sh
     class late_start
     user root
@@ -757,13 +669,6 @@ service qcom-post-boot /system/bin/sh /init.qcom.post_boot.sh
     user root
     disabled
     oneshot
-
-#service qti-testscripts /system/bin/sh /system/etc/init.qcom.testscripts.sh
-#    class late_start
-#    user root
-#    disabled
-#    oneshot
-#    seclabel u:r:qti-testscripts:s0
 
 service wifi-sdio-on /system/bin/sh /init.qcom.sdio.sh
     class late_start
@@ -800,14 +705,6 @@ service hostapd /system/bin/hostapd -dd /data/misc/wifi/hostapd.conf
     oneshot
     disabled
 
-#service ims_regmanager /system/bin/exe-ims-regmanagerprocessnative
-#    class late_start
-#    group net_bt_admin inet radio wifi
-#    disabled
-
-#on property:persist.ims.regmanager.mode=1
-#    start ims_regmanager
-
 on property:ro.data.large_tcp_window_size=true
     # Adjust socket buffer to enlarge TCP receive window for high bandwidth (e.g. DO-RevB)
     write /proc/sys/net/ipv4/tcp_adv_win_scale  2
@@ -839,23 +736,11 @@ service usb_uicc_enable /system/bin/sh /init.qcom.uicc.sh
     disabled
     oneshot
 
-#service usb_uicc_daemon /system/bin/usb_uicc_client
-#    class main
-#    user system
-#    group system log net_raw
-#    oneshot
-
 on property:sys.usb_uicc.enabled=1
     start usb_uicc_enable
 
 on property:sys.usb_uicc.enabled=0
     start usb_uicc_enable
-
-#service profiler_daemon /system/bin/profiler_daemon
-#    class late_start
-#    user root
-#    group root
-#    disabled
 
 service hcidump /system/bin/sh /hcidump.sh
     user bluetooth
@@ -863,44 +748,11 @@ service hcidump /system/bin/sh /hcidump.sh
     disabled
     oneshot
 
-#service charger /charger
-#    class charger
-#    group system graphics
-#    seclabel u:r:healthd:s0
-
 service ssr_diag /system/bin/ssr_diag
     class late_start
     user system
     group system
     disabled
-
-#service hvdcp /system/bin/hvdcp
-#    class core
-#    user root
-#    disabled
-
-#on property:persist.usb.hvdcp.detect=true
-#    start hvdcp
-
-#on property:persist.usb.hvdcp.detect=false
-#    stop hvdcp
-
-#service charger_monitor /system/bin/charger_monitor
-#    user root
-#    group root
-#    disabled
-
-#service qbcharger /charger -m 1
-#    disabled
-#    oneshot
-
-#on property:sys.qbcharger.enable=true
-#    write /sys/power/wake_lock QuickBoot
-#    start qbcharger
-
-#on property:sys.qbcharger.enable=false
-#    write /sys/power/wake_unlock QuickBoot
-#    stop qbcharger
 
 service diag_mdlog_start /system/bin/diag_mdlog
     class late_start
@@ -915,23 +767,6 @@ service diag_mdlog_stop /system/bin/diag_mdlog -k
     group system qcom_diag sdcard_rw sdcard_r media_rw
     disabled
     oneshot
-
-#service qlogd /system/xbin/qlogd
-#    socket qlogd stream 0662 system system
-#    class main
-#    disabled
-#on property:persist.sys.qlogd=1
-#    start qlogd
-#on property:persist.sys.qlogd=0
-#    stop qlogd
-
-#service rootagent /system/bin/sh /system/etc/init.qcom.rootagent.sh
-#    disabled
-#    oneshot
-#on property:persist.sys.rootagent=1
-#    start rootagent
-#on property:persist.sys.rootagent=0
-#    stop rootagent
 
 service bms-sh /system/bin/sh /init.qcom.bms.sh
     class main
@@ -954,27 +789,6 @@ service msm_irqbal_lb /system/bin/msm_irqbalance -f /system/vendor/etc/msm_irqba
     user root
     group root
     disabled
-
-#service wfdservice /system/bin/wfdservice
-#    class main
-#    user system
-#    group graphics audio camera inet net_bt net_bt_admin net_bt_stack drmrpc bluetooth media_rw media
-#    disabled
-#    oneshot
-
-#on property:sys.wfdservice=enable
-#    start wfdservice
-
-#on property:sys.wfdservice=disable
-#    stop wfdservice
-
-#service RIDL /system/vendor/bin/RIDLClient.exe
-#    class late_start
-#    oneshot
-#    user system
-#    group system inet log sdcard_r sdcard_rw qcom_diag
-    # removed for security team - misc bluetooth radio gps wifi diag media_rw
-    # limited to 12 groups.  Unused: audio usb net_bt_admin net_bt_stac net_raw net_admin
 
 service fidodaemon /system/vendor/bin/fidodaemon
     class late_start
