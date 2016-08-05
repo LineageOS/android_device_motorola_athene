@@ -29,6 +29,8 @@ import init.target.rc
 import init.mmi.usb.rc
 
 on early-init
+    # boot with max freq, will be reset in post_boot script
+    write /sys/devices/system/cpu/cpu0/cpufreq/scaling_min_freq 1209600
 
     mkdir /firmware 0771 system system
     mkdir /system 0777 root root
@@ -38,9 +40,6 @@ on early-init
     # Create modem FSG mount point
     mkdir /fsg 755 root root
 
-    # boot with max freq, will be reset in post_boot script
-    write /sys/devices/system/cpu/cpu0/cpufreq/scaling_min_freq 1209600
-
     # Mount point for Digital Personalization partition
     mkdir /customize 0500 root root
 
@@ -48,8 +47,6 @@ on early-init
     #lpass
     write /sys/bus/msm_subsys/devices/subsys1/restart_level "related"
     write /sys/bus/msm_subsys/devices/subsys1/recovery_policy "skip_restart"
-
-    mount debugfs debugfs /sys/kernel/debug
 
 on init
     start qfintverify
@@ -97,10 +94,8 @@ on early-boot
     write /sys/kernel/codec_type/boot ${persist.sys.external}
     write /sys/kernel/boot_adsp/boot 1
     chown root audio /sys/kernel/boot_adsp/boot
-    exec u:r:qti_init_shell:s0 -- /init.qcom.early_boot.sh
 
 on boot
-
     chown bluetooth bluetooth /sys/module/bluetooth_power/parameters/power
     chown bluetooth net_bt /sys/class/rfkill/rfkill0/type
     chown bluetooth net_bt /sys/class/rfkill/rfkill0/state
@@ -307,7 +302,17 @@ on fs
     wait /dev/block/bootdevice
     mount_all fstab.qcom
 
-    mkdir /persist/data 0700  system system
+    # Mount customize partion
+    wait /dev/block/bootdevice/by-name/customize
+    mount ext4 /dev/block/bootdevice/by-name/customize /customize ro discard nosuid nodev noatime nodiratime noexec defcontext=u:object_r:user_config_file:s0
+
+    wait /dev/block/bootdevice/by-name/oem
+    mount ext4 /dev/block/bootdevice/by-name/oem /oem ro nosuid nodev context=u:object_r:oemfs:s0
+
+    wait /dev/block/bootdevice/by-name/dsp
+    mount ext4 /dev/block/bootdevice/by-name/dsp /dsp nosuid nodev barrier=1
+
+	mkdir /persist/data 0700  system system
     restorecon_recursive   /persist
 
     restorecon_recursive   /dsp
@@ -546,29 +551,6 @@ on post-fs-data
     # Imager tuning data for camera subsystem
     mkdir /data/misc/imager 0770 camera camera
 
-on charger
-    wait /dev/block/bootdevice/by-name/system
-    mount ext4 /dev/block/bootdevice/by-name/system /system ro barrier=1
-    load_all_props
-    setprop persist.sys.usb.config mass_storage
-    start qcom-post-boot
-    setprop persist.sys.usb.config mass_storage
-
-    trigger early-fs
-    trigger fs
-    trigger post-fs
-    trigger post-fs-data
-    trigger moto-charger
-    class_stop main
-    class_stop late_start
-
-on moto-charger
-    setprop ro.board.platform msm8952
-    start  qcom-post-boot
-    start charge_only_mode
-    start batt_health
-    start thermal-com
-
 # Services Start here
 service qfintverify /sbin/qfintverify
     user root
@@ -615,7 +597,6 @@ on property:init.svc.wpa_supplicant=stopped
     stop dhcpcd
 
 on property:bluetooth.isEnabled=true
-    start btwlancoex
     write /sys/class/bluetooth/hci0/idle_timeout 7000
 
 on property:bluetooth.sap.status=running
@@ -633,25 +614,7 @@ on property:bluetooth.dun.status=stopped
 on property:ro.bluetooth.ftm_enabled=true
     start ftmd
 
-on property:bluetooth.startbtsnoop=true
-    start btsnoop
-
-on property:bluetooth.startbtsnoop=false
-    stop btsnoop
-
-service qcom-c_core-sh /system/bin/sh /init.qcom.class_core.sh
-    class core
-    user root
-    oneshot
-
-service qcom-c_main-sh /system/bin/sh /init.class_main.sh
-    class main
-    user radio
-    group radio
-    oneshot
-
 on property:vold.decrypt=trigger_restart_framework
-    start qcom-c_main-sh
     start config_bluetooth
     start wcnss-service
 
@@ -710,13 +673,6 @@ on property:bluetooth.hciattach=true
 on property:bluetooth.hciattach=false
     setprop bluetooth.status off
 
-service hciattach_ath3k /system/bin/sh /init.ath3k.bt.sh
-     class late_start
-     user bluetooth
-     group system bluetooth net_bt_admin misc
-     disabled
-     oneshot
-
 service bt-dun /system/bin/dun-server /dev/smd7 /dev/rfcomm0
     class late_start
     user bluetooth
@@ -761,13 +717,11 @@ service ipacm-diag /system/bin/ipacm-diag
     user system
     socket ipacm_log_file dgram 660 system net_admin
     group net_admin qcom_diag
-    disabled
 
 service ipacm /system/bin/ipacm
     class main
     user net_admin
     group net_admin inet
-    disabled
 
 service qti /system/vendor/bin/qti
     class main
@@ -786,13 +740,6 @@ on property:ro.data.large_tcp_window_size=true
 
 on property:sys.sysctl.tcp_adv_win_scale=*
     write /proc/sys/net/ipv4/tcp_adv_win_scale ${sys.sysctl.tcp_adv_win_scale}
-
-service btwlancoex /system/bin/sh /init.qcom.coex.sh
-    class late_start
-    user bluetooth
-    group bluetooth net_bt_admin inet net_admin net_raw
-    disabled
-    oneshot
 
 service p2p_supplicant /system/bin/wpa_supplicant \
     -ip2p0 -Dnl80211 -c/data/misc/wifi/p2p_supplicant.conf \
@@ -907,39 +854,17 @@ service loc_launcher /system/bin/loc_launcher
     class late_start
     group gps inet net_raw qcom_diag net_admin wifi
 
-service fm_dl /system/bin/sh /init.qcom.fm.sh
-    class late_start
-    user system
-    group system
-    disabled
-    oneshot
+on property:hw.fm.init=1
+    write /sys/module/radio_iris_transport/parameters/fmsmd_set 1
 
-on property:crypto.driver.load=1
-     insmod /system/lib/modules/qce.ko
-     insmod /system/lib/modules/qcedev.ko
-
-service qcom-sh /system/bin/sh /init.qcom.sh
-    class late_start
-    user root
-    oneshot
+on property:hw.fm.init=0
+    write /sys/module/radio_iris_transport/parameters/fmsmd_set 0
 
 service qcom-post-boot /system/bin/sh /init.qcom.post_boot.sh
     class late_start
     user root
     disabled
     oneshot
-
-service wifi-sdio-on /system/bin/sh /init.qcom.sdio.sh
-    class late_start
-    group wifi inet
-    disabled
-    oneshot
-
-service wifi-crda /system/bin/sh /init.crda.sh
-   class late_start
-   user root
-   disabled
-   oneshot
 
 service config-zram /system/bin/sh /init.qcom.zram.sh
    class late_start
@@ -949,7 +874,6 @@ service config-zram /system/bin/sh /init.qcom.zram.sh
 
 on property:sys.boot_completed=1
     start qcom-post-boot
-#    start qti-testscripts
     start config-zram
 
 service atfwd /system/bin/ATFWD-daemon
@@ -973,34 +897,7 @@ service ril-daemon2 /system/bin/rild -c 2
     socket rild2 stream 660 root radio
     socket rild-debug2 stream 660 radio system
     user root
-    disabled
-    group radio cache inet misc audio sdcard_r sdcard_rw qcom_diag diag log
-
-service ril-daemon3 /system/bin/rild -c 3
-    class main
-    socket rild3 stream 660 root radio
-    socket rild-debug3 stream 660 radio system
-    user root
-    disabled
-    group radio cache inet misc audio sdcard_r sdcard_rw qcom_diag diag log
-
-service usb_uicc_enable /system/bin/sh /init.qcom.uicc.sh
-    class late_start
-    user root
-    disabled
-    oneshot
-
-on property:sys.usb_uicc.enabled=1
-    start usb_uicc_enable
-
-on property:sys.usb_uicc.enabled=0
-    start usb_uicc_enable
-
-service hcidump /system/bin/sh /hcidump.sh
-    user bluetooth
-    group bluetooth system net_bt_admin net_admin
-    disabled
-    oneshot
+    group radio cache inet misc audio sdcard_rw sensors qcom_diag log net_raw diag
 
 service ssr_diag /system/bin/ssr_diag
     class late_start
@@ -1021,16 +918,6 @@ service diag_mdlog_stop /system/bin/diag_mdlog -k
     group system qcom_diag sdcard_rw sdcard_r media_rw
     disabled
     oneshot
-
-service bms-sh /system/bin/sh /init.qcom.bms.sh
-    class main
-    user root
-    oneshot
-
-service vm_bms /system/bin/vm_bms
-    user root
-    group root
-    disabled
 
 service msm_irqbalance /system/bin/msm_irqbalance -f /system/vendor/etc/msm_irqbalance.conf
     class core
@@ -1070,28 +957,12 @@ on property:sys.dbg.coresight.enable=1
 on property:sys.dbg.coresight.enable=0
     write /persist/coresight/enable 0
 
-    # Start Sensor daemon
+# Start Sensor daemon
 service motosh /system/bin/motosh boot
     class late_start
     user compass
     group compass misc input
     oneshot
-
-on property:persist.log.aplogd.enable=1
-    start aplogd
-
-on property:persist.log.aplogd.enable=0
-    stop aplogd
-
-service aplogd /system/bin/aplogd
-    class main
-    #user log
-    #group log system sdcard_rw sdcard_r media_rw mount
-    # The user and group definitions above are intentionally disabled and left
-    # only as documentation. It actually starts as root and immediately drops
-    # to log plus those groups after preserving CAP_SYS_ADMIN, which is required
-    # for kernel logging.
-    disabled
 
 service mmi-boot-sh /init.mmi.boot.sh
     seclabel u:r:mmi_boot:s0
@@ -1162,18 +1033,6 @@ service batt_health /system/bin/batt_health
 
 on property:sys.boot_completed=1
     start batt_health
-
-service apanic_copy /system/bin/apanic_copy.sh
-    class late_start
-    group log
-    oneshot
-    disabled
-
-service apanic_annotate /system/bin/apanic_save.sh build
-    class late_start
-    group log
-    oneshot
-    disabled
 
 service charge_only_mode /system/bin/charge_only_mode
     user root
@@ -1246,13 +1105,13 @@ service tcmd /system/bin/tcmd
     group mot_tcmd radio mot_pwric input system log camera graphics mot_accy sdcard_r sdcard_rw audio inet bluetooth wifi compass net_bt_admin mot_tombstone mot_tpapi mount net_raw net_admin media shell mot_usb nfc qcom_diag mot_dbvc cache media_rw mot_dtv
     socket local_tcmd stream 0660 mot_tcmd mot_tcmd
     socket batch_socket stream 0600 mot_tcmd mot_tcmd
-oneshot
+    oneshot
     disabled
 
 service tcmdhelp /system/bin/tcmdhelp
     class main
     socket tcmdhelp stream 0600 mot_tcmd mot_tcmd
-oneshot
+    oneshot
     disabled
 
 on property:tcmd.start_tcmdhelp=1
@@ -1261,51 +1120,8 @@ on property:tcmd.start_tcmdhelp=1
 on property:tcmd.start_ftmdaemon=1
     start ftmd
 
-# Backup/Restore Feature
-on property:mot.backup_restore.status="Finished"
-    start zygote
-
-service mot_backup /system/xbin/run_backup /system/etc/backup_targets.csv
-    disabled
-    user root
-    oneshot
-
-service mot_restore /system/xbin/run_restore /system/etc/backup_targets.csv
-    disabled
-    user root
-    oneshot
-
-onproperty:mot.backup_restore.action="run_backup"
-    setprop mot.backup_restore.status "Running"
-    stop zygote
-    start mot_backup
-
-on property:mot.backup_restore.action="run_restore"
-    setprop mot.backup_restore.status "Running"
-    stop zygote
-    start mot_restore
-
 on property:persist.mot.demo_mode_charging=1
     write /sys/class/power_supply/battery/device/force_demo_mode 1
-
-    # Let init manage the bug2go-native wakelock, so that we guarantee its
-    # lifecycle exactly matches that of bug2go-bugreport.  Since init sends
-    # SIGKILL when stopping a service, we could not guarantee the wakelock would
-    # get cleaned up if it were managed by bug2go-bugreport itself.
-on property:init.svc.bugreport=running
-    write /sys/power/wake_lock bug2go-native
-
-on property:init.svc.bugreport=stopping
-    write /sys/power/wake_unlock bug2go-native
-
-on property:init.svc.bugreport=stopped
-    write /sys/power/wake_unlock bug2go-native
-
-service bugreport /system/bin/bug2go-bugreport
-    class main
-    disabled
-    oneshot
-    keycodes 115 116 # VOLUME_UP + PWR
 
 service mbm_spy /system/bin/mbm_spy
     class late_start
@@ -1338,55 +1154,6 @@ service dropboxd /system/bin/dropboxd
     class late_start
     user diag
     group diag
-
-# translate to qcom property name in order to keep the consistent with
-# our legacy property
-on property:persist.sys.qc.sub.rdump.on=*
-    setprop persist.sys.ssr.enable_ramdumps ${persist.sys.qc.sub.rdump.on}
-
-# translate MMI property in order to keep the consistent with QCOM
-on property:ro.hw.dualsim=true
-    setprop persist.radio.multisim.config dsds
-
-on property:ro.hw.dualsim=false
-    setprop persist.radio.multisim.config ""
-
-on nonencrypted
-    setprop ro.kick.logcopy ${ro.bootreason}
-
-on property:vold.decrypt=trigger_restart_framework
-    setprop ro.kick.logcopy ${ro.bootreason}
-    start bootanim
-
-on property:ro.kick.logcopy=coldboot
-    start apanic_copy
-
-on property:ro.bootreason=watchdog
-    stop surfaceflinger
-    stop per_mgr
-    stop zygote
-    stop zygote_secondary
-    stop sensors
-    setprop debug.sf.nobootanimation 1
-    start apanic_annotate
-
-on property:ro.bootreason=pmic_watchdog
-    stop surfaceflinger
-    stop per_mgr
-    stop zygote
-    stop zygote_secondary
-    stop sensors
-    setprop debug.sf.nobootanimation 1
-    start apanic_annotate
-
-on property:ro.bootreason=kernel_panic
-    stop surfaceflinger
-    stop per_mgr
-    stop zygote
-    stop zygote_secondary
-    stop sensors
-    setprop debug.sf.nobootanimation 1
-    start apanic_annotate
 
 # DHCP service for Ethernet
 service dhcpcd_eth0 /system/bin/dhcpcd -G
@@ -1462,13 +1229,6 @@ service per_mgr /system/bin/pm-service
     user system
     group system net_raw
 
-service energy-awareness /system/bin/energy-awareness
-    class main
-    user root
-    group system
-    oneshot
-    disabled
-
 service ppd /system/vendor/bin/mm-pp-daemon
     class late_start
     disabled
@@ -1515,3 +1275,27 @@ service audiod /system/bin/audiod
     class late_start
     user system
     group system
+
+on charger
+    wait /dev/block/bootdevice/by-name/system
+    mount ext4 /dev/block/bootdevice/by-name/system /system ro barrier=1
+    load_all_props
+    setprop persist.sys.usb.config mass_storage
+    start qcom-post-boot
+    setprop persist.sys.usb.config mass_storage
+
+    trigger early-fs
+    trigger fs
+    trigger post-fs
+    trigger post-fs-data
+    trigger moto-charger
+    class_stop main
+    class_stop late_start
+
+on moto-charger
+    setprop ro.board.platform msm8952
+    start  qcom-post-boot
+    start charge_only_mode
+    start batt_health
+    start thermal-com
+
