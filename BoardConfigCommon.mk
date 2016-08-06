@@ -67,9 +67,6 @@ BOARD_HARDWARE_CLASS += \
     $(VENDOR_PATH)/cmhw \
     hardware/cyanogen/cmhw
 
-# Crypto
-TARGET_HW_DISK_ENCRYPTION := true
-
 # Display
 NUM_FRAMEBUFFER_SURFACE_BUFFERS := 3
 TARGET_USES_C2D_COMPOSITION := true
