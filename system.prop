@@ -97,3 +97,13 @@ ro.usb.bpt=0x2ec1
 ro.usb.bpt_adb=0x2ec5
 ro.usb.bpteth=0x2ec3
 ro.usb.bpteth_adb=0x2ec6
+
+# Audio
+persist.audio.dualmic.config=endfire
+persist.audio.fluence.voicecall=true
+persist.audio.fluence.voicecomm=true
+persist.audio.fluence.voicerec=false
+persist.audio.fluence.speaker=false
+
+# Display
+ro.sf.lcd_density=480
