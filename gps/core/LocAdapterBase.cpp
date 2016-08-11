@@ -69,11 +69,18 @@ void LocAdapterBase::
                    GpsLocationExtended &locationExtended,
                    void* locationExt,
                    enum loc_sess_status status,
-                   LocPosTechMask loc_technology_mask)
-DEFAULT_IMPL()
+                   LocPosTechMask loc_technology_mask) {
+    if (mLocAdapterProxyBase == NULL ||
+        !mLocAdapterProxyBase->reportPosition(location,
+                                              locationExtended,
+                                              status,
+                                              loc_technology_mask)) {
+        DEFAULT_IMPL()
+    }
+}
 
 void LocAdapterBase::
-    reportSv(GpsSvStatus &svStatus,
+    reportSv(GnssSvStatus &svStatus,
              GpsLocationExtended &locationExtended,
              void* svExt)
 DEFAULT_IMPL()
@@ -128,10 +135,6 @@ DEFAULT_IMPL(false)
 bool LocAdapterBase::
     requestNiNotify(GpsNiNotification &notify, const void* data)
 DEFAULT_IMPL(false)
-
-void LocAdapterBase::
-    shutdown()
-DEFAULT_IMPL()
 
 void LocAdapterBase::
     reportGpsMeasurementData(GpsData &gpsMeasurementData)
