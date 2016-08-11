@@ -938,13 +938,6 @@ service msm_irqbalance /system/bin/msm_irqbalance -f /system/vendor/etc/msm_irqb
     class core
     user root
     group root
-    disabled
-
-service msm_irqbal_lb /system/bin/msm_irqbalance -f /system/vendor/etc/msm_irqbalance_little_big.conf
-    class core
-    user root
-    group root
-    disabled
 
 service fidodaemon /system/vendor/bin/fidodaemon
     class late_start
