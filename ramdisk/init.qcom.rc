@@ -43,11 +43,6 @@ on early-init
     # Mount point for Digital Personalization partition
     mkdir /customize 0500 root root
 
-    # Subsytem Restart
-    #lpass
-    write /sys/bus/msm_subsys/devices/subsys1/restart_level "related"
-    write /sys/bus/msm_subsys/devices/subsys1/recovery_policy "skip_restart"
-
 on init
     start qfintverify
     # Set permissions for persist partition
@@ -311,6 +306,13 @@ on boot
     chown system drmrpc /sys/devices/soc.0/78b8000.i2c/i2c-4/4-0020/input/input0/secure_touch_enable
     chown system drmrpc /sys/devices/soc.0/78b8000.i2c/i2c-4/4-0020/input/input0/secure_touch
     write /proc/sys/kernel/sched_boost 1
+
+    # Force all SSR systems to 'related' so they attempt self-recovery without
+    # rebooting the device
+    write /sys/bus/msm_subsys/devices/subsys0/restart_level related
+    write /sys/bus/msm_subsys/devices/subsys1/restart_level related
+    write /sys/bus/msm_subsys/devices/subsys2/restart_level related
+
 
 on fs
     wait /dev/block/bootdevice
