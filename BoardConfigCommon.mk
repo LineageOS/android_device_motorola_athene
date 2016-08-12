@@ -100,6 +100,9 @@ TARGET_POWERHAL_VARIANT := qcom
 # Properties
 TARGET_SYSTEM_PROP += $(VENDOR_PATH)/system.prop
 
+# Crypto
+TARGET_HW_DISK_ENCRYPTION := true
+
 # Qualcomm support
 BOARD_USES_QCOM_HARDWARE := true
 
