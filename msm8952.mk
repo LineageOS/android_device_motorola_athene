@@ -200,7 +200,18 @@ PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/keylayout/ft5x06_ts.kl:system/usr/keylayout/ft5x06_ts.kl \
     $(LOCAL_PATH)/configs/keylayout/gpio-keys.kl:system/usr/keylayout/gpio-keys.kl \
     $(LOCAL_PATH)/configs/keylayout/synaptics_dsx.kl:system/usr/keylayout/synaptics_dsx.kl \
-    $(LOCAL_PATH)/configs/keylayout/synaptics_rmi4_i2c.kl:system/usr/keylayout/synaptics_rmi4_i2c.kl \
+    $(LOCAL_PATH)/configs/keylayout/synaptics_rmi4_i2c.kl:system/usr/keylayout/synaptics_rmi4_i2c.kl
+
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/configs/pp_calib_data_mipi_mot_cmd_boe_1080p_546_v0.xml:system/etc/pp_calib_data_mipi_mot_cmd_boe_1080p_546_v0.xml \
+    $(LOCAL_PATH)/configs/pp_calib_data_mipi_mot_cmd_lgd_1080p_546_v0.xml:system/etc/pp_calib_data_mipi_mot_cmd_lgd_1080p_546_v0.xml \
+    $(LOCAL_PATH)/configs/izat.conf:system/etc/izat.conf \
+    $(LOCAL_PATH)/configs/lowi.conf:system/etc/lowi.conf \
+	$(LOCAL_PATH)/configs/ap_gain.bin:system/etc/ap_gain.bin \
+	$(LOCAL_PATH)/configs/ap_gain_mmul.bin:system/etc/ap_gain_mmul.bin \
+	$(LOCAL_PATH)/configs/audio_ext_spkr.conf:system/etc/audio_ext_spkr.conf \
+	$(LOCAL_PATH)/configs/sound_trigger_mixer_paths.xml:system/etc/sound_trigger_mixer_paths.xml \
+	$(LOCAL_PATH)/configs/sound_trigger_platform_info.xml:system/etc/sound_trigger_platform_info.xml \
 	
 PRODUCT_BUILD_PROP_OVERRIDES += BUILD_UTC_DATE=0
 
