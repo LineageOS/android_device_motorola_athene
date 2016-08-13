@@ -214,6 +214,7 @@ vendor/lib/libchromatix_imx214_altm_ihdr_liveshot.so
 vendor/lib/libchromatix_imx214_altm_ihdr_video.so
 vendor/lib/libchromatix_imx214_altm_ihdr_video_ak7345.so
 vendor/lib/libchromatix_imx214_common.so
+vendor/lib/libchromatix_imx214_common_new_ircf.so
 vendor/lib/libchromatix_imx214_cpp_hfr_120.so
 vendor/lib/libchromatix_imx214_cpp_hfr_60.so
 vendor/lib/libchromatix_imx214_cpp_liveshot.so
