@@ -613,7 +613,6 @@ vendor/lib/libdrmtime.so
 vendor/lib/liboemcrypto.so
 vendor/lib/librpmb.so
 vendor/lib/libssd.so
-vendor/lib/libtzdrmgenprov.so
 vendor/lib/libwvdrm_L1.so
 vendor/lib/mediadrm/libdrmclearkeyplugin.so
 vendor/lib/mediadrm/libwvdrmengine.so
