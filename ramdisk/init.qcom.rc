@@ -1214,6 +1214,10 @@ service fingerprintd /system/bin/fingerprintd
     class late_start
     user system
     group fingerp
+    disabled
+
+on property:ro.hw.fps=true
+    start fingerprintd
 
 service setup_shutdown /system/bin/setup_shutdown.sh
    class main
@@ -1317,4 +1321,3 @@ on moto-charger
     start charge_only_mode
     start batt_health
     start thermal-com
-

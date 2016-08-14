@@ -95,6 +95,7 @@ void vendor_load_properties()
         property_set("ro.product.device", "athene");
         property_set("ro.build.description", "athene-user 6.0.1 MPJ24.139-23.4 4 release-keys");
         property_set("ro.build.fingerprint", "motorola/athene/athene:6.0.1/MPJ24.139-23.4/4:user/release-keys");
+        property_set("ro.hw.fps", "false");
     } else if (ISMATCH(sku, "XT1625")) {
         /* XT1625 */
         target_2gb();
@@ -102,6 +103,7 @@ void vendor_load_properties()
         property_set("ro.product.device", "athene");
         property_set("ro.build.description", "athene-user 6.0.1 MPJ24.139-48 48 release-keys");
         property_set("ro.build.fingerprint", "motorola/athene/athene:6.0.1/MPJ24.139-48/48:user/release-keys");
+        property_set("ro.hw.fps", "false");
     } else if (ISMATCH(sku, "XT1642")) {
         /* XT1642 */
         target_2gb();
@@ -109,6 +111,7 @@ void vendor_load_properties()
         property_set("ro.product.device", "athene_f");
         property_set("ro.build.description", "athene_f-user 6.0.1 MPJ24.139-23.4 4 release-keys");
         property_set("ro.build.fingerprint", "motorola/athene_f/athene_f:6.0.1/MPJ24.139-23.4/4:user/release-keys");
+        property_set("ro.hw.fps", "true");
     } else if (ISMATCH(sku, "XT1643")) {
         /* XT1643 */
         target_3gb();
@@ -116,6 +119,7 @@ void vendor_load_properties()
         property_set("ro.product.device", "athene_f");
         property_set("ro.build.description", "athene_f-user 6.0.1 MPJ24.139-23.1 1 release-keys");
         property_set("ro.build.fingerprint", "motorola/athene_f/athene_f:6.0.1/MPJ24.139-23.1/1:user/release-keys");
+        property_set("ro.hw.fps", "true");
 }
 
     property_get("ro.product.device", device);
