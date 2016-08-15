@@ -34,37 +34,86 @@
 
 #define ISMATCH(a,b)    (!strncmp(a,b,PROP_VALUE_MAX))
 
-/* Target-Specific Dalvik Heap Configuration */
-void target_2gb() {
-        property_set("dalvik.vm.heapstartsize", "8m");
+/* Target-Specific Dalvik Heap & HWUI Configuration */
+void target_ram() {
+    char ram[PROP_VALUE_MAX];
+    property_get("ro.boot.ram", ram);
+
+    if (ISMATCH(ram, "2GB")) {
+        property_set("dalvik.vm.heapstartsize", "16m");
         property_set("dalvik.vm.heapgrowthlimit", "192m");
+        property_set("dalvik.vm.heapsize", "512m");
+        property_set("dalvik.vm.heaptargetutilization", "0.75");
+        property_set("dalvik.vm.heapminfree", "2m");
+        property_set("dalvik.vm.heapmaxfree", "8m");
+
+        property_set("ro.hwui.texture_cache_size", "72");
+        property_set("ro.hwui.layer_cache_size", "48");
+        property_set("ro.hwui.r_buffer_cache_size", "8");
+        property_set("ro.hwui.path_cache_size", "32");
+        property_set("ro.hwui.gradient_cache_size", "1");
+        property_set("ro.hwui.drop_shadow_cache_size", "6");
+        property_set("ro.hwui.texture_cache_flushrate", "0.4");
+        property_set("ro.hwui.text_small_cache_width", "1024");
+        property_set("ro.hwui.text_small_cache_height", "1024");
+        property_set("ro.hwui.text_large_cache_width", "2048");
+        property_set("ro.hwui.text_large_cache_height", "1024");
+    } else if (ISMATCH(ram, "3GB")) {
+        property_set("dalvik.vm.heapstartsize", "8m");
+        property_set("dalvik.vm.heapgrowthlimit", "265m");
         property_set("dalvik.vm.heapsize", "512m");
         property_set("dalvik.vm.heaptargetutilization", "0.75");
         property_set("dalvik.vm.heapminfree", "512k");
         property_set("dalvik.vm.heapmaxfree", "8m");
-}
 
-void target_3gb() {
+        property_set("ro.hwui.texture_cache_size", "72");
+        property_set("ro.hwui.layer_cache_size", "48");
+        property_set("ro.hwui.r_buffer_cache_size", "8");
+        property_set("ro.hwui.path_cache_size", "32");
+        property_set("ro.hwui.gradient_cache_size", "1");
+        property_set("ro.hwui.drop_shadow_cache_size", "6");
+        property_set("ro.hwui.texture_cache_flushrate", "0.4");
+        property_set("ro.hwui.text_small_cache_width", "1024");
+        property_set("ro.hwui.text_small_cache_height", "1024");
+        property_set("ro.hwui.text_large_cache_width", "2048");
+        property_set("ro.hwui.text_large_cache_height", "1024");
+    } else if (ISMATCH(ram, "4GB")) {
         property_set("dalvik.vm.heapstartsize", "8m");
-        property_set("dalvik.vm.heapgrowthlimit", "96m");
-        property_set("dalvik.vm.heapsize", "256m");
-        property_set("dalvik.vm.heaptargetutilization", "0.75");
-        property_set("dalvik.vm.heapminfree", "2m");
-        property_set("dalvik.vm.heapmaxfree", "8m");
+        property_set("dalvik.vm.heapgrowthlimit", "256m");
+        property_set("dalvik.vm.heapsize", "512m");
+        property_set("dalvik.vm.heaptargetutilization", "0.25");
+        property_set("dalvik.vm.heapminfree", "4m");
+        property_set("dalvik.vm.heapmaxfree", "16m");
+
+        property_set("ro.hwui.texture_cache_size", "72");
+        property_set("ro.hwui.layer_cache_size", "48");
+        property_set("ro.hwui.r_buffer_cache_size", "8");
+        property_set("ro.hwui.path_cache_size", "32");
+        property_set("ro.hwui.gradient_cache_size", "1");
+        property_set("ro.hwui.drop_shadow_cache_size", "6");
+        property_set("ro.hwui.texture_cache_flushrate", "0.4");
+        property_set("ro.hwui.text_small_cache_width", "1024");
+        property_set("ro.hwui.text_small_cache_height", "1024");
+        property_set("ro.hwui.text_large_cache_width", "2048");
+        property_set("ro.hwui.text_large_cache_height", "1024");
+    }
 }
 
-void msim() {
+void num_sims() {
+    char dualsim[PROP_VALUE_MAX];
+    property_get("ro.boot.dualsim", dualsim);
+
+    if (ISMATCH(dualsim, "true")) {
         property_set("persist.radio.multisim.config", "dsds");
-}
-
-void ssim() {
-        property_set("persist.radio.multisim.config", "");
+	} else {
+        property_set("persist.radio.multisim.config", "");    
+	}
 }
 
 void vendor_load_properties()
 {
     char platform[PROP_VALUE_MAX];
-    char radio[PROP_VALUE_MAX];
+    char device_boot[PROP_VALUE_MAX];
     char sku[PROP_VALUE_MAX];
     char carrier[PROP_VALUE_MAX];
     char device[PROP_VALUE_MAX];
@@ -75,7 +124,7 @@ void vendor_load_properties()
     if (!rc || !ISMATCH(platform, ANDROID_TARGET))
     return;
 
-    property_get("ro.boot.radio", radio);
+    property_get("ro.boot.device", device_boot);
     property_get("ro.boot.hardware.sku", sku);
     property_get("ro.boot.carrier", carrier);
 
@@ -87,40 +136,22 @@ void vendor_load_properties()
     property_set("persist.radio.mot_ecc_enabled", "1");
     property_set("persist.radio.force_get_pref", "1");
     property_set("ro.telephony.default_network", "10,0");
+    target_ram();
+    num_sims();
 
-    if (ISMATCH(sku, "XT1622")) {
-        /* XT1622 */
-        target_2gb();
-        msim();
+    if (ISMATCH(device_boot, "athene_13mp")) {
+        /* Moto G4 (XT162x) */
         property_set("ro.product.device", "athene");
         property_set("ro.build.description", "athene-user 6.0.1 MPJ24.139-23.4 4 release-keys");
         property_set("ro.build.fingerprint", "motorola/athene/athene:6.0.1/MPJ24.139-23.4/4:user/release-keys");
         property_set("ro.hw.fps", "false");
-    } else if (ISMATCH(sku, "XT1625")) {
-        /* XT1625 */
-        target_2gb();
-        ssim();
-        property_set("ro.product.device", "athene");
-        property_set("ro.build.description", "athene-user 6.0.1 MPJ24.139-48 48 release-keys");
-        property_set("ro.build.fingerprint", "motorola/athene/athene:6.0.1/MPJ24.139-48/48:user/release-keys");
-        property_set("ro.hw.fps", "false");
-    } else if (ISMATCH(sku, "XT1642")) {
-        /* XT1642 */
-        target_2gb();
-        msim();
+    } else {
+        /* Moto G4 Plus (XT164x) */
         property_set("ro.product.device", "athene_f");
         property_set("ro.build.description", "athene_f-user 6.0.1 MPJ24.139-23.4 4 release-keys");
         property_set("ro.build.fingerprint", "motorola/athene_f/athene_f:6.0.1/MPJ24.139-23.4/4:user/release-keys");
         property_set("ro.hw.fps", "true");
-    } else if (ISMATCH(sku, "XT1643")) {
-        /* XT1643 */
-        target_3gb();
-        msim();
-        property_set("ro.product.device", "athene_f");
-        property_set("ro.build.description", "athene_f-user 6.0.1 MPJ24.139-23.1 1 release-keys");
-        property_set("ro.build.fingerprint", "motorola/athene_f/athene_f:6.0.1/MPJ24.139-23.1/1:user/release-keys");
-        property_set("ro.hw.fps", "true");
-}
+    }
 
     property_get("ro.product.device", device);
     strlcpy(devicename, device, sizeof(devicename));
