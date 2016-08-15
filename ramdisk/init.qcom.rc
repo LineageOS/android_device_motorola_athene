@@ -25,7 +25,7 @@
 # ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 #
 
-import init.target.rc
+import init.qcom.power.rc
 import init.mmi.usb.rc
 
 on early-init
@@ -370,10 +370,6 @@ on post-fs
     chown mot_tcmd mot_tcmd /persist/bt/bt_bdaddr
     chmod 0664 /persist/bt/bt_bdaddr
     chmod 0600 /persist/whisper/whisper_only/vector0.bin
-
-    swapon_all fstab.qcom
-    write /proc/sys/vm/page-cluster 0
-    write /proc/sys/vm/swappiness 100
 
 on post-fs-data
 
@@ -877,22 +873,6 @@ on property:hw.fm.init=1
 on property:hw.fm.init=0
     write /sys/module/radio_iris_transport/parameters/fmsmd_set 0
 
-service qcom-post-boot /system/bin/sh /init.qcom.post_boot.sh
-    class late_start
-    user root
-    disabled
-    oneshot
-
-service config-zram /system/bin/sh /init.qcom.zram.sh
-   class late_start
-   user root
-   disabled
-   oneshot
-
-on property:sys.boot_completed=1
-    start qcom-post-boot
-    start config-zram
-
 service atfwd /system/bin/ATFWD-daemon
     class late_start
     user system
@@ -1230,11 +1210,6 @@ service qcamerasvr /system/bin/mm-qcamera-daemon
    user camera
    group camera system inet input graphics
 
-#enable zram
-on property:ro.config.zram=true
-    swapon_all fstab.qcom
-    write /proc/sys/vm/swappiness 100
-
 # Allow usb charging to be disabled peristently
 on property:persist.usb.chgdisabled=1
     write /sys/class/power_supply/battery/charging_enabled 0
@@ -1304,7 +1279,6 @@ on charger
     mount ext4 /dev/block/bootdevice/by-name/system /system ro barrier=1
     load_all_props
     setprop persist.sys.usb.config mass_storage
-    start qcom-post-boot
     setprop persist.sys.usb.config mass_storage
 
     trigger early-fs
@@ -1317,7 +1291,6 @@ on charger
 
 on moto-charger
     setprop ro.board.platform msm8952
-    start  qcom-post-boot
     start charge_only_mode
     start batt_health
     start thermal-com
