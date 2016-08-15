@@ -63,12 +63,21 @@ $(call inherit-product-if-exists, frameworks/native/build/phone-xxhdpi-2048-hwui
 
 # Audio
 PRODUCT_PACKAGES += \
+    audiod \
+    audio.a2dp.default \
+    audio.r_submix.default \
+    audio.usb.default \
     libaudio-resampler \
     libqcomvisualizer \
     libqcomvoiceprocessing \
     libqcompostprocbundle \
     tinymix
 
+# Audio
+PRODUCT_PACKAGES += \
+    audio.primary.msm8952
+	
+	
 PRODUCT_COPY_FILES +=  \
     $(LOCAL_PATH)/audio/audio_effects.conf:system/vendor/etc/audio_effects.conf \
     $(LOCAL_PATH)/audio/audio_platform_info.xml:system/etc/audio_platform_info.xml \
