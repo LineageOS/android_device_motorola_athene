@@ -361,3 +361,4 @@ dalvik.vm.isa.arm.variant=cortex-a53
 dalvik.vm.isa.arm.features=default
 persist.gps.qc_nlp_in_use=0
 ro.gps.agps_provider=1
+ro.sf.lcd_density=480
