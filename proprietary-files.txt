@@ -23,7 +23,6 @@ lib/soundfx/libmmieffectswrapper.so
 lib/soundfx/libqcomvisualizer.so
 lib/soundfx/libqcomvoiceprocessing.so
 lib/soundfx/libreverbwrapper.so
-lib/soundfx/libspeakerbundle.so
 lib/soundfx/libvisualizer.so
 vendor/lib/libacdb-fts.so
 vendor/lib/libacdbloader.so
