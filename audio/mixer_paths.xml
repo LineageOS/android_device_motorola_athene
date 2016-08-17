@@ -409,10 +409,6 @@
 		<ctl name="AMP Gain" value="15dB" />
 	</path>
 
-	<path name="speaker-safe">
-		<path name="speaker" />
-	</path>
-
 	<path name="speaker-mic">
 		<path name="adc1" />
 		<ctl name="ADC1 Volume" value="8" />
@@ -507,17 +503,8 @@
 		<path name="speaker" />
 	</path>
 
-	<path name="speaker-safe-and-headphones">
-		<path name="headphones" />
-		<path name="speaker-safe" />
-	</path>
-
 	<path name="speaker-and-line">
 		<path name="speaker-and-headphones" />
-	</path>
-
-	<path name="speaker-safe-and-line">
-		<path name="speaker-safe-and-headphones" />
 	</path>
 
 	<path name="afe-proxy">
