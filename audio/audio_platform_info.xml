@@ -1,67 +1,76 @@
 <?xml version="1.0" encoding="ISO-8859-1"?>
-<!-- Copyright (c) 2014, The Linux Foundation. All rights reserved.         -->
-<!--                                                                        -->
-<!-- Redistribution and use in source and binary forms, with or without     -->
-<!-- modification, are permitted provided that the following conditions are -->
-<!-- met:                                                                   -->
-<!--     * Redistributions of source code must retain the above copyright   -->
-<!--       notice, this list of conditions and the following disclaimer.    -->
-<!--     * Redistributions in binary form must reproduce the above          -->
-<!--       copyright notice, this list of conditions and the following      -->
-<!--       disclaimer in the documentation and/or other materials provided  -->
-<!--       with the distribution.                                           -->
-<!--     * Neither the name of The Linux Foundation nor the names of its    -->
-<!--       contributors may be used to endorse or promote products derived  -->
-<!--       from this software without specific prior written permission.    -->
-<!--                                                                        -->
-<!-- THIS SOFTWARE IS PROVIDED "AS IS" AND ANY EXPRESS OR IMPLIED           -->
-<!-- WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF   -->
-<!-- MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NON-INFRINGEMENT -->
-<!-- ARE DISCLAIMED.  IN NO EVENT SHALL THE COPYRIGHT OWNER OR CONTRIBUTORS -->
-<!-- BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR -->
-<!-- CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF   -->
-<!-- SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR        -->
-<!-- BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY,  -->
-<!-- OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN -->
-<!-- IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.                          -->
+
 <audio_platform_info>
-    <acdb_ids>
-	<!-- Output devices -->
+
+<acdb_ids>
+<!-- Output devices -->
+	<device name="SND_DEVICE_OUT_VOICE_HANDSET" acdb_id="7"/>
+	<device name="SND_DEVICE_OUT_VOICE_HANDSET_TMUS" acdb_id="7"/>
 	<device name="SND_DEVICE_OUT_HEADPHONES" acdb_id="9"/>
 	<device name="SND_DEVICE_OUT_SPEAKER_AND_HEADPHONES" acdb_id="9"/>
+	<device name="SND_DEVICE_OUT_SPEAKER_SAFE_AND_HEADPHONES" acdb_id="9"/>
+	<device name="SND_DEVICE_OUT_SPEAKER" acdb_id="14"/>
 	<device name="SND_DEVICE_OUT_SPEAKER_PROTECTED" acdb_id="14"/>
 	<device name="SND_DEVICE_OUT_SPEAKER_REVERSE" acdb_id="14"/>
+	<device name="SND_DEVICE_OUT_SPEAKER_SAFE" acdb_id="14"/>
 	<device name="SND_DEVICE_OUT_VOICE_SPEAKER_PROTECTED" acdb_id="15"/>
 	<device name="SND_DEVICE_OUT_SPEAKER_AND_HDMI" acdb_id="18"/>
 	<device name="SND_DEVICE_OUT_VOICE_LINE" acdb_id="78"/>
+	<device name="SND_DEVICE_OUT_VOLTE_NB_ANC_HANDSET" acdb_id="200"/>
+	<device name="SND_DEVICE_OUT_VOLTE_NB_HANDSET_TMUS" acdb_id="200"/>
 
-	<!-- Input devices -->
+<!-- Input devices -->
 	<device name="SND_DEVICE_IN_CAPTURE_VI_FEEDBACK" acdb_id="0"/>
 	<device name="SND_DEVICE_IN_HANDSET_MIC_AEC" acdb_id="4"/>
 	<device name="SND_DEVICE_IN_HANDSET_MIC_AEC_NS" acdb_id="4"/>
 	<device name="SND_DEVICE_IN_HANDSET_MIC_NS" acdb_id="4"/>
 	<device name="SND_DEVICE_IN_VOICE_TTY_VCO_HANDSET_MIC" acdb_id="4"/>
 	<device name="SND_DEVICE_IN_VOICE_REC_DMIC_FLUENCE" acdb_id="35"/>
+	<device name="SND_DEVICE_IN_VOICE_DMIC_TMUS" acdb_id="41"/>
 	<device name="SND_DEVICE_IN_SPEAKER_DMIC_AEC" acdb_id="43"/>
 	<device name="SND_DEVICE_IN_SPEAKER_DMIC_AEC_NS" acdb_id="43"/>
 	<device name="SND_DEVICE_IN_SPEAKER_DMIC_NS" acdb_id="43"/>
+	<device name="SND_DEVICE_IN_HEADSET_MIC_AEC" acdb_id="47"/>
 	<device name="SND_DEVICE_IN_VOICE_REC_MIC_NS" acdb_id="62"/>
 	<device name="SND_DEVICE_IN_HANDSET_DMIC_AEC" acdb_id="111"/>
 	<device name="SND_DEVICE_IN_HANDSET_DMIC_NS" acdb_id="111"/>
 	<device name="SND_DEVICE_IN_SPEAKER_MIC_AEC" acdb_id="114"/>
 	<device name="SND_DEVICE_IN_SPEAKER_MIC_NS" acdb_id="114"/>
-    </acdb_ids>
+	</acdb_ids>
 
-    <backend_names>
-        <device name="SND_DEVICE_OUT_SPEAKER" backend="speaker" interface="QUIN_MI2S_RX" />
-        <device name="SND_DEVICE_OUT_VOICE_SPEAKER" backend="speaker" interface="QUIN_MI2S_RX" />
-        <device name="SND_DEVICE_OUT_SPEAKER_AND_HEADPHONES" backend="speaker-and-headphones" interface="QUIN_MI2S_RX-and-PRI_MI2S_RX" />
-        <device name="SND_DEVICE_OUT_SPEAKER_AND_LINE" backend="speaker-and-headphones" interface="QUIN_MI2S_RX-and-PRI_MI2S_RX" />
-    </backend_names>
+<backend_names>
+<device name="SND_DEVICE_OUT_HANDSET" backend="cirrus"/>
+<device name="SND_DEVICE_OUT_VOICE_HANDSET" backend="cirrus"/>
+<device name="SND_DEVICE_OUT_VOLTE_NB_HANDSET" backend="cirrus"/>
+<device name="SND_DEVICE_OUT_VOICE_HAC_HANDSET" backend="cirrus"/>
+<device name="SND_DEVICE_OUT_VOLTE_NB_HAC_HANDSET" backend="cirrus"/>
+<device name="SND_DEVICE_OUT_VOICE_HANDSET_TMUS" backend="cirrus"/>
+<device name="SND_DEVICE_OUT_VOLTE_NB_HANDSET_TMUS" backend="cirrus"/>
+<device name="SND_DEVICE_OUT_VOICE_TTY_HCO_HANDSET" backend="cirrus"/>
+<device name="SND_DEVICE_OUT_VOICE_ANC_HANDSET" backend="cirrus"/>
+<device name="SND_DEVICE_OUT_VOLTE_NB_ANC_HANDSET" backend="cirrus"/>
+<device name="SND_DEVICE_OUT_SPEAKER" backend="speaker"/>
+<device name="SND_DEVICE_OUT_VOICE_SPEAKER" backend="speaker"/>
+<device name="SND_DEVICE_OUT_VOLTE_NB_SPEAKER" backend="speaker"/>
+<device name="SND_DEVICE_OUT_SPEAKER_SAFE" backend="cirrus"/>
+<device name="SND_DEVICE_OUT_SPEAKER_REVERSE" backend="cirrus"/>
+<device name="SND_DEVICE_OUT_SPEAKER_AND_HEADPHONES" backend="cirrus-and-headphones"/>
+<device name="SND_DEVICE_OUT_SPEAKER_AND_LINE" backend="cirrus-and-headphones"/>
+<device name="SND_DEVICE_OUT_SPEAKER_SAFE_AND_HEADPHONES" backend="cirrus-and-headphones"/>
+<device name="SND_DEVICE_OUT_SPEAKER_SAFE_AND_LINE" backend="cirrus-and-headphones"/>
+</backend_names>
 
-    <device_names>
-        <device name="SND_DEVICE_IN_CAMCORDER_STEREO_DMIC" alias="camcorder-mic-bf" />
-        <device name="SND_DEVICE_IN_VOICE_REC_DMIC_STEREO" alias="dmic-endfire" />
-    </device_names>
+<pcm_ids>
+<usecase name="USECASE_AUDIO_PLAYBACK_LOW_LATENCY" type="out" id="12"/>
+<usecase name="USECASE_AUDIO_RECORD_LOW_LATENCY" type="in" id="12"/>
+<usecase name="USECASE_VOICE_CALL" type="in" id="34"/>
+<usecase name="USECASE_VOICE_CALL" type="out" id="34"/>
+<usecase name="USECASE_VOICE2_CALL" type="in" id="35"/>
+<usecase name="USECASE_VOICE2_CALL" type="out" id="35"/>
+<usecase name="USECASE_VOLTE_CALL" type="out" id="15"/>
+<usecase name="USECASE_VOWLAN_CALL" type="out" id="16"/>
+<usecase name="USECASE_AUDIO_DSM_FEEDBACK" type="in" id="54"/>
+</pcm_ids>
+
 </audio_platform_info>
 
