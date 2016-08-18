@@ -74,13 +74,13 @@ persist.esdfs_sdcard=true
 # Audio
 af.fast_track_multiplier=1
 audio_hal.period_size=192
-audio.offload.buffer.size.kb=32
-audio.offload.disable=0
+audio.offload.buffer.size.kb=64
+audio.offload.disable=false
 audio.offload.gapless.enabled=false
-audio.offload.multiple.enabled=true
-audio.offload.pcm.16bit.enable=true
-audio.offload.pcm.24bit.enable=true
-audio.offload.video=true
+audio.offload.multiple.enabled=false
+audio.offload.pcm.16bit.enable=false
+audio.offload.pcm.24bit.enable=false
+audio.offload.video=false
 persist.audio.calfile0=/etc/acdbdata/Bluetooth_cal.acdb
 persist.audio.calfile1=/etc/acdbdata/General_cal.acdb
 persist.audio.calfile2=/etc/acdbdata/Global_cal.acdb
@@ -90,14 +90,26 @@ persist.audio.calfile5=/etc/acdbdata/Headset_cal.acdb
 persist.audio.calfile6=/etc/acdbdata/Speaker_cal.acdb
 persist.audio.dualmic.config=endfire
 persist.audio.fluence.speaker=true
-persist.audio.fluence.voicecall=false
+persist.audio.fluence.voicecall=true
 persist.audio.fluence.voicecomm=true
 persist.audio.fluence.voicerec=false
 ro.config.vc_call_vol_steps=8
 ro.qc.sdk.audio.ssr=false
-ro.qc.sdk.audio.fluencetype=fluence
+ro.qc.sdk.audio.fluencetype=none
 ro.audio.monitorRotation=true
 ro.audio.flinger_standbytime_ms=300
+tunnel.audio.encode=false
+audio.dolby.ds2.enabled=true
+audio.playback.mch.downsample=true
+voice.playback.conc.disabled=true
+voice.record.conc.disabled=false
+voice.voip.conc.disabled=true
+voice.conc.fallbackpath=deep-buffer
+audio.offload.min.duration.secs=30
+audio.offload.track.enable=true
+audio.deep_buffer.media=true
+audio.pp.asphere.enabled=false
+audio.safx.pbe.enabled=true
 
 # Media
 mm.enable.smoothstreaming=false
@@ -129,7 +141,6 @@ ro.pip.gated=0
 
 # FM
 ro.fm.transmitter=false
-audio.offload.gapless.enabled=false
 
 # Coresight
 persist.debug.coresight.config=stm-events
