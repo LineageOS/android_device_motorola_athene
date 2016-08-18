@@ -620,6 +620,8 @@ vendor/lib/hw/gatekeeper.msm8952.so
 etc/flp.conf
 etc/gps.conf
 etc/sap.conf
+lib/libloc_api_v02.so
+lib/libloc_ds_api.so
 vendor/lib/hw/flp.default.so
 vendor/lib/libflp.so
 vendor/lib/libgeofence.so
@@ -881,10 +883,6 @@ vendor/lib/libHevcSwEncoder.so
 vendor/lib/libimscamera_jni.so
 vendor/lib/libimsmedia_jni.so
 vendor/lib/libjni_dualcamera.so
-vendor/lib/libloc_ext.so
-vendor/lib/libloc_xtra.so
-vendor/lib/liblocationservice.so
-vendor/lib/liblocationservice_glue.so
 vendor/lib/liblowi_client.so
 vendor/lib/liblowi_wifihal.so
 vendor/lib/liblowi_wifihal_nl.so
