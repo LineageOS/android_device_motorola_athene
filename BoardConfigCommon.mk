@@ -126,6 +126,10 @@ BOARD_USES_QCOM_HARDWARE := true
 # Keymaster
 TARGET_PROVIDES_KEYMASTER := true
 
+# CNE and DPM
+TARGET_LDPRELOAD := libNimsWrap.so
+BOARD_USES_QCNE := true
+
 # Recovery
 BOARD_HAS_NO_SELECT_BUTTON := true
 TARGET_RECOVERY_FSTAB := $(VENDOR_PATH)/ramdisk/fstab.qcom
