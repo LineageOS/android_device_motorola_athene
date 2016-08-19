@@ -827,7 +827,6 @@ bin/emmc_ffu
 bin/emmc_ffu.sh
 bin/emmc_ffu_15.sh
 bin/emmc_ffu_90.sh
-bin/esdpll
 bin/ftmdaemon
 bin/ftmipcd
 bin/gpsone_daemon
