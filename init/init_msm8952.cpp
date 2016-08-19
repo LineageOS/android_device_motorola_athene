@@ -107,7 +107,7 @@ void num_sims() {
         property_set("persist.radio.multisim.config", "dsds");
 	} else {
         property_set("persist.radio.multisim.config", "");   
-		property_set("persist.radio.is_wps_enabled", "true")
+        property_set("persist.radio.is_wps_enabled", "true");
 	}
 }
 
