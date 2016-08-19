@@ -178,10 +178,15 @@ PRODUCT_COPY_FILES += \
 # OMX
 PRODUCT_PACKAGES += \
     libc2dcolorconvert \
+    libOmxAacDec \
     libOmxAacEnc \
     libOmxAmrEnc \
     libOmxCore \
+    libOmxEvrcDec \
     libOmxEvrcEnc \
+    libOmxFlacDec \
+    libOmxFlacEnc \
+    libOmxQcelp13Dev \
     libOmxQcelp13Enc \
     libOmxSwVencMpeg4 \
     libOmxSwVencHevc \
