@@ -146,7 +146,11 @@ PRODUCT_PACKAGES += \
 # GPS
 PRODUCT_PACKAGES += \
      gps.msm8952
-	
+
+# OEM
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/configs/vhw.xml:system/etc/vhw.xml
+	 
 # Media
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/media_codecs.xml:system/etc/media_codecs.xml \
