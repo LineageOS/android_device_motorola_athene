@@ -48,7 +48,7 @@ ALL_DEFAULT_INSTALLED_MODULES += $(CMN_SYMLINKS)
 FIRMWARE_KEYMASTER_IMAGES := \
     keymaster.b00 keymaster.b01 keymaster.b02 keymaster.b03 keymaster.mdt
 
-FIRMWARE_KEYMASTER_SYMLINKS := $(addprefix $(TARGET_OUT_ETC)/firmware/,$(notdir $(FIRMWARE_KEYMASTER_IMAGES)))
+FIRMWARE_KEYMASTER_SYMLINKS := $(addprefix $(TARGET_OUT_VENDOR)/firmware/keymaster/,$(notdir $(FIRMWARE_KEYMASTER_IMAGES)))
 $(FIRMWARE_KEYMASTER_SYMLINKS): $(LOCAL_INSTALLED_MODULE)
 	@echo "Keymaster Firmware link: $@"
 	@mkdir -p $(dir $@)
