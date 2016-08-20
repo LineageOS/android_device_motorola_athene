@@ -83,16 +83,16 @@ void vendor_load_properties()
 		property_set("ro.product.model", "Moto G4 Plus");
     }
 	
-	if ((ISMATCH(sku, "XT1625")) || (ISMATCH(sku, "XT1644"))) {
+	if (ISMATCH(sku, "XT1625") || ISMATCH(sku, "XT1644")) {
 		property_set("persist.radio.is_wps_enabled", "true");
 		property_set("ro.radio.imei.sv", "4");
 	}
 	
-	if (ISMATCH(sku, "XT1621")) {
+	if (ISMATCH(sku, "XT1621") || ISMATCH(sku, "XT1642") || ISMATCH(sku, "XT1643")) {
 		property_set("ro.radio.imei.sv", "3");
 	}
 	
-	if (ISMATCH(sku, "XT1626")) {
+	if (ISMATCH(sku, "XT1626") || ISMATCH(sku, "XT1626")) {
 		property_set("ro.radio.imei.sv", "2");
 		property_set("persist.radio.is_wps_enabled", "true");
 		property_set("persist.radio.pb.max.match", "10");
