@@ -73,14 +73,14 @@ void vendor_load_properties()
         property_set("ro.build.description", "athene-user 6.0.1 MPJ24.139-23.4 4 release-keys");
         property_set("ro.build.fingerprint", "motorola/athene/athene:6.0.1/MPJ24.139-23.4/4:user/release-keys");
         property_set("ro.hw.fps", "false");
-		property_set("ro.product.model", "Moto G4");	
+        property_set("ro.product.model", "Moto G4");	
     } else {
         /* Moto G4 Plus (XT164x) */
         property_set("ro.product.device", "athene_f");
         property_set("ro.build.description", "athene_f-user 6.0.1 MPJ24.139-23.4 4 release-keys");
         property_set("ro.build.fingerprint", "motorola/athene_f/athene_f:6.0.1/MPJ24.139-23.4/4:user/release-keys");
         property_set("ro.hw.fps", "true");
-		property_set("ro.product.model", "Moto G4 Plus");
+        property_set("ro.product.model", "Moto G4 Plus");
     }
 	
 	if (ISMATCH(sku, "XT1625") || ISMATCH(sku, "XT1644")) {
@@ -88,11 +88,11 @@ void vendor_load_properties()
 		property_set("ro.radio.imei.sv", "4");
 	}
 	
-	if (ISMATCH(sku, "XT1621") || ISMATCH(sku, "XT1642") || ISMATCH(sku, "XT1643")) {
+	if (ISMATCH(sku, "XT1621") || ISMATCH(sku, "XT1622") || ISMATCH(sku, "XT1642") || ISMATCH(sku, "XT1643")) {
 		property_set("ro.radio.imei.sv", "3");
 	}
 	
-	if (ISMATCH(sku, "XT1626") || ISMATCH(sku, "XT1626")) {
+	if (ISMATCH(sku, "XT1626") || ISMATCH(sku, "XT1641")) {
 		property_set("ro.radio.imei.sv", "2");
 		property_set("persist.radio.is_wps_enabled", "true");
 		property_set("persist.radio.pb.max.match", "10");
