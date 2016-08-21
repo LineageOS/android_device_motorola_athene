@@ -127,7 +127,12 @@ audio.pp.asphere.enabled=false
 audio.safx.pbe.enabled=true
 audio.parser.ip.buffer.size=262144
 
-#CNE
+# Camera
+camera.lowpower.record.enable=1
+camera.display.lmax=1280x720
+camera.display.umax=1920x1080
+
+# CNE
 persist.cne.feature=1
 persist.cne.logging.qxdm=0
 
@@ -150,6 +155,12 @@ ro.media.enc.aud.ch=1
 ro.media.enc.aud.hz=8000
 av.offload.enable=false
 use.voice.path.for.pcm.voip=false
+media.msm8956.version=0
+media.msm8956hw=0
+mm.enable.qcom_parser=1048575
+mm.enable.qcom_parser=
+vidc.enc.dcvs.extra-buff-count=2
+vidc.enc.narrow.searchrange=1
 
 # GPS
 persist.mot.gps.conf.from.sim=true
@@ -169,6 +180,8 @@ persist.debug.coresight.config=stm-events
 dalvik.vm.boot-dex2oat-threads=4
 dalvik.vm.dex2oat-threads=2
 dalvik.vm.image-dex2oat-threads=4
+dalvik.vm.isa.arm.features=default
+dalvik.vm.isa.arm.variant=cortex-a53
 
 # Perf
 ro.vendor.gt_library=libqti-gt.so
@@ -239,3 +252,4 @@ ro.mot.ignore_csim_appid=true
 ro.config.alarm_alert=Oxygen.ogg
 ro.config.ringtone=Moto.ogg
 ro.config.notification_sound=Moto.ogg
+ro.cutoff_voltage_mv=3200
