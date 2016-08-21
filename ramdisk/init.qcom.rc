@@ -338,7 +338,7 @@ on fs
     symlink /persist /pds
 
     # wait /dev/block/bootdevice/by-name/hw
-    # start oem-hw-sh
+    start oem-hw-sh
 
 on post-fs
     mkdir /persist/camera 0755 mot_tcmd mot_tcmd

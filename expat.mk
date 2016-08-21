@@ -1,0 +1,1 @@
+$(shell ln -s /system/bin/toolbox $(TARGET_OUT)/bin/expat)

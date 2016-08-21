@@ -172,6 +172,7 @@ $(FIRMWARE_WIDEVINE_SYMLINKS): $(LOCAL_INSTALLED_MODULE)
 ALL_DEFAULT_INSTALLED_MODULES += $(FIRMWARE_WIDEVINE_SYMLINKS)
 
 include device/motorola/msm8952-common/tftp.mk
+include device/motorola/msm8952-common/expat.mk
 
 include $(call all-makefiles-under,$(LOCAL_PATH))
 
