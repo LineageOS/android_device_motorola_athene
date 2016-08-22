@@ -139,6 +139,10 @@ on enable-low-power
     write /sys/module/lowmemorykiller/parameters/vmpressure_file_min 53059
 	
 	write /proc/sys/kernel/sched_boost 0
+	
+    # Set perfd properties
+    rm /data/system/perfd/default_values
+    start perfd
 
 on class_start:late_start
     trigger enable-low-power
