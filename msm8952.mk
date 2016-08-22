@@ -178,10 +178,6 @@ PRODUCT_PACKAGES += \
     ipacm \
     IPACM_cfg.xml
 
-# Fingerprint sensor
-PRODUCT_PACKAGES += \
-	fingerprintd
-	
 # Power
 PRODUCT_PACKAGES += \
     power.msm8952
