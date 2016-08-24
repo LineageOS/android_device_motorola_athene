@@ -88,10 +88,9 @@ persist.esdfs_sdcard=true
 
 # Audio
 af.fast_track_multiplier=1
-audio_hal.period_size=240
 audio.offload.buffer.size.kb=64
-audio.offload.disable=false
-audio.offload.gapless.enabled=false
+audio.offload.disable=1
+audio.offload.gapless.enabled=true
 audio.offload.multiple.enabled=false
 audio.offload.pcm.16bit.enable=false
 audio.offload.pcm.24bit.enable=false
@@ -111,8 +110,6 @@ persist.audio.fluence.voicerec=false
 ro.config.vc_call_vol_steps=8
 ro.qc.sdk.audio.ssr=false
 ro.qc.sdk.audio.fluencetype=none
-ro.audio.monitorRotation=true
-ro.audio.flinger_standbytime_ms=300
 tunnel.audio.encode=false
 audio.dolby.ds2.enabled=true
 audio.playback.mch.downsample=true
@@ -125,7 +122,6 @@ audio.offload.track.enable=true
 audio.deep_buffer.media=true
 audio.pp.asphere.enabled=false
 audio.safx.pbe.enabled=true
-audio.parser.ip.buffer.size=262144
 
 # Camera
 camera.lowpower.record.enable=1
@@ -158,7 +154,6 @@ use.voice.path.for.pcm.voip=false
 media.msm8956.version=0
 media.msm8956hw=0
 mm.enable.qcom_parser=1048575
-mm.enable.qcom_parser=
 vidc.enc.dcvs.extra-buff-count=2
 vidc.enc.narrow.searchrange=1
 
