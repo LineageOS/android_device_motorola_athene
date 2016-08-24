@@ -244,6 +244,7 @@ PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/display/pp_calib_data_mipi_mot_cmd_lgd_1080p_546_v0.xml:system/etc/pp_calib_data_mipi_mot_cmd_lgd_1080p_546_v0.xml \
     $(LOCAL_PATH)/configs/izat.conf:system/etc/izat.conf \
     $(LOCAL_PATH)/configs/lowi.conf:system/etc/lowi.conf \
+    $(LOCAL_PATH)/configs/xtwifi.conf:system/etc/xtwifi.conf
 	
 PRODUCT_BUILD_PROP_OVERRIDES += BUILD_UTC_DATE=0
 
