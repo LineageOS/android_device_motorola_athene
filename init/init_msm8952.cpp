@@ -95,7 +95,7 @@ void vendor_load_properties()
 		property_set("ro.radio.imei.sv", "4");
 	}
 	
-	if (ISMATCH(sku, "XT1621") || ISMATCH(sku, "XT1622") || ISMATCH(sku, "XT1642") || ISMATCH(sku, "XT1643")) {
+	if (ISMATCH(sku, "XT1621") || ISMATCH(sku, "XT1622") || ISMATCH(sku, "XT1640") || ISMATCH(sku, "XT1642") || ISMATCH(sku, "XT1643")) {
 		property_set("ro.radio.imei.sv", "3");
 	}
 	
