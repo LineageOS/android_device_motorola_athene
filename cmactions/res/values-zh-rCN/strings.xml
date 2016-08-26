@@ -30,4 +30,9 @@
   <string name="chop_chop_gesture_summary">当左右摇动时切换手电筒</string>
   <string name="ir_silencer_title">挥动以静音</string>
   <string name="ir_silencer_summary">来电时用手挥过屏幕以静音</string>
+  <string name="flip_to_mute_title">翻转以请勿打扰</string>
+  <string name="flip_to_mute_summary">将手机朝下放置以静音通知和来电</string>
+  <string name="dnd_access">请为 CMActions 授予“请勿打扰”访问权限以使用此功能。</string>
+  <string name="lift_to_silence_title">拿起以停止响铃</string>
+  <string name="lift_to_silence_summary">拿起电话时静音来电。只有当您的手机平放时此功能才会生效</string>
 </resources>

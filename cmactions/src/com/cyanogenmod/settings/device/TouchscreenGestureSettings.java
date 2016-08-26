@@ -17,8 +17,13 @@
 package com.cyanogenmod.settings.device;
 
 import android.app.ActionBar;
+import android.app.AlertDialog;
+import android.app.NotificationManager;
 import android.os.Bundle;
-import android.content.res.Resources;
+import android.content.Context;
+import android.content.DialogInterface;
+import android.content.Intent;
+import android.preference.Preference;
 import android.preference.PreferenceActivity;
 import android.preference.PreferenceCategory;
 import android.preference.SwitchPreference;
@@ -29,6 +34,9 @@ import org.cyanogenmod.internal.util.ScreenType;
 
 public class TouchscreenGestureSettings extends PreferenceActivity {
     private static final String CATEGORY_AMBIENT_DISPLAY = "ambient_display_key";
+    private SwitchPreference mFlipPref;
+    private NotificationManager mNotificationManager;
+    private boolean mFlipClick = false;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -41,13 +49,37 @@ public class TouchscreenGestureSettings extends PreferenceActivity {
         }
         final ActionBar actionBar = getActionBar();
         actionBar.setDisplayHomeAsUpEnabled(true);
-        Resources res = getResources();
-        boolean hasChopChop = res.getBoolean(R.bool.config_hasChopChop);
-        if (!hasChopChop){
+        if (Device.isSurnia()){
             //Check if we have to hide the chop chop entry
             SwitchPreference chopChopPref = (SwitchPreference) findPreference("gesture_chop_chop");
             PreferenceCategory mCategory = (PreferenceCategory) findPreference("actions_key");
             mCategory.removePreference(chopChopPref);
+        }
+        mNotificationManager = (NotificationManager) getSystemService(Context.NOTIFICATION_SERVICE);
+        mFlipPref = (SwitchPreference) findPreference("gesture_flip_to_mute");
+        mFlipPref.setOnPreferenceClickListener(new Preference.OnPreferenceClickListener() {
+            public boolean onPreferenceClick(Preference preference) {
+                if (!mNotificationManager.isNotificationPolicyAccessGranted()) {
+                    mFlipPref.setChecked(false);
+                    new AlertDialog.Builder(TouchscreenGestureSettings.this)
+                        .setTitle(getString(R.string.flip_to_mute_title))
+                        .setMessage(getString(R.string.dnd_access))
+                        .setNegativeButton(android.R.string.cancel, null)
+                        .setPositiveButton(android.R.string.ok, new DialogInterface.OnClickListener() {
+                            public void onClick(DialogInterface dialog, int which) {
+                                mFlipClick = true;
+                                startActivity(new Intent(
+                                   android.provider.Settings.ACTION_NOTIFICATION_POLICY_ACCESS_SETTINGS));
+                            }
+                        }).show();
+                }
+                return true;
+            }
+        });
+
+        //Users may deny DND access after giving it
+        if (!mNotificationManager.isNotificationPolicyAccessGranted()) {
+            mFlipPref.setChecked(false);
         }
     }
 
@@ -58,6 +90,10 @@ public class TouchscreenGestureSettings extends PreferenceActivity {
         // If running on a phone, remove padding around the listview
         if (!ScreenType.isTablet(this)) {
             getListView().setPadding(0, 0, 0, 0);
+        }
+
+        if (mNotificationManager.isNotificationPolicyAccessGranted() && mFlipClick) {
+            mFlipPref.setChecked(true);
         }
     }
 

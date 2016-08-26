@@ -30,4 +30,9 @@
   <string name="chop_chop_gesture_summary">Zaklamp aan-/uitzetten bij gebruik van het \'chop-chop\'-gebaar</string>
   <string name="ir_silencer_title">Handgebaar voor stil</string>
   <string name="ir_silencer_summary">Inkomende oproepen dempen met handgebaar over het scherm</string>
+  <string name="flip_to_mute_title">Omdraaien voor \'Niet storen\'</string>
+  <string name="flip_to_mute_summary">Plaats de telefoon met scherm naar beneden om notificaties en oproepen te dempen</string>
+  <string name="dnd_access">Geef CMActies toegang tot \'Niet storen\' om deze functie te gebruiken.</string>
+  <string name="lift_to_silence_title">Oppakken om te stoppen met rinkelen</string>
+  <string name="lift_to_silence_summary">Til de telefoon op om binnenkomende oproepen te dempen. Werkt alleen als de telefoon al plat ligt</string>
 </resources>

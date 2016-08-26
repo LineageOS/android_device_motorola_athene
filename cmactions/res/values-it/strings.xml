@@ -22,12 +22,17 @@
   <string name="pick_up_gesture_title">Solleva</string>
   <string name="pick_up_gesture_summary">Mostra notifiche al sollevamento</string>
   <string name="ir_wake_up_title">Onda</string>
-  <string name="ir_wake_up_summary">Mostra notifiche quando passi la mano sopra lo schermo</string>
+  <string name="ir_wake_up_summary">Mostra notifiche quando la mano passa sopra lo schermo</string>
   <string name="actions_title">Azioni</string>
   <string name="camera_gesture_title">Doppio scuotimento</string>
   <string name="camera_gesture_summary">Apri la fotocamera quando scuoti due volte</string>
   <string name="chop_chop_gesture_title">Chop-chop</string>
   <string name="chop_chop_gesture_summary">Accendi la torcia quando utilizzi la gesture chop-chop</string>
-  <string name="ir_silencer_title">Scorri la mano per silenziare</string>
-  <string name="ir_silencer_summary">Silenza le chiamate in arrivo agitando la mano sopra lo schermo</string>
+  <string name="ir_silencer_title">Muovi la mano per silenziare</string>
+  <string name="ir_silencer_summary">Silenza le chiamate in arrivo passando la mano sopra lo schermo</string>
+  <string name="flip_to_mute_title">Capovolgi per non disturbare</string>
+  <string name="flip_to_mute_summary">Metti a faccia in giù il telefono per silenziare le notifiche e chiamate</string>
+  <string name="dnd_access">Consenti il permesso di accedere a Non disturbare a CMActions per utilizzare questa funzione.</string>
+  <string name="lift_to_silence_title">Prendi in mano per silenziare</string>
+  <string name="lift_to_silence_summary">Solleva il telefono per silenziare le chiamate in arrivo. Funziona solo se il telefono era su una superficie piatta</string>
 </resources>

@@ -16,7 +16,6 @@
 
 package com.cyanogenmod.settings.device;
 
-import android.content.res.Resources;
 import android.app.IntentService;
 import android.content.Context;
 import android.content.Intent;
@@ -62,15 +61,15 @@ public class CMActionsService extends IntentService implements ScreenStateNotifi
 
         // Other actions that are always enabled
         mUpdatedStateNotifiers.add(new CameraActivationSensor(cmActionsSettings, mSensorHelper));
-        Resources res = context.getResources();
-        boolean hasChopChop = res.getBoolean(R.bool.config_hasChopChop);
-        if (hasChopChop){
+        if (!Device.isSurnia()){
             mUpdatedStateNotifiers.add(new ChopChopSensor(cmActionsSettings, mSensorHelper));
         } else {
             Log.d(TAG, "No ChopChop");
         }
 
         mUpdatedStateNotifiers.add(new ProximitySilencer(cmActionsSettings, context, mSensorHelper));
+        mUpdatedStateNotifiers.add(new FlipToMute(cmActionsSettings, context, mSensorHelper));
+        mUpdatedStateNotifiers.add(new LiftToSilence(cmActionsSettings, context, mSensorHelper));
 
         mPowerManager = (PowerManager) context.getSystemService(Context.POWER_SERVICE);
         updateState();

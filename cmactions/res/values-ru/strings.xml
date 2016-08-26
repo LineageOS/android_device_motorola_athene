@@ -30,4 +30,9 @@
   <string name="chop_chop_gesture_summary">Включать или выключать фонарик при постукивании</string>
   <string name="ir_silencer_title">Взмах для отключения звука</string>
   <string name="ir_silencer_summary">Проведите рукой над экраном, чтобы приглушить звук входящего звонка</string>
+  <string name="flip_to_mute_title">Режим «Не беспокоить»</string>
+  <string name="flip_to_mute_summary">Переверните телефон экраном вниз, чтобы отключить звуки уведомлений и вызовов</string>
+  <string name="dnd_access">Чтобы использовать эту функцию, предоставьте CMActions доступ к функции «Не беспокоить».</string>
+  <string name="lift_to_silence_title">Отключение звука</string>
+  <string name="lift_to_silence_summary">Поднимите телефон, чтобы заглушить звук звонка. Это действие сработает, если телефон лежал горизонтально</string>
 </resources>

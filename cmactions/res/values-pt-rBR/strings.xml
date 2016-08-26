@@ -30,4 +30,9 @@
   <string name="chop_chop_gesture_summary">Ligar/desligar lanterna ao chacoalhar duas vezes</string>
   <string name="ir_silencer_title">Acenar para silenciar</string>
   <string name="ir_silencer_summary">Silenciar chamadas recebidas acenando com a mão na frente da tela</string>
+  <string name="flip_to_mute_title">Ativar o modo não perturbe ao virar o telefone</string>
+  <string name="flip_to_mute_summary">Silenciar notificações e chamadas ao colocar o telefone com a tela para baixo</string>
+  <string name="dnd_access">Por favor, conceda acesso Não Perturbe ao CMActions para poder utilizar esta função.</string>
+  <string name="lift_to_silence_title">Parar de tocar ao pegar o telefone</string>
+  <string name="lift_to_silence_summary">Levante o telefone para silenciar as chamadas. Só funciona quando o seu telefone está sobre uma superfície plana</string>
 </resources>

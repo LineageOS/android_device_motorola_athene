@@ -30,4 +30,9 @@
   <string name="chop_chop_gesture_summary">Uključi/isključi svjetiljku koristeći chop-chop gestu</string>
   <string name="ir_silencer_title">Mahni za tišinu</string>
   <string name="ir_silencer_summary">Utišaj dolazne pozive mahanjem preko zaslona</string>
+  <string name="flip_to_mute_title">Preokreni za Ne ometaj</string>
+  <string name="flip_to_mute_summary">Okrenite telefon prema dolje za utišavanje obavijesti i poziva</string>
+  <string name="dnd_access">Molimo vas, dajte \"Ne ometaj\" pristup CMActions da biste mogli koristiti ovu opciju.</string>
+  <string name="lift_to_silence_title">Javi se da prestane zvoniti</string>
+  <string name="lift_to_silence_summary">Podignite uređaj da utišate dolazne pozive. Radi samo kada vaš telefon počinje iz ravnog položaja</string>
 </resources>

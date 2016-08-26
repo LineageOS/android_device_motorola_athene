@@ -30,4 +30,9 @@
   <string name="chop_chop_gesture_summary">Txandakatu linterna moztu-moztu keinua erabiltzean</string>
   <string name="ir_silencer_title">Eskuarekin agurtu isilarazteko</string>
   <string name="ir_silencer_summary">Isildu jasotako deiak eskuarekin pantaila gainetik agurtuz</string>
+  <string name="flip_to_mute_title">Itzulbiratu ez molestatzeko</string>
+  <string name="flip_to_mute_summary">Jarri telefonoa buruz behera jakinarazpenak eta deiak isilarazteko</string>
+  <string name="dnd_access">Eman Ez molestatu elementuari CMActions atzitzeko eskubidea ezaugarri hau erabili ahal izateko.</string>
+  <string name="lift_to_silence_title">Hartu txirrina gelditzeko</string>
+  <string name="lift_to_silence_summary">Altzatu telefonoa jasotako deiak isilarazteko. Telefonoa etzanda dagoenean besterik ez dabil</string>
 </resources>

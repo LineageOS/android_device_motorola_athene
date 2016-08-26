@@ -30,4 +30,9 @@
   <string name="chop_chop_gesture_summary">Avaa taskulamppu leikkauseleellä</string>
   <string name="ir_silencer_title">Hiljennä heilauttamalla</string>
   <string name="ir_silencer_summary">Hiljennä tulevat puhelut heilauttamalla kättä ruudun yli</string>
+  <string name="flip_to_mute_title">Älä häiritse-tila kääntäessä</string>
+  <string name="flip_to_mute_summary">Aseta puhelin näyttö alaspäin hiljentääksesi ilmoitukset ja puhelut</string>
+  <string name="dnd_access">Anna CMActions:lle oikeudet Älä häiritse-tilaan käyttääksesi tätä toimintoa.</string>
+  <string name="lift_to_silence_title">Nosta hiljentääksesi</string>
+  <string name="lift_to_silence_summary">Nosta puhelin hiljentääksesi saapuvan puhelun. Se toimii vain kun puhelin on tasaisella nostettaessa</string>
 </resources>

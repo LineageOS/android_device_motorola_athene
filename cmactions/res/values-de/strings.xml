@@ -26,8 +26,13 @@
   <string name="actions_title">Aktionen</string>
   <string name="camera_gesture_title">Doppeldrehung</string>
   <string name="camera_gesture_summary">Kamera starten bei Verwendung der Geste Doppeldrehung</string>
-  <string name="chop_chop_gesture_title">Schwenken</string>
-  <string name="chop_chop_gesture_summary">Taschenlampe mit der Schwenk-Geste ein-/ausschalten</string>
+  <string name="chop_chop_gesture_title">Hacken</string>
+  <string name="chop_chop_gesture_summary">Taschenlampe mit der Hack-Geste ein-/ausschalten</string>
   <string name="ir_silencer_title">Winken zum Stummschalten</string>
   <string name="ir_silencer_summary">Eingehende Anrufe durch Winken über den Bildschirm stummschalten</string>
+  <string name="flip_to_mute_title">Umdrehen für \"Nicht Stören\"</string>
+  <string name="flip_to_mute_summary">Das Telefon mit dem Display nach unten ablegen, um Benachrichtigungen und Anrufe stumm zu schalten</string>
+  <string name="dnd_access">Bitte geben Sie CMActions Zugriff auf \"Nicht Stören\", um diese Funktion zu nutzen.</string>
+  <string name="lift_to_silence_title">Aufheben, um das Klingeln zu beenden</string>
+  <string name="lift_to_silence_summary">Eingehende Anrufe durch das Aufheben des Telefons stummschalten. Funktioniert nur, wenn Ihr Telefon zuvor flach auflag</string>
 </resources>

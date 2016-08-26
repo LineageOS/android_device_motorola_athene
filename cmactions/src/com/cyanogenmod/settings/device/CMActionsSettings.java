@@ -32,16 +32,19 @@ public class CMActionsSettings {
     private static final String GESTURE_PICK_UP_KEY = "gesture_pick_up";
     private static final String GESTURE_IR_WAKEUP_KEY = "gesture_ir_wake_up";
     private static final String GESTURE_IR_SILENCER_KEY = "gesture_ir_silencer";
-
+    private static final String GESTURE_FLIP_TO_MUTE_KEY = "gesture_flip_to_mute";
+    private static final String GESTURE_LIFT_TO_SILENCE_KEY = "gesture_lift_to_silence";
 
     private final Context mContext;
     private final UpdatedStateNotifier mUpdatedStateNotifier;
 
     private boolean mCameraGestureEnabled;
     private boolean mChopChopEnabled;
+    private boolean mPickUpGestureEnabled;
     private boolean mIrWakeUpEnabled;
     private boolean mIrSilencerEnabled;
-    private boolean mPickUpGestureEnabled;
+    private boolean mFlipToMuteEnabled;
+    private boolean mLiftToSilenceEnabled;
 
     public CMActionsSettings(Context context, UpdatedStateNotifier updatedStateNotifier) {
         SharedPreferences sharedPrefs = PreferenceManager.getDefaultSharedPreferences(context);
@@ -79,6 +82,14 @@ public class CMActionsSettings {
         return mIrSilencerEnabled;
     }
 
+    public boolean isFlipToMuteEnabled() {
+        return mFlipToMuteEnabled;
+    }
+
+    public boolean isLiftToSilenceEnabled() {
+        return mLiftToSilenceEnabled;
+    }
+
     public void cameraAction() {
         new CameraActivationAction(mContext).action();
     }
@@ -93,6 +104,8 @@ public class CMActionsSettings {
         mIrWakeUpEnabled = sharedPreferences.getBoolean(GESTURE_IR_WAKEUP_KEY, true);
         mPickUpGestureEnabled = sharedPreferences.getBoolean(GESTURE_PICK_UP_KEY, true);
         mIrSilencerEnabled = sharedPreferences.getBoolean(GESTURE_IR_SILENCER_KEY, false);
+        mFlipToMuteEnabled = sharedPreferences.getBoolean(GESTURE_FLIP_TO_MUTE_KEY, false);
+        mLiftToSilenceEnabled = sharedPreferences.getBoolean(GESTURE_LIFT_TO_SILENCE_KEY, false);
     }
 
     private SharedPreferences.OnSharedPreferenceChangeListener mPrefListener =
@@ -111,6 +124,10 @@ public class CMActionsSettings {
                 mPickUpGestureEnabled = sharedPreferences.getBoolean(GESTURE_PICK_UP_KEY, true);
             } else if (GESTURE_IR_SILENCER_KEY.equals(key)) {
                 mIrSilencerEnabled = sharedPreferences.getBoolean(GESTURE_IR_SILENCER_KEY, false);
+            } else if (GESTURE_FLIP_TO_MUTE_KEY.equals(key)) {
+                mFlipToMuteEnabled = sharedPreferences.getBoolean(GESTURE_FLIP_TO_MUTE_KEY, false);
+            } else if (GESTURE_LIFT_TO_SILENCE_KEY.equals(key)) {
+                mLiftToSilenceEnabled = sharedPreferences.getBoolean(GESTURE_LIFT_TO_SILENCE_KEY, false);
             } else {
                 updated = false;
             }

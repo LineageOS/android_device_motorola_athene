@@ -18,7 +18,7 @@
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
   <!-- Gesture shortcuts -->
   <string name="screen_gestures_panel_title">קיצורי מחוות</string>
-  <string name="ambient_display_title">תצוגת התראות ברקע</string>
+  <string name="ambient_display_title">תצוגת התראות עמומה</string>
   <string name="pick_up_gesture_title">הרמה</string>
   <string name="pick_up_gesture_summary">הצג התראות בעת הרמה או הוצאה מאחסון</string>
   <string name="ir_wake_up_title">נפנוף</string>
@@ -30,4 +30,8 @@
   <string name="chop_chop_gesture_summary">הפעל/כבה פנס בעת השימוש במחוות הניעור הכפול</string>
   <string name="ir_silencer_title">נפנוף להשתקה</string>
   <string name="ir_silencer_summary">השתק שיחות נכנסות בנפנוף יד מול המסך</string>
+  <string name="flip_to_mute_title">הפוך להפעלת מצב \"נא לא להפריע\"</string>
+  <string name="flip_to_mute_summary">הנח את המכשיר על פניו על מנת להשתיק התראות ושיחות</string>
+  <string name="dnd_access">אנא תן ל\"נא לא להפריע\" גישה ל-CMActions על מנת להשתמש באפשרות זו.</string>
+  <string name="lift_to_silence_title">הרם על מנת להפסיק את הצלצול</string>
 </resources>

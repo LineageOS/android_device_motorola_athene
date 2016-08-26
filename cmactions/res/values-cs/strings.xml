@@ -30,4 +30,9 @@
   <string name="chop_chop_gesture_summary">Zapnout/vypnout svítilnu použitím gesta chop-chop</string>
   <string name="ir_silencer_title">Zavlněním ztišit</string>
   <string name="ir_silencer_summary">Ztišit příchozí hovory zavlněním ruky přes obrazovku</string>
+  <string name="flip_to_mute_title">Otočit pro povolení „Nerušit“</string>
+  <string name="flip_to_mute_summary">Obrácením telefonu obrazovkou dolů ztlumit oznámení a vyzvánění</string>
+  <string name="dnd_access">Prosím pro využití této funkce povolte přístup k CMActions režimu „Nerušit”.</string>
+  <string name="lift_to_silence_title">Zvednutím zastavit vyzvánění</string>
+  <string name="lift_to_silence_summary">Zvednutím telefonu pro ztlumení vyzvánění. Tuto funkci je možné využít pouze v případě, že byl telefon položen na plocho</string>
 </resources>

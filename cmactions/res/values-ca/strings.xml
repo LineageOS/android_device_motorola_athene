@@ -30,4 +30,9 @@
   <string name="chop_chop_gesture_summary">Commuta la llanterna quan es faci el gest de doble sacsejada</string>
   <string name="ir_silencer_title">Passa la mà per silenciar</string>
   <string name="ir_silencer_summary">Silencia les trucades entrants en passar la mà per la pantalla</string>
+  <string name="flip_to_mute_title">Gira per no molestar</string>
+  <string name="flip_to_mute_summary">Col·loca el telèfon cap per avall per silenciar les notificacions i trucades</string>
+  <string name="dnd_access">Si us plau, permet l\'accés a CMActions per utilitzar aquesta funció.</string>
+  <string name="lift_to_silence_title">Deixa de sonar a l\'agafar-lo</string>
+  <string name="lift_to_silence_summary">Aixeca el telèfon per silenciar les trucades entrants. Això només funcionarà quan el teu telèfon estigui sobre una superfície plana</string>
 </resources>

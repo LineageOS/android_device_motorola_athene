@@ -38,5 +38,13 @@
     <string name="ir_silencer_title">Wave to silence</string>
     <string name="ir_silencer_summary">Silence incoming calls by waving your hand across the screen</string>
 
+    <string name="flip_to_mute_title">Flip for Do Not Disturb</string>
+    <string name="flip_to_mute_summary">Place the phone face down to silence notifications and calls</string>
+
+    <string name="dnd_access">Please, give Do Not Disturb access to CMActions in order to use this feature.</string>
+
+    <string name="lift_to_silence_title">Pick up to stop ringing</string>
+    <string name="lift_to_silence_summary">Lift the phone to silence incoming calls. It only works when your phone starts flat</string>
+
 </resources>
 
