@@ -16,3 +16,5 @@ type vibeamp_sysfs, fs_type, sysfs_type;
 
 #fsg
 type fsg_file, fs_type, contextmount_type;
+
+type chr_file, file_type, data_file_type;

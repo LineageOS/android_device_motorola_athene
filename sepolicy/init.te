@@ -12,3 +12,6 @@ allow init pstorefs:dir mounton;
 
 allow init socket_device:sock_file { create setattr };
 allow init thermal_device:chr_file ioctl;
+
+allow init property_socket:sock_file write;
+allow init sensors_device:chr_file { write ioctl };
