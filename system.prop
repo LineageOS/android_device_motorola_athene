@@ -230,7 +230,6 @@ ro.mot.build.customerid=retail
 ro.mot.build.version.sdk_int=24
 ro.mot.build.product.increment=24
 ro.mot.build.version.release=24.24
-ro.telephony.default_network=10,0
 ro.mot.ignore_csim_appid=true
 ro.config.alarm_alert=Oxygen.ogg
 ro.config.ringtone=Moto.ogg

@@ -81,6 +81,7 @@ void vendor_load_properties()
         property_set("ro.build.fingerprint", "motorola/athene/athene:6.0.1/MPJ24.139-23.4/4:user/release-keys");
         property_set("ro.hw.fps", "false");
         property_set("ro.product.model", "Moto G⁴");	
+        property_set("ro.telephony.default_network", "10");
     } else {
         /* Moto G4 Plus (XT164x) */
         property_set("ro.product.device", "athene_f");
@@ -88,6 +89,7 @@ void vendor_load_properties()
         property_set("ro.build.fingerprint", "motorola/athene_f/athene_f:6.0.1/MPJ24.139-23.4/4:user/release-keys");
         property_set("ro.hw.fps", "true");
         property_set("ro.product.model", "Moto G⁴ Plus");
+        property_set("ro.telephony.default_network", "10,10");
     }
 	
 	if (ISMATCH(sku, "XT1625") || ISMATCH(sku, "XT1644")) {
