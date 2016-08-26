@@ -243,6 +243,12 @@ on boot
     chmod 0660 /sys/kernel/range/set_delay_ms
     chown system system /sys/kernel/range/near
     chmod 0660 /sys/kernel/range/near
+    chown system system /sys/kernel/range/offset
+    chmod 0660 /sys/kernel/range/offset
+    chown system system /sys/kernel/range/set_mode
+    chmod 0660 /sys/kernel/range/set_mode
+    chown system system /sys/kernel/range/xtalk
+    chmod 0660 /sys/kernel/range/xtalk
 
     # Change the ownership of the notification LED interface
     chown system system /sys/class/leds/rgb/control
