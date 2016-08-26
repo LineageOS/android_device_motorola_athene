@@ -127,6 +127,7 @@ audio.safx.pbe.enabled=true
 camera.lowpower.record.enable=1
 camera.display.lmax=1280x720
 camera.display.umax=1920x1080
+persist.camera.HAL3.enabled=1
 
 # CNE
 persist.cne.feature=1
