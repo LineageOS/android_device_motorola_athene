@@ -567,7 +567,6 @@ on post-fs-data
 service qfintverify /sbin/qfintverify
     user root
     class core
-    seclabel u:r:qfips:s0
     oneshot
 
 service ssr_setup /system/bin/ssr_setup
@@ -952,13 +951,11 @@ service motosh /system/bin/motosh boot
     oneshot
 
 service mmi-boot-sh /init.mmi.boot.sh
-    seclabel u:r:mmi_boot:s0
     class core
     user root
     oneshot
 
 service mmi-laser-sh  /init.mmi.laser.sh
-    seclabel u:r:mmi_laser:s0
     class core
     user root
     oneshot
@@ -973,28 +970,24 @@ service mmi-touch-sh /system/bin/init.mmi.touch.sh
     oneshot
 
 service oem-hw-sh /init.oem.hw.sh
-    seclabel u:r:init_hw:s0
     class core
     user root
     oneshot
     disabled
 
 service touch-dead-sh /init.oem.hw.sh -f
-    seclabel u:r:init_hw:s0
     class main
     user root
     oneshot
     disabled
 
 service touch-ready-sh /init.oem.hw.sh -r
-    seclabel u:r:init_hw:s0
     class main
     user root
     oneshot
     disabled
 
 service oem-hw-config-sh /init.oem.hw.sh -p
-    seclabel u:r:init_hw:s0
     class main
     user root
     oneshot
@@ -1040,13 +1033,11 @@ service atvc /system/bin/dbvc_atvc_property_set
 
 service qe /xbin/qe /system
     class main
-    seclabel u:r:qe:s0
     oneshot
     disabled
 
 service qe_broadcast /xbin/qe /system -b
     class main
-    seclabel u:r:qe:s0
     oneshot
     disabled
 
