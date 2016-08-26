@@ -136,6 +136,9 @@ TARGET_PROVIDES_KEYMASTER := true
 TARGET_LDPRELOAD := libNimsWrap.so
 BOARD_USES_QCNE := true
 
+# Sensors
+USE_SENSOR_MULTI_HAL := true
+
 # Recovery
 BOARD_HAS_NO_SELECT_BUTTON := true
 TARGET_RECOVERY_FSTAB := $(VENDOR_PATH)/ramdisk/fstab.qcom
