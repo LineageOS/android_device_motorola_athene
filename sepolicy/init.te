@@ -15,3 +15,7 @@ allow init thermal_device:chr_file ioctl;
 
 allow init property_socket:sock_file write;
 allow init sensors_device:chr_file { write ioctl };
+
+allow init rootfs:file execute_no_trans;
+allow init self:netlink_route_socket create;
+allow init self:tcp_socket create;
