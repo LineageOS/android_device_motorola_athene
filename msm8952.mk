@@ -164,10 +164,14 @@ PRODUCT_PACKAGES += \
     libOmxCore \
     libOmxEvrcEnc \
     libOmxQcelp13Enc \
+    libOmxSwVencMpeg4 \
     libOmxSwVencHevc \
     libOmxVdec \
+    libOmxVdecHevc \
+    libOmxVidcCommon \
     libOmxVenc \
-    libstagefrighthw
+    libstagefrighthw \
+    libstagefright_soft_flacdec
 
 # IPA Manager
 PRODUCT_PACKAGES += \
