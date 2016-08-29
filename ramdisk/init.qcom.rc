@@ -916,6 +916,7 @@ service msm_irqbalance /system/bin/msm_irqbalance -f /system/vendor/etc/msm_irqb
     class core
     user root
     group root
+    writepid /dev/cpuset/system-background/tasks
 
 service fidodaemon /system/vendor/bin/fidodaemon
     class late_start
@@ -1182,6 +1183,7 @@ service qcamerasvr /system/bin/mm-qcamera-daemon
    class late_start
    user camera
    group camera system inet input graphics
+   writepid /dev/cpuset/system-background/tasks
 
 # Allow usb charging to be disabled peristently
 on property:persist.usb.chgdisabled=1
