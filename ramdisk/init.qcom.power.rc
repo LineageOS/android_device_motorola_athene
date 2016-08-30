@@ -115,6 +115,16 @@ on enable-low-power
     write /sys/module/cpu_boost/parameters/input_boost_freq 960000
     write /sys/module/cpu_boost/parameters/input_boost_ms 40
 
+    # Enable core control
+    insmod /system/lib/modules/core_ctl.ko
+    write /sys/devices/system/cpu/cpu0/core_ctl/min_cpus 0
+    write /sys/devices/system/cpu/cpu0/core_ctl/max_cpus 4
+    write /sys/devices/system/cpu/cpu0/core_ctl/busy_up_thres 72
+    write /sys/devices/system/cpu/cpu0/core_ctl/busy_down_thres 28
+    write /sys/devices/system/cpu/cpu0/core_ctl/offline_delay_ms 100
+    write /sys/devices/system/cpu/cpu0/core_ctl/is_big_cluster 1
+    write /sys/devices/system/cpu/cpu0/core_ctl/task_thres 4
+
     # RPS
     write /sys/class/net/rmnet_ipa0/queues/rx-0/rps_cpus "f0"
 
