@@ -50,6 +50,7 @@ persist.rcs.presence.provision=0
 persist.rcs.supported=0
 persist.rmnet.mux=enabled
 persist.vt.supported=0
+telephony.lteOnCdmaDevice=1
 
 # Display
 debug.sf.hw=1
