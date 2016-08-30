@@ -1,9 +1,9 @@
 on boot
     # Update foreground cpuset now that processors are up
     write /dev/cpuset/foreground/cpus 0-7
-    write /dev/cpuset/foreground/boost/cpus 4-7
-    write /dev/cpuset/background/cpus 0
-	write /dev/cpuset/system-background/cpus 0-3
+    write /dev/cpuset/foreground/boost/cpus 0-3
+    write /dev/cpuset/background/cpus 4
+	write /dev/cpuset/system-background/cpus 4-7
 
 on enable-low-power
     # HMP scheduler settings
