@@ -1,0 +1,16 @@
+on init
+    chmod 0777 /dev/qseecom
+    chown system mot_tpapi /dev/qseecom
+    chmod 0664 /dev/ion
+    chown system system /dev/ion
+
+service sbinqseecomd /sbin/qseecomd
+    oneshot
+    disabled
+    user root
+    group root
+    seclabel u:r:recovery:s0
+
+on property:ro.crypto.state=encrypted
+    start sbinqseecomd
+
