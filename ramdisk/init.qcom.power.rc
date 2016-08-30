@@ -3,7 +3,7 @@ on boot
     write /dev/cpuset/foreground/cpus 0-7
     write /dev/cpuset/foreground/boost/cpus 0-3
     write /dev/cpuset/background/cpus 4
-	write /dev/cpuset/system-background/cpus 4-7
+    write /dev/cpuset/system-background/cpus 4-7
 
 on enable-low-power
     # HMP scheduler settings
@@ -122,24 +122,24 @@ on enable-low-power
     write /sys/module/lpm_levels/lpm_workarounds/dynamic_clock_gating 1
     # Enable timer migration to little cluster
     write /proc/sys/kernel/power_aware_timer_migration 1
-	
+
     # ZRAM
     #swapon_all /fstab.qcom
     #write /proc/sys/vm/swappiness 100
 
     # Process reclaim
     write /sys/module/process_reclaim/parameters/enable_process_reclaim 1
-    write /sys/module/process_reclaim/parameters/pressure_min 50
-    write /sys/module/process_reclaim/parameters/per_swap_size 512
+    write /sys/module/process_reclaim/parameters/pressure_min 10
+    write /sys/module/process_reclaim/parameters/per_swap_size 1024
 
     write /sys/module/process_reclaim/parameters/pressure_max 70
     write /sys/module/process_reclaim/parameters/swap_opt_eff 30
-	
-	write /sys/module/lowmemorykiller/parameters/enable_adaptive_lmk 1
+
+    write /sys/module/lowmemorykiller/parameters/enable_adaptive_lmk 1
     write /sys/module/lowmemorykiller/parameters/vmpressure_file_min 53059
-	
-	write /proc/sys/kernel/sched_boost 0
-	
+
+    write /proc/sys/kernel/sched_boost 0
+
     # Set perfd properties
     rm /data/system/perfd/default_values
     start perfd
