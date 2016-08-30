@@ -19,3 +19,9 @@ allow init sensors_device:chr_file { write ioctl };
 allow init rootfs:file execute_no_trans;
 allow init self:netlink_route_socket create;
 allow init self:tcp_socket create;
+
+allow init block_device:blk_file write;
+allow init self:netlink_route_socket setopt;
+allow init self:tcp_socket ioctl;
+allow init utags_block_device:blk_file write;
+allow init self:netlink_route_socket bind;

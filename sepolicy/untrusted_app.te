@@ -5,3 +5,5 @@ allow untrusted_app rfs_system_file:dir { read getattr open };
 allow untrusted_app rfs_system_file:lnk_file read;
 allow untrusted_app tombstone_data_file:dir { search getattr };
 allow untrusted_app device:dir read;
+allow untrusted_app persist_file:file getattr;
+allow untrusted_app rfs_system_file:dir search;
