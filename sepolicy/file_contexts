@@ -33,6 +33,9 @@
 /data/misc/cutback(/.*)?                                    u:object_r:cutback_data_file:s0
 /dev/socket/cutback                                         u:object_r:rild_socket:s0
 
+# Radio
+/dev/radio(/.*)?                                            u:object_r:radio_data_file:s0
+
 # Sensors
 /dev/akm09912                                               u:object_r:sensors_device:s0
 /dev/akm09912_dev                                           u:object_r:sensors_device:s0
