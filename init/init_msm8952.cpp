@@ -111,12 +111,33 @@ void num_sims() {
 	}
 }
 
+void set_wifi_carrier(){
+    char carrier[PROP_VALUE_MAX];
+    property_get("ro.boot.carrier", carrier);
+
+    if (ISMATCH(carrier, "retbr") || ISMATCH(carrier, "timbr") || ISMATCH(carrier, "oibr") || ISMATCH(carrier, "amxbr") || ISMATCH(carrier, "niibr")) {
+        property_set("ro.wifi.brazil", "true");
+        return;
+    }
+
+    if (ISMATCH(carrier, "perar") || ISMATCH(carrier, "retar") || ISMATCH(carrier, "tefar") || ISMATCH(carrier, "amxar")) {
+        property_set("ro.wifi.argentina", "true");
+        return;
+    }
+
+    if (ISMATCH(carrier, "retin")) {
+        property_set("ro.wifi.india", "true");
+        return;
+    }
+
+    property_set("ro.wifi.default", "true");
+}
+
 void vendor_load_properties()
 {
     char platform[PROP_VALUE_MAX];
     char device_boot[PROP_VALUE_MAX];
     char sku[PROP_VALUE_MAX];
-    char carrier[PROP_VALUE_MAX];
     char device[PROP_VALUE_MAX];
     char devicename[PROP_VALUE_MAX];
     char radio[PROP_VALUE_MAX];
@@ -130,7 +151,6 @@ void vendor_load_properties()
     property_set("ro.hw.device", device_boot);
 	
     property_get("ro.boot.hardware.sku", sku);
-    property_get("ro.boot.carrier", carrier);
 	
     property_get("ro.boot.radio", radio);
     property_set("ro.hw.radio", radio);
@@ -139,6 +159,7 @@ void vendor_load_properties()
     property_set("ro.build.product", "athene");
     target_ram();
     num_sims();
+    set_wifi_carrier();
 
     if (ISMATCH(device_boot, "athene_13mp")) {
         /* Moto G4 (XT162x) */
