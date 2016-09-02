@@ -1124,18 +1124,6 @@ service fingerprintd /system/bin/fingerprintd
 on property:ro.hw.fps=true
     start fingerprintd
 
-on property:ro.wifi.brazil=true
-    symlink /system/etc/firmware/wlan/prima/WCNSS_qcom_wlan_nv_Brazil.bin /system/etc/firmware/wlan/prima/WCNSS_qcom_wlan_nv.bin
-
-on property:ro.wifi.argentina=true
-    symlink /system/etc/firmware/wlan/prima/WCNSS_qcom_wlan_nv_Argentina.bin /system/etc/firmware/wlan/prima/WCNSS_qcom_wlan_nv.bin
-
-on property:ro.wifi.india=true
-    symlink /system/etc/firmware/wlan/prima/WCNSS_qcom_wlan_nv_India.bin /system/etc/firmware/wlan/prima/WCNSS_qcom_wlan_nv.bin
-
-on property:ro.wifi.default=true
-    symlink /system/etc/firmware/wlan/prima/WCNSS_qcom_wlan_nv_Default.bin /system/etc/firmware/wlan/prima/WCNSS_qcom_wlan_nv.bin
-
 service setup_shutdown /system/bin/setup_shutdown.sh
    class main
    user system
