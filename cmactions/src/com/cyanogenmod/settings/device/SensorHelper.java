@@ -49,8 +49,7 @@ public class SensorHelper {
 
     private void dumpSensorsList() {
         try {
-            FileOutputStream out = mContext.openFileOutput("sensors.txt",
-                Context.MODE_WORLD_READABLE);
+            FileOutputStream out = mContext.openFileOutput("sensors.txt", Context.MODE_PRIVATE);
             OutputStreamWriter writer = new OutputStreamWriter(out);
 
             List<Sensor> sensorList = mSensorManager.getSensorList(Sensor.TYPE_ALL);
