@@ -26,11 +26,13 @@
 #include <sys/types.h>
 #include <stdint.h>
 
-#ifdef HAVE_ANDROID_OS
+#if defined(__ANDROID__)
 #include <linux/capability.h>
 #else
 #include <private/android_filesystem_capability.h>
 #endif
+
+#define CAP_MASK_LONG(cap_name) (1ULL << (cap_name))
 
 /* This is the master Users and Groups config for the platform.
  * DO NOT EVER RENUMBER
@@ -77,6 +79,17 @@
 #define AID_SDCARD_ALL    1035  /* access all users external storage */
 #define AID_LOGD          1036  /* log daemon */
 #define AID_SHARED_RELRO  1037  /* creator of shared GNU RELRO files */
+#define AID_SHARED_RELRO  1037  /* creator of shared GNU RELRO files */
+#define AID_DBUS          1038  /* dbus-daemon IPC broker process */
+#define AID_TLSDATE       1039  /* tlsdate unprivileged user */
+#define AID_MEDIA_EX      1040  /* mediaextractor process */
+#define AID_AUDIOSERVER   1041  /* audioserver process */
+#define AID_METRICS_COLL  1042  /* metrics_collector process */
+#define AID_METRICSD      1043  /* metricsd process */
+#define AID_WEBSERV       1044  /* webservd process */
+#define AID_DEBUGGERD     1045  /* debuggerd unprivileged user */
+#define AID_MEDIA_CODEC   1046  /* mediacodec process */
+#define AID_CAMERASERVER  1047  /* cameraserver process */
 
 #define AID_SHELL         2000  /* adb and debug shell user */
 #define AID_CACHE         2001  /* cache access */
@@ -97,12 +110,19 @@
 #define AID_NET_BW_STATS  3006  /* read bandwidth statistics */
 #define AID_NET_BW_ACCT   3007  /* change bandwidth statistics accounting */
 #define AID_NET_BT_STACK  3008  /* bluetooth: access config files */
-#define AID_QCOM_DIAG     3009  /* can read/write /dev/diag */
-#define AID_IMS           3010 /* can read/write /dev/socket/imsrtp */
+#define AID_READPROC     3009  /* can read/write /dev/diag */
+#define AID_WAKELOCK           3010 /* can read/write /dev/socket/imsrtp */
 #define AID_SENSORS       3011 /* access to /dev/socket/sensor_ctl_socket & QCCI/QCSI */
 
 #define AID_RFS           3012  /* Remote Filesystem for peripheral processors */
 #define AID_RFS_SHARED    3013  /* Shared files for Remote Filesystem for peripheral processors  */
+
+#define AID_QCOM_DIAG     3014  /* can read/write /dev/diag */
+#define AID_IMS           3015 /* can read/write /dev/socket/imsrtp */
+
+/* The range 5000-5999 is also reserved for OEM, and must never be used here. */
+#define AID_OEM_RESERVED_2_START 5000
+#define AID_OEM_RESERVED_2_END 5999
 
 /* Motorola IDs */
 #define AID_MOT_ACCY      9000  /* access to accessory */
@@ -197,6 +217,16 @@ static const struct android_id_info android_ids[] = {
     { "sdcard_all",    AID_SDCARD_ALL, },
     { "logd",          AID_LOGD, },
     { "shared_relro",  AID_SHARED_RELRO, },
+    { "dbus",          AID_DBUS, },
+    { "tlsdate",       AID_TLSDATE, },
+    { "mediaex",       AID_MEDIA_EX, },
+    { "audioserver",   AID_AUDIOSERVER, },
+    { "metrics_coll",  AID_METRICS_COLL },
+    { "metricsd",      AID_METRICSD },
+    { "webserv",       AID_WEBSERV },
+    { "debuggerd",     AID_DEBUGGERD, },
+    { "mediacodec",    AID_MEDIA_CODEC, },
+    { "cameraserver",  AID_CAMERASERVER, },
 
     { "shell",         AID_SHELL, },
     { "cache",         AID_CACHE, },
@@ -212,6 +242,8 @@ static const struct android_id_info android_ids[] = {
     { "ims",           AID_IMS, },
     { "net_bw_acct",   AID_NET_BW_ACCT, },
     { "net_bt_stack",  AID_NET_BT_STACK, },
+    { "readproc", AID_READPROC, },
+    { "wakelock", AID_WAKELOCK, },
 
     { "sensors",       AID_SENSORS, },
 
