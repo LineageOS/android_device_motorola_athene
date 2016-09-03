@@ -955,7 +955,7 @@ service mmi-laser-sh  /init.mmi.laser.sh
 on property:sys.boot_completed=1
     start mmi-laser-sh
 
-service mmi-touch-sh /system/bin/init.mmi.touch.sh
+service mmi-touch-sh /system/bin/sh /init.mmi.touch.sh
     class core
     user root
     oneshot
