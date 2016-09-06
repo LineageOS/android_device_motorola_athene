@@ -1,7 +1,0 @@
-type atvc, domain;
-type atvc_exec, exec_type, file_type;
-init_daemon_domain(atvc)
-
-allow atvc atvc_prop:property_service set;
-allow atvc persist_file:dir search;
-unix_socket_connect(atvc, property, init)

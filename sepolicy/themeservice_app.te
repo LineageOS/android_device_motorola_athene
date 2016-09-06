@@ -1,1 +1,0 @@
-allow themeservice_app system_data_file:dir add_name;
