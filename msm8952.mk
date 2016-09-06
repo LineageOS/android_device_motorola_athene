@@ -82,8 +82,7 @@ PRODUCT_PACKAGES += \
 # Audio
 PRODUCT_PACKAGES += \
     audio.primary.msm8952
-	
-	
+
 PRODUCT_COPY_FILES +=  \
     $(LOCAL_PATH)/audio/audio_effects.conf:system/vendor/etc/audio_effects.conf \
     $(LOCAL_PATH)/audio/audio_platform_info.xml:system/etc/audio_platform_info.xml \
@@ -105,10 +104,6 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     libbson \
     Snap
-
-# CMActions
-PRODUCT_PACKAGES += \
-    CMActions
 
 # Display
 PRODUCT_PACKAGES += \
@@ -151,7 +146,7 @@ PRODUCT_PACKAGES += \
 # OEM
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/vhw.xml:system/etc/vhw.xml
-	 
+ 
 # Media
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/media_codecs.xml:system/etc/media_codecs.xml \
@@ -249,8 +244,7 @@ PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/izat.conf:system/etc/izat.conf \
     $(LOCAL_PATH)/configs/lowi.conf:system/etc/lowi.conf \
     $(LOCAL_PATH)/configs/xtwifi.conf:system/etc/xtwifi.conf
-	
+
 PRODUCT_BUILD_PROP_OVERRIDES += BUILD_UTC_DATE=0
 
 PRODUCT_GMS_CLIENTID_BASE := android-motorola
-
