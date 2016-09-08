@@ -26,20 +26,91 @@
  */
 
 #include <stdlib.h>
+#include <stdio.h>
 
 #include "vendor_init.h"
 #include "property_service.h"
 #include "log.h"
 #include "util.h"
 
-#define ISMATCH(a,b)    (!strncmp(a,b,PROP_VALUE_MAX))
+static void num_sims(void);
+static void target_ram(void);
+
+void vendor_load_properties()
+{
+    INFO("Starting custom ini");
+
+    std::string platform;
+    std::string device_boot;
+    std::string sku;
+    std::string radio;
+    std::string device;
+    std::string carrier;
+
+    platform = property_get("ro.board.platform");
+    if (platform != ANDROID_TARGET)
+        return;
+
+    device_boot = property_get("ro.boot.device");
+    property_set("ro.hw.device", device_boot.c_str());
+
+    sku = property_get("ro.boot.hardware.sku");
+
+    carrier = property_get("ro.boot.carrier");
+
+    radio = property_get("ro.boot.radio");
+    property_set("ro.hw.radio", radio.c_str());
+
+    /* Common for all models */
+    property_set("ro.build.product", "athene");
+    target_ram();
+    num_sims();
+
+    if (device_boot == "athene_13mp") {
+        /* Moto G4 (XT162x) */
+        property_set("ro.product.device", "athene");
+        property_set("ro.build.description", "athene-user 6.0.1 MPJ24.139-63 64 release-keys");
+        property_set("ro.build.fingerprint", "motorola/athene/athene:6.0.1/MPJ24.139-63/64:user/release-keys");
+        property_set("ro.product.model", "Moto G4");
+        property_set("ro.telephony.default_network", "10");
+    } else {
+        /* Moto G4 Plus (XT164x) */
+        property_set("ro.product.device", "athene_f");
+        property_set("ro.build.description", "athene_f-user 6.0.1 MPJ24.139-63 64 release-keys");
+        property_set("ro.build.fingerprint", "motorola/athene_f/athene_f:6.0.1/MPJ24.139-63/64:user/release-keys");
+        property_set("ro.product.model", "Moto G4 Plus");
+        property_set("ro.telephony.default_network", "10,10");
+    }
+
+        if (sku == "XT1625" || sku == "XT1644") {
+                property_set("persist.radio.is_wps_enabled", "true");
+                property_set("ro.radio.imei.sv", "4");
+        }
+
+        if (sku == "XT1621" || sku == "XT1622" || sku == "XT1640" || sku == "XT1642" || sku == "XT1643") {
+                if (radio == "India") {
+                    property_set("ro.radio.imei.sv", "6");
+                    property_set("persist.radio.is_wps_enabled", "true");
+                }
+                else {
+                    property_set("ro.radio.imei.sv", "3");
+                }
+        }
+
+        if (sku == "XT1626" || sku == "XT1641") {
+                property_set("ro.radio.imei.sv", "2");
+                property_set("persist.radio.is_wps_enabled", "true");
+                property_set("persist.radio.pb.max.match", "10");
+        }  
+}
 
 /* Target-Specific Dalvik Heap & HWUI Configuration */
-void target_ram() {
-    char ram[PROP_VALUE_MAX];
-    property_get("ro.boot.ram", ram);
+static void target_ram(void) {
+    std::string ram;
 
-    if (ISMATCH(ram, "2GB")) {
+    ram = property_get("ro.boot.ram");
+
+    if (ram == "2GB") {
         property_set("dalvik.vm.heapstartsize", "16m");
         property_set("dalvik.vm.heapgrowthlimit", "192m");
         property_set("dalvik.vm.heapsize", "512m");
@@ -76,91 +147,20 @@ void target_ram() {
         property_set("ro.hwui.text_small_cache_width", "1024");
         property_set("ro.hwui.text_small_cache_height", "1024");
         property_set("ro.hwui.text_large_cache_width", "2048");
-        property_set("ro.hwui.text_large_cache_height", "1024");
+        property_set("ro.hwui.text_large_cache_height", "1024");    
     }
 }
 
-void num_sims() {
-    char dualsim[PROP_VALUE_MAX];
-    property_get("ro.boot.dualsim", dualsim);
-    property_set("ro.hw.dualsim", dualsim);
+static void num_sims(void) {
+    std::string dualsim;
 
-    if (ISMATCH(dualsim, "true")) {
+    dualsim = property_get("ro.boot.dualsim");
+
+    property_set("ro.hw.dualsim", dualsim.c_str());
+
+    if (dualsim == "true") {
             property_set("persist.radio.multisim.config", "dsds");
-	} else {
+        } else {
             property_set("persist.radio.multisim.config", "");
-	}
+        }
 }
-
-void vendor_load_properties()
-{
-    char platform[PROP_VALUE_MAX];
-    char device_boot[PROP_VALUE_MAX];
-    char sku[PROP_VALUE_MAX];
-    char carrier[PROP_VALUE_MAX];
-    char device[PROP_VALUE_MAX];
-    char devicename[PROP_VALUE_MAX];
-    char radio[PROP_VALUE_MAX];
-    int rc;
-
-    rc = property_get("ro.board.platform", platform);
-    if (!rc || !ISMATCH(platform, ANDROID_TARGET))
-        return;
-
-    property_get("ro.boot.device", device_boot);
-    property_set("ro.hw.device", device_boot);
-	
-    property_get("ro.boot.hardware.sku", sku);
-    property_get("ro.boot.carrier", carrier);
-	
-    property_get("ro.boot.radio", radio);
-    property_set("ro.hw.radio", radio);
-	
-    /* Common for all models */
-    property_set("ro.build.product", "athene");
-    target_ram();
-    num_sims();
-
-    if (ISMATCH(device_boot, "athene_13mp")) {
-        /* Moto G4 (XT162x) */
-        property_set("ro.product.device", "athene");
-        property_set("ro.build.description", "athene-user 6.0.1 MPJ24.139-63 64 release-keys");
-        property_set("ro.build.fingerprint", "motorola/athene/athene:6.0.1/MPJ24.139-63/64:user/release-keys");
-        property_set("ro.product.model", "Moto G4");	
-        property_set("ro.telephony.default_network", "10");
-    } else {
-        /* Moto G4 Plus (XT164x) */
-        property_set("ro.product.device", "athene_f");
-        property_set("ro.build.description", "athene_f-user 6.0.1 MPJ24.139-63 64 release-keys");
-        property_set("ro.build.fingerprint", "motorola/athene_f/athene_f:6.0.1/MPJ24.139-63/64:user/release-keys");
-        property_set("ro.product.model", "Moto G4 Plus");
-        property_set("ro.telephony.default_network", "10,10");
-    }
-	
-	if (ISMATCH(sku, "XT1625") || ISMATCH(sku, "XT1644")) {
-		property_set("persist.radio.is_wps_enabled", "true");
-		property_set("ro.radio.imei.sv", "4");
-	}
-	
-	if (ISMATCH(sku, "XT1621") || ISMATCH(sku, "XT1622") || ISMATCH(sku, "XT1640") || ISMATCH(sku, "XT1642") || ISMATCH(sku, "XT1643")) {
-		
-                if (ISMATCH(radio, "India")) {
-                    property_set("ro.radio.imei.sv", "6");
-                    property_set("persist.radio.is_wps_enabled", "true");
-                }
-                else {
-                    property_set("ro.radio.imei.sv", "3");
-                }
-	}
-	
-	if (ISMATCH(sku, "XT1626") || ISMATCH(sku, "XT1641")) {
-		property_set("ro.radio.imei.sv", "2");
-		property_set("persist.radio.is_wps_enabled", "true");
-		property_set("persist.radio.pb.max.match", "10");
-	}
-	
-    property_get("ro.product.device", device);
-    strlcpy(devicename, device, sizeof(devicename));
-    INFO("Found sku id: %s setting build properties for %s device\n", sku, devicename);
-}
-
