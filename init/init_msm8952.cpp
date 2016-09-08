@@ -26,9 +26,11 @@
  */
 
 #include <stdlib.h>
+#include <unistd.h>
+#include <fcntl.h>
+#include <cutils/properties.h>
 
 #include "vendor_init.h"
-#include "property_service.h"
 #include "log.h"
 #include "util.h"
 
@@ -36,9 +38,10 @@
 
 /* Target-Specific Dalvik Heap & HWUI Configuration */
 void target_ram() {
-    std::string ram = property_get("ro.boot.ram");
+    char ram[PROP_VALUE_MAX];
+    property_get("ro.boot.ram", ram, NULL);
 
-    if (strstr(ram.c_str(), "2GB")) {
+    if (ISMATCH(ram, "2GB")) {
         property_set("dalvik.vm.heapstartsize", "16m");
         property_set("dalvik.vm.heapgrowthlimit", "192m");
         property_set("dalvik.vm.heapsize", "512m");
@@ -57,7 +60,7 @@ void target_ram() {
         property_set("ro.hwui.text_small_cache_height", "1024");
         property_set("ro.hwui.text_large_cache_width", "2048");
         property_set("ro.hwui.text_large_cache_height", "1024");
-    } else if (strstr(ram.c_str(), "3GB")) {
+    } else if (ISMATCH(ram, "3GB")) {
         property_set("dalvik.vm.heapstartsize", "8m");
         property_set("dalvik.vm.heapgrowthlimit", "288m");
         property_set("dalvik.vm.heapsize", "768m");
@@ -76,7 +79,7 @@ void target_ram() {
         property_set("ro.hwui.text_small_cache_height", "1024");
         property_set("ro.hwui.text_large_cache_width", "2048");
         property_set("ro.hwui.text_large_cache_height", "1024");
-    } else if (strstr(ram.c_str(), "4GB")) {
+    } else if (ISMATCH(ram, "4GB")) {
         property_set("dalvik.vm.heapstartsize", "8m");
         property_set("dalvik.vm.heapgrowthlimit", "384m");
         property_set("dalvik.vm.heapsize", "1024m");
@@ -99,10 +102,11 @@ void target_ram() {
 }
 
 void num_sims() {
-    std::string dualsim = property_get("ro.boot.dualsim");
-    property_set("ro.hw.dualsim", dualsim.c_str());
+    char dualsim[PROP_VALUE_MAX];
+    property_get("ro.boot.dualsim", dualsim, NULL);
+    property_set("ro.hw.dualsim", dualsim);
 
-    if (strstr(dualsim.c_str(), "true")) {
+    if (ISMATCH(dualsim, "true")) {
             property_set("persist.radio.multisim.config", "dsds");
 	} else {
             property_set("persist.radio.multisim.config", "");
@@ -111,24 +115,34 @@ void num_sims() {
 
 void vendor_load_properties()
 {
-    std::string platform = property_get("ro.board.platform");
-    if (!strstr(platform.c_str(), ANDROID_TARGET))
+    char platform[PROP_VALUE_MAX];
+    char device_boot[PROP_VALUE_MAX];
+    char sku[PROP_VALUE_MAX];
+    char carrier[PROP_VALUE_MAX];
+    char device[PROP_VALUE_MAX];
+    char devicename[PROP_VALUE_MAX];
+    char radio[PROP_VALUE_MAX];
+    int rc;
+
+    rc = property_get("ro.board.platform", platform, NULL);
+    if (!rc || !ISMATCH(platform, ANDROID_TARGET))
         return;
 
-    std::string device = property_get("ro.boot.device");
-    property_set("ro.hw.device", device.c_str());
+    property_get("ro.boot.device", device_boot, NULL);
+    property_set("ro.hw.device", device_boot);
 	
-    std::string radio = property_get("ro.boot.radio");
-    property_set("ro.hw.radio", radio.c_str());
-
-    std::string sku = property_get("ro.boot.hardware.sku");
-
+    property_get("ro.boot.hardware.sku", sku, NULL);
+    property_get("ro.boot.carrier", carrier, NULL);
+	
+    property_get("ro.boot.radio", radio, NULL);
+    property_set("ro.hw.radio", radio);
+	
     /* Common for all models */
     property_set("ro.build.product", "athene");
     target_ram();
     num_sims();
 
-    if (strstr(device.c_str(), "athene_13mp")) {
+    if (ISMATCH(device_boot, "athene_13mp")) {
         /* Moto G4 (XT162x) */
         property_set("ro.product.device", "athene");
         property_set("ro.build.description", "athene-user 6.0.1 MPJ24.139-23.4 4 release-keys");
@@ -144,19 +158,23 @@ void vendor_load_properties()
         property_set("ro.telephony.default_network", "10,10");
     }
 	
-	if (strstr(sku.c_str(), "XT1625") || strstr(sku.c_str(), "XT1644")) {
+	if (ISMATCH(sku, "XT1625") || ISMATCH(sku, "XT1644")) {
 		property_set("persist.radio.is_wps_enabled", "true");
 		property_set("ro.radio.imei.sv", "4");
 	}
 	
-	if (strstr(sku.c_str(), "XT1621") || strstr(sku.c_str(), "XT1622") || strstr(sku.c_str(), "XT1640") || strstr(sku.c_str(), "XT1642") || strstr(sku.c_str(), "XT1643")) {
+	if (ISMATCH(sku, "XT1621") || ISMATCH(sku, "XT1622") || ISMATCH(sku, "XT1640") || ISMATCH(sku, "XT1642") || ISMATCH(sku, "XT1643")) {
 		property_set("ro.radio.imei.sv", "3");
 	}
 	
-	if (strstr(sku.c_str(), "XT1626") || strstr(sku.c_str(), "XT1641")) {
+	if (ISMATCH(sku, "XT1626") || ISMATCH(sku, "XT1641")) {
 		property_set("ro.radio.imei.sv", "2");
 		property_set("persist.radio.is_wps_enabled", "true");
 		property_set("persist.radio.pb.max.match", "10");
 	}
 	
+    property_get("ro.product.device", device, NULL);
+    strlcpy(devicename, device, sizeof(devicename));
+    INFO("Found sku id: %s setting build properties for %s device\n", sku, devicename);
 }
+
