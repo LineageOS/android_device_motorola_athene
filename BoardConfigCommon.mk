@@ -141,6 +141,7 @@ TARGET_LDPRELOAD := libNimsWrap.so
 BOARD_USES_QCNE := true
 
 # Sensors
+BOARD_GLOBAL_CFLAGS += -DCOMPAT_SENSORS_M
 USE_SENSOR_MULTI_HAL := true
 
 # Recovery
