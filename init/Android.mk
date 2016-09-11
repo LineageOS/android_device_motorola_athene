@@ -7,5 +7,6 @@ LOCAL_C_INCLUDES := system/core/init
 LOCAL_CPPFLAGS := -Wall -DANDROID_TARGET=\"$(TARGET_BOARD_PLATFORM)\"
 LOCAL_SRC_FILES := init_msm8952.cpp
 LOCAL_MODULE := libinit_msm8952
+LOCAL_STATIC_LIBRARIES := libcutils libc
 
 include $(BUILD_STATIC_LIBRARY)
