@@ -1,4 +1,4 @@
-/* Copyright (c) 2011-2016, The Linux Foundation. All rights reserved.
+/* Copyright (c) 2011-2014, The Linux Foundation. All rights reserved.
  *
  * Redistribution and use in source and binary forms, with or without
  * modification, are permitted provided that the following conditions are
@@ -113,7 +113,7 @@ public:
                         enum loc_sess_status status,
                         LocPosTechMask loc_technology_mask =
                                   LOC_POS_TECH_MASK_DEFAULT);
-    void reportSv(GnssSvStatus &svStatus,
+    void reportSv(QcomGnssSvStatus &svStatus,
                   GpsLocationExtended &locationExtended,
                   void* svExt);
     void reportStatus(GpsStatusValue status);
@@ -130,7 +130,7 @@ public:
     void reportDataCallClosed();
     void requestNiNotify(GpsNiNotification &notify, const void* data);
     void saveSupportedMsgList(uint64_t supportedMsgList);
-    void reportGnssMeasurementData(GnssData &gnssMeasurementData);
+    void reportGpsMeasurementData(GpsData &gpsMeasurementData);
 
     // downward calls
     // All below functions are to be defined by adapter specific modules:
@@ -171,8 +171,6 @@ public:
         informNiResponse(GpsUserResponseType userResponse, const void* passThroughData);
     virtual enum loc_api_adapter_err
         setSUPLVersion(uint32_t version);
-    virtual enum loc_api_adapter_err
-        setNMEATypes (uint32_t typesMask);
     virtual enum loc_api_adapter_err
         setLPPConfig(uint32_t profile);
     virtual enum loc_api_adapter_err
@@ -216,15 +214,9 @@ public:
     virtual void installAGpsCert(const DerEncodedCertificate* pData,
                                  size_t length,
                                  uint32_t slotBitMask);
-    inline virtual void setInSession(bool inSession) {
-
-        (void)inSession;
-    }
+    inline virtual void setInSession(bool inSession) {}
     inline bool isMessageSupported (LocCheckingMessagesID msgID) const {
-
-        // confirm if msgID is not larger than the number of bits in
-        // mSupportedMsg
-        if ((uint64_t)msgID > (sizeof(mSupportedMsg) << 3)) {
+        if (msgID > (sizeof(mSupportedMsg) << 3)) {
             return false;
         } else {
             uint32_t messageChecker = 1 << msgID;

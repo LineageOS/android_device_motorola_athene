@@ -80,7 +80,7 @@ void LocAdapterBase::
 }
 
 void LocAdapterBase::
-    reportSv(GnssSvStatus &svStatus,
+    reportSv(QcomGnssSvStatus &svStatus,
              GpsLocationExtended &locationExtended,
              void* svExt)
 DEFAULT_IMPL()
@@ -137,6 +137,6 @@ bool LocAdapterBase::
 DEFAULT_IMPL(false)
 
 void LocAdapterBase::
-    reportGnssMeasurementData(GnssData &gnssMeasurementData)
+    reportGpsMeasurementData(GpsData &gpsMeasurementData)
 DEFAULT_IMPL()
 } // namespace loc_core
