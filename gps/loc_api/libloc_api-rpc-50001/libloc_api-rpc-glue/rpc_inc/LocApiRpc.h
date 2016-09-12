@@ -67,11 +67,9 @@ protected:
         open(LOC_API_ADAPTER_EVENT_MASK_T mask);
     virtual enum loc_api_adapter_err
         close();
-    LocApiRpc(const MsgTask* msgTask,
-              LOC_API_ADAPTER_EVENT_MASK_T exMask);
 
 public:
-    static LocApiRpc* createLocApiRpc(const MsgTask* msgTask,
+    LocApiRpc(const MsgTask* msgTask,
               LOC_API_ADAPTER_EVENT_MASK_T exMask);
     ~LocApiRpc();
 
