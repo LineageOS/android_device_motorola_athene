@@ -44,8 +44,8 @@ on enable-low-power
     write /sys/class/devfreq/qcom,cpubw.51/governor "bw_hwmon"
     write /sys/class/devfreq/qcom,cpubw.51/bw_hwmon/cpu_io_percent 20
     write /sys/class/devfreq/qcom,cpubw.51/bw_hwmon/guard_band_mbps 30
-    write /sys/class/devfreq/qcom,gpubw.38/governor "bw_hwmon"
-    write /sys/class/devfreq/qcom,gpubw.38/bw_hwmon/io_percent 40
+    write /sys/class/devfreq/qcom,gpubw.39/governor "bw_hwmon"
+    write /sys/class/devfreq/qcom,gpubw.39/bw_hwmon/io_percent 40
 
     # disable thermal & BCL core_control to update interactive gov settings
     write /sys/module/msm_thermal/core_control/enabled 0
