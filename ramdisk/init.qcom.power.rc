@@ -96,6 +96,10 @@ on enable-low-power
     write /sys/devices/system/cpu/cpu6/online 1
     write /sys/devices/system/cpu/cpu7/online 1
 
+    # Disable L2 GDHS to improve CPU stability
+    write /sys/module/lpm_levels/system/pwr/pwr-l2-gdhs/idle_enabled "N"
+    write /sys/module/lpm_levels/system/perf/perf-l2-gdhs/idle_enabled "N"
+
     # Enable Low power modes
     write /sys/module/lpm_levels/parameters/sleep_disabled 0
 
