@@ -143,7 +143,14 @@ void vendor_load_properties()
 	}
 	
 	if (ISMATCH(sku, "XT1621") || ISMATCH(sku, "XT1622") || ISMATCH(sku, "XT1640") || ISMATCH(sku, "XT1642") || ISMATCH(sku, "XT1643")) {
-		property_set("ro.radio.imei.sv", "3");
+		
+                if (ISMATCH(radio, "India")) {
+                    property_set("ro.radio.imei.sv", "6");
+                    property_set("persist.radio.is_wps_enabled", "true");
+                }
+                else {
+                    property_set("ro.radio.imei.sv", "3");
+                }
 	}
 	
 	if (ISMATCH(sku, "XT1626") || ISMATCH(sku, "XT1641")) {
