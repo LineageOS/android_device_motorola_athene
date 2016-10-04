@@ -60,6 +60,7 @@ persist.ims.disableADBLogs=2
 persist.ims.disableDebugLogs=0
 persist.ims.disableQXDMLogs=0
 persist.ims.disableIMSLogs=0
+service.qti.ims.enabled=1
 
 # Display
 debug.sf.hw=1
