@@ -61,6 +61,8 @@ persist.ims.disableDebugLogs=0
 persist.ims.disableQXDMLogs=0
 persist.ims.disableIMSLogs=0
 service.qti.ims.enabled=1
+net.lte.volte_call_capable=true
+persist.ims.enabler.enabled=true
 
 # Display
 debug.sf.hw=1
