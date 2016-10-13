@@ -75,10 +75,10 @@ on enable-low-power
     write /sys/devices/system/cpu/cpu4/cpufreq/interactive/timer_rate 20000
     write /sys/devices/system/cpu/cpu4/cpufreq/interactive/hispeed_freq 806400
     write /sys/devices/system/cpu/cpu4/cpufreq/interactive/io_is_busy 0
-    write /sys/devices/system/cpu/cpu4/cpufreq/interactive/target_loads "1 800000:90"
+    write /sys/devices/system/cpu/cpu4/cpufreq/interactive/target_loads "1 806400:90"
     write /sys/devices/system/cpu/cpu4/cpufreq/interactive/min_sample_time 40000
     write /sys/devices/system/cpu/cpu4/cpufreq/interactive/sampling_down_factor 40000
-    write /sys/devices/system/cpu/cpu4/cpufreq/scaling_min_freq 800000
+    write /sys/devices/system/cpu/cpu4/cpufreq/scaling_min_freq 806400
 
     # re-enable thermal & BCL core_control now
     write /sys/module/msm_thermal/core_control/enabled 1
@@ -122,14 +122,11 @@ on enable-low-power
     # Enable core control
     write /sys/devices/system/cpu/cpu0/core_ctl/min_cpus 0
     write /sys/devices/system/cpu/cpu0/core_ctl/max_cpus 4
-    write /sys/devices/system/cpu/cpu0/core_ctl/busy_up_thres 72
-    write /sys/devices/system/cpu/cpu0/core_ctl/busy_down_thres 28
+    write /sys/devices/system/cpu/cpu0/core_ctl/busy_up_thres 68
+    write /sys/devices/system/cpu/cpu0/core_ctl/busy_down_thres 40
     write /sys/devices/system/cpu/cpu0/core_ctl/offline_delay_ms 100
     write /sys/devices/system/cpu/cpu0/core_ctl/is_big_cluster 1
     write /sys/devices/system/cpu/cpu0/core_ctl/task_thres 4
-
-    # RPS
-    write /sys/class/net/rmnet_ipa0/queues/rx-0/rps_cpus "f0"
 
     # Enable dynamic clock gating
     write /sys/module/lpm_levels/lpm_workarounds/dynamic_clock_gating 1
@@ -147,9 +144,6 @@ on enable-low-power
 
     write /sys/module/process_reclaim/parameters/pressure_max 70
     write /sys/module/process_reclaim/parameters/swap_opt_eff 30
-
-    write /sys/module/lowmemorykiller/parameters/enable_adaptive_lmk 1
-    write /sys/module/lowmemorykiller/parameters/vmpressure_file_min 53059
 
     write /proc/sys/kernel/sched_boost 0
 
