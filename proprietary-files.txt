@@ -940,7 +940,6 @@ lib/libbabysit.so
 lib/libbt-aptX-ARM-4.2.2.so
 lib/libcce-socketjni.so
 lib/libcryptfs_hw.so
-lib/libdhcpcd.so
 lib/libdmengine.so
 lib/libdmjavaplugin.so
 lib/libdtvhal.so
