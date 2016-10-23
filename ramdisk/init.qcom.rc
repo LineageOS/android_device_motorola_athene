@@ -44,7 +44,6 @@ on early-init
     mkdir /customize 0500 root root
 
 on init
-    export LD_SHIM_LIBS /system/lib/libjustshoot.so|libshim_camera.so:/system/lib/libjscore.so|libshim_camera.so
     start qfintverify
     # Set permissions for persist partition
     mkdir /persist 0771 system system
