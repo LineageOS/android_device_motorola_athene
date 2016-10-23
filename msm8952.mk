@@ -103,8 +103,7 @@ PRODUCT_PACKAGES += \
 # Camera
 PRODUCT_PACKAGES += \
     libbson \
-    Snap \
-    libshim_camera
+    Snap
 
 # Display
 PRODUCT_PACKAGES += \
