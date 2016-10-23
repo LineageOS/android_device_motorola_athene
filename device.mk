@@ -189,8 +189,19 @@ PRODUCT_PACKAGES += \
     power.msm8952
 
 # Ramdisk
-PRODUCT_COPY_FILES += \
-    $(call find-copy-subdir-files,*,${LOCAL_PATH}/ramdisk,root)
+# Ramdisk
+PRODUCT_PACKAGES += \
+    fstab.qcom \
+    init.mmi.boot.sh \
+    init.mmi.laser.sh \
+    init.mmi.touch.sh \
+    init.mmi.usb.rc \
+    init.oem.hw.sh \
+    init.qcom.bt.sh \
+    init.qcom.power.rc \
+    init.qcom.rc \
+    init.qcom.ril.sh \
+    ueventd.qcom.rc
 
 # RIL
 PRODUCT_PACKAGES += \
