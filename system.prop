@@ -237,6 +237,9 @@ ro.com.google.clientidbase.am=android-motorola
 ro.com.google.clientidbase.gmm=android-motorola
 ro.com.google.clientidbase.yt=android-motorola
 
+# SDCard
+ro.sys.sdcardfs=true
+
 #
 # ADDITIONAL_BUILD_PROPERTIES
 #
