@@ -27,16 +27,82 @@
 
 #include <stdlib.h>
 #include <stdio.h>
-#include <cutils/properties.h>
 
 #include "vendor_init.h"
 #include "property_service.h"
 #include "log.h"
 #include "util.h"
 
+static void num_sims(void);
+static void target_ram(void);
+
+void vendor_load_properties()
+{
+    INFO("Starting custom ini");
+
+    std::string platform;
+    std::string device_boot;
+    std::string sku;
+    std::string radio;
+    std::string device;
+    std::string carrier;
+
+    platform = property_get("ro.board.platform");
+    if (platform != ANDROID_TARGET)
+        return;
+
+    device_boot = property_get("ro.boot.device");
+    property_set("ro.hw.device", device_boot.c_str());
+
+    sku = property_get("ro.boot.hardware.sku");
+
+    carrier = property_get("ro.boot.carrier");
+
+    radio = property_get("ro.boot.radio");
+    property_set("ro.hw.radio", radio.c_str());
+
+    /* Common for all models */
+    property_set("ro.build.product", "athene");
+    target_ram();
+    num_sims();
+
+    if (device_boot == "athene_13mp") {
+        /* Moto G4 (XT162x) */
+        property_set("ro.product.device", "athene");
+        property_set("ro.build.description", "athene-user 6.0.1 MPJ24.139-23.4 4 release-keys");
+        property_set("ro.build.fingerprint", "motorola/athene/athene:6.0.1/MPJ24.139-23.4/4:user/release-keys");
+        property_set("ro.product.model", "Moto G⁴");	
+        property_set("ro.telephony.default_network", "10");
+    } else {
+        /* Moto G4 Plus (XT164x) */
+        property_set("ro.product.device", "athene_f");
+        property_set("ro.build.description", "athene_f-user 6.0.1 MPJ24.139-23.4 4 release-keys");
+        property_set("ro.build.fingerprint", "motorola/athene_f/athene_f:6.0.1/MPJ24.139-23.4/4:user/release-keys");
+        property_set("ro.product.model", "Moto G⁴ Plus");
+        property_set("ro.telephony.default_network", "10,10");
+    }
+
+	if (sku == "XT1625" || sku == "XT1644") {
+		property_set("persist.radio.is_wps_enabled", "true");
+		property_set("ro.radio.imei.sv", "4");
+	}
+
+	if (sku == "XT1621" || sku == "XT1622" || sku == "XT1640" || sku == "XT1642" || sku == "XT1643") {
+		property_set("ro.radio.imei.sv", "3");
+	}
+
+	if (sku == "XT1626" || sku == "XT1641") {
+		property_set("ro.radio.imei.sv", "2");
+		property_set("persist.radio.is_wps_enabled", "true");
+		property_set("persist.radio.pb.max.match", "10");
+	}
+}
+
 /* Target-Specific Dalvik Heap & HWUI Configuration */
-void target_ram() {
-    std::string ram = property_get("ro.boot.ram");
+static void target_ram(void) {
+    std::string ram;
+
+    ram = property_get("ro.boot.ram");
 
     if (ram == "2GB") {
         property_set("dalvik.vm.heapstartsize", "16m");
@@ -98,8 +164,11 @@ void target_ram() {
     }
 }
 
-void num_sims() {
-    std::string dualsim = property_get("ro.boot.dualsim");
+static void num_sims(void) {
+    std::string dualsim;
+
+    dualsim = property_get("ro.boot.dualsim");
+
     property_set("ro.hw.dualsim", dualsim.c_str());
 
     if (dualsim == "true") {
@@ -107,72 +176,4 @@ void num_sims() {
 	} else {
             property_set("persist.radio.multisim.config", "");
 	}
-}
-
-void vendor_load_properties()
-{
-    INFO("Starting custom ini");
-
-    std::string platform, device_boot, sku, radio, device, carrier;
-
-    platform = property_get("ro.board.platform");
-    if (platform == ANDROID_TARGET) {
-        INFO("ANDROID_TARGET");
-        return;
-    }
-
-    INFO("Get device");
-    device_boot = property_get("ro.boot.device");
-    property_set("ro.hw.device", device_boot.c_str());
-
-    INFO("Get sku");
-    sku = property_get("ro.boot.hardware.sku");
-
-    INFO("Get carrier");
-    carrier = property_get("ro.boot.carrier");
-
-    INFO("Get radio");
-    radio = property_get("ro.boot.radio");
-    property_set("ro.hw.radio", radio.c_str());
-
-    /* Common for all models */
-    property_set("ro.build.product", "athene");
-    INFO("Set RAM");
-    target_ram();
-    INFO("Set SIM");
-    num_sims();
-
-    if (device_boot == "athene_13mp") {
-        /* Moto G4 (XT162x) */
-        property_set("ro.product.device", "athene");
-        property_set("ro.build.description", "athene-user 6.0.1 MPJ24.139-23.4 4 release-keys");
-        property_set("ro.build.fingerprint", "motorola/athene/athene:6.0.1/MPJ24.139-23.4/4:user/release-keys");
-        property_set("ro.product.model", "Moto G⁴");	
-        property_set("ro.telephony.default_network", "10");
-    } else {
-        /* Moto G4 Plus (XT164x) */
-        property_set("ro.product.device", "athene_f");
-        property_set("ro.build.description", "athene_f-user 6.0.1 MPJ24.139-23.4 4 release-keys");
-        property_set("ro.build.fingerprint", "motorola/athene_f/athene_f:6.0.1/MPJ24.139-23.4/4:user/release-keys");
-        property_set("ro.product.model", "Moto G⁴ Plus");
-        property_set("ro.telephony.default_network", "10,10");
-    }
-
-	if (sku == "XT1625" || sku == "XT1644") {
-		property_set("persist.radio.is_wps_enabled", "true");
-		property_set("ro.radio.imei.sv", "4");
-	}
-
-	if (sku == "XT1621" || sku == "XT1622" || sku == "XT1640" || sku == "XT1642" || sku == "XT1643") {
-		property_set("ro.radio.imei.sv", "3");
-	}
-
-	if (sku == "XT1626" || sku == "XT1641") {
-		property_set("ro.radio.imei.sv", "2");
-		property_set("persist.radio.is_wps_enabled", "true");
-		property_set("persist.radio.pb.max.match", "10");
-	}
-
-    device = property_get("ro.product.device");
-    INFO("Found sku id: %s setting build properties for %s device\n", sku.c_str() , device.c_str());
 }
