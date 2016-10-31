@@ -44,8 +44,8 @@ on enable-low-power
     write /sys/class/devfreq/qcom,cpubw.51/governor "bw_hwmon"
     write /sys/class/devfreq/qcom,cpubw.51/bw_hwmon/cpu_io_percent 20
     write /sys/class/devfreq/qcom,cpubw.51/bw_hwmon/guard_band_mbps 30
-    write /sys/class/devfreq/qcom,gpubw.39/governor "bw_hwmon"
-    write /sys/class/devfreq/qcom,gpubw.39/bw_hwmon/io_percent 40
+    write /sys/class/devfreq/qcom,gpubw.38/governor "bw_hwmon"
+    write /sys/class/devfreq/qcom,gpubw.38/bw_hwmon/io_percent 40
 
     # disable thermal & BCL core_control to update interactive gov settings
     write /sys/module/msm_thermal/core_control/enabled 0
@@ -75,10 +75,10 @@ on enable-low-power
     write /sys/devices/system/cpu/cpu4/cpufreq/interactive/timer_rate 20000
     write /sys/devices/system/cpu/cpu4/cpufreq/interactive/hispeed_freq 806400
     write /sys/devices/system/cpu/cpu4/cpufreq/interactive/io_is_busy 0
-    write /sys/devices/system/cpu/cpu4/cpufreq/interactive/target_loads "1 806400:90"
+    write /sys/devices/system/cpu/cpu4/cpufreq/interactive/target_loads "1 800000:90"
     write /sys/devices/system/cpu/cpu4/cpufreq/interactive/min_sample_time 40000
     write /sys/devices/system/cpu/cpu4/cpufreq/interactive/sampling_down_factor 40000
-    write /sys/devices/system/cpu/cpu4/cpufreq/scaling_min_freq 806400
+    write /sys/devices/system/cpu/cpu4/cpufreq/scaling_min_freq 800000
 
     # re-enable thermal & BCL core_control now
     write /sys/module/msm_thermal/core_control/enabled 1
@@ -95,10 +95,6 @@ on enable-low-power
     write /sys/devices/system/cpu/cpu5/online 1
     write /sys/devices/system/cpu/cpu6/online 1
     write /sys/devices/system/cpu/cpu7/online 1
-
-    # Disable L2 GDHS to improve CPU stability
-    write /sys/module/lpm_levels/system/pwr/pwr-l2-gdhs/idle_enabled "N"
-    write /sys/module/lpm_levels/system/perf/perf-l2-gdhs/idle_enabled "N"
 
     # Enable Low power modes
     write /sys/module/lpm_levels/parameters/sleep_disabled 0
