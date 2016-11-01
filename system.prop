@@ -87,11 +87,6 @@ persist.timed.enable=true
 # CABL
 ro.qualcomm.cabl=0
 
-# Bluetooth
-bluetooth.hfp.client=1
-ro.bluetooth.hfp.ver=1.6
-ro.qualcomm.bt.hci_transport=smd
-
 # SDCard
 persist.fuse_sdcard=true
 persist.esdfs_sdcard=true
@@ -132,6 +127,12 @@ audio.offload.track.enable=true
 audio.deep_buffer.media=true
 audio.pp.asphere.enabled=false
 audio.safx.pbe.enabled=true
+
+# Bluetooth
+bluetooth.hfp.client=1
+qcom.bluetooth.soc=smd
+ro.bluetooth.hfp.ver=1.6
+ro.qualcomm.bt.hci_transport=smd
 
 # Camera
 camera.lowpower.record.enable=1
