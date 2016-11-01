@@ -14,8 +14,10 @@
 # limitations under the License.
 #
 
-$(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
-$(call inherit-product, vendor/cm/config/common_full_phone.mk)
+$(call inherit-product, $(SRC_TARGET_DIR)/product/languages_full.mk)
+
+# Also get non-open-source specific aspects if available
+$(call inherit-product, vendor/motorola/msm8952-common/msm8952-common-vendor.mk)
 
 # Overlay
 DEVICE_PACKAGE_OVERLAYS += $(LOCAL_PATH)/overlay
