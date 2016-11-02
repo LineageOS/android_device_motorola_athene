@@ -17,6 +17,8 @@
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
   <!-- Gesture shortcuts -->
+  <string name="user_aware_display_title">Korisniku prilagođen prikaz</string>
+  <string name="user_aware_display_summary">Drži zaslon uključen dok je korisnik ispred zaslona</string>
   <string name="screen_gestures_panel_title">Prečaci gesta</string>
   <string name="ambient_display_title">Ambijentni zaslon</string>
   <string name="pick_up_gesture_title">Podizanje</string>
@@ -25,14 +27,18 @@
   <string name="ir_wake_up_summary">Prikaži obavijesti kada mahnete rukom preko zaslona</string>
   <string name="actions_title">Radnje</string>
   <string name="camera_gesture_title">Dvostruki zaokret</string>
-  <string name="camera_gesture_summary">Otvori fotoaparat gestom dvostruki zaokret</string>
-  <string name="chop_chop_gesture_title">Chop-chop</string>
-  <string name="chop_chop_gesture_summary">Uključi/isključi svjetiljku koristeći chop-chop gestu</string>
+  <string name="camera_gesture_summary">Akcija za gestu duplog zaokreta</string>
+  <string name="chop_chop_gesture_title">Sjeći</string>
+  <string name="chop_chop_gesture_summary">Akcija kada se koristi gesta požuri</string>
   <string name="ir_silencer_title">Mahni za tišinu</string>
-  <string name="ir_silencer_summary">Utišaj dolazne pozive mahanjem preko zaslona</string>
-  <string name="flip_to_mute_title">Preokreni za Ne ometaj</string>
-  <string name="flip_to_mute_summary">Okrenite telefon prema dolje za utišavanje obavijesti i poziva</string>
-  <string name="dnd_access">Molimo vas, dajte \"Ne ometaj\" pristup CMActions da biste mogli koristiti ovu opciju.</string>
-  <string name="lift_to_silence_title">Javi se da prestane zvoniti</string>
-  <string name="lift_to_silence_summary">Podignite uređaj da utišate dolazne pozive. Radi samo kada vaš telefon počinje iz ravnog položaja</string>
+  <string name="ir_silencer_summary">Utišaj dolazni poziv mahanjem preko ekrana</string>
+  <string name="action_none">Onemogući</string>
+  <string name="action_launch_camera">Pokreni kameru</string>
+  <string name="action_torch">Prekidač svjetiljke</string>
+  <string name="feedback_intensity_title">Intenzitet odgovora dodira</string>
+  <string name="feedback_intensity_summary">Jakost povratne informacije za duplu rotaciju i požuri akciju</string>
+  <string name="feedback_intensity_none">Onemogućeno</string>
+  <string name="feedback_intensity_low">Niska</string>
+  <string name="feedback_intensity_medium">Srednje</string>
+  <string name="feedback_intensity_high">Visoka</string>
 </resources>

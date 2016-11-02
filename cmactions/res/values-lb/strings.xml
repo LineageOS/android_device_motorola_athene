@@ -17,15 +17,28 @@
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
   <!-- Gesture shortcuts -->
+  <string name="user_aware_display_title">Benotzerbewosst Uweis</string>
+  <string name="user_aware_display_summary">De Schierm waakreghalen, soulaang e virun engem Benutzer ass</string>
   <string name="screen_gestures_panel_title">Steierung mat Gesten</string>
   <string name="ambient_display_title">Ambiente Schierm</string>
   <string name="pick_up_gesture_title">Ophiewen</string>
-  <string name="pick_up_gesture_summary">Notifikatioune beim Ophiewen oder Eraushuele kuerz uweisen</string>
+  <string name="pick_up_gesture_summary">Puls-Notifikatioune beim Ophiewen oder Eraushuelen</string>
   <string name="ir_wake_up_title">Wénken</string>
-  <string name="ir_wake_up_summary">Notifikatioune kuerz uweisen, wann s du mat denger Hand iwwer de Schierm wénks</string>
+  <string name="ir_wake_up_summary">Puls-Notifikatiounen, wann s du mat denger Hand iwwer de Schierm wénks</string>
   <string name="actions_title">Aktiounen</string>
-  <string name="camera_gesture_title">Duebel Dréiung</string>
-  <string name="camera_gesture_summary">Fotoapparat aktivéieren, wann de Gest \"Duebel Dréinung\" benotzt gëtt</string>
+  <string name="camera_gesture_title">Duebel-Dréinung</string>
+  <string name="camera_gesture_summary">Aktioun wann den Duebel-Dréinung-Gest benotzt gëtt</string>
+  <string name="chop_chop_gesture_title">Schwenken</string>
+  <string name="chop_chop_gesture_summary">Aktioun wann de Schwenk-Gest benotzt gëtt</string>
   <string name="ir_silencer_title">Wénke fir roueg ze schalten</string>
   <string name="ir_silencer_summary">Erakommend Uriff roueg schalten duerch d\'Wénken iwwer de Schierm</string>
+  <string name="action_none">Desaktivéieren</string>
+  <string name="action_launch_camera">Kamera starten</string>
+  <string name="action_torch">Täscheluucht un/ausmaachen</string>
+  <string name="feedback_intensity_title">Intensitéit vum haptesche Feedback</string>
+  <string name="feedback_intensity_summary">Stäerkt vum haptesche Feedback fir d\'Duebel-Dréinung- an d\'Schwenk-Aktiounen</string>
+  <string name="feedback_intensity_none">Desaktivéiert</string>
+  <string name="feedback_intensity_low">Niddreg</string>
+  <string name="feedback_intensity_medium">Mëttel</string>
+  <string name="feedback_intensity_high">Héich</string>
 </resources>
