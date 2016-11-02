@@ -80,8 +80,7 @@ on enable-low-power
     write /sys/devices/system/cpu/cpu4/cpufreq/interactive/sampling_down_factor 40000
     write /sys/devices/system/cpu/cpu4/cpufreq/scaling_min_freq 800000
 
-    # re-enable thermal & BCL core_control now
-    write /sys/module/msm_thermal/core_control/enabled 1
+    #BCL core_control now
     write /sys/devices/soc.0/qcom,bcl.57/mode "disable"
     write /sys/devices/soc.0/qcom,bcl.57/hotplug_mask 12
     write /sys/devices/soc.0/qcom,bcl.57/hotplug_soc_mask 15
@@ -116,14 +115,20 @@ on enable-low-power
     write /sys/module/cpu_boost/parameters/input_boost_ms 40
 
     # Enable core control
-    insmod /system/lib/modules/core_ctl.ko
-    write /sys/devices/system/cpu/cpu0/core_ctl/min_cpus 0
+    write /sys/devices/system/cpu/cpu0/core_ctl/min_cpus 1
     write /sys/devices/system/cpu/cpu0/core_ctl/max_cpus 4
-    write /sys/devices/system/cpu/cpu0/core_ctl/busy_up_thres 72
-    write /sys/devices/system/cpu/cpu0/core_ctl/busy_down_thres 28
+    write /sys/devices/system/cpu/cpu0/core_ctl/busy_up_thres 68
+    write /sys/devices/system/cpu/cpu0/core_ctl/busy_down_thres 40
     write /sys/devices/system/cpu/cpu0/core_ctl/offline_delay_ms 100
     write /sys/devices/system/cpu/cpu0/core_ctl/is_big_cluster 1
     write /sys/devices/system/cpu/cpu0/core_ctl/task_thres 4
+    write /sys/devices/system/cpu/cpu4/core_ctl/busy_up_thres 20
+    write /sys/devices/system/cpu/cpu4/core_ctl/busy_down_thres 5
+    write /sys/devices/system/cpu/cpu4/core_ctl/offline_delay_ms 5000
+    write /sys/devices/system/cpu/cpu4/core_ctl/not_preferred 1
+
+    # Re-enable thermal
+    write /sys/module/msm_thermal/core_control/enabled 1
 
     # RPS
     write /sys/class/net/rmnet_ipa0/queues/rx-0/rps_cpus "f0"
@@ -148,7 +153,7 @@ on enable-low-power
     write /sys/module/lowmemorykiller/parameters/enable_adaptive_lmk 1
     write /sys/module/lowmemorykiller/parameters/vmpressure_file_min 53059
 
-    write /proc/sys/kernel/sched_boost 0
+    write /proc/sys/kernel/sched_boost 1
 
     # Set perfd properties
     rm /data/system/perfd/default_values
