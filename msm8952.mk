@@ -105,7 +105,7 @@ PRODUCT_PACKAGES += \
 # Camera
 PRODUCT_PACKAGES += \
     libbson \
-    Camera2
+    Snap
 
 # Display
 PRODUCT_PACKAGES += \
