@@ -17,4 +17,28 @@
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
   <!-- Gesture shortcuts -->
+  <string name="user_aware_display_title">प्रयोक्ता-जाणीव प्रदर्शन</string>
+  <string name="user_aware_display_summary">प्रयोक्ता प्रदर्शनाच्या समोर असताना स्क्रीन चालू ठेवा</string>
+  <string name="screen_gestures_panel_title">गेश्चरशॉर्टकट</string>
+  <string name="ambient_display_title">अँबियन्ट प्रदर्शन</string>
+  <string name="pick_up_gesture_title">उचलणे</string>
+  <string name="pick_up_gesture_summary">उचलल्यावर किंवा अनस्टो केल्यावर पल्स नोटिफिकेशन्स</string>
+  <string name="ir_wake_up_title">हलवा</string>
+  <string name="ir_wake_up_summary">तुम्ही तुमचा हात स्क्रीनवर तिरका हलवल्यावर पल्स नोटिफिकेशन्स</string>
+  <string name="actions_title">कृती</string>
+  <string name="camera_gesture_title">दुहेरी-ट्विस्ट</string>
+  <string name="camera_gesture_summary">दुहेरी-ट्विस्ट जेश्चर वापरतानाची क्रिया</string>
+  <string name="chop_chop_gesture_title">चॉप-चॉप</string>
+  <string name="chop_chop_gesture_summary">चॉप-चॉप जेश्चर वापरताना क्रिया</string>
+  <string name="ir_silencer_title">मूक करण्यासाठी हलवा</string>
+  <string name="ir_silencer_summary">तुमचा हात स्क्रीनवर तिरका हलवून इनकमिंग कॉल्स मूक करा</string>
+  <string name="action_none">अक्षम करा</string>
+  <string name="action_launch_camera">कॅमेरा सुरू करा</string>
+  <string name="action_torch">टॉर्च टॉगल करा</string>
+  <string name="feedback_intensity_title">हॅप्टिक फीडबॅक तीव्रता</string>
+  <string name="feedback_intensity_summary">दुहेरी-ट्विस्ट आणि चॉप-चॉप कृतींसाठी हॅप्टिक फीडबॅकची तीव्रता</string>
+  <string name="feedback_intensity_none">अक्षम केले</string>
+  <string name="feedback_intensity_low">निम्न</string>
+  <string name="feedback_intensity_medium">मध्‍यम</string>
+  <string name="feedback_intensity_high">उच्च</string>
 </resources>

@@ -29,13 +29,15 @@ public class TorchAction implements SensorAction {
     private static final int TURN_SCREEN_ON_WAKE_LOCK_MS = 500;
 
     private CameraManager mCameraManager;
+    private final int mVibratorPeriod;
     private final Vibrator mVibrator;
     private String mRearCameraId;
-    private static boolean mTorchEnabled;
+    private static boolean mTorchEnabled;;
 
-    public TorchAction(Context mContext) {
+    public TorchAction(Context mContext, int vibratorPeriod) {
         mCameraManager = (CameraManager) mContext.getSystemService(Context.CAMERA_SERVICE);
         mVibrator = (Vibrator) mContext.getSystemService(Context.VIBRATOR_SERVICE);
+        mVibratorPeriod = vibratorPeriod;
         try {
             for (final String cameraId : mCameraManager.getCameraIdList()) {
                 CameraCharacteristics characteristics =
@@ -52,7 +54,7 @@ public class TorchAction implements SensorAction {
 
     @Override
     public void action() {
-        mVibrator.vibrate(250);
+        mVibrator.vibrate(mVibratorPeriod);
         if (mRearCameraId != null) {
             try {
                 mCameraManager.setTorchMode(mRearCameraId, !mTorchEnabled);
@@ -63,7 +65,6 @@ public class TorchAction implements SensorAction {
     }
 
     private class MyTorchCallback extends CameraManager.TorchCallback {
-
         @Override
         public void onTorchModeChanged(String cameraId, boolean enabled) {
             if (!cameraId.equals(mRearCameraId))

@@ -17,4 +17,28 @@
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
   <!-- Gesture shortcuts -->
+  <string name="user_aware_display_title">பயனர்-அறிந்த காட்சி</string>
+  <string name="user_aware_display_summary">பயனர் காட்சிக்கு முன் இருக்கும்போது திரையை ஆன்-இல் வைக்கவும்</string>
+  <string name="screen_gestures_panel_title">குறிப்புணர்வு குறுக்குவழிகள்</string>
+  <string name="ambient_display_title">சூழல்சார் திரை</string>
+  <string name="pick_up_gesture_title">மேலே-எடு</string>
+  <string name="pick_up_gesture_summary">மேலே-எடு அல்லது அன்ஸ்டவ்வில் துடிப்பு அறிவிப்புகள்</string>
+  <string name="ir_wake_up_title">அசை</string>
+  <string name="ir_wake_up_summary">உங்கள் கையை திரைக்கு குறுக்கே அசைக்கும்போது துடிப்பு அறிவிப்புகள்</string>
+  <string name="actions_title">செயல்கள்</string>
+  <string name="camera_gesture_title">இரு-திருப்பம்</string>
+  <string name="camera_gesture_summary">இரு திருப்ப குறிப்புணர்வை பயன்படுத்தும்போதுள்ள செயல்</string>
+  <string name="chop_chop_gesture_title">சாப்-சாப்</string>
+  <string name="chop_chop_gesture_summary">சாப்-சாப் குறிப்புணர்வின்போது செயல்</string>
+  <string name="ir_silencer_title">நிசப்தத்திற்கு அசை</string>
+  <string name="ir_silencer_summary">உங்கள் கையை திரைக்கு குறுக்கே அசைப்பதன் மூலம் உள்வரும் அழைப்புகளை நிசப்தமாக்குங்கள்</string>
+  <string name="action_none">முடக்கு</string>
+  <string name="action_launch_camera">கேமராவை தொடங்கு</string>
+  <string name="action_torch">டார்ச்சை நிலைமாற்று</string>
+  <string name="feedback_intensity_title">தீண்டும் பின்னூட்டம் இன்டென்சிட்டி</string>
+  <string name="feedback_intensity_summary">இரு-திருப்பம் மற்றும் சாப்-சாப் செயல்களுக்கான தீண்டும் பின்னூட்டத்தின் வலிமை</string>
+  <string name="feedback_intensity_none">முடக்கப்பட்டது</string>
+  <string name="feedback_intensity_low">குறைந்த தரம்</string>
+  <string name="feedback_intensity_medium">நடுத்தரம்</string>
+  <string name="feedback_intensity_high">உயர்தரம்</string>
 </resources>

@@ -17,22 +17,28 @@
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
   <!-- Gesture shortcuts -->
-  <string name="screen_gestures_panel_title">Keinu lasterbideak</string>
+  <string name="user_aware_display_title">Erabiltzaile aintzakotzat duen pantaila</string>
+  <string name="user_aware_display_summary">Mantendu pantaila piztuta erabiltzailea begira dagoen bitartean</string>
+  <string name="screen_gestures_panel_title">Keinuzko lasterbideak</string>
   <string name="ambient_display_title">Ambient display</string>
   <string name="pick_up_gesture_title">Hartu</string>
-  <string name="pick_up_gesture_summary">Jakinarazpen argia hartzean edo poltsikotik ateratzean</string>
+  <string name="pick_up_gesture_summary">Jakinarazpen argia hartzean edo hurbiltzean</string>
   <string name="ir_wake_up_title">Eskuarekin agurtu</string>
   <string name="ir_wake_up_summary">Jakinarazpen argia eskua pantaila gainetik agurtuz pasatzean</string>
   <string name="actions_title">Ekintzak</string>
   <string name="camera_gesture_title">Birritan biratu</string>
-  <string name="camera_gesture_summary">Ireki kamera birritan biratu keinua erabiltzean</string>
+  <string name="camera_gesture_summary">Ekintza birritan biratzean</string>
   <string name="chop_chop_gesture_title">Moztu-moztu</string>
-  <string name="chop_chop_gesture_summary">Txandakatu linterna moztu-moztu keinua erabiltzean</string>
+  <string name="chop_chop_gesture_summary">Ekintza moztu-moztu keinua egitean</string>
   <string name="ir_silencer_title">Eskuarekin agurtu isilarazteko</string>
   <string name="ir_silencer_summary">Isildu jasotako deiak eskuarekin pantaila gainetik agurtuz</string>
-  <string name="flip_to_mute_title">Itzulbiratu ez molestatzeko</string>
-  <string name="flip_to_mute_summary">Jarri telefonoa buruz behera jakinarazpenak eta deiak isilarazteko</string>
-  <string name="dnd_access">Eman Ez molestatu elementuari CMActions atzitzeko eskubidea ezaugarri hau erabili ahal izateko.</string>
-  <string name="lift_to_silence_title">Hartu txirrina gelditzeko</string>
-  <string name="lift_to_silence_summary">Altzatu telefonoa jasotako deiak isilarazteko. Telefonoa etzanda dagoenean besterik ez dabil</string>
+  <string name="action_none">Ezgaitu</string>
+  <string name="action_launch_camera">Abiatu kamera</string>
+  <string name="action_torch">Txandakatu linterna</string>
+  <string name="feedback_intensity_title">Erantzun haptikoaren intentsitatea</string>
+  <string name="feedback_intensity_summary">Erantzun haptikoaren indarra birritan biratu eta moztu-moztu ekintzetan</string>
+  <string name="feedback_intensity_none">Ezgaituta</string>
+  <string name="feedback_intensity_low">Baxua</string>
+  <string name="feedback_intensity_medium">Ertaina</string>
+  <string name="feedback_intensity_high">Altua</string>
 </resources>

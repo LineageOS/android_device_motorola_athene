@@ -17,4 +17,28 @@
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
   <!-- Gesture shortcuts -->
+  <string name="user_aware_display_title">User-aware display</string>
+  <string name="user_aware_display_summary">Keep the screen on while a user is in front of the display</string>
+  <string name="screen_gestures_panel_title">Gesture shortcuts</string>
+  <string name="ambient_display_title">Ambient display</string>
+  <string name="pick_up_gesture_title">Pick-up</string>
+  <string name="pick_up_gesture_summary">Pulse notifications on pick-up or unstow</string>
+  <string name="ir_wake_up_title">Wave</string>
+  <string name="ir_wake_up_summary">Pulse notifications when you wave your hand across the screen</string>
+  <string name="actions_title">Actions</string>
+  <string name="camera_gesture_title">Double-twist</string>
+  <string name="camera_gesture_summary">Action when using the double twist gesture</string>
+  <string name="chop_chop_gesture_title">Chop-chop</string>
+  <string name="chop_chop_gesture_summary">Action when using the chop-chop gesture</string>
+  <string name="ir_silencer_title">Wave to silence</string>
+  <string name="ir_silencer_summary">Silence incoming calls by waving your hand across the screen</string>
+  <string name="action_none">Disable</string>
+  <string name="action_launch_camera">Launch camera</string>
+  <string name="action_torch">Toggle torch</string>
+  <string name="feedback_intensity_title">Haptic feedback intensity</string>
+  <string name="feedback_intensity_summary">Strength of the haptic feedback for the double-twist and chop-chop actions</string>
+  <string name="feedback_intensity_none">Disabled</string>
+  <string name="feedback_intensity_low">Low</string>
+  <string name="feedback_intensity_medium">Medium</string>
+  <string name="feedback_intensity_high">High</string>
 </resources>

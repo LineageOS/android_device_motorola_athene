@@ -17,4 +17,28 @@
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
   <!-- Gesture shortcuts -->
+  <string name="user_aware_display_title">ഉപഭോക്താവിനെ അറിഞ്ഞുകൊണ്ടുള്ള പ്രദർശിനി</string>
+  <string name="user_aware_display_summary">യുസർ മുന്നിലുള്ളലടത്തോളം സ്ക്രീൻ ഓണാക്കി വയ്ക്കുക</string>
+  <string name="screen_gestures_panel_title">ആംഗ്യ കുറുക്കുവഴികൾ</string>
+  <string name="ambient_display_title">വ്യാപിക്കുന്ന പ്രദര്‍ശനം</string>
+  <string name="pick_up_gesture_title">എടുക്കുക</string>
+  <string name="pick_up_gesture_summary">എടുക്കുമ്പോഴും വിടുമ്പോഴും പൾസ്‌ നോട്ടിഫികേഷൻ വേണം</string>
+  <string name="ir_wake_up_title">വീശുക</string>
+  <string name="ir_wake_up_summary">സ്ക്രീനിനു കുറുകെ കൈ വീശുമ്പോൾ പൾസ്‌ നോട്ടിഫികേഷൻ വേണം</string>
+  <string name="actions_title">പ്രവർത്തികൾ</string>
+  <string name="camera_gesture_title">ഇരട്ട ട്വിസ്റ്റ്‌</string>
+  <string name="camera_gesture_summary">ഇരട്ട ട്വിസ്റ്റ്‌ ആംഗ്യ പ്രവൃത്തീ</string>
+  <string name="chop_chop_gesture_title">വെട്ടി നുറുക്കുന്ന ആംഗ്യം</string>
+  <string name="chop_chop_gesture_summary">വെട്ടി നുറുക്കുന്ന ആംഗ്യ പ്രവൃത്തി</string>
+  <string name="ir_silencer_title">നിശബ്ദമാകാന്‍ വീശുക</string>
+  <string name="ir_silencer_summary">ഫോണിലേക് വരുന്ന വിളികൾ തിരശ്ശീലയിൽ വീശി നിശ്ശബ്‌ദമാക്കുക</string>
+  <string name="action_none">ഇല്ലാതാക്കുക</string>
+  <string name="action_launch_camera">ക്യാമറ തുറക്കുക</string>
+  <string name="action_torch">ടോര്‍ച്ച് മാറ്റുക</string>
+  <string name="feedback_intensity_title">സ്പര്ശ പ്രതികരണ ശക്തി</string>
+  <string name="feedback_intensity_summary">ഇരട്ട-ട്വിസ്റ്റിന്നും വെട്ടി നുറുക്കലിനും വേണ്ടുന്ന സ്പര്ശ പ്രതികരണ ശക്തി</string>
+  <string name="feedback_intensity_none">ഇല്ലാതാകി</string>
+  <string name="feedback_intensity_low">കുറഞ്ഞ</string>
+  <string name="feedback_intensity_medium">മിതമായ</string>
+  <string name="feedback_intensity_high">വലിയ</string>
 </resources>

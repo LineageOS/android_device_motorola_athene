@@ -17,17 +17,28 @@
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
   <!-- Gesture shortcuts -->
+  <string name="user_aware_display_title">ผู้ใช้อยู่หน้าจอ</string>
+  <string name="user_aware_display_summary">เปิดจอค้างไว้เมื่อผู้ใช้อยู่หน้าจอ</string>
   <string name="screen_gestures_panel_title">ทางลัดท่าทาง</string>
   <string name="ambient_display_title">หน้าจอแวดล้อม</string>
   <string name="pick_up_gesture_title">หยิบขึ้น</string>
   <string name="pick_up_gesture_summary">เช็คการแจ้งเตือนเมื่อหยิบขึ้น</string>
-  <string name="ir_wake_up_title">โบกแกว่ง</string>
+  <string name="ir_wake_up_title">แกว่ง</string>
   <string name="ir_wake_up_summary">เช็คการแจ้งเตือนเมื่อแกว่งมือผ่านหน้าจอ</string>
   <string name="actions_title">การกระทำ</string>
-  <string name="camera_gesture_title">บิดสองครั้ง</string>
-  <string name="camera_gesture_summary">เปิดกล้องเมื่อบิดสองครั้ง</string>
-  <string name="chop_chop_gesture_title">เลื่อนจากบนลงล่างอย่างเร็วสองครั้ง</string>
-  <string name="chop_chop_gesture_summary">เปิดไฟฉายเมื่อเลื่อนจากบนลงล่างอย่างเร็วสองครั้ง</string>
+  <string name="camera_gesture_title">บิด 2 ครั้ง</string>
+  <string name="camera_gesture_summary">การกระทำเมื่อใช้ท่าทางการบิดสองครั้ง</string>
+  <string name="chop_chop_gesture_title">เลื่อนอย่างเร็ว</string>
+  <string name="chop_chop_gesture_summary">การกระทำเมื่อใช้ท่าทางการเลื่อนแบบรวดเร็ว</string>
   <string name="ir_silencer_title">แกว่งเพื่อปิดเสียง</string>
   <string name="ir_silencer_summary">ปิดเสียงเรียกเข้าโดยการแกว่งมือผ่านหน้าจอ</string>
+  <string name="action_none">ปิด</string>
+  <string name="action_launch_camera">เปิดกล้อง</string>
+  <string name="action_torch">เปิดปิดไฟฉาย</string>
+  <string name="feedback_intensity_title">ความรุนแรงการสั่น</string>
+  <string name="feedback_intensity_summary">ความรุนแรงในการสั่นของการบิดสองครั้งและการเลื่อนแบบรวดเร็ว</string>
+  <string name="feedback_intensity_none">ปิด</string>
+  <string name="feedback_intensity_low">ต่ำ</string>
+  <string name="feedback_intensity_medium">ปานกลาง</string>
+  <string name="feedback_intensity_high">สูง</string>
 </resources>
