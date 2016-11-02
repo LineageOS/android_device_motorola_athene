@@ -17,6 +17,8 @@
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
   <!-- Gesture shortcuts -->
+  <string name="user_aware_display_title">Ecran reactiv la gesturi utilizator</string>
+  <string name="user_aware_display_summary">Menține ecranul aprins cât timp utilizatorul este în dreptul afișajului</string>
   <string name="screen_gestures_panel_title">Scurtături gesturi</string>
   <string name="ambient_display_title">Afișare ambientală</string>
   <string name="pick_up_gesture_title">Ridicare</string>
@@ -24,9 +26,14 @@
   <string name="ir_wake_up_title">Unduire</string>
   <string name="ir_wake_up_summary">Pulsează notificările când unduiți mâna peste ecran</string>
   <string name="actions_title">Acțiuni</string>
-  <string name="camera_gesture_title">Dublu-răsucire</string>
-  <string name="camera_gesture_summary">Deschide camera prin răsucirea dublă a mâinii</string>
   <string name="chop_chop_gesture_title">Chop-Chop</string>
   <string name="ir_silencer_title">Unduire pentru silențios</string>
-  <string name="ir_silencer_summary">Pune pe mut apelurile de intrare mișcând mâna desupra ecranului</string>
+  <string name="action_none">Dezactivare</string>
+  <string name="action_launch_camera">Lansare Cameră foto</string>
+  <string name="action_torch">Comutare lanternă</string>
+  <string name="feedback_intensity_title">Intensitate răspuns haptic</string>
+  <string name="feedback_intensity_none">Dezactivat</string>
+  <string name="feedback_intensity_low">Redusă</string>
+  <string name="feedback_intensity_medium">Medie</string>
+  <string name="feedback_intensity_high">Ridicată</string>
 </resources>

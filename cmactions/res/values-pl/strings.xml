@@ -17,17 +17,28 @@
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
   <!-- Gesture shortcuts -->
-  <string name="screen_gestures_panel_title">Skróty gestami</string>
+  <string name="user_aware_display_title">Aktywny ekran podczas spoglądania na niego</string>
+  <string name="user_aware_display_summary">Utrzymuj ekran włączony, gdy użytkownik spogląda na ekran</string>
+  <string name="screen_gestures_panel_title">Gesty skrótów</string>
   <string name="ambient_display_title">Aktywny wyświetlacz</string>
-  <string name="pick_up_gesture_title">Podnieś</string>
-  <string name="pick_up_gesture_summary">Pulsujące powiadomienia podczas podnoszenia lub odkładania</string>
-  <string name="ir_wake_up_title">Machnij</string>
-  <string name="ir_wake_up_summary">Pulsujące powiadomienia, gdy machniesz ręką nad ekranem</string>
+  <string name="pick_up_gesture_title">Odbierz</string>
+  <string name="pick_up_gesture_summary">Pulsujące powiadomienia podczas podnoszenia lub kładzenia</string>
+  <string name="ir_wake_up_title">Potrząśnij</string>
+  <string name="ir_wake_up_summary">Pulsujące powiadomienia, gdy machniesz ręką przed ekranem</string>
   <string name="actions_title">Akcje</string>
-  <string name="camera_gesture_title">Obróć dwa razy</string>
-  <string name="camera_gesture_summary">Uruchom Aparat po użyciu gestu podwójnego obrotu</string>
+  <string name="camera_gesture_title">Podwójne potrząśnięcie</string>
+  <string name="camera_gesture_summary">Akcja, kiedy użyto gestu ósemki</string>
   <string name="chop_chop_gesture_title">Podwójne potrząśnięcie</string>
-  <string name="chop_chop_gesture_summary">Przełącz stan latarki po geście cięcia</string>
-  <string name="ir_silencer_title">Machnij, aby wyciszyć</string>
-  <string name="ir_silencer_summary">Wycisza połączenia przychodzące, gdy machniesz ręką nad ekranem</string>
+  <string name="chop_chop_gesture_summary">Akcja, kiedy użyto podwójnego potrząśnięcia</string>
+  <string name="ir_silencer_title">Potrząśnij, aby wyciszyć</string>
+  <string name="ir_silencer_summary">Wycisz połączenia przychodzące machając ręką przed ekranem</string>
+  <string name="action_none">Wyłączone</string>
+  <string name="action_launch_camera">Uruchom aparat</string>
+  <string name="action_torch">Przełącznik latarki</string>
+  <string name="feedback_intensity_title">Intensywność wibracji</string>
+  <string name="feedback_intensity_summary">Siła wibracji dla podwójnego obrócenia i potrząśnięcia</string>
+  <string name="feedback_intensity_none">Wyłączona</string>
+  <string name="feedback_intensity_low">Niska</string>
+  <string name="feedback_intensity_medium">Średnia</string>
+  <string name="feedback_intensity_high">Wysoka</string>
 </resources>
