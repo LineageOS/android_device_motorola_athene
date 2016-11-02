@@ -153,7 +153,7 @@ on enable-low-power
     write /sys/module/lowmemorykiller/parameters/enable_adaptive_lmk 1
     write /sys/module/lowmemorykiller/parameters/vmpressure_file_min 53059
 
-    write /proc/sys/kernel/sched_boost 1
+    write /proc/sys/kernel/sched_boost 0
 
     # Set perfd properties
     rm /data/system/perfd/default_values
