@@ -17,4 +17,28 @@
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
   <!-- Gesture shortcuts -->
+  <string name="user_aware_display_title">Visualización en función da presencia do usuario</string>
+  <string name="user_aware_display_summary">Manter a pantalla acesa mentes o usuario estea diante dela</string>
+  <string name="screen_gestures_panel_title">Atallos xestuais</string>
+  <string name="ambient_display_title">Visualización ambiente</string>
+  <string name="pick_up_gesture_title">Escoller</string>
+  <string name="pick_up_gesture_summary">Amosar notificacións ao escoller ou deixar</string>
+  <string name="ir_wake_up_title">Pasar a man</string>
+  <string name="ir_wake_up_summary">Amosar notificacións ao pasar a man pola pantalla</string>
+  <string name="actions_title">Accións</string>
+  <string name="camera_gesture_title">Dobre xiro</string>
+  <string name="camera_gesture_summary">Acción ao utilizar o xesto de dobre xiro</string>
+  <string name="chop_chop_gesture_title">Dobre toque rápido</string>
+  <string name="chop_chop_gesture_summary">Acción ao utilizar o dobre toque rápido</string>
+  <string name="ir_silencer_title">Pasar a man para silenciar</string>
+  <string name="ir_silencer_summary">Silenciar chamadas entrantes ao atravesar a pantalla coa man</string>
+  <string name="action_none">Desactivar</string>
+  <string name="action_launch_camera">Iniciar a cámara</string>
+  <string name="action_torch">Lanterna</string>
+  <string name="feedback_intensity_title">Intensidade da resposta háptica</string>
+  <string name="feedback_intensity_summary">Intensidade da resposta háptica para as accions de dobre xiro e dobre toque rápido</string>
+  <string name="feedback_intensity_none">Desactivado</string>
+  <string name="feedback_intensity_low">Baixa</string>
+  <string name="feedback_intensity_medium">Media</string>
+  <string name="feedback_intensity_high">Alta</string>
 </resources>

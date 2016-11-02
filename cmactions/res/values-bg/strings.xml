@@ -17,22 +17,28 @@
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
   <!-- Gesture shortcuts -->
+  <string name="user_aware_display_title">Потребителски дисплей</string>
+  <string name="user_aware_display_summary">Задръж екрана включен, докато потребителят е пред дисплея</string>
   <string name="screen_gestures_panel_title">Преки пътища с жестове</string>
   <string name="ambient_display_title">Атмосферен екран</string>
   <string name="pick_up_gesture_title">Повдигане</string>
-  <string name="pick_up_gesture_summary">Показва известията при повдигане или завъртане на устройството</string>
+  <string name="pick_up_gesture_summary">Светлинна индикация при входящо повикване или критичен капацитет на батерията</string>
   <string name="ir_wake_up_title">Размахване</string>
   <string name="ir_wake_up_summary">Прекарайте ръката над екрана, за да видите уведомленията</string>
   <string name="actions_title">Действия</string>
-  <string name="camera_gesture_title">Двойно завъртане</string>
-  <string name="camera_gesture_summary">Стартирай камерата при двукратно-завъртане</string>
-  <string name="chop_chop_gesture_title">Двукратно тръскане</string>
-  <string name="chop_chop_gesture_summary">Активиране на фенерчето с разтърсване нагоре-надолу</string>
-  <string name="ir_silencer_title">Размахване за преминаване в тих режим</string>
+  <string name="camera_gesture_title">Двойно завъртене</string>
+  <string name="camera_gesture_summary">Ефект на жеста двукратно-завъртане</string>
+  <string name="chop_chop_gesture_title">Почукване</string>
+  <string name="chop_chop_gesture_summary">Действия с почукване</string>
+  <string name="ir_silencer_title">Махни за да спреш звука</string>
   <string name="ir_silencer_summary">Спри звука на входящо повикване, помахвайки с ръка над екрана</string>
-  <string name="flip_to_mute_title">Завъртете за режим \"Не безпокойте\"</string>
-  <string name="flip_to_mute_summary">Обърнете телефона с екрана надолу, за спиране на звука на уведомления и обаждания</string>
-  <string name="dnd_access">За да използвате тази функция, осигурете достъп на COMActions до функциите \"Не безпокойте\".</string>
-  <string name="lift_to_silence_title">Повдигнете за да спре да звъни</string>
-  <string name="lift_to_silence_summary">Вдигнете телефона, за да заглушите входящи повиквания. Тази фуннкция работи само когато телефонът е в хоризонтално положение</string>
+  <string name="action_none">Изключи</string>
+  <string name="action_launch_camera">Стартиране на камерата</string>
+  <string name="action_torch">Фенерче</string>
+  <string name="feedback_intensity_title">Сила на вибрацията</string>
+  <string name="feedback_intensity_summary">Сила на вибрацията при използване на жестовете двойно-завъртане или тръскане</string>
+  <string name="feedback_intensity_none">Изключена</string>
+  <string name="feedback_intensity_low">Ниска</string>
+  <string name="feedback_intensity_medium">Средна</string>
+  <string name="feedback_intensity_high">Силна</string>
 </resources>

@@ -17,6 +17,9 @@
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
 
     <!-- Gesture shortcuts -->
+    <string name="user_aware_display_title">User-aware display</string>
+    <string name="user_aware_display_summary">Keep the screen on while a user is in front of the display</string>
+
     <string name="screen_gestures_panel_title">Gesture shortcuts</string>
 
     <string name="ambient_display_title">Ambient display</string>
@@ -30,21 +33,23 @@
     <string name="actions_title">Actions</string>
 
     <string name="camera_gesture_title">Double-twist</string>
-    <string name="camera_gesture_summary">Open camera when using the double twist gesture</string>
+    <string name="camera_gesture_summary">Action when using the double twist gesture</string>
 
     <string name="chop_chop_gesture_title">Chop-chop</string>
-    <string name="chop_chop_gesture_summary">Toggle flashlight when using the chop-chop gesture</string>
+    <string name="chop_chop_gesture_summary">Action when using the chop-chop gesture</string>
 
     <string name="ir_silencer_title">Wave to silence</string>
     <string name="ir_silencer_summary">Silence incoming calls by waving your hand across the screen</string>
 
-    <string name="flip_to_mute_title">Flip for Do Not Disturb</string>
-    <string name="flip_to_mute_summary">Place the phone face down to silence notifications and calls</string>
+    <string name="action_none">Disable</string>
+    <string name="action_launch_camera">Launch camera</string>
+    <string name="action_torch">Toggle torch</string>
 
-    <string name="dnd_access">Please, give Do Not Disturb access to CMActions in order to use this feature.</string>
-
-    <string name="lift_to_silence_title">Pick up to stop ringing</string>
-    <string name="lift_to_silence_summary">Lift the phone to silence incoming calls. It only works when your phone starts flat</string>
-
+    <string name="feedback_intensity_title">Haptic feedback intensity</string>
+    <string name="feedback_intensity_summary">Strength of the haptic feedback for the double-twist and chop-chop actions</string>
+    <string name="feedback_intensity_none">Disabled</string>
+    <string name="feedback_intensity_low">Low</string>
+    <string name="feedback_intensity_medium">Medium</string>
+    <string name="feedback_intensity_high">High</string>
 </resources>
 

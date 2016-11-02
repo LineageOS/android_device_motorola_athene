@@ -17,17 +17,28 @@
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
   <!-- Gesture shortcuts -->
+  <string name="user_aware_display_title">Tampilan sadar pengguna</string>
+  <string name="user_aware_display_summary">Biarkan layar menyala ketika pengguna sedang berada di depan layar</string>
   <string name="screen_gestures_panel_title">Pintasan gerakan</string>
   <string name="ambient_display_title">Tampilan kala takaktif</string>
   <string name="pick_up_gesture_title">Ambil</string>
-  <string name="pick_up_gesture_summary">Pemberitahuan berkedip saat mengambil atau mengangkat</string>
+  <string name="pick_up_gesture_summary">Pemberitahuan berkedip pada saat mengambil atau mengangkat</string>
   <string name="ir_wake_up_title">Lambai</string>
-  <string name="ir_wake_up_summary">Pemberitahuan berkedip saat Anda melambaikan tangan di depan layar</string>
+  <string name="ir_wake_up_summary">Pemberitahuan berkedip ketika Anda melambaikan tangan di depan layar</string>
   <string name="actions_title">Tindakan</string>
   <string name="camera_gesture_title">Dwiputar</string>
-  <string name="camera_gesture_summary">Buka Kamera ketika melakukan gerakan dwiputar</string>
+  <string name="camera_gesture_summary">Tindakan ketika menggunakan gerakan dwiputar</string>
   <string name="chop_chop_gesture_title">Dwiguncang</string>
-  <string name="chop_chop_gesture_summary">Aktifkan/nonaktifkan senter ketika menggunakan gerakan dwiguncang</string>
+  <string name="chop_chop_gesture_summary">Tindakan ketika menggunakan gerakan dwiguncang</string>
   <string name="ir_silencer_title">Lambai untuk senyap</string>
   <string name="ir_silencer_summary">Senyapkan panggilan masuk dengan melambaikan tangan di depan layar</string>
+  <string name="action_none">Nonaktifkan</string>
+  <string name="action_launch_camera">Buka kamera</string>
+  <string name="action_torch">Hidup/matikan senter</string>
+  <string name="feedback_intensity_title">Intensitas tanggapan sentuhan</string>
+  <string name="feedback_intensity_summary">Kekuatan tanggapan sentuhan untuk tindakan dwiputar dan dwiguncang</string>
+  <string name="feedback_intensity_none">Dinonaktifkan</string>
+  <string name="feedback_intensity_low">Lemah</string>
+  <string name="feedback_intensity_medium">Sedang</string>
+  <string name="feedback_intensity_high">Kuat</string>
 </resources>
