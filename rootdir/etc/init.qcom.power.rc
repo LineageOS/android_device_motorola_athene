@@ -1,10 +1,19 @@
 on boot
-    # Update foreground cpuset now that processors are up
-    write /dev/cpuset/foreground/cpus 0-7
+    # add a cpuset for the camera daemon
+    # we want all the little cores for camera
+    mkdir /dev/cpuset/camera-daemon
+    chown system system /dev/cpuset/camera-daemon
+    chown system system /dev/cpuset/camera-daemon/tasks
+    chmod 0664 /dev/cpuset/camera-daemon/tasks
+
+    # update foreground cpuset now that processors are up
+    # reserve CPU 4 for the top app
+    write /dev/cpuset/foreground/cpus 0-3,5-7
     write /dev/cpuset/foreground/boost/cpus 0-3
     write /dev/cpuset/background/cpus 4
-    write /dev/cpuset/system-background/cpus 4-7
-    write /dev/cpuset/top-app/cpus 0-5
+    write /dev/cpuset/system-background/cpus 5-7
+    write /dev/cpuset/top-app/cpus 0-7
+    write /dev/cpuset/camera-daemon/cpus 4-7
 
 on enable-low-power
     # HMP scheduler settings
