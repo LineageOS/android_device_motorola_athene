@@ -21,24 +21,30 @@ import android.hardware.SensorEvent;
 import android.hardware.SensorEventListener;
 import android.util.Log;
 
-public class StowSensor implements ScreenStateNotifier, SensorEventListener {
-    private static final String TAG = "CMActions-StowSensor";
+import static com.cyanogenmod.settings.device.IrGestureManager.*;
+
+public class IrGestureSensor implements ScreenStateNotifier, SensorEventListener {
+    private static final String TAG = "CMActions-IRGestureSensor";
+
+    private static final int IR_GESTURES_FOR_SCREEN_OFF = (1 << IR_GESTURE_SWIPE) | (1 << IR_GESTURE_APPROACH);
 
     private final CMActionsSettings mCMActionsSettings;
     private final SensorHelper mSensorHelper;
     private final SensorAction mSensorAction;
+    private final IrGestureVote mIrGestureVote;
     private final Sensor mSensor;
 
     private boolean mEnabled;
-    private boolean mLastStowed;
 
-    public StowSensor(CMActionsSettings cmActionsSettings, SensorHelper sensorHelper,
-                SensorAction action) {
+    public IrGestureSensor(CMActionsSettings cmActionsSettings, SensorHelper sensorHelper,
+                SensorAction action, IrGestureManager irGestureManager) {
         mCMActionsSettings = cmActionsSettings;
         mSensorHelper = sensorHelper;
         mSensorAction = action;
+        mIrGestureVote = new IrGestureVote(irGestureManager);
 
-        mSensor = sensorHelper.getStowSensor();
+        mSensor = sensorHelper.getIrGestureSensor();
+        mIrGestureVote.voteForSensors(0);
     }
 
     @Override
@@ -46,30 +52,33 @@ public class StowSensor implements ScreenStateNotifier, SensorEventListener {
         if (mEnabled) {
             Log.d(TAG, "Disabling");
             mSensorHelper.unregisterListener(this);
+            mIrGestureVote.voteForSensors(0);
             mEnabled = false;
         }
     }
 
     @Override
     public void screenTurnedOff() {
-        if (mCMActionsSettings.isPickUpEnabled() && !mEnabled) {
+        if (mCMActionsSettings.isIrWakeupEnabled() && !mEnabled) {
             Log.d(TAG, "Enabling");
             mSensorHelper.registerListener(mSensor, this);
+            mIrGestureVote.voteForSensors(IR_GESTURES_FOR_SCREEN_OFF);
             mEnabled = true;
         }
     }
 
     @Override
     public void onSensorChanged(SensorEvent event) {
-        boolean thisStowed = (event.values[0] != 0);
-        Log.d(TAG, "event: " + thisStowed);
-        if (mLastStowed && ! thisStowed) {
+        int gesture = (int) event.values[1];
+
+        if (gesture == IR_GESTURE_SWIPE || gesture == IR_GESTURE_APPROACH) {
+            Log.d(TAG, "event: [" + event.values.length + "]: " + event.values[0] + ", " +
+                event.values[1] + ", " + event.values[2]);
             mSensorAction.action();
         }
-        mLastStowed = thisStowed;
     }
 
     @Override
-    public void onAccuracyChanged(Sensor sensor, int accuracy) {
+    public void onAccuracyChanged(Sensor mSensor, int accuracy) {
     }
 }

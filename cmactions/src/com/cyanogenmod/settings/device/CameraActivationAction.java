@@ -40,12 +40,14 @@ public class CameraActivationAction implements SensorAction {
     private final KeyguardManager mKeyguardManager;
     private final PackageManager mPackageManager;
     private final PowerManager mPowerManager;
+    private final int mVibratorPeriod;
 
-    public CameraActivationAction(Context context) {
+    public CameraActivationAction(Context context, int vibratorPeriod) {
         mContext = context;
         mKeyguardManager = (KeyguardManager) context.getSystemService(Context.KEYGUARD_SERVICE);
         mPowerManager = (PowerManager) context.getSystemService(Context.POWER_SERVICE);
         mPackageManager = context.getPackageManager();
+        mVibratorPeriod = vibratorPeriod;
     }
 
     @Override
@@ -61,7 +63,7 @@ public class CameraActivationAction implements SensorAction {
 
     private void vibrate() {
         Vibrator v = (Vibrator) mContext.getSystemService(Context.VIBRATOR_SERVICE);
-        v.vibrate(500);
+        v.vibrate(mVibratorPeriod);
     }
 
     private void turnScreenOn() {

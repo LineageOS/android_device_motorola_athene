@@ -17,4 +17,28 @@
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
   <!-- Gesture shortcuts -->
+  <string name="user_aware_display_title">ব্যৱহাৰকৰ্তা-সজগতা প্রদর্শন</string>
+  <string name="user_aware_display_summary">ব্যৱহাৰকৰ্তা প্রদর্শনৰ সম্মুখত থাকিলে স্ক্ৰীণ অন কৰি ৰাখক</string>
+  <string name="screen_gestures_panel_title">ভঙ্গিমা চমুপথ</string>
+  <string name="ambient_display_title">পৰিপাৰ্শ্বিক ডিচপ্লে</string>
+  <string name="pick_up_gesture_title">পিক-আপ</string>
+  <string name="pick_up_gesture_summary">পিক-আপ বা আনষ্টোৰ সময়ত পালচ্‌ অধিসূচনা</string>
+  <string name="ir_wake_up_title">ওয়েভ</string>
+  <string name="ir_wake_up_summary">আপুনি স্ক্ৰীণৰ ওপৰেৰে হাত বাউলি দিলে পালচ্‌ অধিসূচনা</string>
+  <string name="actions_title">পদক্ষেপসমূহ</string>
+  <string name="camera_gesture_title">ডাবল-টুইষ্ট</string>
+  <string name="camera_gesture_summary">ডাবল-টুইষ্ট ভঙ্গিমা ব্যৱহাৰ কৰা সময়ৰ ক্ৰিয়া</string>
+  <string name="chop_chop_gesture_title">চপ-চপ</string>
+  <string name="chop_chop_gesture_summary">চপ-চপ ভঙ্গিমা ব্যৱহাৰ কৰা সময়ৰ ক্ৰিয়া</string>
+  <string name="ir_silencer_title">নীৰৱ কৰিবলৈ হাত বাউলি দিয়া</string>
+  <string name="ir_silencer_summary">স্ক্ৰীণৰ ওপৰেৰে আপোনাৰ হাত বাউলি দি ইনকামিং কল নীৰৱ কৰক</string>
+  <string name="action_none">নিস্ক্ৰিয়</string>
+  <string name="action_launch_camera">কেমেৰা লান্চ্চ কৰক</string>
+  <string name="action_torch">টগল টৰ্চ</string>
+  <string name="feedback_intensity_title">হেপ্টিক ফীডবেক তীব্ৰতা</string>
+  <string name="feedback_intensity_summary">ডাবল-টুইষ্ট আৰু চপ-চপ ক্ৰিয়াৰ বাবে হেপ্টিক ফীডবেকৰ শক্তি</string>
+  <string name="feedback_intensity_none">নিস্ক্ৰিয় কৰা হল</string>
+  <string name="feedback_intensity_low">নিম্ন</string>
+  <string name="feedback_intensity_medium">মাধ্যম</string>
+  <string name="feedback_intensity_high">উচ্চ</string>
 </resources>

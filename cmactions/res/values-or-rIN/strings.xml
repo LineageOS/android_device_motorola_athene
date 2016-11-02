@@ -17,4 +17,28 @@
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
   <!-- Gesture shortcuts -->
+  <string name="user_aware_display_title">ଉପଭୋକ୍ତା-ସଚେତନ ଡିସ୍‍ପ୍ଲେ</string>
+  <string name="user_aware_display_summary">ଡିସ୍‍ପ୍ଲେର ସାମନାରେ ଜଣେ ଉପଭୋକ୍ତା ଥିବା ସମୟରେ ସ୍କ୍ରିନ୍‍କୁ ଅନ୍‍ ରଖନ୍ତୁ</string>
+  <string name="screen_gestures_panel_title">ଅଙ୍ଗଭଙ୍ଗୀ ସର୍ଟ୍‍କଟ୍‍</string>
+  <string name="ambient_display_title">ଏମ୍ବିଏଣ୍ଟ ପ୍ରଦର୍ଶନ</string>
+  <string name="pick_up_gesture_title">ଉପରକୁ ଉଠାନ୍ତୁ</string>
+  <string name="pick_up_gesture_summary">ଉପରକୁ ଉଠାଇବା ଓ ଅଷ୍ଟୋ ସମୟରେ ପଲ୍ସ ନୋଟିଫିକେସନ୍‍</string>
+  <string name="ir_wake_up_title">ୱେଭ</string>
+  <string name="ir_wake_up_summary">ସ୍କ୍ରିନ୍‍ରେ ଆପଣଙ୍କ ହାତ ହଲାଇବା ସମୟରେ ପଲ୍ସ ନିର୍ଦ୍ଦେଶାବଳି</string>
+  <string name="actions_title">କ୍ରିୟାଗୁଡିକ</string>
+  <string name="camera_gesture_title">ଡବଲ୍‍-ଟ୍ୱିଷ୍ଟ</string>
+  <string name="camera_gesture_summary">ଡବଲ୍‍ ଟ୍ୱିଷ୍ଟ ଅଙ୍ଗଭଙ୍ଗୀ୍‍ ବ୍ୟବହାର କରିବା ସମୟରେ କ୍ରିୟା</string>
+  <string name="chop_chop_gesture_title">ଚପ୍‍-ଚପ୍‍</string>
+  <string name="chop_chop_gesture_summary">ଚପ୍‍-ଚପ୍‍ ଅଙ୍ଗଭଙ୍ଗୀ୍‍ ବ୍ୟବହାର କରି ସଂଚାଳନ</string>
+  <string name="ir_silencer_title">ମୌନ କରିବା ପାଇଁ ୱେଭ୍‍</string>
+  <string name="ir_silencer_summary">ସ୍କ୍ରିନ୍‍ ପାଖରେ ହାତ ହଲାଇ ଆସୁଥିବା କଲ୍‍କୁ ମୌନ କରନ୍ତୁ</string>
+  <string name="action_none">ଅକ୍ଷମ</string>
+  <string name="action_launch_camera">କ୍ୟାମେରା ଉନ୍ମୋଚନ୍ଚ କରନ୍ତୁ</string>
+  <string name="action_torch">ଟୋଗଲ୍‍ ଟର୍ଚ୍ଚ</string>
+  <string name="feedback_intensity_title">ହାପ୍‍ଟିକ୍‍ ମତାମତ ପ୍ରଭାବ</string>
+  <string name="feedback_intensity_summary">ଡବଲ୍‍-ଟ୍ୱିଷ୍ଟ ଓ ଚପ୍‍-ଚପ୍‍ ସଂଚାଳନ ପାଇଁ ହାପ୍‍ଟିକ୍‍ ମତାମତର କ୍ଷମତା</string>
+  <string name="feedback_intensity_none">ଅକ୍ଷମ ହୋଇଛି</string>
+  <string name="feedback_intensity_low">କମ୍</string>
+  <string name="feedback_intensity_medium">ମଧ୍ୟମ</string>
+  <string name="feedback_intensity_high">ଉଚ୍ଚ</string>
 </resources>

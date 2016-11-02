@@ -17,22 +17,28 @@
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
   <!-- Gesture shortcuts -->
-  <string name="screen_gestures_panel_title">Жесты</string>
+  <string name="user_aware_display_title">Интеллектуальное откл. экрана</string>
+  <string name="user_aware_display_summary">Не отключать экран, пока пользователь находится перед ним</string>
+  <string name="screen_gestures_panel_title">Настройка жестов</string>
   <string name="ambient_display_title">Индикация событий</string>
   <string name="pick_up_gesture_title">Поднять</string>
   <string name="pick_up_gesture_summary">Отображать уведомления при поднятии устройства или извлечении его из кармана</string>
-  <string name="ir_wake_up_title">Взмахнуть</string>
+  <string name="ir_wake_up_title">Взмах</string>
   <string name="ir_wake_up_summary">Проведите ладонью над экраном для просмотра уведомлений</string>
   <string name="actions_title">Действия</string>
-  <string name="camera_gesture_title">Двойное вращение</string>
-  <string name="camera_gesture_summary">Запускать приложение камеры при двойном вращении</string>
+  <string name="camera_gesture_title">Вращение</string>
+  <string name="camera_gesture_summary">Действие при двойном встряхивании устройства вокруг своей оси</string>
   <string name="chop_chop_gesture_title">Встряхивание</string>
-  <string name="chop_chop_gesture_summary">Включать или выключать фонарик при постукивании</string>
+  <string name="chop_chop_gesture_summary">Действие при встряхивании</string>
   <string name="ir_silencer_title">Взмах для отключения звука</string>
   <string name="ir_silencer_summary">Проведите рукой над экраном, чтобы приглушить звук входящего звонка</string>
-  <string name="flip_to_mute_title">Режим «Не беспокоить»</string>
-  <string name="flip_to_mute_summary">Переверните телефон экраном вниз, чтобы отключить звуки уведомлений и вызовов</string>
-  <string name="dnd_access">Чтобы использовать эту функцию, предоставьте CMActions доступ к функции «Не беспокоить».</string>
-  <string name="lift_to_silence_title">Отключение звука</string>
-  <string name="lift_to_silence_summary">Поднимите телефон, чтобы заглушить звук звонка. Это действие сработает, если телефон лежал горизонтально</string>
+  <string name="action_none">Отключить</string>
+  <string name="action_launch_camera">Запуск камеры</string>
+  <string name="action_torch">Фонарик</string>
+  <string name="feedback_intensity_title">Мощность виброотклика</string>
+  <string name="feedback_intensity_summary">Настройка силы вибрации для жестов вращения и встряхивания</string>
+  <string name="feedback_intensity_none">Выключен</string>
+  <string name="feedback_intensity_low">Низкая</string>
+  <string name="feedback_intensity_medium">Средняя</string>
+  <string name="feedback_intensity_high">Высокая</string>
 </resources>
