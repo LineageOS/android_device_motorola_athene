@@ -323,61 +323,61 @@
 		<path name="fm-virtual-record" />
 	</path>
 
-	<path name="voice-call">
+	<path name="voicemmode1-call">
 		<ctl name="PRI_MI2S_RX_Voice Mixer VoiceMMode1" value="1" />
 		<ctl name="VoiceMMode1_Tx Mixer TERT_MI2S_TX_MMode1" value="1" />
 	</path>
 
-	<path name="voice-call cirrus">
+	<path name="voicemmode1-call cirrus">
 		<ctl name="QUIN_MI2S_RX_Voice Mixer VoiceMMode1" value="1" />
 		<ctl name="VoiceMMode1_Tx Mixer TERT_MI2S_TX_MMode1" value="1" />
 	</path>
 
-	<path name="voice-call speaker">
-		<path name="voice-call cirrus" />
+	<path name="voicemmode1-call speaker">
+		<path name="voicemmode1-call cirrus" />
 	</path>
 
 
-	<path name="voice-call bt-sco">
+	<path name="voicemmode1-call bt-sco">
 		<ctl name="INTERNAL_BT_SCO_RX_Voice Mixer VoiceMMode1" value="1" />
 		<ctl name="VoiceMMode1_Tx Mixer INT_BT_SCO_TX_MMode1" value="1" />
 	</path>
 
-	<path name="voice-call bt-sco-wb">
+	<path name="voicemmode1-call bt-sco-wb">
 		<ctl name="Internal BTSCO SampleRate" value="BTSCO_RATE_16KHZ" />
-		<path name="voice-call bt-sco" />
+		<path name="voicemmode1-call bt-sco" />
 	</path>
 
-	<path name="voice-call afe-proxy">
+	<path name="voicemmode1-call afe-proxy">
 		<ctl name="AFE_PCM_RX_Voice Mixer VoiceMMode1" value="1" />
 		<ctl name="VoiceMMode1_Tx Mixer AFE_PCM_TX_MMode1" value="1" />
 	</path>
 
-	<path name="voice2-call">
+	<path name="voicemmode2-call">
 		<ctl name="PRI_MI2S_RX_Voice Mixer VoiceMMode2" value="1" />
 		<ctl name="VoiceMMode2_Tx Mixer TERT_MI2S_TX_MMode2" value="1" />
 	</path>
 
-	<path name="voice2-call cirrus">
+	<path name="voicemmode2-call cirrus">
 		<ctl name="QUIN_MI2S_RX_Voice Mixer VoiceMMode2" value="1" />
 		<ctl name="VoiceMMode2_Tx Mixer TERT_MI2S_TX_MMode2" value="1" />
 	</path>
 
-	<path name="voice2-call speaker">
-		<path name="voice2-call cirrus" />
+	<path name="voicemmode2-call speaker">
+		<path name="voicemmode2-call cirrus" />
 	</path>
 
-	<path name="voice2-call bt-sco">
+	<path name="voicemmode2-call bt-sco">
 		<ctl name="INTERNAL_BT_SCO_RX_Voice Mixer VoiceMMode2" value="1" />
 		<ctl name="VoiceMMode2_Tx Mixer INT_BT_SCO_TX_MMode2" value="1" />
 	</path>
 
-	<path name="voice2-call bt-sco-wb">
+	<path name="voicemmode2-call bt-sco-wb">
 		<ctl name="Internal BTSCO SampleRate" value="BTSCO_RATE_16KHZ" />
-		<path name="voice2-call bt-sco" />
+		<path name="voicemmode2-call bt-sco" />
 	</path>
 
-	<path name="voice2-call afe-proxy">
+	<path name="voicemmode2-call afe-proxy">
 		<ctl name="AFE_PCM_RX_Voice Mixer VoiceMMode2" value="1" />
 		<ctl name="VoiceMMode2_Tx Mixer AFE_PCM_TX_MMode2" value="1" />
 	</path>
