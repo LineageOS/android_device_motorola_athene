@@ -142,10 +142,6 @@ on enable-low-power
     # Enable timer migration to little cluster
     write /proc/sys/kernel/power_aware_timer_migration 1
 
-    # ZRAM
-    #swapon_all /fstab.qcom
-    #write /proc/sys/vm/swappiness 100
-
     # Process reclaim
     write /sys/module/process_reclaim/parameters/enable_process_reclaim 1
     write /sys/module/process_reclaim/parameters/pressure_min 10
