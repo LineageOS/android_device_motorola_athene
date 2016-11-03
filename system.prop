@@ -60,6 +60,11 @@ persist.ims.disableADBLogs=2
 persist.ims.disableDebugLogs=0
 persist.ims.disableQXDMLogs=0
 persist.ims.disableIMSLogs=0
+persist.radio.sw_mbn_update=1
+persist.radio.custom_ecc=1
+mdc_initial_max_retry=10
+persist.radio.sar_sensor=1
+persist.radio.call.audio.output=0
 
 # Display
 debug.sf.hw=1
@@ -80,6 +85,7 @@ persist.metadata_dynfps.disable=true
 ro.use_data_netmgrd=true
 persist.data.netmgrd.qos.enable=true
 persist.data.mode=concurrent
+persist.data.iwlan.enable=true
 
 # Time
 persist.timed.enable=true
@@ -94,8 +100,8 @@ persist.esdfs_sdcard=true
 # Audio
 af.fast_track_multiplier=1
 audio.offload.buffer.size.kb=64
-audio.offload.disable=1
-audio.offload.gapless.enabled=true
+audio.offload.disable=false
+audio.offload.gapless.enabled=false
 audio.offload.multiple.enabled=false
 audio.offload.pcm.16bit.enable=false
 audio.offload.pcm.24bit.enable=false
@@ -122,11 +128,14 @@ voice.playback.conc.disabled=true
 voice.record.conc.disabled=false
 voice.voip.conc.disabled=true
 voice.conc.fallbackpath=deep-buffer
-audio.offload.min.duration.secs=30
+audio.offload.min.duration.secs=60
 audio.offload.track.enable=true
 audio.deep_buffer.media=true
 audio.pp.asphere.enabled=false
 audio.safx.pbe.enabled=true
+qcom.hw.aac.encoder=true
+audio.parser.ip.buffer.size=262144
+audio_hal.period_size=240
 
 # Bluetooth
 bluetooth.hfp.client=1
@@ -145,6 +154,9 @@ camera.hal1.packagelist=com.skype.raider,com.whatsapp,com.tencent.mm,com.google.
 persist.cne.feature=1
 persist.sys.cnd.iwlan=0
 persist.cne.logging.qxdm=0
+
+# HWUI
+ro.hwui.texture_cache_size=40
 
 # Media
 mm.enable.smoothstreaming=false
@@ -167,9 +179,11 @@ av.offload.enable=false
 use.voice.path.for.pcm.voip=false
 media.msm8956.version=0
 media.msm8956hw=0
-mm.enable.qcom_parser=1048575
+mm.enable.qcom_parser=4643
 vidc.enc.dcvs.extra-buff-count=2
 vidc.enc.narrow.searchrange=1
+media.camera.ts.monotonic=1
+mm.enable.sec.smoothstreaming=false
 
 # GPS
 persist.mot.gps.conf.from.sim=true
@@ -210,7 +224,6 @@ ro.sys.fw.dex2oat_thread_count=4
 ro.frp.pst=/dev/block/bootdevice/by-name/frp
 
 persist.dpm.feature=0
-persist.radio.sar_sensor=1
 
 # USB
 ro.usb.mtp=2e82
@@ -237,6 +250,9 @@ ro.com.google.clientidbase.yt=android-motorola
 
 # SDCard
 ro.sys.sdcardfs=true
+
+#Enable delay service restart
+ro.am.reschedule_service=true
 
 #
 # ADDITIONAL_BUILD_PROPERTIES
