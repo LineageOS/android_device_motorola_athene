@@ -54,8 +54,6 @@ on init
     # Mount point for oem partition
     # mkdir /oem 0550 root root
 
-    symlink /sdcard /storage/sdcard0
-
     mount pstore pstore /sys/fs/pstore
     chown system log /sys/fs/pstore/console-ramoops-0
     chmod 0440 /sys/fs/pstore/console-ramoops-0
