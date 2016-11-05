@@ -17,28 +17,22 @@
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
   <!-- Gesture shortcuts -->
-  <string name="user_aware_display_title">Brukerbevisst skjerm</string>
-  <string name="user_aware_display_summary">Hold skjermen påslått når en bruker er foran skjermen</string>
-  <string name="screen_gestures_panel_title">Bevegelsessnarveier</string>
+  <string name="screen_gestures_panel_title">Gest snarveier</string>
   <string name="ambient_display_title">Ambient skjerm</string>
-  <string name="pick_up_gesture_title">Oppløfting</string>
-  <string name="pick_up_gesture_summary">Vibrer varsler ved oppløfting eller fremhenting</string>
+  <string name="pick_up_gesture_title">Plukke opp</string>
+  <string name="pick_up_gesture_summary">Pulseringsnotifikasjon ved frakobling av lader eller når plukket opp</string>
   <string name="ir_wake_up_title">Vink</string>
-  <string name="ir_wake_up_summary">Vibrer varsler når du vinker med hånden foran skjermen</string>
+  <string name="ir_wake_up_summary">Pulseringsnotifikasjon når du vinker med hånden foran skjermen</string>
   <string name="actions_title">Handlinger</string>
-  <string name="camera_gesture_title">Dobbelvridning</string>
-  <string name="camera_gesture_summary">Handling når du bruker dobbelvridningsbevegelsen</string>
+  <string name="camera_gesture_title">Dobbel-vri</string>
+  <string name="camera_gesture_summary">Opne kamera når du bruker dobbelvridningsgesten</string>
   <string name="chop_chop_gesture_title">Hakk-hakk</string>
-  <string name="chop_chop_gesture_summary">Handling når du bruker hakk-hakk-bevegelsen</string>
+  <string name="chop_chop_gesture_summary">Slå på/av lommelykt når hakk-hakk gest</string>
   <string name="ir_silencer_title">Vink for å dempe lyden</string>
   <string name="ir_silencer_summary">Demp innkommende samtaler ved å vinke med hånden over skjermen</string>
-  <string name="action_none">Deaktiver</string>
-  <string name="action_launch_camera">Start kamera</string>
-  <string name="action_torch">Skru av/på lommelykt</string>
-  <string name="feedback_intensity_title">Haptisk intensitet</string>
-  <string name="feedback_intensity_summary">Styrken til den haptiske tilbakemeldingen for dobbelvridnings- og hakk-hakk-handlingene</string>
-  <string name="feedback_intensity_none">Deaktivert</string>
-  <string name="feedback_intensity_low">Lav</string>
-  <string name="feedback_intensity_medium">Middels</string>
-  <string name="feedback_intensity_high">Høy</string>
+  <string name="flip_to_mute_title">Snu for Ikke Forstyrr</string>
+  <string name="flip_to_mute_summary">Plasser telefonen opp ned for å dempe alle innkommende varslinger og anrop</string>
+  <string name="dnd_access">Vennligst gi Ikke Forstyrr tilgang til CMActions for å bruke denne funksjonen.</string>
+  <string name="lift_to_silence_title">Plukk opp for å stoppe ringing</string>
+  <string name="lift_to_silence_summary">Plukk telefonen opp for å dempe innkommende anrop. Dette fungerer bare når telefonen ligger flatt fra starten av</string>
 </resources>

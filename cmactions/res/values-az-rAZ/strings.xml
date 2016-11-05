@@ -17,28 +17,4 @@
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
   <!-- Gesture shortcuts -->
-  <string name="user_aware_display_title">İstifadəçini xəbərdar edən ekran</string>
-  <string name="user_aware_display_summary">İstifadəçi ekranın qarşısında olanda ekranı açıq saxlayar</string>
-  <string name="screen_gestures_panel_title">Jest qısayolları</string>
-  <string name="ambient_display_title">Ekran mühiti</string>
-  <string name="pick_up_gesture_title">Telefonu tut</string>
-  <string name="pick_up_gesture_summary">Telefonu tutanda bildirişləri at</string>
-  <string name="ir_wake_up_title">Yellə</string>
-  <string name="ir_wake_up_summary">Əlinizi ekranın qarşısında yelləyəndə bildirişləri atar</string>
-  <string name="actions_title">Hərəkətlər</string>
-  <string name="camera_gesture_title">Cüt yellə</string>
-  <string name="camera_gesture_summary">Cüt yelləmə jest hərəkəti</string>
-  <string name="chop_chop_gesture_title">Doğrama</string>
-  <string name="chop_chop_gesture_summary">Doğramaq jestindən istifadə hərəkəti</string>
-  <string name="ir_silencer_title">Səssizə almaq üçün yelləyin</string>
-  <string name="ir_silencer_summary">Ekran qarşısında əlinizi yelləyəndə gələn zəngləri səssizə alar</string>
-  <string name="action_none">Ləğv et</string>
-  <string name="action_launch_camera">Kameranı başlat</string>
-  <string name="action_torch">Fənəri aç/bağla</string>
-  <string name="feedback_intensity_title">Sensor geri bildiriş gərginliyi</string>
-  <string name="feedback_intensity_summary">Cüt yelləmə və doğrama hərəkətləri üçün sensor geri bildiriş gücü</string>
-  <string name="feedback_intensity_none">Ləğv edildi</string>
-  <string name="feedback_intensity_low">Aşağı</string>
-  <string name="feedback_intensity_medium">Orta</string>
-  <string name="feedback_intensity_high">Yüksək</string>
 </resources>

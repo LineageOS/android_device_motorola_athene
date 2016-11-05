@@ -27,28 +27,24 @@ import android.util.Log;
 public class CMActionsSettings {
     private static final String TAG = "CMActions";
 
-    private static final int ACTION_NONE = 0;
-    private static final int ACTION_LAUNCH_CAMERA = 1;
-    private static final int ACTION_TORCH = 2;
-
-    private static final String GESTURE_USER_AWARE_DISPLAY_KEY = "gesture_user_aware_display";
     private static final String GESTURE_CAMERA_ACTION_KEY = "gesture_camera_action";
     private static final String GESTURE_CHOP_CHOP_KEY = "gesture_chop_chop";
-    private static final String GESTURE_FEEDBACK_INTENSITY_KEY = "gesture_feedback_intensity";
     private static final String GESTURE_PICK_UP_KEY = "gesture_pick_up";
     private static final String GESTURE_IR_WAKEUP_KEY = "gesture_ir_wake_up";
     private static final String GESTURE_IR_SILENCER_KEY = "gesture_ir_silencer";
+    private static final String GESTURE_FLIP_TO_MUTE_KEY = "gesture_flip_to_mute";
+    private static final String GESTURE_LIFT_TO_SILENCE_KEY = "gesture_lift_to_silence";
 
     private final Context mContext;
     private final UpdatedStateNotifier mUpdatedStateNotifier;
 
-    private boolean mUserAwareDisplayEnabled;
-    private int mCameraGestureAction;
-    private int mChopChopAction;
-    private int mFeedbackIntensity;
+    private boolean mCameraGestureEnabled;
+    private boolean mChopChopEnabled;
+    private boolean mPickUpGestureEnabled;
     private boolean mIrWakeUpEnabled;
     private boolean mIrSilencerEnabled;
-    private boolean mPickUpGestureEnabled;
+    private boolean mFlipToMuteEnabled;
+    private boolean mLiftToSilenceEnabled;
 
     public CMActionsSettings(Context context, UpdatedStateNotifier updatedStateNotifier) {
         SharedPreferences sharedPrefs = PreferenceManager.getDefaultSharedPreferences(context);
@@ -58,24 +54,12 @@ public class CMActionsSettings {
         mUpdatedStateNotifier = updatedStateNotifier;
     }
 
-    public SensorAction newCameraActivationAction() {
-        return new ConfigurableAction(true);
-    }
-
-    public SensorAction newChopChopAction() {
-        return new ConfigurableAction(false);
-    }
-
-    public boolean isUserAwareDisplayEnabled() {
-        return mUserAwareDisplayEnabled;
-    }
-
     public boolean isCameraGestureEnabled() {
-        return mCameraGestureAction != ACTION_NONE;
+        return mCameraGestureEnabled;
     }
 
     public boolean isChopChopGestureEnabled() {
-        return mChopChopAction != ACTION_NONE;
+        return mChopChopEnabled;
     }
 
     public static boolean isDozeEnabled(ContentResolver contentResolver) {
@@ -98,19 +82,30 @@ public class CMActionsSettings {
         return mIrSilencerEnabled;
     }
 
-    private void loadPreferences(SharedPreferences sharedPreferences) {
-        mUserAwareDisplayEnabled = sharedPreferences.getBoolean(GESTURE_USER_AWARE_DISPLAY_KEY, false);
-        mCameraGestureAction = getIntPreference(sharedPreferences, GESTURE_CAMERA_ACTION_KEY);
-        mChopChopAction = getIntPreference(sharedPreferences, GESTURE_CHOP_CHOP_KEY);
-        mFeedbackIntensity = getIntPreference(sharedPreferences, GESTURE_FEEDBACK_INTENSITY_KEY);
-        mIrWakeUpEnabled = sharedPreferences.getBoolean(GESTURE_IR_WAKEUP_KEY, false);
-        mPickUpGestureEnabled = sharedPreferences.getBoolean(GESTURE_PICK_UP_KEY, false);
-        mIrSilencerEnabled = sharedPreferences.getBoolean(GESTURE_IR_SILENCER_KEY, false);
+    public boolean isFlipToMuteEnabled() {
+        return mFlipToMuteEnabled;
     }
 
-    private int getIntPreference(SharedPreferences sharedPreferences, String key) {
-        String value = sharedPreferences.getString(key, "0");
-        return Integer.valueOf(value);
+    public boolean isLiftToSilenceEnabled() {
+        return mLiftToSilenceEnabled;
+    }
+
+    public void cameraAction() {
+        new CameraActivationAction(mContext).action();
+    }
+
+    public void chopChopAction() {
+        new TorchAction(mContext).action();
+    }
+
+    private void loadPreferences(SharedPreferences sharedPreferences) {
+        mCameraGestureEnabled = sharedPreferences.getBoolean(GESTURE_CAMERA_ACTION_KEY, true);
+        mChopChopEnabled = sharedPreferences.getBoolean(GESTURE_CHOP_CHOP_KEY, true);
+        mIrWakeUpEnabled = sharedPreferences.getBoolean(GESTURE_IR_WAKEUP_KEY, true);
+        mPickUpGestureEnabled = sharedPreferences.getBoolean(GESTURE_PICK_UP_KEY, true);
+        mIrSilencerEnabled = sharedPreferences.getBoolean(GESTURE_IR_SILENCER_KEY, false);
+        mFlipToMuteEnabled = sharedPreferences.getBoolean(GESTURE_FLIP_TO_MUTE_KEY, false);
+        mLiftToSilenceEnabled = sharedPreferences.getBoolean(GESTURE_LIFT_TO_SILENCE_KEY, false);
     }
 
     private SharedPreferences.OnSharedPreferenceChangeListener mPrefListener =
@@ -119,52 +114,26 @@ public class CMActionsSettings {
         public void onSharedPreferenceChanged(SharedPreferences sharedPreferences, String key) {
             boolean updated = true;
 
-            if (GESTURE_USER_AWARE_DISPLAY_KEY.equals(key)) {
-                mUserAwareDisplayEnabled = sharedPreferences.getBoolean(GESTURE_USER_AWARE_DISPLAY_KEY, false);
-            } else if (GESTURE_CAMERA_ACTION_KEY.equals(key)) {
-                mCameraGestureAction = getIntPreference(sharedPreferences, GESTURE_CAMERA_ACTION_KEY);
+            if (GESTURE_CAMERA_ACTION_KEY.equals(key)) {
+                mCameraGestureEnabled = sharedPreferences.getBoolean(GESTURE_CAMERA_ACTION_KEY, true);
             } else if (GESTURE_CHOP_CHOP_KEY.equals(key)) {
-                mChopChopAction = getIntPreference(sharedPreferences, GESTURE_CHOP_CHOP_KEY);
-            } else if (GESTURE_FEEDBACK_INTENSITY_KEY.equals(key)) {
-                mFeedbackIntensity = getIntPreference(sharedPreferences, GESTURE_FEEDBACK_INTENSITY_KEY);
+                mChopChopEnabled = sharedPreferences.getBoolean(GESTURE_CHOP_CHOP_KEY, true);
             } else if (GESTURE_IR_WAKEUP_KEY.equals(key)) {
-                mIrWakeUpEnabled = sharedPreferences.getBoolean(GESTURE_IR_WAKEUP_KEY, false);
+                mIrWakeUpEnabled = sharedPreferences.getBoolean(GESTURE_IR_WAKEUP_KEY, true);
             } else if (GESTURE_PICK_UP_KEY.equals(key)) {
-                mPickUpGestureEnabled = sharedPreferences.getBoolean(GESTURE_PICK_UP_KEY, false);
+                mPickUpGestureEnabled = sharedPreferences.getBoolean(GESTURE_PICK_UP_KEY, true);
             } else if (GESTURE_IR_SILENCER_KEY.equals(key)) {
                 mIrSilencerEnabled = sharedPreferences.getBoolean(GESTURE_IR_SILENCER_KEY, false);
+            } else if (GESTURE_FLIP_TO_MUTE_KEY.equals(key)) {
+                mFlipToMuteEnabled = sharedPreferences.getBoolean(GESTURE_FLIP_TO_MUTE_KEY, false);
+            } else if (GESTURE_LIFT_TO_SILENCE_KEY.equals(key)) {
+                mLiftToSilenceEnabled = sharedPreferences.getBoolean(GESTURE_LIFT_TO_SILENCE_KEY, false);
             } else {
                 updated = false;
             }
 
             if (updated) {
                 mUpdatedStateNotifier.updateState();
-            }
-        }
-    };
-
-    private class ConfigurableAction implements SensorAction {
-        private final boolean mIsCamera;
-
-        public ConfigurableAction(boolean isCamera) {
-             mIsCamera = isCamera;
-        }
-
-        @Override
-        public void action() {
-            if (mIsCamera) {
-                action(mCameraGestureAction);
-            } else {
-                action(mChopChopAction);
-            }
-        }
-
-        private void action(int action) {
-            int vibratorPeriod = mFeedbackIntensity * 80;
-            if (action == ACTION_LAUNCH_CAMERA) {
-                new CameraActivationAction(mContext, vibratorPeriod).action();
-            } else if (action == ACTION_TORCH) {
-                new TorchAction(mContext, vibratorPeriod).action();
             }
         }
     };
