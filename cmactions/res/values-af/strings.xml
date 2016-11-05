@@ -17,28 +17,17 @@
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
   <!-- Gesture shortcuts -->
-  <string name="user_aware_display_title">Gebruiker bewus skerm</string>
-  <string name="user_aware_display_summary">Hou skerm aan terwyl gebruiker voor skerm is</string>
   <string name="screen_gestures_panel_title">Gebaar kortpaaie</string>
-  <string name="ambient_display_title">Omgewings skerm</string>
+  <string name="ambient_display_title">Omgewings temperatuur skerm</string>
   <string name="pick_up_gesture_title">Optel</string>
   <string name="pick_up_gesture_summary">Pols kennisgewings met optel van toestel</string>
   <string name="ir_wake_up_title">Waai</string>
   <string name="ir_wake_up_summary">Pols kennisgewings wanneer jou hand waai bo-oor die skerm</string>
   <string name="actions_title">Aksies</string>
   <string name="camera_gesture_title">Dubbel-draai</string>
-  <string name="camera_gesture_summary">Voer aksie uit wanneer die dubbel-draai gebaar gedoen word</string>
+  <string name="camera_gesture_summary">Maak kamera oop wanneer die dubbel-draai gebaar gedoen word</string>
   <string name="chop_chop_gesture_title">Kap-kap</string>
-  <string name="chop_chop_gesture_summary">Voer aksie uit wanneer die kap-kap gebaar gedoen word</string>
+  <string name="chop_chop_gesture_summary">Skakel flitslig aan/af met die gebruik van die kap-kap gebaar</string>
   <string name="ir_silencer_title">Waai vir stilte</string>
   <string name="ir_silencer_summary">Maak inkomende oproepe stil met die waai van jou hand bo-oor jou skerm</string>
-  <string name="action_none">Deaktiveer</string>
-  <string name="action_launch_camera">Begin kamera</string>
-  <string name="action_torch">Flits</string>
-  <string name="feedback_intensity_title">Haptiese terugvoer intensiteit</string>
-  <string name="feedback_intensity_summary">Sterkte van haptiese terugvoer vir die dubbel-draai en kap-kap askies</string>
-  <string name="feedback_intensity_none">Af</string>
-  <string name="feedback_intensity_low">Laag</string>
-  <string name="feedback_intensity_medium">Gemiddeld</string>
-  <string name="feedback_intensity_high">Hoog</string>
 </resources>

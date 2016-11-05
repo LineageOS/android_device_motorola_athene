@@ -17,28 +17,17 @@
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
   <!-- Gesture shortcuts -->
-  <string name="user_aware_display_title">Màn hình nhận biết người dùng</string>
-  <string name="user_aware_display_summary">Giữ màn hình sáng khi người dùng còn nhìn vào màn hình</string>
   <string name="screen_gestures_panel_title">Lối tắt cử chỉ</string>
   <string name="ambient_display_title">Hiển thị môi trường xung quanh</string>
   <string name="pick_up_gesture_title">Nhấc lên</string>
-  <string name="pick_up_gesture_summary">Hiện thông báo khi nhấc máy lên</string>
+  <string name="pick_up_gesture_summary">Kích hoạt thông báo khi nhấc máy lên hoặc bỏ xuống</string>
   <string name="ir_wake_up_title">Vẫy</string>
-  <string name="ir_wake_up_summary">Hiện thông báo khi vẫy tay qua màn hình</string>
+  <string name="ir_wake_up_summary">Kích hoạt thông báo khi vẫy tay qua màn hình</string>
   <string name="actions_title">Thao tác</string>
   <string name="camera_gesture_title">Xoay hai lần</string>
-  <string name="camera_gesture_summary">Thao tác khi sử dụng cử chỉ xoay hai lần</string>
+  <string name="camera_gesture_summary">Mở máy ảnh khi sử dụng cử chỉ xoay hai lần</string>
   <string name="chop_chop_gesture_title">Lắc 2 lần</string>
-  <string name="chop_chop_gesture_summary">Thao tác khi sử dụng cử chỉ lắc hai lần</string>
+  <string name="chop_chop_gesture_summary">Bật/tắt đèn pin khi sử dụng cử chỉ lắc 2 lần</string>
   <string name="ir_silencer_title">Vẫy để im lặng</string>
   <string name="ir_silencer_summary">Ngắt tiếng cuộc gọi đến bằng cách vẫy tay qua màn hình</string>
-  <string name="action_none">Tắt</string>
-  <string name="action_launch_camera">Khởi động camera</string>
-  <string name="action_torch">Bật/tắt đèn pin</string>
-  <string name="feedback_intensity_title">Cường độ phản hồi xúc giác</string>
-  <string name="feedback_intensity_summary">Độ mạnh của phản hồi xúc giác với thao tác xoay hai lần và lắc hai lần</string>
-  <string name="feedback_intensity_none">Đã tắt</string>
-  <string name="feedback_intensity_low">Thấp</string>
-  <string name="feedback_intensity_medium">Trung bình</string>
-  <string name="feedback_intensity_high">Cao</string>
 </resources>

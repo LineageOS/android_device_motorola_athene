@@ -18,17 +18,6 @@
         xmlns:settings="http://schemas.android.com/apk/res/com.android.settings">
 
     <PreferenceCategory
-        android:key="user_aware_display_key"
-        android:title="@string/user_aware_display_title" >
-
-        <SwitchPreference
-            android:key="gesture_user_aware_display"
-            android:defaultValue="false"
-            android:title="@string/user_aware_display_title"
-            android:summary="@string/user_aware_display_summary" />
-    </PreferenceCategory>
-
-    <PreferenceCategory
         android:key="ambient_display_key"
         android:title="@string/ambient_display_title" >
 
@@ -49,38 +38,36 @@
         android:key="actions_key"
         android:title="@string/actions_title" >
 
-        <ListPreference
+        <SwitchPreference
             android:key="gesture_camera_action"
-            android:defaultValue="1"
+            android:defaultValue="true"
             android:title="@string/camera_gesture_title"
-            android:dialogTitle="@string/camera_gesture_title"
-            android:summary="@string/camera_gesture_summary"
-            android:entries="@array/action_entries"
-            android:entryValues="@array/action_values" />
+            android:summary="@string/camera_gesture_summary" />
 
-        <ListPreference
+        <SwitchPreference
             android:key="gesture_chop_chop"
-            android:defaultValue="2"
+            android:defaultValue="true"
             android:title="@string/chop_chop_gesture_title"
-            android:dialogTitle="@string/chop_chop_gesture_title"
-            android:summary="@string/chop_chop_gesture_summary"
-            android:entries="@array/action_entries"
-            android:entryValues="@array/action_values" />
-
-        <ListPreference
-            android:key="gesture_feedback_intensity"
-            android:defaultValue="2"
-            android:title="@string/feedback_intensity_title"
-            android:dialogTitle="@string/feedback_intensity_title"
-            android:summary="@string/feedback_intensity_summary"
-            android:entries="@array/feedback_intensity_entries"
-            android:entryValues="@array/feedback_intensity_values" />
+            android:summary="@string/chop_chop_gesture_summary" />
 
         <SwitchPreference
             android:key="gesture_ir_silencer"
-            android:defaultValue="true"
+            android:defaultValue="false"
             android:title="@string/ir_silencer_title"
             android:summary="@string/ir_silencer_summary" />
+
+        <SwitchPreference
+            android:key="gesture_flip_to_mute"
+            android:defaultValue="false"
+            android:title="@string/flip_to_mute_title"
+            android:summary="@string/flip_to_mute_summary" />
+
+        <SwitchPreference
+            android:key="gesture_lift_to_silence"
+            android:defaultValue="false"
+            android:title="@string/lift_to_silence_title"
+            android:summary="@string/lift_to_silence_summary" />
+
     </PreferenceCategory>
 
 </PreferenceScreen>

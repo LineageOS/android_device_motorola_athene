@@ -17,8 +17,6 @@
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
   <!-- Gesture shortcuts -->
-  <string name="user_aware_display_title">Gebruikersbewust scherm</string>
-  <string name="user_aware_display_summary">Scherm aan houden als de gebruiker voor het scherm zit</string>
   <string name="screen_gestures_panel_title">Gebarensnelkoppelingen</string>
   <string name="ambient_display_title">Omgevingsdisplay</string>
   <string name="pick_up_gesture_title">Oppakken</string>
@@ -27,18 +25,14 @@
   <string name="ir_wake_up_summary">Meldingen laten knipperen bij handgebaar over het scherm</string>
   <string name="actions_title">Acties</string>
   <string name="camera_gesture_title">Double-twist</string>
-  <string name="camera_gesture_summary">Actie bij \'double twist\'-gebaar (twee draaiende bewegingen met uw apparaat)</string>
+  <string name="camera_gesture_summary">Camera openen bij gebruik van het \'double-twist\'-gebaar</string>
   <string name="chop_chop_gesture_title">Chop-chop</string>
-  <string name="chop_chop_gesture_summary">Actie bij \'chop-chop\'-gebaar (twee hakkende bewegingen met uw apparaat)</string>
+  <string name="chop_chop_gesture_summary">Zaklamp aan-/uitzetten bij gebruik van het \'chop-chop\'-gebaar</string>
   <string name="ir_silencer_title">Handgebaar voor stil</string>
-  <string name="ir_silencer_summary">Inkomende oproepen dempen bij handgebaar over het scherm</string>
-  <string name="action_none">Uitschakelen</string>
-  <string name="action_launch_camera">Camera openen</string>
-  <string name="action_torch">Zaklamp aan/uit</string>
-  <string name="feedback_intensity_title">Trilintensiteit</string>
-  <string name="feedback_intensity_summary">Trilintensiteit voor de \'double-twist\' en \'chop-chop\' acties</string>
-  <string name="feedback_intensity_none">Uitgeschakeld</string>
-  <string name="feedback_intensity_low">Laag</string>
-  <string name="feedback_intensity_medium">Gemiddeld</string>
-  <string name="feedback_intensity_high">Hoog</string>
+  <string name="ir_silencer_summary">Inkomende oproepen dempen met handgebaar over het scherm</string>
+  <string name="flip_to_mute_title">Omdraaien voor \'Niet storen\'</string>
+  <string name="flip_to_mute_summary">Plaats de telefoon met scherm naar beneden om notificaties en oproepen te dempen</string>
+  <string name="dnd_access">Geef CMActies toegang tot \'Niet storen\' om deze functie te gebruiken.</string>
+  <string name="lift_to_silence_title">Oppakken om te stoppen met rinkelen</string>
+  <string name="lift_to_silence_summary">Til de telefoon op om binnenkomende oproepen te dempen. Werkt alleen als de telefoon al plat ligt</string>
 </resources>
