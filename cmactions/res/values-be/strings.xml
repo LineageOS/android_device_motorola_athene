@@ -17,28 +17,10 @@
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
   <!-- Gesture shortcuts -->
-  <string name="user_aware_display_title">Інтэлектуальнае адкл. дысплея</string>
-  <string name="user_aware_display_summary">Трымаць экран уключаным, пакуль карыстач знаходзіцца перад ім</string>
-  <string name="screen_gestures_panel_title">Уключыць жэсты</string>
+  <string name="screen_gestures_panel_title">Жэсты</string>
   <string name="ambient_display_title">Індыкацыя падзей</string>
   <string name="pick_up_gesture_title">Падняць</string>
-  <string name="pick_up_gesture_summary">Адлюстроўваць апавяшчэнні пры ўзняцці прылады ці выманні яго з кішэні</string>
   <string name="ir_wake_up_title">Узмах</string>
-  <string name="ir_wake_up_summary">Правядзіце далонню над экранам для прагляду апавяшчэнняў</string>
-  <string name="actions_title">Дзеянні</string>
-  <string name="camera_gesture_title">Кручэнне</string>
-  <string name="camera_gesture_summary">Дзеянне, выкананае пры падвойным кручэнні</string>
-  <string name="chop_chop_gesture_title">Пастукванне</string>
-  <string name="chop_chop_gesture_summary">Дзеянне, выкананае пры пастукванні</string>
-  <string name="ir_silencer_title">Узмах для адключэння гуку</string>
-  <string name="ir_silencer_summary">Адключаць выклік і адкладаць будзільнік узмахам над экранам</string>
-  <string name="action_none">Выключыць</string>
-  <string name="action_launch_camera">Уключыць камеру</string>
-  <string name="action_torch">Ліхтарык</string>
-  <string name="feedback_intensity_title">Магутнасць вібра водгуку</string>
-  <string name="feedback_intensity_summary">Налада сілы вібрацыі для жэстаў пастуквання і кручэння</string>
-  <string name="feedback_intensity_none">Выключана</string>
-  <string name="feedback_intensity_low">Нізкі</string>
-  <string name="feedback_intensity_medium">Сярэдні</string>
-  <string name="feedback_intensity_high">Высокі</string>
+  <string name="actions_title">Дзеянне</string>
+  <string name="chop_chop_gesture_title">Уструс</string>
 </resources>

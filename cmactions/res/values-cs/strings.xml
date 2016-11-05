@@ -17,28 +17,22 @@
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
   <!-- Gesture shortcuts -->
-  <string name="user_aware_display_title">Všímat si uživatele</string>
-  <string name="user_aware_display_summary">Pokud je uživatel před obrazovkou, nechat ji zapnutou</string>
   <string name="screen_gestures_panel_title">Rychlá gesta</string>
   <string name="ambient_display_title">Ambientní zobrazení</string>
-  <string name="pick_up_gesture_title">Při sebrání</string>
-  <string name="pick_up_gesture_summary">Upozornit pulsováním při sebrání</string>
+  <string name="pick_up_gesture_title">Sebrání</string>
+  <string name="pick_up_gesture_summary">Upozornit pulsováním při sebrání či vyložení</string>
   <string name="ir_wake_up_title">Zavlnění</string>
   <string name="ir_wake_up_summary">Upozornit pulsováním při zamáváním rukou přes obrazovku</string>
   <string name="actions_title">Akce</string>
   <string name="camera_gesture_title">Dvojité otočení</string>
-  <string name="camera_gesture_summary">Akce při použití gesta dvojitého otočení</string>
+  <string name="camera_gesture_summary">Otevřít fotoaparát gestem dvojitého otočení</string>
   <string name="chop_chop_gesture_title">Chop-chop</string>
-  <string name="chop_chop_gesture_summary">Akce při použití chop-chop gesta</string>
+  <string name="chop_chop_gesture_summary">Zapnout/vypnout svítilnu použitím gesta chop-chop</string>
   <string name="ir_silencer_title">Zavlněním ztišit</string>
   <string name="ir_silencer_summary">Ztišit příchozí hovory zavlněním ruky přes obrazovku</string>
-  <string name="action_none">Žádná</string>
-  <string name="action_launch_camera">Spustit fotoaparát</string>
-  <string name="action_torch">Přepnout svítilnu</string>
-  <string name="feedback_intensity_title">Intensita zpětné vazby</string>
-  <string name="feedback_intensity_summary">Síla zpětné vazby pro double-twist a chop-chop akce</string>
-  <string name="feedback_intensity_none">Žádná</string>
-  <string name="feedback_intensity_low">Nízká</string>
-  <string name="feedback_intensity_medium">Střední</string>
-  <string name="feedback_intensity_high">Vysoká</string>
+  <string name="flip_to_mute_title">Otočit pro povolení „Nerušit“</string>
+  <string name="flip_to_mute_summary">Obrácením telefonu obrazovkou dolů ztlumit oznámení a vyzvánění</string>
+  <string name="dnd_access">Prosím pro využití této funkce povolte přístup k CMActions režimu „Nerušit”.</string>
+  <string name="lift_to_silence_title">Zvednutím zastavit vyzvánění</string>
+  <string name="lift_to_silence_summary">Zvednutím telefonu pro ztlumení vyzvánění. Tuto funkci je možné využít pouze v případě, že byl telefon položen na plocho</string>
 </resources>
