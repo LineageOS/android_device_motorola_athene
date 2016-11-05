@@ -17,28 +17,4 @@
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
   <!-- Gesture shortcuts -->
-  <string name="user_aware_display_title">Kasutaja teadlik ekraan</string>
-  <string name="user_aware_display_summary">Hoia ekraan sees, kui kasutaja on ekraani ees</string>
-  <string name="screen_gestures_panel_title">Žestide otseteed</string>
-  <string name="ambient_display_title">Ambient kuva</string>
-  <string name="pick_up_gesture_title">Tõsta üles</string>
-  <string name="pick_up_gesture_summary">Kuva teatised seadme kättevõtmisel</string>
-  <string name="ir_wake_up_title">Viibutus</string>
-  <string name="ir_wake_up_summary">Kuva teatised üle erkaani viibates</string>
-  <string name="actions_title">Tegevused</string>
-  <string name="camera_gesture_title">Topelt-vääne</string>
-  <string name="camera_gesture_summary">Toiming topelt-vääne žesti kasutamisel</string>
-  <string name="chop_chop_gesture_title">Ruttu-ruttu</string>
-  <string name="chop_chop_gesture_summary">Toiming ruttu-ruttu žesti kasutamisel</string>
-  <string name="ir_silencer_title">Viipa vaigistamiseks</string>
-  <string name="ir_silencer_summary">Vaigista sissetulev kõne üle erkaani viibates</string>
-  <string name="action_none">Keela</string>
-  <string name="action_launch_camera">Käivita kaamera</string>
-  <string name="action_torch">Lülita taskulamp</string>
-  <string name="feedback_intensity_title">Puutetagasiside intensiivsus</string>
-  <string name="feedback_intensity_summary">Topelt-vääne ja ruttu-tuttu toimingute puutetagasiside tugevus</string>
-  <string name="feedback_intensity_none">Keelatud</string>
-  <string name="feedback_intensity_low">Madal</string>
-  <string name="feedback_intensity_medium">Keskmine</string>
-  <string name="feedback_intensity_high">Kõrge</string>
 </resources>

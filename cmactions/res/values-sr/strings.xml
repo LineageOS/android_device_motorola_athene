@@ -17,28 +17,17 @@
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
   <!-- Gesture shortcuts -->
-  <string name="user_aware_display_title">Дисплеј свестан корисника</string>
-  <string name="user_aware_display_summary">Држи екран укљученим док је корисник испред дисплеја</string>
-  <string name="screen_gestures_panel_title">Пречице покретима</string>
+  <string name="screen_gestures_panel_title">Пречице гестова</string>
   <string name="ambient_display_title">Амбијент приказ</string>
   <string name="pick_up_gesture_title">Купљење</string>
-  <string name="pick_up_gesture_summary">Пулсно обавештење при купљењу</string>
+  <string name="pick_up_gesture_summary">Пулсно обавештење при купљењу или остављању</string>
   <string name="ir_wake_up_title">Талас</string>
   <string name="ir_wake_up_summary">Пулсно обавештење када махнеш руком испред екрана</string>
   <string name="actions_title">Акције</string>
   <string name="camera_gesture_title">Дупло ротирање</string>
-  <string name="camera_gesture_summary">Акција када се користи гест дуплог ротирања</string>
+  <string name="camera_gesture_summary">Отвори камеру када се користи гест дуплог ротирања</string>
   <string name="chop_chop_gesture_title">Пожури</string>
-  <string name="chop_chop_gesture_summary">Акција када се користи гест пожури</string>
+  <string name="chop_chop_gesture_summary">Укључи/Искључи лампу користећи гест пожури</string>
   <string name="ir_silencer_title">Махни за тишину</string>
-  <string name="ir_silencer_summary">Утишај долазећи позив махањем руком преко екрана</string>
-  <string name="action_none">Онемогући</string>
-  <string name="action_launch_camera">Покрени камеру</string>
-  <string name="action_torch">Пребацивање бакље</string>
-  <string name="feedback_intensity_title">Интензитет одговора додира</string>
-  <string name="feedback_intensity_summary">Јачина повратне информације за дуплу ротацију и пожури акцију</string>
-  <string name="feedback_intensity_none">Онемогућено</string>
-  <string name="feedback_intensity_low">Ниска</string>
-  <string name="feedback_intensity_medium">Средња</string>
-  <string name="feedback_intensity_high">Висока</string>
+  <string name="ir_silencer_summary">Утишај долазеће позиве махањем руком преко екрана</string>
 </resources>
