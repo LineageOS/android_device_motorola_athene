@@ -17,28 +17,22 @@
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
   <!-- Gesture shortcuts -->
-  <string name="user_aware_display_title">Visualizzazione utente</string>
-  <string name="user_aware_display_summary">Tiene lo schermo accesso quando l\'utente lo guarda</string>
   <string name="screen_gestures_panel_title">Scorciatoie gesture</string>
-  <string name="ambient_display_title">Ambient display</string>
-  <string name="pick_up_gesture_title">Sollevamento</string>
+  <string name="ambient_display_title">Display Ambient</string>
+  <string name="pick_up_gesture_title">Solleva</string>
   <string name="pick_up_gesture_summary">Mostra notifiche al sollevamento</string>
   <string name="ir_wake_up_title">Onda</string>
-  <string name="ir_wake_up_summary">Mostra notifiche quando passi la mano sopra lo schermo</string>
+  <string name="ir_wake_up_summary">Mostra notifiche quando la mano passa sopra lo schermo</string>
   <string name="actions_title">Azioni</string>
   <string name="camera_gesture_title">Doppio scuotimento</string>
-  <string name="camera_gesture_summary">Azione quando scuoti due volte</string>
+  <string name="camera_gesture_summary">Apri la fotocamera quando scuoti due volte</string>
   <string name="chop_chop_gesture_title">Chop-chop</string>
-  <string name="chop_chop_gesture_summary">Azione quando si utilizza la gesture chop-chop</string>
-  <string name="ir_silencer_title">Scorri la mano per silenziare</string>
-  <string name="ir_silencer_summary">Silenzia le chiamate in arricchì passando la mano sopra lo schermo</string>
-  <string name="action_none">Disattiva</string>
-  <string name="action_launch_camera">Avvia Fotocamera</string>
-  <string name="action_torch">Torcia</string>
-  <string name="feedback_intensity_title">Intensità feedback tattile</string>
-  <string name="feedback_intensity_summary">Forza del feedback tattile per le azioni doppio scuotimento e chop-chop</string>
-  <string name="feedback_intensity_none">Disattivato</string>
-  <string name="feedback_intensity_low">Bassa</string>
-  <string name="feedback_intensity_medium">Media</string>
-  <string name="feedback_intensity_high">Alta</string>
+  <string name="chop_chop_gesture_summary">Accendi la torcia quando utilizzi la gesture chop-chop</string>
+  <string name="ir_silencer_title">Muovi la mano per silenziare</string>
+  <string name="ir_silencer_summary">Silenza le chiamate in arrivo passando la mano sopra lo schermo</string>
+  <string name="flip_to_mute_title">Capovolgi per non disturbare</string>
+  <string name="flip_to_mute_summary">Metti a faccia in giù il telefono per silenziare le notifiche e chiamate</string>
+  <string name="dnd_access">Consenti il permesso di accedere a Non disturbare a CMActions per utilizzare questa funzione.</string>
+  <string name="lift_to_silence_title">Prendi in mano per silenziare</string>
+  <string name="lift_to_silence_summary">Solleva il telefono per silenziare le chiamate in arrivo. Funziona solo se il telefono era su una superficie piatta</string>
 </resources>

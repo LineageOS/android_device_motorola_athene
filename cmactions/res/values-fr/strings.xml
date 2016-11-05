@@ -17,28 +17,17 @@
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
   <!-- Gesture shortcuts -->
-  <string name="user_aware_display_title">Affichage selon l\'utilisateur</string>
-  <string name="user_aware_display_summary">Garder l\'écran allumé tant qu\'un utilisateur le regarde</string>
   <string name="screen_gestures_panel_title">Raccourcis gestuels</string>
   <string name="ambient_display_title">Affichage en mode veille</string>
   <string name="pick_up_gesture_title">Prise en main</string>
-  <string name="pick_up_gesture_summary">Le voyant des notifications clignote lorsque pris en main, désancré, débranché ou sorti du boîtier</string>
-  <string name="ir_wake_up_title">Agiter</string>
+  <string name="pick_up_gesture_summary">Le voyant des notifications clignote lorsque pris en main, débranché ou sorti du boîtier</string>
+  <string name="ir_wake_up_title">Secouer</string>
   <string name="ir_wake_up_summary">Le voyant des notifications clignote lorsque vous passez votre main sur l\'écran</string>
   <string name="actions_title">Actions</string>
   <string name="camera_gesture_title">Double torsion</string>
-  <string name="camera_gesture_summary">Action associée à la double-torsion</string>
+  <string name="camera_gesture_summary">Ouvrir l\'appareil photo avec le geste de double torsion</string>
   <string name="chop_chop_gesture_title">Double tranchage</string>
-  <string name="chop_chop_gesture_summary">Action lorsque vous utilisez le geste Double tranchage</string>
-  <string name="ir_silencer_title">Agiter pour couper le son</string>
+  <string name="chop_chop_gesture_summary">Activer/désactiver la lampe de poche avec le geste de double tranchage</string>
+  <string name="ir_silencer_title">Secouer pour couper le son</string>
   <string name="ir_silencer_summary">Couper la sonnerie des appels entrants en passant la main sur l\'écran</string>
-  <string name="action_none">Désactiver</string>
-  <string name="action_launch_camera">Lancer l\'appareil photo</string>
-  <string name="action_torch">Basculer la torche</string>
-  <string name="feedback_intensity_title">Intensité du retour haptique</string>
-  <string name="feedback_intensity_summary">Intensité du retour haptique pour la double-torsion et le double -tranchage</string>
-  <string name="feedback_intensity_none">Désactivé</string>
-  <string name="feedback_intensity_low">Faible</string>
-  <string name="feedback_intensity_medium">Moyenne</string>
-  <string name="feedback_intensity_high">Élevée</string>
 </resources>
