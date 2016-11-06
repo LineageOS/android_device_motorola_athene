@@ -151,10 +151,6 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     lights.msm8952
 
-# GPS
-PRODUCT_PACKAGES += \
-     gps.msm8952
-
 # OEM
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/vhw.xml:system/etc/vhw.xml
