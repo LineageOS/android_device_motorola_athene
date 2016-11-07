@@ -236,6 +236,9 @@ lib/libipanat.so
 lib/libcamerabgproc-jni.so
 lib/libminui.so
 lib/libmotimager_utils.so
+lib/libOmxCore.so
+lib/libOmxVdec.so
+lib/libOmxVenc.so
 lib/libdtvtuner.so
 lib/lib_mottof.so
 lib/hw/gps.default.so
