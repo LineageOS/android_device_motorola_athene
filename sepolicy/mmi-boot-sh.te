@@ -1,0 +1,17 @@
+type mmi-boot-sh, domain;
+type mmi-boot-sh_exec, exec_type, file_type;
+init_daemon_domain(mmi-boot-sh)
+
+allow mmi-boot-sh rootfs:file entrypoint;
+allow mmi-boot-sh shell_exec:file read;
+allow mmi-boot-sh proc:file write;
+allow mmi-boot-sh property_socket:sock_file write;
+allow mmi-boot-sh kmsg_device:chr_file write;
+allow mmi-boot-sh init:unix_stream_socket connectto;
+allow mmi-boot-sh self:capability dac_override;
+allow mmi-boot-sh manufacturedate_prop:property_service set;
+allow mmi-boot-sh system_prop:property_service set;
+allow mmi-boot-sh utags_block_device:blk_file { read write };
+allow mmi-boot-sh utags_block_device:blk_file open;
+
+
