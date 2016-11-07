@@ -956,6 +956,7 @@ service motosh /system/bin/motosh boot
     oneshot
 
 service mmi-boot-sh /init.mmi.boot.sh
+    seclabel u:r:mmi-boot-sh:s0
     class core
     user root
     oneshot
@@ -975,6 +976,7 @@ service mmi-touch-sh /system/bin/sh /init.mmi.touch.sh
     oneshot
 
 service oem-hw-sh /init.oem.hw.sh
+    seclabel u:r:oem-hw-sh:s0
     class core
     user root
     oneshot
