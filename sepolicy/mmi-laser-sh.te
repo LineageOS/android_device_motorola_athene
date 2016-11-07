@@ -1,0 +1,14 @@
+type mmi-laser-sh, domain;
+type mmi-laser-sh_exec, exec_type, file_type;
+init_daemon_domain(mmi-laser-sh)
+
+allow mmi-laser-sh rootfs:file entrypoint;
+allow mmi-laser-sh shell_exec:file read;
+allow mmi-laser-sh kmsg_device:chr_file write;
+allow mmi-laser-sh persist_file:dir search;
+allow mmi-laser-sh kmsg_device:chr_file open;
+allow mmi-laser-sh persist_file:file getattr;
+allow mmi-laser-sh self:capability { dac_read_search dac_override };
+allow mmi-laser-sh persist_file:file read;
+allow mmi-laser-sh sysfs:file write;
+allow mmi-laser-sh persist_file:file open;
