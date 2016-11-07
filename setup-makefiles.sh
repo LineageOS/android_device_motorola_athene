@@ -16,6 +16,8 @@
 #
 
 set -e
+export DEVICE=athene
+export VENDOR=motorola
 
 # Load extractutils and do some sanity checks
 MY_DIR="${BASH_SOURCE%/*}"
