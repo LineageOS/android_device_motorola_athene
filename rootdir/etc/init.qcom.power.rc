@@ -150,7 +150,9 @@ on enable-low-power
     write /sys/module/process_reclaim/parameters/swap_opt_eff 30
 
     write /sys/module/lowmemorykiller/parameters/enable_adaptive_lmk 1
-    write /sys/module/lowmemorykiller/parameters/vmpressure_file_min 53059
+    write /sys/module/lowmemorykiller/parameters/vmpressure_file_min 81250
+    write /sys/module/lowmemorykiller/parameters/debug_level 0
+    write /sys/module/lowmemorykiller/parameters/lmk_fast_run 0
 
     # Set idle GPU to 240 Mhz
     write /sys/class/kgsl/kgsl-3d0/default_pwrlevel 4
