@@ -1,1 +1,2 @@
 allow wcnss_service persist_file:dir search;
+allow wcnss_service self:capability net_raw;

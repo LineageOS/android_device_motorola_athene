@@ -12,6 +12,7 @@ allow mm-qcamerad device:chr_file ioctl;
 allow mm-qcamerad shell_exec:file { read execute open execute_no_trans };
 allow mm-qcamerad system_data_file:dir read;
 allow mm-qcamerad laser_device:chr_file { read write open };
+allow mm-qcamerad laser_device:chr_file ioctl;
 
 allow servicemanager mm-qcamerad:dir search;
 allow servicemanager mm-qcamerad:file { open read };
