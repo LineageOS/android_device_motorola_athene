@@ -9,3 +9,4 @@ allow untrusted_app persist_file:file getattr;
 allow untrusted_app rfs_system_file:dir search;
 allow untrusted_app mpctl_socket:sock_file getattr;
 allow untrusted_app radio_data_file:dir getattr;
+allow untrusted_app rootfs:dir read;
