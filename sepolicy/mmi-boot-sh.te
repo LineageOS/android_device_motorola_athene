@@ -13,5 +13,7 @@ allow mmi-boot-sh manufacturedate_prop:property_service set;
 allow mmi-boot-sh system_prop:property_service set;
 allow mmi-boot-sh utags_block_device:blk_file { read write };
 allow mmi-boot-sh utags_block_device:blk_file open;
-
-
+allow mmi-boot-sh proc:file { open read };
+allow mmi-boot-sh rootfs:file { open read };
+allow mmi-boot-sh shell_exec:file getattr;
+allow mmi-boot-sh toolbox_exec:file { execute execute_no_trans getattr open read };
