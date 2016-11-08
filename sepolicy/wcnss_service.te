@@ -1,1 +1,3 @@
 allow wcnss_service persist_file:dir search;
+allow wcnss_service self:capability net_raw;
+allow wcnss_service self:capability { dac_override net_raw };

@@ -14,3 +14,7 @@ allow batt_health sysfs_battery_supply:dir { search read };
 allow batt_health sysfs_battery_supply:file r_file_perms;
 allow batt_health sysfs_usb_supply:dir { search read };
 allow batt_health sysfs_usb_supply:file r_file_perms;
+allow batt_health cache_file:file { getattr read };
+allow batt_health sysfs:dir { open read };
+allow batt_health cache_file:file { getattr read };
+allow batt_health sysfs:file { open read };
