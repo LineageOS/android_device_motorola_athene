@@ -1160,6 +1160,18 @@ service per_mgr /system/bin/pm-service
     group system net_raw
     writepid /dev/cpuset/system-background/tasks
 
+service per_proxy /system/bin/pm-proxy
+    class core
+    user system
+    group system
+    disabled
+
+on property:init.svc.per_mgr=running
+    start per_proxy
+
+on property:sys.shutdown.requested=*
+    stop per_proxy
+
 service ppd /system/vendor/bin/mm-pp-daemon
     class late_start
     disabled
