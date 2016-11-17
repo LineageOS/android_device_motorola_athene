@@ -127,6 +127,9 @@ TARGET_POWERHAL_VARIANT := qcom
 # CPU
 ENABLE_CPUSETS := true
 
+# Lights
+TARGET_PROVIDES_LIBLIGHT := true
+
 # Properties
 TARGET_SYSTEM_PROP += device/motorola/athene/system.prop
 
