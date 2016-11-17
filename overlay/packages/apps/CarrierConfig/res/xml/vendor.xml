@@ -1,6 +1,1675 @@
-<?xml version='1.0' encoding='utf-8' standalone='yes' ?>
+<?xml version="1.0" encoding="utf-8"?>
 <carrier_config_list>
-    <carrier_config>
-        <boolean name="show_apn_setting_cdma_bool" value="true" />
+    <carrier_config mcc="001" customerid="verizon">
+        <boolean name="carrier_volte_provisioning_required_bool" value="true" />
+        <boolean name="carrier_volte_available_bool" value="true" />
+        <boolean name="carrier_vt_available_bool" value="true" />
+        <boolean name="carrier_allow_turnoff_ims_bool" value="false" />
+        <boolean name="support_pause_ims_video_calls_bool" value="true" />
+        <boolean name="carrier_wfc_ims_available_bool" value="true" />
+        <boolean name="moto_vowifi_home_priority" value="false" />
+        <boolean name="allow_video_call_in_low_battery" value="true" />
+    </carrier_config>
+    <carrier_config mcc="001" customerid="retail">
+        <boolean name="carrier_volte_available_bool" value="true" />
+        <boolean name="carrier_wfc_ims_available_bool" value="true" />
+        <boolean name="carrier_volte_tty_supported_bool" value="false" />
+    </carrier_config>
+    <carrier_config mcc="202">
+        <boolean name="enableGroupMms" value="false" />
+        <int name="maxImageHeight" value="1944" />
+        <int name="maxImageWidth" value="2592" />
+        <int name="recipientLimit" value="20" />
+        <int name="smsToMmsTextThreshold" value="6" />
+        <int name="maxSubjectLength" value="80" />
+    </carrier_config>
+    <carrier_config mcc="206">
+        <boolean name="enableGroupMms" value="false" />
+        <int name="maxImageHeight" value="1944" />
+        <int name="maxImageWidth" value="2592" />
+        <int name="recipientLimit" value="20" />
+        <int name="smsToMmsTextThreshold" value="6" />
+    </carrier_config>
+    <carrier_config mcc="208">
+        <boolean name="enableGroupMms" value="false" />
+        <int name="maxImageHeight" value="1944" />
+        <int name="maxImageWidth" value="2592" />
+        <int name="recipientLimit" value="20" />
+        <int name="smsToMmsTextThreshold" value="6" />
+    </carrier_config>
+    <carrier_config mcc="212">
+        <boolean name="enableGroupMms" value="false" />
+        <int name="maxImageHeight" value="1944" />
+        <int name="maxImageWidth" value="2592" />
+        <int name="recipientLimit" value="20" />
+        <int name="smsToMmsTextThreshold" value="6" />
+    </carrier_config>
+    <carrier_config mcc="213">
+        <boolean name="enableGroupMms" value="false" />
+        <int name="maxImageHeight" value="1944" />
+        <int name="maxImageWidth" value="2592" />
+        <int name="recipientLimit" value="20" />
+        <int name="smsToMmsTextThreshold" value="6" />
+    </carrier_config>
+    <carrier_config mcc="214">
+        <boolean name="enableGroupMms" value="false" />
+        <int name="maxImageHeight" value="1944" />
+        <int name="maxImageWidth" value="2592" />
+        <int name="recipientLimit" value="20" />
+        <int name="smsToMmsTextThreshold" value="6" />
+        <boolean name="smsUsesSimpleCharactersOnly" value="true" />
+    </carrier_config>
+    <carrier_config mcc="216">
+        <boolean name="enableGroupMms" value="false" />
+        <int name="maxImageHeight" value="1944" />
+        <int name="maxImageWidth" value="2592" />
+        <int name="recipientLimit" value="20" />
+    </carrier_config>
+    <carrier_config mcc="218">
+        <boolean name="enableGroupMms" value="false" />
+        <int name="maxImageHeight" value="1944" />
+        <int name="maxImageWidth" value="2592" />
+        <int name="recipientLimit" value="20" />
+        <int name="smsToMmsTextThreshold" value="6" />
+    </carrier_config>
+    <carrier_config mcc="219">
+        <boolean name="enableGroupMms" value="false" />
+        <int name="maxImageHeight" value="1944" />
+        <int name="maxImageWidth" value="2592" />
+        <int name="recipientLimit" value="20" />
+        <int name="smsToMmsTextThreshold" value="6" />
+    </carrier_config>
+    <carrier_config mcc="220">
+        <boolean name="enableGroupMms" value="false" />
+        <int name="maxImageHeight" value="1944" />
+        <int name="maxImageWidth" value="2592" />
+        <int name="recipientLimit" value="20" />
+        <int name="smsToMmsTextThreshold" value="6" />
+    </carrier_config>
+    <carrier_config mcc="222">
+        <boolean name="enableGroupMms" value="false" />
+        <int name="maxImageHeight" value="1944" />
+        <int name="maxImageWidth" value="2592" />
+        <int name="recipientLimit" value="20" />
+        <int name="smsToMmsTextThreshold" value="6" />
+    </carrier_config>
+    <carrier_config mcc="226">
+        <boolean name="enableGroupMms" value="false" />
+        <int name="maxImageHeight" value="1944" />
+        <int name="maxImageWidth" value="2592" />
+        <int name="recipientLimit" value="20" />
+        <int name="smsToMmsTextThreshold" value="6" />
+    </carrier_config>
+    <carrier_config mcc="228">
+        <boolean name="enableGroupMms" value="false" />
+        <int name="maxImageHeight" value="1944" />
+        <int name="maxImageWidth" value="2592" />
+        <int name="recipientLimit" value="20" />
+        <int name="smsToMmsTextThreshold" value="6" />
+    </carrier_config>
+    <carrier_config mcc="230">
+        <boolean name="enableGroupMms" value="false" />
+        <int name="maxImageHeight" value="1944" />
+        <int name="maxImageWidth" value="2592" />
+        <int name="recipientLimit" value="20" />
+        <int name="smsToMmsTextThreshold" value="6" />
+    </carrier_config>
+    <carrier_config mcc="231">
+        <boolean name="enableGroupMms" value="false" />
+        <int name="maxImageHeight" value="1944" />
+        <int name="maxImageWidth" value="2592" />
+        <int name="recipientLimit" value="20" />
+        <int name="smsToMmsTextThreshold" value="6" />
+    </carrier_config>
+    <carrier_config mcc="232">
+        <boolean name="enableGroupMms" value="false" />
+        <int name="maxImageHeight" value="1944" />
+        <int name="maxImageWidth" value="2592" />
+        <int name="recipientLimit" value="20" />
+        <int name="smsToMmsTextThreshold" value="6" />
+    </carrier_config>
+    <carrier_config mcc="234">
+        <boolean name="enableGroupMms" value="false" />
+        <int name="maxImageHeight" value="1944" />
+        <int name="maxImageWidth" value="2592" />
+        <int name="recipientLimit" value="20" />
+    </carrier_config>
+    <carrier_config customerid="vf" mcc="234" mnc="15">
+        <boolean name="moto_hide_non_user_apn_edit_delete_bool" value="true" />
+    </carrier_config>
+    <carrier_config customerid="3uk" mcc="234" mnc="20">
+        <boolean name="moto_hide_non_user_apn_edit_delete_bool" value="true" />
+    </carrier_config>
+    <carrier_config mcc="238">
+        <boolean name="enableGroupMms" value="false" />
+        <int name="maxImageHeight" value="1944" />
+        <int name="maxImageWidth" value="2592" />
+        <int name="recipientLimit" value="20" />
+        <int name="smsToMmsTextThreshold" value="6" />
+    </carrier_config>
+    <carrier_config mcc="240">
+        <boolean name="enableGroupMms" value="false" />
+        <int name="maxImageHeight" value="1944" />
+        <int name="maxImageWidth" value="2592" />
+        <int name="recipientLimit" value="20" />
+        <int name="smsToMmsTextThreshold" value="6" />
+    </carrier_config>
+    <carrier_config mcc="242">
+        <boolean name="enableGroupMms" value="false" />
+        <int name="maxImageHeight" value="1944" />
+        <int name="maxImageWidth" value="2592" />
+        <int name="recipientLimit" value="20" />
+        <int name="smsToMmsTextThreshold" value="6" />
+    </carrier_config>
+    <carrier_config mcc="244">
+        <boolean name="enableGroupMms" value="false" />
+        <int name="maxImageHeight" value="1944" />
+        <int name="maxImageWidth" value="2592" />
+        <int name="recipientLimit" value="20" />
+        <int name="smsToMmsTextThreshold" value="6" />
+    </carrier_config>
+    <carrier_config mcc="246">
+        <boolean name="enableGroupMms" value="false" />
+        <int name="maxImageHeight" value="1944" />
+        <int name="maxImageWidth" value="2592" />
+        <int name="recipientLimit" value="20" />
+        <int name="smsToMmsTextThreshold" value="6" />
+    </carrier_config>
+    <carrier_config mcc="247">
+        <boolean name="enableGroupMms" value="false" />
+        <int name="maxImageHeight" value="1944" />
+        <int name="maxImageWidth" value="2592" />
+        <int name="recipientLimit" value="20" />
+        <int name="smsToMmsTextThreshold" value="6" />
+    </carrier_config>
+    <carrier_config mcc="248">
+        <boolean name="enableGroupMms" value="false" />
+        <int name="maxImageHeight" value="1944" />
+        <int name="maxImageWidth" value="2592" />
+        <int name="recipientLimit" value="20" />
+        <int name="smsToMmsTextThreshold" value="6" />
+    </carrier_config>
+    <carrier_config mcc="250">
+        <boolean name="enableGroupMms" value="false" />
+        <int name="maxImageHeight" value="1944" />
+        <int name="maxImageWidth" value="2592" />
+        <int name="recipientLimit" value="20" />
+        <int name="smsToMmsTextThreshold" value="6" />
+    </carrier_config>
+    <carrier_config mcc="255">
+        <boolean name="enableGroupMms" value="false" />
+        <int name="maxImageHeight" value="1944" />
+        <int name="maxImageWidth" value="2592" />
+        <int name="recipientLimit" value="20" />
+        <int name="smsToMmsTextThreshold" value="6" />
+    </carrier_config>
+    <carrier_config mcc="259">
+        <boolean name="enableGroupMms" value="false" />
+        <int name="maxImageHeight" value="1944" />
+        <int name="maxImageWidth" value="2592" />
+        <int name="recipientLimit" value="20" />
+        <int name="smsToMmsTextThreshold" value="6" />
+    </carrier_config>
+    <carrier_config mcc="260">
+        <boolean name="enableGroupMms" value="false" />
+        <int name="maxImageHeight" value="1944" />
+        <int name="maxImageWidth" value="2592" />
+        <int name="recipientLimit" value="20" />
+        <int name="smsToMmsTextThreshold" value="6" />
+    </carrier_config>
+    <carrier_config mcc="262">
+        <boolean name="enableGroupMms" value="false" />
+        <int name="maxImageHeight" value="1944" />
+        <int name="maxImageWidth" value="2592" />
+        <int name="recipientLimit" value="20" />
+        <int name="smsToMmsTextThreshold" value="6" />
+    </carrier_config>
+    <carrier_config mcc="268">
+        <boolean name="enableGroupMms" value="false" />
+        <int name="maxImageHeight" value="1944" />
+        <int name="maxImageWidth" value="2592" />
+        <int name="recipientLimit" value="20" />
+        <int name="smsToMmsTextThreshold" value="6" />
+    </carrier_config>
+    <carrier_config mcc="270">
+        <boolean name="enableGroupMms" value="false" />
+        <int name="maxImageHeight" value="1944" />
+        <int name="maxImageWidth" value="2592" />
+        <int name="recipientLimit" value="20" />
+        <int name="smsToMmsTextThreshold" value="6" />
+    </carrier_config>
+    <carrier_config mcc="272">
+        <boolean name="enableGroupMms" value="false" />
+        <int name="maxImageHeight" value="1944" />
+        <int name="maxImageWidth" value="2592" />
+        <int name="recipientLimit" value="20" />
+    </carrier_config>
+    <carrier_config mcc="274">
+        <boolean name="enableGroupMms" value="false" />
+        <int name="maxImageHeight" value="1944" />
+        <int name="maxImageWidth" value="2592" />
+        <int name="recipientLimit" value="20" />
+        <int name="smsToMmsTextThreshold" value="6" />
+    </carrier_config>
+    <carrier_config mcc="276">
+        <boolean name="enableGroupMms" value="false" />
+        <int name="maxImageHeight" value="1944" />
+        <int name="maxImageWidth" value="2592" />
+        <int name="recipientLimit" value="20" />
+    </carrier_config>
+    <carrier_config mcc="278">
+        <boolean name="enableGroupMms" value="false" />
+        <int name="maxImageHeight" value="1944" />
+        <int name="maxImageWidth" value="2592" />
+        <int name="recipientLimit" value="20" />
+        <int name="smsToMmsTextThreshold" value="6" />
+    </carrier_config>
+    <carrier_config mcc="280">
+        <boolean name="enableGroupMms" value="false" />
+        <int name="maxImageHeight" value="1944" />
+        <int name="maxImageWidth" value="2592" />
+        <int name="recipientLimit" value="20" />
+        <int name="smsToMmsTextThreshold" value="6" />
+    </carrier_config>
+    <carrier_config mcc="282">
+        <boolean name="enableGroupMms" value="false" />
+        <int name="maxImageHeight" value="1944" />
+        <int name="maxImageWidth" value="2592" />
+        <int name="recipientLimit" value="20" />
+        <int name="smsToMmsTextThreshold" value="6" />
+    </carrier_config>
+    <carrier_config mcc="283">
+        <boolean name="enableGroupMms" value="false" />
+        <int name="maxImageHeight" value="1944" />
+        <int name="maxImageWidth" value="2592" />
+        <int name="recipientLimit" value="20" />
+        <int name="smsToMmsTextThreshold" value="6" />
+    </carrier_config>
+    <carrier_config mcc="284">
+        <boolean name="enableGroupMms" value="false" />
+        <int name="maxImageHeight" value="1944" />
+        <int name="maxImageWidth" value="2592" />
+        <int name="recipientLimit" value="20" />
+    </carrier_config>
+    <carrier_config mcc="286">
+        <boolean name="enableGroupMms" value="false" />
+        <int name="maxImageHeight" value="1944" />
+        <int name="maxImageWidth" value="2592" />
+        <int name="recipientLimit" value="20" />
+        <int name="smsToMmsTextThreshold" value="6" />
+    </carrier_config>
+    <carrier_config mcc="288">
+        <boolean name="enableGroupMms" value="false" />
+        <int name="maxImageHeight" value="1944" />
+        <int name="maxImageWidth" value="2592" />
+        <int name="recipientLimit" value="20" />
+        <int name="smsToMmsTextThreshold" value="6" />
+    </carrier_config>
+    <carrier_config mcc="289">
+        <boolean name="enableGroupMms" value="false" />
+        <int name="maxImageHeight" value="1944" />
+        <int name="maxImageWidth" value="2592" />
+        <int name="recipientLimit" value="20" />
+        <int name="smsToMmsTextThreshold" value="6" />
+    </carrier_config>
+    <carrier_config mcc="290">
+        <boolean name="enableGroupMms" value="false" />
+        <int name="maxImageHeight" value="1944" />
+        <int name="maxImageWidth" value="2592" />
+        <int name="recipientLimit" value="20" />
+        <int name="smsToMmsTextThreshold" value="6" />
+    </carrier_config>
+    <carrier_config mcc="292">
+        <boolean name="enableGroupMms" value="false" />
+        <int name="maxImageHeight" value="1944" />
+        <int name="maxImageWidth" value="2592" />
+        <int name="recipientLimit" value="20" />
+        <int name="smsToMmsTextThreshold" value="6" />
+    </carrier_config>
+    <carrier_config mcc="293">
+        <boolean name="enableGroupMms" value="false" />
+        <int name="maxImageHeight" value="1944" />
+        <int name="maxImageWidth" value="2592" />
+        <int name="recipientLimit" value="20" />
+        <int name="smsToMmsTextThreshold" value="6" />
+    </carrier_config>
+    <carrier_config mcc="294">
+        <boolean name="enableGroupMms" value="false" />
+        <int name="maxImageHeight" value="1944" />
+        <int name="maxImageWidth" value="2592" />
+        <int name="recipientLimit" value="20" />
+        <int name="smsToMmsTextThreshold" value="6" />
+    </carrier_config>
+    <carrier_config mcc="295">
+        <boolean name="enableGroupMms" value="false" />
+        <int name="maxImageHeight" value="1944" />
+        <int name="maxImageWidth" value="2592" />
+        <int name="recipientLimit" value="20" />
+        <int name="smsToMmsTextThreshold" value="6" />
+    </carrier_config>
+    <carrier_config mcc="297">
+        <boolean name="enableGroupMms" value="false" />
+        <int name="maxImageHeight" value="1944" />
+        <int name="maxImageWidth" value="2592" />
+        <int name="recipientLimit" value="20" />
+        <int name="smsToMmsTextThreshold" value="6" />
+    </carrier_config>
+    <carrier_config mcc="302">
+        <boolean name="moto_hide_non_user_apn_edit_delete_bool" value="true" />
+    </carrier_config>
+    <carrier_config mcc="330">
+        <boolean name="enableGroupMms" value="false" />
+        <boolean name="moto_enable_service_dialing_number" value="true" />
+    </carrier_config>
+    <carrier_config mcc="334">
+        <boolean name="enableGroupMms" value="false" />
+        <int name="maxImageHeight" value="1944" />
+        <int name="maxImageWidth" value="2592" />
+        <int name="maxSubjectLength" value="80" />
+        <int name="recipientLimit" value="20" />
+        <int name="smsToMmsTextThreshold" value="6" />
+        <boolean name="moto_enable_service_dialing_number" value="true" />
+    </carrier_config>
+    <carrier_config mcc="338">
+        <boolean name="enableGroupMms" value="false" />
+        <int name="maxImageWidth" value="2592" />
+        <int name="maxImageHeight" value="1944" />
+        <int name="recipientLimit" value="20" />
+        <int name="smsToMmsTextThreshold" value="6" />
+        <boolean name="moto_enable_service_dialing_number" value="true" />
+    </carrier_config>
+    <carrier_config mcc="340">
+        <boolean name="enableGroupMms" value="false" />
+        <int name="maxImageHeight" value="1944" />
+        <int name="maxImageWidth" value="2592" />
+        <int name="recipientLimit" value="20" />
+        <int name="smsToMmsTextThreshold" value="6" />
+        <boolean name="moto_enable_service_dialing_number" value="true" />
+    </carrier_config>
+    <carrier_config mcc="342">
+        <boolean name="enableGroupMms" value="false" />
+        <int name="maxImageHeight" value="1944" />
+        <int name="maxImageWidth" value="2592" />
+        <int name="recipientLimit" value="20" />
+        <int name="smsToMmsTextThreshold" value="6" />
+        <boolean name="moto_enable_service_dialing_number" value="true" />
+    </carrier_config>
+    <carrier_config mcc="344">
+        <boolean name="enableGroupMms" value="false" />
+        <int name="maxImageHeight" value="1944" />
+        <int name="maxImageWidth" value="2592" />
+        <int name="recipientLimit" value="20" />
+        <int name="smsToMmsTextThreshold" value="6" />
+        <boolean name="moto_enable_service_dialing_number" value="true" />
+    </carrier_config>
+    <carrier_config mcc="346">
+        <boolean name="moto_enable_service_dialing_number" value="true" />
+    </carrier_config>
+    <carrier_config mcc="348">
+        <boolean name="moto_enable_service_dialing_number" value="true" />
+    </carrier_config>
+    <carrier_config mcc="350">
+        <boolean name="moto_enable_service_dialing_number" value="true" />
+    </carrier_config>
+    <carrier_config mcc="352">
+        <boolean name="enableGroupMms" value="false" />
+        <int name="maxImageHeight" value="1944" />
+        <int name="maxImageWidth" value="2592" />
+        <int name="recipientLimit" value="20" />
+        <int name="smsToMmsTextThreshold" value="6" />
+        <boolean name="moto_enable_service_dialing_number" value="true" />
+    </carrier_config>
+    <carrier_config mcc="354">
+        <boolean name="moto_enable_service_dialing_number" value="true" />
+    </carrier_config>
+    <carrier_config mcc="356">
+        <boolean name="enableGroupMms" value="false" />
+        <int name="maxImageHeight" value="1944" />
+        <int name="maxImageWidth" value="2592" />
+        <int name="recipientLimit" value="20" />
+        <int name="smsToMmsTextThreshold" value="6" />
+        <boolean name="moto_enable_service_dialing_number" value="true" />
+    </carrier_config>
+    <carrier_config mcc="358">
+        <boolean name="enableGroupMms" value="false" />
+        <int name="maxImageHeight" value="1944" />
+        <int name="maxImageWidth" value="2592" />
+        <int name="recipientLimit" value="20" />
+        <int name="smsToMmsTextThreshold" value="6" />
+        <boolean name="moto_enable_service_dialing_number" value="true" />
+    </carrier_config>
+    <carrier_config mcc="360">
+        <boolean name="enableGroupMms" value="false" />
+        <int name="maxImageHeight" value="1944" />
+        <int name="maxImageWidth" value="2592" />
+        <int name="recipientLimit" value="20" />
+        <int name="smsToMmsTextThreshold" value="6" />
+        <boolean name="moto_enable_service_dialing_number" value="true" />
+    </carrier_config>
+    <carrier_config mcc="362">
+        <boolean name="moto_enable_service_dialing_number" value="true" />
+    </carrier_config>
+    <carrier_config mcc="363">
+        <boolean name="moto_enable_service_dialing_number" value="true" />
+    </carrier_config>
+    <carrier_config mcc="364">
+        <boolean name="enableGroupMms" value="false" />
+        <int name="maxImageHeight" value="1944" />
+        <int name="maxImageWidth" value="2592" />
+        <int name="recipientLimit" value="20" />
+        <int name="smsToMmsTextThreshold" value="6" />
+        <boolean name="moto_enable_service_dialing_number" value="true" />
+    </carrier_config>
+    <carrier_config mcc="365">
+        <boolean name="moto_enable_service_dialing_number" value="true" />
+    </carrier_config>
+    <carrier_config mcc="366">
+        <boolean name="enableGroupMms" value="false" />
+        <int name="maxImageHeight" value="1944" />
+        <int name="maxImageWidth" value="2592" />
+        <int name="recipientLimit" value="20" />
+        <int name="smsToMmsTextThreshold" value="6" />
+        <boolean name="moto_enable_service_dialing_number" value="true" />
+    </carrier_config>
+    <carrier_config mcc="368">
+        <boolean name="moto_enable_service_dialing_number" value="true" />
+    </carrier_config>
+    <carrier_config mcc="370">
+        <boolean name="enableGroupMms" value="false" />
+        <int name="maxImageHeight" value="1944" />
+        <int name="maxImageWidth" value="2592" />
+        <int name="maxSubjectLength" value="80" />
+        <int name="recipientLimit" value="20" />
+        <int name="smsToMmsTextThreshold" value="6" />
+        <boolean name="smsUsesSimpleCharactersOnly" value="true" />
+        <boolean name="moto_enable_service_dialing_number" value="true" />
+    </carrier_config>
+    <carrier_config mcc="372">
+        <boolean name="enableGroupMms" value="false" />
+        <int name="maxImageHeight" value="1944" />
+        <int name="maxImageWidth" value="2592" />
+        <int name="recipientLimit" value="20" />
+        <int name="smsToMmsTextThreshold" value="6" />
+        <boolean name="moto_enable_service_dialing_number" value="true" />
+    </carrier_config>
+    <carrier_config mcc="374">
+        <boolean name="enableGroupMms" value="false" />
+        <int name="maxImageHeight" value="1944" />
+        <int name="maxImageWidth" value="2592" />
+        <int name="recipientLimit" value="20" />
+        <int name="smsToMmsTextThreshold" value="6" />
+        <boolean name="moto_enable_service_dialing_number" value="true" />
+    </carrier_config>
+    <carrier_config mcc="376">
+        <boolean name="moto_enable_service_dialing_number" value="true" />
+    </carrier_config>
+    <carrier_config mcc="400">
+        <boolean name="enableGroupMms" value="false" />
+        <int name="maxImageHeight" value="1944" />
+        <int name="maxImageWidth" value="2592" />
+        <int name="recipientLimit" value="20" />
+        <int name="smsToMmsTextThreshold" value="6" />
+    </carrier_config>
+    <carrier_config mcc="401">
+        <boolean name="enableGroupMms" value="false" />
+        <int name="maxImageHeight" value="1944" />
+        <int name="maxImageWidth" value="2592" />
+        <int name="recipientLimit" value="20" />
+        <int name="smsToMmsTextThreshold" value="6" />
+    </carrier_config>
+    <carrier_config mcc="402">
+        <boolean name="enableGroupMms" value="false" />
+        <int name="maxImageHeight" value="1944" />
+        <int name="maxImageWidth" value="2592" />
+        <int name="recipientLimit" value="20" />
+        <int name="smsToMmsTextThreshold" value="6" />
+    </carrier_config>
+    <carrier_config mcc="404">
+        <boolean name="enableGroupMms" value="false" />
+        <int name="maxImageHeight" value="1944" />
+        <int name="maxImageWidth" value="2592" />
+        <int name="recipientLimit" value="20" />
+        <int name="smsToMmsTextThreshold" value="6" />
+        <int name="moto_back_to_auto_network_selection_timer" value="300000" />
+        <boolean name="prefer_2g_bool" value="false" />
+    </carrier_config>
+    <carrier_config mcc="405">
+        <boolean name="enableGroupMms" value="false" />
+        <int name="maxImageHeight" value="1944" />
+        <int name="maxImageWidth" value="2592" />
+        <int name="recipientLimit" value="20" />
+        <int name="smsToMmsTextThreshold" value="6" />
+        <int name="moto_back_to_auto_network_selection_timer" value="300000" />
+        <boolean name="prefer_2g_bool" value="false" />
+    </carrier_config>
+    <carrier_config mcc="410">
+        <boolean name="enableGroupMms" value="false" />
+        <int name="maxImageHeight" value="1944" />
+        <int name="maxImageWidth" value="2592" />
+        <int name="recipientLimit" value="20" />
+        <int name="smsToMmsTextThreshold" value="6" />
+    </carrier_config>
+    <carrier_config mcc="412">
+        <boolean name="enableGroupMms" value="false" />
+        <int name="maxImageHeight" value="1944" />
+        <int name="maxImageWidth" value="2592" />
+        <int name="recipientLimit" value="20" />
+        <int name="smsToMmsTextThreshold" value="6" />
+    </carrier_config>
+    <carrier_config mcc="413">
+        <boolean name="enableGroupMms" value="false" />
+        <int name="maxImageHeight" value="1944" />
+        <int name="maxImageWidth" value="2592" />
+        <int name="recipientLimit" value="20" />
+        <int name="smsToMmsTextThreshold" value="6" />
+    </carrier_config>
+    <carrier_config mcc="414">
+        <boolean name="enableGroupMms" value="false" />
+        <int name="maxImageHeight" value="1944" />
+        <int name="maxImageWidth" value="2592" />
+        <int name="recipientLimit" value="20" />
+        <int name="smsToMmsTextThreshold" value="6" />
+    </carrier_config>
+    <carrier_config mcc="415">
+        <boolean name="enableGroupMms" value="false" />
+        <int name="maxImageHeight" value="1944" />
+        <int name="maxImageWidth" value="2592" />
+        <int name="recipientLimit" value="20" />
+        <int name="smsToMmsTextThreshold" value="6" />
+    </carrier_config>
+    <carrier_config mcc="416">
+        <boolean name="enableGroupMms" value="false" />
+        <int name="maxImageHeight" value="1944" />
+        <int name="maxImageWidth" value="2592" />
+        <int name="recipientLimit" value="20" />
+        <int name="smsToMmsTextThreshold" value="6" />
+    </carrier_config>
+    <carrier_config mcc="417">
+        <boolean name="enableGroupMms" value="false" />
+        <int name="maxImageHeight" value="1944" />
+        <int name="maxImageWidth" value="2592" />
+        <int name="recipientLimit" value="20" />
+        <int name="smsToMmsTextThreshold" value="6" />
+    </carrier_config>
+    <carrier_config mcc="418">
+        <boolean name="enableGroupMms" value="false" />
+        <int name="maxImageHeight" value="1944" />
+        <int name="maxImageWidth" value="2592" />
+        <int name="recipientLimit" value="20" />
+        <int name="smsToMmsTextThreshold" value="6" />
+    </carrier_config>
+    <carrier_config mcc="419">
+        <boolean name="enableGroupMms" value="false" />
+        <int name="maxImageHeight" value="1944" />
+        <int name="maxImageWidth" value="2592" />
+        <int name="recipientLimit" value="20" />
+        <int name="smsToMmsTextThreshold" value="6" />
+    </carrier_config>
+    <carrier_config mcc="420">
+        <boolean name="enableGroupMms" value="false" />
+        <int name="maxImageHeight" value="1944" />
+        <int name="maxImageWidth" value="2592" />
+        <int name="recipientLimit" value="20" />
+        <int name="smsToMmsTextThreshold" value="6" />
+    </carrier_config>
+    <carrier_config mcc="421">
+        <boolean name="enableGroupMms" value="false" />
+        <int name="maxImageHeight" value="1944" />
+        <int name="maxImageWidth" value="2592" />
+        <int name="recipientLimit" value="20" />
+        <int name="smsToMmsTextThreshold" value="6" />
+    </carrier_config>
+    <carrier_config mcc="422">
+        <boolean name="enableGroupMms" value="false" />
+        <int name="maxImageHeight" value="1944" />
+        <int name="maxImageWidth" value="2592" />
+        <int name="recipientLimit" value="20" />
+        <int name="smsToMmsTextThreshold" value="6" />
+    </carrier_config>
+    <carrier_config mcc="424">
+        <boolean name="enableGroupMms" value="false" />
+        <int name="maxImageHeight" value="1944" />
+        <int name="maxImageWidth" value="2592" />
+        <int name="recipientLimit" value="20" />
+        <int name="smsToMmsTextThreshold" value="6" />
+    </carrier_config>
+    <carrier_config mcc="425">
+        <boolean name="enableGroupMms" value="false" />
+        <int name="maxImageHeight" value="1944" />
+        <int name="maxImageWidth" value="2592" />
+        <int name="recipientLimit" value="20" />
+        <int name="smsToMmsTextThreshold" value="6" />
+    </carrier_config>
+    <carrier_config mcc="426">
+        <boolean name="enableGroupMms" value="false" />
+        <int name="maxImageHeight" value="1944" />
+        <int name="maxImageWidth" value="2592" />
+        <int name="recipientLimit" value="20" />
+        <int name="smsToMmsTextThreshold" value="6" />
+    </carrier_config>
+    <carrier_config mcc="427">
+        <boolean name="enableGroupMms" value="false" />
+        <int name="maxImageHeight" value="1944" />
+        <int name="maxImageWidth" value="2592" />
+        <int name="recipientLimit" value="20" />
+        <int name="smsToMmsTextThreshold" value="6" />
+    </carrier_config>
+    <carrier_config mcc="428">
+        <boolean name="enableGroupMms" value="false" />
+        <int name="maxImageHeight" value="1944" />
+        <int name="maxImageWidth" value="2592" />
+        <int name="recipientLimit" value="20" />
+        <int name="smsToMmsTextThreshold" value="6" />
+    </carrier_config>
+    <carrier_config mcc="429">
+        <boolean name="enableGroupMms" value="false" />
+        <int name="maxImageHeight" value="1944" />
+        <int name="maxImageWidth" value="2592" />
+        <int name="recipientLimit" value="20" />
+        <int name="smsToMmsTextThreshold" value="6" />
+    </carrier_config>
+    <carrier_config mcc="430">
+        <boolean name="enableGroupMms" value="false" />
+        <int name="maxImageHeight" value="1944" />
+        <int name="maxImageWidth" value="2592" />
+        <int name="recipientLimit" value="20" />
+        <int name="smsToMmsTextThreshold" value="6" />
+    </carrier_config>
+    <carrier_config mcc="431">
+        <boolean name="enableGroupMms" value="false" />
+        <int name="maxImageHeight" value="1944" />
+        <int name="maxImageWidth" value="2592" />
+        <int name="recipientLimit" value="20" />
+        <int name="smsToMmsTextThreshold" value="6" />
+    </carrier_config>
+    <carrier_config mcc="432">
+        <boolean name="enableGroupMms" value="false" />
+        <int name="maxImageHeight" value="1944" />
+        <int name="maxImageWidth" value="2592" />
+        <int name="recipientLimit" value="20" />
+        <int name="smsToMmsTextThreshold" value="6" />
+    </carrier_config>
+    <carrier_config mcc="434">
+        <boolean name="enableGroupMms" value="false" />
+        <int name="maxImageHeight" value="1944" />
+        <int name="maxImageWidth" value="2592" />
+        <int name="recipientLimit" value="20" />
+        <int name="smsToMmsTextThreshold" value="6" />
+    </carrier_config>
+    <carrier_config mcc="436">
+        <boolean name="enableGroupMms" value="false" />
+        <int name="maxImageHeight" value="1944" />
+        <int name="maxImageWidth" value="2592" />
+        <int name="recipientLimit" value="20" />
+        <int name="smsToMmsTextThreshold" value="6" />
+    </carrier_config>
+    <carrier_config mcc="437">
+        <boolean name="enableGroupMms" value="false" />
+        <int name="maxImageHeight" value="1944" />
+        <int name="maxImageWidth" value="2592" />
+        <int name="recipientLimit" value="20" />
+        <int name="smsToMmsTextThreshold" value="6" />
+    </carrier_config>
+    <carrier_config mcc="438">
+        <boolean name="enableGroupMms" value="false" />
+        <int name="maxImageHeight" value="1944" />
+        <int name="maxImageWidth" value="2592" />
+        <int name="recipientLimit" value="20" />
+        <int name="smsToMmsTextThreshold" value="6" />
+    </carrier_config>
+    <carrier_config mcc="440">
+        <boolean name="enableGroupMms" value="false" />
+        <int name="maxImageHeight" value="1944" />
+        <int name="maxImageWidth" value="2592" />
+        <int name="recipientLimit" value="20" />
+        <int name="smsToMmsTextThreshold" value="6" />
+    </carrier_config>
+    <carrier_config mcc="441">
+        <boolean name="enableGroupMms" value="false" />
+        <int name="maxImageHeight" value="1944" />
+        <int name="maxImageWidth" value="2592" />
+        <int name="recipientLimit" value="20" />
+        <int name="smsToMmsTextThreshold" value="6" />
+    </carrier_config>
+    <carrier_config mcc="450">
+        <boolean name="enableGroupMms" value="false" />
+        <int name="maxImageHeight" value="1944" />
+        <int name="maxImageWidth" value="2592" />
+        <int name="recipientLimit" value="20" />
+        <int name="smsToMmsTextThreshold" value="6" />
+    </carrier_config>
+    <carrier_config mcc="452">
+        <boolean name="enableGroupMms" value="false" />
+        <int name="maxImageHeight" value="1944" />
+        <int name="maxImageWidth" value="2592" />
+        <int name="recipientLimit" value="20" />
+        <int name="smsToMmsTextThreshold" value="6" />
+    </carrier_config>
+    <carrier_config mcc="454">
+        <boolean name="enableGroupMms" value="false" />
+        <int name="maxImageHeight" value="1944" />
+        <int name="maxImageWidth" value="2592" />
+        <int name="recipientLimit" value="20" />
+        <int name="smsToMmsTextThreshold" value="6" />
+    </carrier_config>
+    <carrier_config mcc="455">
+        <boolean name="enableGroupMms" value="false" />
+        <int name="maxImageHeight" value="1944" />
+        <int name="maxImageWidth" value="2592" />
+        <int name="recipientLimit" value="20" />
+        <int name="smsToMmsTextThreshold" value="6" />
+    </carrier_config>
+    <carrier_config mcc="456">
+        <boolean name="enableGroupMms" value="false" />
+        <int name="maxImageHeight" value="1944" />
+        <int name="maxImageWidth" value="2592" />
+        <int name="recipientLimit" value="20" />
+        <int name="smsToMmsTextThreshold" value="6" />
+    </carrier_config>
+    <carrier_config mcc="457">
+        <boolean name="enableGroupMms" value="false" />
+        <int name="maxImageHeight" value="1944" />
+        <int name="maxImageWidth" value="2592" />
+        <int name="recipientLimit" value="20" />
+        <int name="smsToMmsTextThreshold" value="6" />
+    </carrier_config>
+    <carrier_config mcc="460">
+        <boolean name="enableGroupMms" value="false" />
+        <int name="maxImageHeight" value="1944" />
+        <int name="maxImageWidth" value="2592" />
+        <int name="recipientLimit" value="20" />
+        <int name="smsToMmsTextThreshold" value="6" />
+        <boolean name="support_pause_ims_video_calls_bool" value="false" />
+        <string-array name="carrier_metered_apn_types_strings" num="3">
+            <item value="default" />
+            <item value="dun" />
+            <item value="supl" />
+        </string-array>
+        <string-array name="carrier_metered_roaming_apn_types_strings" num="3">
+            <item value="default" />
+            <item value="dun" />
+            <item value="supl" />
+        </string-array>
+        <boolean name="ascii_7_bit_support_for_long_message" value="true" />
+        <boolean name="moto_auto_resume_holding_call" value="false" />
+    </carrier_config>
+    <carrier_config mcc="466">
+        <boolean name="enableGroupMms" value="false" />
+        <int name="maxImageHeight" value="1944" />
+        <int name="maxImageWidth" value="2592" />
+        <int name="recipientLimit" value="20" />
+        <int name="smsToMmsTextThreshold" value="6" />
+    </carrier_config>
+    <carrier_config mcc="467">
+        <boolean name="enableGroupMms" value="false" />
+        <int name="maxImageHeight" value="1944" />
+        <int name="maxImageWidth" value="2592" />
+        <int name="recipientLimit" value="20" />
+        <int name="smsToMmsTextThreshold" value="6" />
+    </carrier_config>
+    <carrier_config mcc="470">
+        <boolean name="enableGroupMms" value="false" />
+        <int name="maxImageHeight" value="1944" />
+        <int name="maxImageWidth" value="2592" />
+        <int name="recipientLimit" value="20" />
+        <int name="smsToMmsTextThreshold" value="6" />
+    </carrier_config>
+    <carrier_config mcc="472">
+        <boolean name="enableGroupMms" value="false" />
+        <int name="maxImageHeight" value="1944" />
+        <int name="maxImageWidth" value="2592" />
+        <int name="recipientLimit" value="20" />
+        <int name="smsToMmsTextThreshold" value="6" />
+    </carrier_config>
+    <carrier_config mcc="502">
+        <boolean name="enableGroupMms" value="false" />
+        <int name="maxImageHeight" value="1944" />
+        <int name="maxImageWidth" value="2592" />
+        <int name="recipientLimit" value="20" />
+        <int name="smsToMmsTextThreshold" value="6" />
+    </carrier_config>
+    <carrier_config mcc="505">
+        <boolean name="enableGroupMms" value="false" />
+        <int name="maxImageHeight" value="1944" />
+        <int name="maxImageWidth" value="2592" />
+        <int name="recipientLimit" value="20" />
+        <int name="smsToMmsTextThreshold" value="6" />
+        <boolean name="prefer_2g_bool" value="false" />
+    </carrier_config>
+    <carrier_config mcc="510">
+        <boolean name="enableGroupMms" value="false" />
+        <int name="maxImageHeight" value="1944" />
+        <int name="maxImageWidth" value="2592" />
+        <int name="recipientLimit" value="20" />
+        <int name="smsToMmsTextThreshold" value="6" />
+    </carrier_config>
+    <carrier_config mcc="514">
+        <boolean name="enableGroupMms" value="false" />
+        <int name="maxImageHeight" value="1944" />
+        <int name="maxImageWidth" value="2592" />
+        <int name="recipientLimit" value="20" />
+        <int name="smsToMmsTextThreshold" value="6" />
+    </carrier_config>
+    <carrier_config mcc="515">
+        <boolean name="enableGroupMms" value="false" />
+        <int name="maxImageHeight" value="1944" />
+        <int name="maxImageWidth" value="2592" />
+        <int name="recipientLimit" value="20" />
+        <int name="smsToMmsTextThreshold" value="6" />
+    </carrier_config>
+    <carrier_config mcc="520">
+        <boolean name="enableGroupMms" value="false" />
+        <int name="maxImageHeight" value="1944" />
+        <int name="maxImageWidth" value="2592" />
+        <int name="recipientLimit" value="20" />
+        <int name="smsToMmsTextThreshold" value="6" />
+    </carrier_config>
+    <carrier_config mcc="525">
+        <boolean name="enableGroupMms" value="false" />
+        <int name="maxImageHeight" value="1944" />
+        <int name="maxImageWidth" value="2592" />
+        <int name="recipientLimit" value="20" />
+        <int name="smsToMmsTextThreshold" value="6" />
+    </carrier_config>
+    <carrier_config mcc="528">
+        <boolean name="enableGroupMms" value="false" />
+        <int name="maxImageHeight" value="1944" />
+        <int name="maxImageWidth" value="2592" />
+        <int name="recipientLimit" value="20" />
+        <int name="smsToMmsTextThreshold" value="6" />
+    </carrier_config>
+    <carrier_config mcc="530">
+        <boolean name="enableGroupMms" value="false" />
+        <int name="maxImageHeight" value="1944" />
+        <int name="maxImageWidth" value="2592" />
+        <int name="recipientLimit" value="20" />
+        <int name="smsToMmsTextThreshold" value="6" />
+    </carrier_config>
+    <carrier_config mcc="536">
+        <boolean name="enableGroupMms" value="false" />
+        <int name="maxImageHeight" value="1944" />
+        <int name="maxImageWidth" value="2592" />
+        <int name="recipientLimit" value="20" />
+        <int name="smsToMmsTextThreshold" value="6" />
+    </carrier_config>
+    <carrier_config mcc="537">
+        <boolean name="enableGroupMms" value="false" />
+        <int name="maxImageHeight" value="1944" />
+        <int name="maxImageWidth" value="2592" />
+        <int name="recipientLimit" value="20" />
+        <int name="smsToMmsTextThreshold" value="6" />
+    </carrier_config>
+    <carrier_config mcc="539">
+        <boolean name="enableGroupMms" value="false" />
+        <int name="maxImageHeight" value="1944" />
+        <int name="maxImageWidth" value="2592" />
+        <int name="recipientLimit" value="20" />
+        <int name="smsToMmsTextThreshold" value="6" />
+    </carrier_config>
+    <carrier_config mcc="540">
+        <boolean name="enableGroupMms" value="false" />
+        <int name="maxImageHeight" value="1944" />
+        <int name="maxImageWidth" value="2592" />
+        <int name="recipientLimit" value="20" />
+        <int name="smsToMmsTextThreshold" value="6" />
+    </carrier_config>
+    <carrier_config mcc="541">
+        <boolean name="enableGroupMms" value="false" />
+        <int name="maxImageHeight" value="1944" />
+        <int name="maxImageWidth" value="2592" />
+        <int name="recipientLimit" value="20" />
+        <int name="smsToMmsTextThreshold" value="6" />
+    </carrier_config>
+    <carrier_config mcc="542">
+        <boolean name="enableGroupMms" value="false" />
+        <int name="maxImageHeight" value="1944" />
+        <int name="maxImageWidth" value="2592" />
+        <int name="recipientLimit" value="20" />
+        <int name="smsToMmsTextThreshold" value="6" />
+    </carrier_config>
+    <carrier_config mcc="544">
+        <boolean name="enableGroupMms" value="false" />
+        <int name="maxImageHeight" value="1944" />
+        <int name="maxImageWidth" value="2592" />
+        <int name="recipientLimit" value="20" />
+        <int name="smsToMmsTextThreshold" value="6" />
+    </carrier_config>
+    <carrier_config mcc="545">
+        <boolean name="enableGroupMms" value="false" />
+        <int name="maxImageHeight" value="1944" />
+        <int name="maxImageWidth" value="2592" />
+        <int name="recipientLimit" value="20" />
+        <int name="smsToMmsTextThreshold" value="6" />
+    </carrier_config>
+    <carrier_config mcc="546">
+        <boolean name="enableGroupMms" value="false" />
+        <int name="maxImageHeight" value="1944" />
+        <int name="maxImageWidth" value="2592" />
+        <int name="recipientLimit" value="20" />
+        <int name="smsToMmsTextThreshold" value="6" />
+    </carrier_config>
+    <carrier_config mcc="547">
+        <boolean name="enableGroupMms" value="false" />
+        <int name="maxImageHeight" value="1944" />
+        <int name="maxImageWidth" value="2592" />
+        <int name="recipientLimit" value="20" />
+        <int name="smsToMmsTextThreshold" value="6" />
+    </carrier_config>
+    <carrier_config mcc="548">
+        <boolean name="enableGroupMms" value="false" />
+        <int name="maxImageHeight" value="1944" />
+        <int name="maxImageWidth" value="2592" />
+        <int name="recipientLimit" value="20" />
+        <int name="smsToMmsTextThreshold" value="6" />
+    </carrier_config>
+    <carrier_config mcc="549">
+        <boolean name="enableGroupMms" value="false" />
+        <int name="maxImageHeight" value="1944" />
+        <int name="maxImageWidth" value="2592" />
+        <int name="recipientLimit" value="20" />
+        <int name="smsToMmsTextThreshold" value="6" />
+    </carrier_config>
+    <carrier_config mcc="550">
+        <boolean name="enableGroupMms" value="false" />
+        <int name="maxImageHeight" value="1944" />
+        <int name="maxImageWidth" value="2592" />
+        <int name="recipientLimit" value="20" />
+        <int name="smsToMmsTextThreshold" value="6" />
+    </carrier_config>
+    <carrier_config mcc="551">
+        <boolean name="enableGroupMms" value="false" />
+        <int name="maxImageHeight" value="1944" />
+        <int name="maxImageWidth" value="2592" />
+        <int name="recipientLimit" value="20" />
+        <int name="smsToMmsTextThreshold" value="6" />
+    </carrier_config>
+    <carrier_config mcc="552">
+        <boolean name="enableGroupMms" value="false" />
+        <int name="maxImageHeight" value="1944" />
+        <int name="maxImageWidth" value="2592" />
+        <int name="recipientLimit" value="20" />
+        <int name="smsToMmsTextThreshold" value="6" />
+    </carrier_config>
+    <carrier_config mcc="553">
+        <boolean name="enableGroupMms" value="false" />
+        <int name="maxImageHeight" value="1944" />
+        <int name="maxImageWidth" value="2592" />
+        <int name="recipientLimit" value="20" />
+        <int name="smsToMmsTextThreshold" value="6" />
+    </carrier_config>
+    <carrier_config mcc="555">
+        <boolean name="enableGroupMms" value="false" />
+        <int name="maxImageHeight" value="1944" />
+        <int name="maxImageWidth" value="2592" />
+        <int name="recipientLimit" value="20" />
+        <int name="smsToMmsTextThreshold" value="6" />
+    </carrier_config>
+    <carrier_config mcc="602">
+        <boolean name="enableGroupMms" value="false" />
+        <int name="maxImageHeight" value="1944" />
+        <int name="maxImageWidth" value="2592" />
+        <int name="recipientLimit" value="20" />
+        <int name="smsToMmsTextThreshold" value="6" />
+    </carrier_config>
+    <carrier_config mcc="603">
+        <boolean name="enableGroupMms" value="false" />
+        <int name="maxImageHeight" value="1944" />
+        <int name="maxImageWidth" value="2592" />
+        <int name="recipientLimit" value="20" />
+        <int name="smsToMmsTextThreshold" value="6" />
+    </carrier_config>
+    <carrier_config mcc="604">
+        <boolean name="enableGroupMms" value="false" />
+        <int name="maxImageHeight" value="1944" />
+        <int name="maxImageWidth" value="2592" />
+        <int name="recipientLimit" value="20" />
+        <int name="smsToMmsTextThreshold" value="6" />
+    </carrier_config>
+    <carrier_config mcc="605">
+        <boolean name="enableGroupMms" value="false" />
+        <int name="maxImageHeight" value="1944" />
+        <int name="maxImageWidth" value="2592" />
+        <int name="recipientLimit" value="20" />
+        <int name="smsToMmsTextThreshold" value="6" />
+    </carrier_config>
+    <carrier_config mcc="606">
+        <boolean name="enableGroupMms" value="false" />
+        <int name="maxImageHeight" value="1944" />
+        <int name="maxImageWidth" value="2592" />
+        <int name="recipientLimit" value="20" />
+        <int name="smsToMmsTextThreshold" value="6" />
+    </carrier_config>
+    <carrier_config mcc="607">
+        <boolean name="enableGroupMms" value="false" />
+        <int name="maxImageHeight" value="1944" />
+        <int name="maxImageWidth" value="2592" />
+        <int name="recipientLimit" value="20" />
+        <int name="smsToMmsTextThreshold" value="6" />
+    </carrier_config>
+    <carrier_config mcc="608">
+        <boolean name="enableGroupMms" value="false" />
+        <int name="maxImageHeight" value="1944" />
+        <int name="maxImageWidth" value="2592" />
+        <int name="recipientLimit" value="20" />
+        <int name="smsToMmsTextThreshold" value="6" />
+    </carrier_config>
+    <carrier_config mcc="609">
+        <boolean name="enableGroupMms" value="false" />
+        <int name="maxImageHeight" value="1944" />
+        <int name="maxImageWidth" value="2592" />
+        <int name="recipientLimit" value="20" />
+        <int name="smsToMmsTextThreshold" value="6" />
+    </carrier_config>
+    <carrier_config mcc="610">
+        <boolean name="enableGroupMms" value="false" />
+        <int name="maxImageHeight" value="1944" />
+        <int name="maxImageWidth" value="2592" />
+        <int name="recipientLimit" value="20" />
+        <int name="smsToMmsTextThreshold" value="6" />
+    </carrier_config>
+    <carrier_config mcc="611">
+        <boolean name="enableGroupMms" value="false" />
+        <int name="maxImageHeight" value="1944" />
+        <int name="maxImageWidth" value="2592" />
+        <int name="recipientLimit" value="20" />
+        <int name="smsToMmsTextThreshold" value="6" />
+    </carrier_config>
+    <carrier_config mcc="612">
+        <boolean name="enableGroupMms" value="false" />
+        <int name="maxImageHeight" value="1944" />
+        <int name="maxImageWidth" value="2592" />
+        <int name="recipientLimit" value="20" />
+        <int name="smsToMmsTextThreshold" value="6" />
+    </carrier_config>
+    <carrier_config mcc="613">
+        <boolean name="enableGroupMms" value="false" />
+        <int name="maxImageHeight" value="1944" />
+        <int name="maxImageWidth" value="2592" />
+        <int name="recipientLimit" value="20" />
+        <int name="smsToMmsTextThreshold" value="6" />
+    </carrier_config>
+    <carrier_config mcc="614">
+        <boolean name="enableGroupMms" value="false" />
+        <int name="maxImageHeight" value="1944" />
+        <int name="maxImageWidth" value="2592" />
+        <int name="recipientLimit" value="20" />
+        <int name="smsToMmsTextThreshold" value="6" />
+    </carrier_config>
+    <carrier_config mcc="615">
+        <boolean name="enableGroupMms" value="false" />
+        <int name="maxImageHeight" value="1944" />
+        <int name="maxImageWidth" value="2592" />
+        <int name="recipientLimit" value="20" />
+        <int name="smsToMmsTextThreshold" value="6" />
+    </carrier_config>
+    <carrier_config mcc="616">
+        <boolean name="enableGroupMms" value="false" />
+        <int name="maxImageHeight" value="1944" />
+        <int name="maxImageWidth" value="2592" />
+        <int name="recipientLimit" value="20" />
+        <int name="smsToMmsTextThreshold" value="6" />
+    </carrier_config>
+    <carrier_config mcc="617">
+        <boolean name="enableGroupMms" value="false" />
+        <int name="maxImageHeight" value="1944" />
+        <int name="maxImageWidth" value="2592" />
+        <int name="recipientLimit" value="20" />
+        <int name="smsToMmsTextThreshold" value="6" />
+    </carrier_config>
+    <carrier_config mcc="618">
+        <boolean name="enableGroupMms" value="false" />
+        <int name="maxImageHeight" value="1944" />
+        <int name="maxImageWidth" value="2592" />
+        <int name="recipientLimit" value="20" />
+        <int name="smsToMmsTextThreshold" value="6" />
+    </carrier_config>
+    <carrier_config mcc="619">
+        <boolean name="enableGroupMms" value="false" />
+        <int name="maxImageHeight" value="1944" />
+        <int name="maxImageWidth" value="2592" />
+        <int name="recipientLimit" value="20" />
+        <int name="smsToMmsTextThreshold" value="6" />
+    </carrier_config>
+    <carrier_config mcc="620">
+        <boolean name="enableGroupMms" value="false" />
+        <int name="maxImageHeight" value="1944" />
+        <int name="maxImageWidth" value="2592" />
+        <int name="recipientLimit" value="20" />
+        <int name="smsToMmsTextThreshold" value="6" />
+    </carrier_config>
+    <carrier_config mcc="621">
+        <boolean name="enableGroupMms" value="false" />
+        <int name="maxImageHeight" value="1944" />
+        <int name="maxImageWidth" value="2592" />
+        <int name="recipientLimit" value="20" />
+        <int name="smsToMmsTextThreshold" value="6" />
+    </carrier_config>
+    <carrier_config mcc="622">
+        <boolean name="enableGroupMms" value="false" />
+        <int name="maxImageHeight" value="1944" />
+        <int name="maxImageWidth" value="2592" />
+        <int name="recipientLimit" value="20" />
+        <int name="smsToMmsTextThreshold" value="6" />
+    </carrier_config>
+    <carrier_config mcc="623">
+        <boolean name="enableGroupMms" value="false" />
+        <int name="maxImageHeight" value="1944" />
+        <int name="maxImageWidth" value="2592" />
+        <int name="recipientLimit" value="20" />
+        <int name="smsToMmsTextThreshold" value="6" />
+    </carrier_config>
+    <carrier_config mcc="624">
+        <boolean name="enableGroupMms" value="false" />
+        <int name="maxImageHeight" value="1944" />
+        <int name="maxImageWidth" value="2592" />
+        <int name="recipientLimit" value="20" />
+        <int name="smsToMmsTextThreshold" value="6" />
+    </carrier_config>
+    <carrier_config mcc="625">
+        <boolean name="enableGroupMms" value="false" />
+        <int name="maxImageHeight" value="1944" />
+        <int name="maxImageWidth" value="2592" />
+        <int name="recipientLimit" value="20" />
+        <int name="smsToMmsTextThreshold" value="6" />
+    </carrier_config>
+    <carrier_config mcc="626">
+        <boolean name="enableGroupMms" value="false" />
+        <int name="maxImageHeight" value="1944" />
+        <int name="maxImageWidth" value="2592" />
+        <int name="recipientLimit" value="20" />
+        <int name="smsToMmsTextThreshold" value="6" />
+    </carrier_config>
+    <carrier_config mcc="627">
+        <boolean name="enableGroupMms" value="false" />
+        <int name="maxImageHeight" value="1944" />
+        <int name="maxImageWidth" value="2592" />
+        <int name="recipientLimit" value="20" />
+        <int name="smsToMmsTextThreshold" value="6" />
+    </carrier_config>
+    <carrier_config mcc="628">
+        <boolean name="enableGroupMms" value="false" />
+        <int name="maxImageHeight" value="1944" />
+        <int name="maxImageWidth" value="2592" />
+        <int name="recipientLimit" value="20" />
+        <int name="smsToMmsTextThreshold" value="6" />
+    </carrier_config>
+    <carrier_config mcc="629">
+        <boolean name="enableGroupMms" value="false" />
+        <int name="maxImageHeight" value="1944" />
+        <int name="maxImageWidth" value="2592" />
+        <int name="recipientLimit" value="20" />
+        <int name="smsToMmsTextThreshold" value="6" />
+    </carrier_config>
+    <carrier_config mcc="630">
+        <boolean name="enableGroupMms" value="false" />
+        <int name="maxImageHeight" value="1944" />
+        <int name="maxImageWidth" value="2592" />
+        <int name="recipientLimit" value="20" />
+        <int name="smsToMmsTextThreshold" value="6" />
+    </carrier_config>
+    <carrier_config mcc="631">
+        <boolean name="enableGroupMms" value="false" />
+        <int name="maxImageHeight" value="1944" />
+        <int name="maxImageWidth" value="2592" />
+        <int name="recipientLimit" value="20" />
+        <int name="smsToMmsTextThreshold" value="6" />
+    </carrier_config>
+    <carrier_config mcc="632">
+        <boolean name="enableGroupMms" value="false" />
+        <int name="maxImageHeight" value="1944" />
+        <int name="maxImageWidth" value="2592" />
+        <int name="recipientLimit" value="20" />
+        <int name="smsToMmsTextThreshold" value="6" />
+    </carrier_config>
+    <carrier_config mcc="633">
+        <boolean name="enableGroupMms" value="false" />
+        <int name="maxImageHeight" value="1944" />
+        <int name="maxImageWidth" value="2592" />
+        <int name="recipientLimit" value="20" />
+        <int name="smsToMmsTextThreshold" value="6" />
+    </carrier_config>
+    <carrier_config mcc="634">
+        <boolean name="enableGroupMms" value="false" />
+        <int name="maxImageHeight" value="1944" />
+        <int name="maxImageWidth" value="2592" />
+        <int name="recipientLimit" value="20" />
+        <int name="smsToMmsTextThreshold" value="6" />
+    </carrier_config>
+    <carrier_config mcc="635">
+        <boolean name="enableGroupMms" value="false" />
+        <int name="maxImageHeight" value="1944" />
+        <int name="maxImageWidth" value="2592" />
+        <int name="recipientLimit" value="20" />
+        <int name="smsToMmsTextThreshold" value="6" />
+    </carrier_config>
+    <carrier_config mcc="636">
+        <boolean name="enableGroupMms" value="false" />
+        <int name="maxImageHeight" value="1944" />
+        <int name="maxImageWidth" value="2592" />
+        <int name="recipientLimit" value="20" />
+        <int name="smsToMmsTextThreshold" value="6" />
+    </carrier_config>
+    <carrier_config mcc="637">
+        <boolean name="enableGroupMms" value="false" />
+        <int name="maxImageHeight" value="1944" />
+        <int name="maxImageWidth" value="2592" />
+        <int name="recipientLimit" value="20" />
+        <int name="smsToMmsTextThreshold" value="6" />
+    </carrier_config>
+    <carrier_config mcc="638">
+        <boolean name="enableGroupMms" value="false" />
+        <int name="maxImageHeight" value="1944" />
+        <int name="maxImageWidth" value="2592" />
+        <int name="recipientLimit" value="20" />
+        <int name="smsToMmsTextThreshold" value="6" />
+    </carrier_config>
+    <carrier_config mcc="639">
+        <boolean name="enableGroupMms" value="false" />
+        <int name="maxImageHeight" value="1944" />
+        <int name="maxImageWidth" value="2592" />
+        <int name="recipientLimit" value="20" />
+        <int name="smsToMmsTextThreshold" value="6" />
+    </carrier_config>
+    <carrier_config mcc="640">
+        <boolean name="enableGroupMms" value="false" />
+        <int name="maxImageHeight" value="1944" />
+        <int name="maxImageWidth" value="2592" />
+        <int name="recipientLimit" value="20" />
+        <int name="smsToMmsTextThreshold" value="6" />
+    </carrier_config>
+    <carrier_config mcc="641">
+        <boolean name="enableGroupMms" value="false" />
+        <int name="maxImageHeight" value="1944" />
+        <int name="maxImageWidth" value="2592" />
+        <int name="recipientLimit" value="20" />
+        <int name="smsToMmsTextThreshold" value="6" />
+    </carrier_config>
+    <carrier_config mcc="642">
+        <boolean name="enableGroupMms" value="false" />
+        <int name="maxImageHeight" value="1944" />
+        <int name="maxImageWidth" value="2592" />
+        <int name="recipientLimit" value="20" />
+        <int name="smsToMmsTextThreshold" value="6" />
+    </carrier_config>
+    <carrier_config mcc="643">
+        <boolean name="enableGroupMms" value="false" />
+        <int name="maxImageHeight" value="1944" />
+        <int name="maxImageWidth" value="2592" />
+        <int name="recipientLimit" value="20" />
+        <int name="smsToMmsTextThreshold" value="6" />
+    </carrier_config>
+    <carrier_config mcc="645">
+        <boolean name="enableGroupMms" value="false" />
+        <int name="maxImageHeight" value="1944" />
+        <int name="maxImageWidth" value="2592" />
+        <int name="recipientLimit" value="20" />
+        <int name="smsToMmsTextThreshold" value="6" />
+    </carrier_config>
+    <carrier_config mcc="646">
+        <boolean name="enableGroupMms" value="false" />
+        <int name="maxImageHeight" value="1944" />
+        <int name="maxImageWidth" value="2592" />
+        <int name="recipientLimit" value="20" />
+        <int name="smsToMmsTextThreshold" value="6" />
+    </carrier_config>
+    <carrier_config mcc="647">
+        <boolean name="enableGroupMms" value="false" />
+        <int name="maxImageHeight" value="1944" />
+        <int name="maxImageWidth" value="2592" />
+        <int name="recipientLimit" value="20" />
+        <int name="smsToMmsTextThreshold" value="6" />
+    </carrier_config>
+    <carrier_config mcc="648">
+        <boolean name="enableGroupMms" value="false" />
+        <int name="maxImageHeight" value="1944" />
+        <int name="maxImageWidth" value="2592" />
+        <int name="recipientLimit" value="20" />
+        <int name="smsToMmsTextThreshold" value="6" />
+    </carrier_config>
+    <carrier_config mcc="649">
+        <boolean name="enableGroupMms" value="false" />
+        <int name="maxImageHeight" value="1944" />
+        <int name="maxImageWidth" value="2592" />
+        <int name="recipientLimit" value="20" />
+        <int name="smsToMmsTextThreshold" value="6" />
+    </carrier_config>
+    <carrier_config mcc="650">
+        <boolean name="enableGroupMms" value="false" />
+        <int name="maxImageHeight" value="1944" />
+        <int name="maxImageWidth" value="2592" />
+        <int name="recipientLimit" value="20" />
+        <int name="smsToMmsTextThreshold" value="6" />
+    </carrier_config>
+    <carrier_config mcc="651">
+        <boolean name="enableGroupMms" value="false" />
+        <int name="maxImageHeight" value="1944" />
+        <int name="maxImageWidth" value="2592" />
+        <int name="recipientLimit" value="20" />
+        <int name="smsToMmsTextThreshold" value="6" />
+    </carrier_config>
+    <carrier_config mcc="652">
+        <boolean name="enableGroupMms" value="false" />
+        <int name="maxImageHeight" value="1944" />
+        <int name="maxImageWidth" value="2592" />
+        <int name="recipientLimit" value="20" />
+        <int name="smsToMmsTextThreshold" value="6" />
+    </carrier_config>
+    <carrier_config mcc="653">
+        <boolean name="enableGroupMms" value="false" />
+        <int name="maxImageHeight" value="1944" />
+        <int name="maxImageWidth" value="2592" />
+        <int name="recipientLimit" value="20" />
+        <int name="smsToMmsTextThreshold" value="6" />
+    </carrier_config>
+    <carrier_config mcc="654">
+        <boolean name="enableGroupMms" value="false" />
+        <int name="maxImageHeight" value="1944" />
+        <int name="maxImageWidth" value="2592" />
+        <int name="recipientLimit" value="20" />
+        <int name="smsToMmsTextThreshold" value="6" />
+    </carrier_config>
+    <carrier_config mcc="655">
+        <boolean name="enableGroupMms" value="false" />
+        <int name="maxImageHeight" value="1944" />
+        <int name="maxImageWidth" value="2592" />
+        <int name="recipientLimit" value="20" />
+        <int name="smsToMmsTextThreshold" value="6" />
+    </carrier_config>
+    <carrier_config mcc="657">
+        <boolean name="enableGroupMms" value="false" />
+        <int name="maxImageHeight" value="1944" />
+        <int name="maxImageWidth" value="2592" />
+        <int name="recipientLimit" value="20" />
+        <int name="smsToMmsTextThreshold" value="6" />
+    </carrier_config>
+    <carrier_config mcc="659">
+        <boolean name="enableGroupMms" value="false" />
+        <int name="maxImageHeight" value="1944" />
+        <int name="maxImageWidth" value="2592" />
+        <int name="recipientLimit" value="20" />
+        <int name="smsToMmsTextThreshold" value="6" />
+    </carrier_config>
+    <carrier_config mcc="702">
+        <boolean name="enableGroupMms" value="false" />
+        <int name="maxImageHeight" value="1944" />
+        <int name="maxImageWidth" value="2592" />
+        <int name="recipientLimit" value="20" />
+        <int name="smsToMmsTextThreshold" value="6" />
+        <boolean name="moto_enable_service_dialing_number" value="true" />
+    </carrier_config>
+    <carrier_config mcc="704">
+        <boolean name="enableGroupMms" value="false" />
+        <int name="maxImageHeight" value="1944" />
+        <int name="maxImageWidth" value="2592" />
+        <int name="maxSubjectLength" value="80" />
+        <int name="recipientLimit" value="20" />
+        <int name="smsToMmsTextThreshold" value="6" />
+        <boolean name="smsUsesSimpleCharactersOnly" value="true" />
+        <boolean name="moto_enable_service_dialing_number" value="true" />
+    </carrier_config>
+    <carrier_config mcc="706">
+        <boolean name="enableGroupMms" value="false" />
+        <int name="maxImageHeight" value="1944" />
+        <int name="maxImageWidth" value="2592" />
+        <int name="maxSubjectLength" value="80" />
+        <int name="recipientLimit" value="20" />
+        <int name="smsToMmsTextThreshold" value="6" />
+        <boolean name="smsUsesSimpleCharactersOnly" value="true" />
+        <boolean name="moto_enable_service_dialing_number" value="true" />
+    </carrier_config>
+    <carrier_config mcc="708">
+        <boolean name="enableGroupMms" value="false" />
+        <int name="maxImageHeight" value="1944" />
+        <int name="maxImageWidth" value="2592" />
+        <int name="maxSubjectLength" value="80" />
+        <int name="recipientLimit" value="20" />
+        <int name="smsToMmsTextThreshold" value="6" />
+        <boolean name="smsUsesSimpleCharactersOnly" value="true" />
+        <boolean name="moto_enable_service_dialing_number" value="true" />
+    </carrier_config>
+    <carrier_config mcc="710">
+        <boolean name="enableGroupMms" value="false" />
+        <int name="maxImageHeight" value="1944" />
+        <int name="maxImageWidth" value="2592" />
+        <int name="maxSubjectLength" value="80" />
+        <int name="recipientLimit" value="20" />
+        <int name="smsToMmsTextThreshold" value="6" />
+        <boolean name="smsUsesSimpleCharactersOnly" value="true" />
+        <boolean name="moto_enable_service_dialing_number" value="true" />
+    </carrier_config>
+    <carrier_config mcc="712">
+        <boolean name="enableGroupMms" value="false" />
+        <int name="maxImageHeight" value="1944" />
+        <int name="maxImageWidth" value="2592" />
+        <int name="maxSubjectLength" value="80" />
+        <int name="recipientLimit" value="20" />
+        <int name="smsToMmsTextThreshold" value="6" />
+        <boolean name="smsUsesSimpleCharactersOnly" value="true" />
+        <boolean name="moto_enable_service_dialing_number" value="true" />
+    </carrier_config>
+    <carrier_config mcc="714">
+        <boolean name="enableGroupMms" value="false" />
+        <int name="maxImageHeight" value="1944" />
+        <int name="maxImageWidth" value="2592" />
+        <int name="maxSubjectLength" value="80" />
+        <int name="recipientLimit" value="20" />
+        <int name="smsToMmsTextThreshold" value="6" />
+        <boolean name="smsUsesSimpleCharactersOnly" value="true" />
+        <boolean name="moto_enable_service_dialing_number" value="true" />
+    </carrier_config>
+    <carrier_config mcc="716">
+        <boolean name="enableGroupMms" value="false" />
+        <int name="maxImageHeight" value="1944" />
+        <int name="maxImageWidth" value="2592" />
+        <boolean name="moto_enable_service_dialing_number" value="true" />
+    </carrier_config>
+    <carrier_config mcc="722">
+        <boolean name="enableGroupMms" value="false" />
+        <int name="maxImageHeight" value="1944" />
+        <int name="maxImageWidth" value="2592" />
+        <int name="maxSubjectLength" value="80" />
+        <int name="recipientLimit" value="20" />
+        <int name="smsToMmsTextThreshold" value="6" />
+        <boolean name="smsUsesSimpleCharactersOnly" value="true" />
+        <boolean name="moto_enable_service_dialing_number" value="true" />
+    </carrier_config>
+    <carrier_config mcc="724">
+        <boolean name="enableGroupMms" value="false" />
+        <int name="maxImageHeight" value="1944" />
+        <int name="maxImageWidth" value="2592" />
+        <int name="maxSubjectLength" value="80" />
+        <int name="recipientLimit" value="20" />
+        <int name="smsToMmsTextThreshold" value="6" />
+        <boolean name="smsUsesSimpleCharactersOnly" value="true" />
+        <boolean name="moto_show_brazil_settings" value="true" />
+        <boolean name="moto_enable_service_dialing_number" value="true" />
+    </carrier_config>
+    <carrier_config mcc="730">
+        <boolean name="enableGroupMms" value="false" />
+        <int name="maxImageHeight" value="1944" />
+        <int name="maxImageWidth" value="2592" />
+        <int name="maxSubjectLength" value="80" />
+        <int name="recipientLimit" value="20" />
+        <int name="smsToMmsTextThreshold" value="6" />
+        <boolean name="moto_enable_service_dialing_number" value="true" />
+    </carrier_config>
+    <carrier_config mcc="732">
+        <boolean name="enableGroupMms" value="false" />
+        <int name="maxImageHeight" value="1944" />
+        <int name="maxImageWidth" value="2592" />
+        <int name="maxSubjectLength" value="80" />
+        <int name="recipientLimit" value="20" />
+        <int name="smsToMmsTextThreshold" value="6" />
+        <boolean name="smsUsesSimpleCharactersOnly" value="true" />
+        <boolean name="moto_enable_service_dialing_number" value="true" />
+    </carrier_config>
+    <carrier_config mcc="734">
+        <boolean name="enableGroupMms" value="false" />
+        <int name="maxImageHeight" value="1944" />
+        <int name="maxImageWidth" value="2592" />
+        <int name="maxSubjectLength" value="80" />
+        <int name="recipientLimit" value="20" />
+        <int name="smsToMmsTextThreshold" value="6" />
+        <boolean name="smsUsesSimpleCharactersOnly" value="true" />
+        <boolean name="moto_enable_service_dialing_number" value="true" />
+    </carrier_config>
+    <carrier_config mcc="736">
+        <boolean name="enableGroupMms" value="false" />
+        <int name="maxImageHeight" value="1944" />
+        <int name="maxImageWidth" value="2592" />
+        <int name="recipientLimit" value="20" />
+        <int name="smsToMmsTextThreshold" value="6" />
+        <boolean name="moto_enable_service_dialing_number" value="true" />
+    </carrier_config>
+    <carrier_config mcc="738">
+        <boolean name="enableGroupMms" value="false" />
+        <int name="maxImageHeight" value="1944" />
+        <int name="maxImageWidth" value="2592" />
+        <int name="recipientLimit" value="20" />
+        <int name="smsToMmsTextThreshold" value="6" />
+        <boolean name="moto_enable_service_dialing_number" value="true" />
+    </carrier_config>
+    <carrier_config mcc="740">
+        <boolean name="enableGroupMms" value="false" />
+        <int name="recipientLimit" value="20" />
+        <int name="maxImageHeight" value="1944" />
+        <int name="maxImageWidth" value="2592" />
+        <int name="maxSubjectLength" value="80" />
+        <int name="smsToMmsTextThreshold" value="6" />
+        <boolean name="smsUsesSimpleCharactersOnly" value="true" />
+        <boolean name="moto_enable_service_dialing_number" value="true" />
+    </carrier_config>
+    <carrier_config mcc="744">
+        <boolean name="enableGroupMms" value="false" />
+        <int name="recipientLimit" value="20" />
+        <int name="maxImageHeight" value="1944" />
+        <int name="maxImageWidth" value="2592" />
+        <int name="maxSubjectLength" value="80" />
+        <int name="smsToMmsTextThreshold" value="6" />
+        <boolean name="smsUsesSimpleCharactersOnly" value="true" />
+        <boolean name="moto_enable_service_dialing_number" value="true" />
+    </carrier_config>
+    <carrier_config mcc="746">
+        <boolean name="enableGroupMms" value="false" />
+        <int name="maxImageHeight" value="1944" />
+        <int name="maxImageWidth" value="2592" />
+        <int name="recipientLimit" value="20" />
+        <int name="smsToMmsTextThreshold" value="6" />
+    </carrier_config>
+    <carrier_config mcc="748">
+        <boolean name="enableGroupMms" value="false" />
+        <int name="maxImageHeight" value="1944" />
+        <int name="maxImageWidth" value="2592" />
+        <int name="recipientLimit" value="20" />
+        <int name="maxSubjectLength" value="80" />
+        <int name="smsToMmsTextThreshold" value="6" />
+        <boolean name="smsUsesSimpleCharactersOnly" value="true" />
+        <boolean name="moto_enable_service_dialing_number" value="true" />
+    </carrier_config>
+    <carrier_config mcc="750">
+        <boolean name="moto_enable_service_dialing_number" value="true" />
+    </carrier_config>
+    <carrier_config customerid="3uk" mcc="234" mnc="20">
+        <boolean name="moto_hide_non_user_apn_edit_delete_bool" value="true" />
+    </carrier_config>
+    <carrier_config carrierid="usc" mcc="311" mnc="220">
+        <string-array name="moto_non_user_apn_allow_only_certain_fields_editable_list" num="1">
+            <item value="apn_apn" />
+        </string-array>
+    </carrier_config>
+    <carrier_config carrierid="usc" mcc="311" mnc="221">
+        <string-array name="moto_non_user_apn_allow_only_certain_fields_editable_list" num="1">
+            <item value="apn_apn" />
+        </string-array>
+    </carrier_config>
+    <carrier_config carrierid="usc" mcc="311" mnc="222">
+        <string-array name="moto_non_user_apn_allow_only_certain_fields_editable_list" num="1">
+            <item value="apn_apn" />
+        </string-array>
+    </carrier_config>
+    <carrier_config carrierid="usc" mcc="311" mnc="223">
+        <string-array name="moto_non_user_apn_allow_only_certain_fields_editable_list" num="1">
+            <item value="apn_apn" />
+        </string-array>
+    </carrier_config>
+    <carrier_config carrierid="usc" mcc="311" mnc="224">
+        <string-array name="moto_non_user_apn_allow_only_certain_fields_editable_list" num="1">
+            <item value="apn_apn" />
+        </string-array>
+    </carrier_config>
+    <carrier_config carrierid="usc" mcc="311" mnc="225">
+        <string-array name="moto_non_user_apn_allow_only_certain_fields_editable_list" num="1">
+            <item value="apn_apn" />
+        </string-array>
+    </carrier_config>
+    <carrier_config carrierid="usc" mcc="311" mnc="226">
+        <string-array name="moto_non_user_apn_allow_only_certain_fields_editable_list" num="1">
+            <item value="apn_apn" />
+        </string-array>
+    </carrier_config>
+    <carrier_config carrierid="usc" mcc="311" mnc="227">
+        <string-array name="moto_non_user_apn_allow_only_certain_fields_editable_list" num="1">
+            <item value="apn_apn" />
+        </string-array>
+    </carrier_config>
+    <carrier_config carrierid="usc" mcc="311" mnc="228">
+        <string-array name="moto_non_user_apn_allow_only_certain_fields_editable_list" num="1">
+            <item value="apn_apn" />
+        </string-array>
+    </carrier_config>
+    <carrier_config carrierid="usc" mcc="311" mnc="229">
+        <string-array name="moto_non_user_apn_allow_only_certain_fields_editable_list" num="1">
+            <item value="apn_apn" />
+        </string-array>
+    </carrier_config>
+    <carrier_config carrierid="usc" mcc="311" mnc="580">
+        <string-array name="moto_non_user_apn_allow_only_certain_fields_editable_list" num="1">
+            <item value="apn_apn" />
+        </string-array>
+    </carrier_config>
+    <carrier_config carrierid="usc" mcc="311" mnc="581">
+        <string-array name="moto_non_user_apn_allow_only_certain_fields_editable_list" num="1">
+            <item value="apn_apn" />
+        </string-array>
+    </carrier_config>
+    <carrier_config carrierid="usc" mcc="311" mnc="582">
+        <string-array name="moto_non_user_apn_allow_only_certain_fields_editable_list" num="1">
+            <item value="apn_apn" />
+        </string-array>
+    </carrier_config>
+    <carrier_config carrierid="usc" mcc="311" mnc="583">
+        <string-array name="moto_non_user_apn_allow_only_certain_fields_editable_list" num="1">
+            <item value="apn_apn" />
+        </string-array>
+    </carrier_config>
+    <carrier_config carrierid="usc" mcc="311" mnc="584">
+        <string-array name="moto_non_user_apn_allow_only_certain_fields_editable_list" num="1">
+            <item value="apn_apn" />
+        </string-array>
+    </carrier_config>
+    <carrier_config carrierid="usc" mcc="311" mnc="585">
+        <string-array name="moto_non_user_apn_allow_only_certain_fields_editable_list" num="1">
+            <item value="apn_apn" />
+        </string-array>
+    </carrier_config>
+    <carrier_config carrierid="usc" mcc="311" mnc="586">
+        <string-array name="moto_non_user_apn_allow_only_certain_fields_editable_list" num="1">
+            <item value="apn_apn" />
+        </string-array>
+    </carrier_config>
+    <carrier_config carrierid="usc" mcc="311" mnc="587">
+        <string-array name="moto_non_user_apn_allow_only_certain_fields_editable_list" num="1">
+            <item value="apn_apn" />
+        </string-array>
+    </carrier_config>
+    <carrier_config carrierid="usc" mcc="311" mnc="588">
+        <string-array name="moto_non_user_apn_allow_only_certain_fields_editable_list" num="1">
+            <item value="apn_apn" />
+        </string-array>
+    </carrier_config>
+    <carrier_config carrierid="usc" mcc="311" mnc="589">
+        <string-array name="moto_non_user_apn_allow_only_certain_fields_editable_list" num="1">
+            <item value="apn_apn" />
+        </string-array>
     </carrier_config>
 </carrier_config_list>
