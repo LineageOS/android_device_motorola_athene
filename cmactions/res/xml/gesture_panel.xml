@@ -19,7 +19,7 @@
 
     <PreferenceCategory
         android:key="ambient_display_key"
-        android:title="@string/ambient_display_title" >
+        android:title="@string/ambient_display_title">
 
         <SwitchPreference
             android:key="gesture_pick_up"
@@ -28,15 +28,15 @@
             android:summary="@string/pick_up_gesture_summary" />
 
         <SwitchPreference
-            android:key="gesture_ir_wake_up"
+            android:key="gesture_hand_wave"
             android:defaultValue="true"
-            android:title="@string/ir_wake_up_title"
-            android:summary="@string/ir_wake_up_summary" />
+            android:title="@string/hand_wave_gesture_title"
+            android:summary="@string/hand_wave_gesture_summary" />
     </PreferenceCategory>
 
     <PreferenceCategory
         android:key="actions_key"
-        android:title="@string/actions_title" >
+        android:title="@string/actions_title">
 
         <SwitchPreference
             android:key="gesture_camera_action"
@@ -53,8 +53,8 @@
         <SwitchPreference
             android:key="gesture_ir_silencer"
             android:defaultValue="false"
-            android:title="@string/ir_silencer_title"
-            android:summary="@string/ir_silencer_summary" />
+            android:title="@string/hand_wave_silencer_title"
+            android:summary="@string/hand_wave_silencer_summary" />
 
         <SwitchPreference
             android:key="gesture_flip_to_mute"
@@ -72,13 +72,13 @@
 
     <PreferenceCategory
         android:key="fp_key"
-        android:title="@string/fp_title" >
+        android:title="@string/fingerprint_title" >
 
 
         <SwitchPreference
             android:key="fp_home"
-            android:title="@string/fp_home_title"
-            android:summary="@string/fp_home_summary" />
+            android:title="@string/fingerprint_as_home_title"
+            android:summary="@string/fingerprint_as_home_summary" />
 
     </PreferenceCategory>
 
