@@ -792,6 +792,7 @@
         </string-array>
         <boolean name="ascii_7_bit_support_for_long_message" value="true" />
         <boolean name="moto_auto_resume_holding_call" value="false" />
+        <boolean name="allow_emergency_numbers_in_call_log_bool" value="true" />
     </carrier_config>
     <carrier_config mcc="466">
         <boolean name="enableGroupMms" value="false" />
