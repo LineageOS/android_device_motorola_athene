@@ -301,6 +301,8 @@ on boot
     chown system mot_tcmd /sys/bus/spi/devices/spi7.0/clk_enable
     chown system mot_tcmd /sys/bus/spi/devices/spi7.0/dev_enable
     chown system mot_tcmd /sys/bus/spi/devices/spi7.0/irq
+    chown system mot_tcmd /sys/bus/spi/devices/spi7.0/irq_cnt
+    chmod 0440 /sys/bus/spi/devices/spi7.0/irq_cnt
 
     # Create moodle directory that MOT_MOODLE can write to
     mkdir /data/local/moodle 0770 graphics mot_tcmd
@@ -927,27 +929,6 @@ service qseeproxydaemon /system/vendor/bin/qseeproxydaemon
     user system
     group system
 
-# Coresight early boot service
-service cs-early-boot /system/bin/sh /persist/coresight/qdss.agent.sh early-boot /init.qcom.debug.sh
-    class core
-    user root
-    oneshot
-
-# Coresight post boot servive
-service cs-post-boot /system/bin/sh /persist/coresight/qdss.agent.sh
-    user root
-    disabled
-    oneshot
-
-on property:sys.boot_completed=1
-    start cs-post-boot
-
-on property:sys.dbg.coresight.enable=1
-    write /persist/coresight/enable 1
-
-on property:sys.dbg.coresight.enable=0
-    write /persist/coresight/enable 0
-
 # Start Sensor daemon
 service motosh /system/bin/motosh boot
     class late_start
@@ -1024,18 +1005,6 @@ service ftmipcd /system/bin/ftmipcd
     user radio
     group radio net_raw inet qcom_diag
     disabled
-    oneshot
-
-service atvc_core /system/bin/dbvc_atvc_property_set
-    class core
-    user mot_atvc
-    group mot_tpapi
-    oneshot
-
-service atvc /system/bin/dbvc_atvc_property_set
-    class late_start
-    user mot_atvc
-    group mot_tpapi
     oneshot
 
 service qe /xbin/qe /system
