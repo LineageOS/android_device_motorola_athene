@@ -328,7 +328,7 @@ on fs
 
     # Mount customize partion
     wait /dev/block/bootdevice/by-name/customize
-    mount ext4 /dev/block/bootdevice/by-name/customize /customize ro discard nosuid nodev noatime nodiratime noexec
+    mount ext4 /dev/block/bootdevice/by-name/customize /customize ro discard nosuid nodev noatime nodiratime noexec defcontext=u:object_r:user_config_file:s0
 
     # This partition is used by moto for their system apps. Mounting this breaks boot for some.
     # wait /dev/block/bootdevice/by-name/oem
