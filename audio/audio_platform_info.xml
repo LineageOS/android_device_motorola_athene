@@ -17,6 +17,7 @@
 	<device name="SND_DEVICE_OUT_VOICE_LINE" acdb_id="78" />
 	<device name="SND_DEVICE_OUT_VOLTE_NB_ANC_HANDSET" acdb_id="200" />
 	<device name="SND_DEVICE_OUT_VOLTE_NB_HANDSET_TMUS" acdb_id="200" />
+	<device name="SND_DEVICE_OUT_VOLTE_NB_TX" acdb_id="245" />
 
 <!-- Input devices -->
 	<device name="SND_DEVICE_IN_CAPTURE_VI_FEEDBACK" acdb_id="0" />
