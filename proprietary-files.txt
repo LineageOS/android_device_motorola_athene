@@ -14,9 +14,12 @@ framework/qcom.fmradio.jar
 framework/ConnectivityExt.jar
 framework/com.motorola.motosignature.jar
 framework/com.qti.dpmframework.jar
+framework/com.qti.snapdragon.sdk.display.jar
+framework/com.qti.location.sdk.jar
 framework/dpmapi.jar
 framework/tcmiface.jar
 framework/cneapiclient.jar
+framework/izat.xt.srv.jar
 framework/tcmclient.jar
 framework/rcsimssettings.jar
 framework/rcsservice.jar
@@ -24,6 +27,7 @@ framework/com.quicinc.cne.jar
 framework/QPerformance.jar
 framework/embmslibrary.jar
 framework/qmapbridge.jar
+framework/qti-telephony-common.jar
 framework/com.qualcomm.location.vzw_library.jar
 
 bin/imsqmidaemon
@@ -263,6 +267,8 @@ vendor/bin/mm-pp-daemon
 vendor/bin/thermal-engine
 vendor/bin/audioflacapp
 vendor/lib/libGPreqcancel.so
+vendor/lib/libaptX-1.0.0-rel-Android21-ARMv7A.so
+vendor/lib/libaptXScheduler.so
 vendor/lib/libchromatix_ov13850_polaris_hfr_60.so
 vendor/lib/libscve_stub.so
 vendor/lib/libmmcamera_isp_clamp_video40.so
