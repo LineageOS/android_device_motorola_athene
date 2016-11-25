@@ -190,6 +190,7 @@
         <item>mobile_ims,11,0,2,60000,true</item>
         <item>mobile_cbs,12,0,2,60000,true</item>
         <item>bluetooth,7,7,2,-1,true</item>
+        <item>mobile_emergency,15,0,5,-1,true</item>
         <item>ethernet,9,9,3,-1,true</item>
     </string-array>
 
@@ -269,7 +270,13 @@
     <bool name="config_carrier_volte_available">true</bool>
 
     <!-- Flag specifying whether VoLTE TTY is supported -->
-    <bool name="config_carrier_volte_tty_supported">false</bool>
+    <bool name="config_carrier_volte_tty_supported">true</bool>
+
+    <bool name="config_device_vt_available">true</bool>
+    <bool name="config_carrier_vt_available">true</bool>
+    <bool name="config_device_vce_available">true</bool>
+    <bool name="config_carrier_wfc_ims_available">true</bool>
+    <bool name="config_device_wfc_ims_available">true</bool>
 
     <!-- Maximum number of supported users -->
     <integer name="config_multiuserMaximumUsers">4</integer>
