@@ -90,6 +90,8 @@ etc/permissions/com.qualcomm.location.xml
 etc/permissions/imscm.xml
 etc/permissions/com.qualcomm.location.vzw_library.xml
 etc/permissions/com.motorola.msimsettings.xml
+etc/permissions/izat.xt.srv.xml
+etc/permissions/com.qti.snapdragon.sdk.display.xml
 etc/permissions/qcnvitems.xml
 etc/data/qmi_config.xml
 etc/data/netmgr_config.xml
