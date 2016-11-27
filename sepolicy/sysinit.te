@@ -1,0 +1,7 @@
+allow sysinit adsprpcd_file:dir getattr;
+allow sysinit cache_file:dir getattr;
+allow sysinit proc:file { getattr open read write };
+allow sysinit proc_dirty_ratio:file { getattr open read write };
+allow sysinit rootfs:dir { add_name write };
+allow sysinit rootfs:lnk_file create;
+allow sysinit storage_file:dir getattr;
