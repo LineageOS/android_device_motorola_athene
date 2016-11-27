@@ -25,3 +25,4 @@ allow kernel tee:process setsched;
 allow kernel thermal-engine:process setsched;
 allow kernel time_daemon:process setsched;
 allow kernel untrusted_app:process setsched;
+allow kernel bluetooth:process setsched;

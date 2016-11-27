@@ -13,7 +13,7 @@ allow oem-hw-sh property_socket:sock_file write;
 allow oem-hw-sh init:unix_stream_socket connectto;
 allow oem-hw-sh system_prop:property_service set;
 allow oem-hw-sh proc:file { getattr open read };
-allow oem-hw-sh rootfs:file read;
+allow oem-hw-sh rootfs:file { read open };
 allow oem-hw-sh self:capability dac_override;
 allow oem-hw-sh shell_exec:file getattr;
 allow oem-hw-sh system_file:file execute_no_trans;
