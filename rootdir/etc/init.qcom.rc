@@ -943,6 +943,7 @@ service mmi-boot-sh /init.mmi.boot.sh
     oneshot
 
 service mmi-laser-sh  /init.mmi.laser.sh
+    seclabel u:r:mmi-laser-sh:s0
     class core
     user root
     oneshot
