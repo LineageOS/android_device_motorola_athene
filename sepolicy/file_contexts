@@ -28,6 +28,9 @@
 /dev/block/bootdevice/by-name/persist                       u:object_r:persist_block_device:s0
 /dev/block/bootdevice/by-name/utags                         u:object_r:utags_block_device:s0
 /dev/block/bootdevice/by-name/utagsBackup                   u:object_r:utags_block_device:s0
+/dev/block/bootdevice/by-name/hw                   u:object_r:hw_block_device:s0
+/dev/block/bootdevice/by-name/cache                   u:object_r:cache_block_device:s0
+/dev/block/bootdevice/by-name/frp                   u:object_r:frp_block_device:s0
 
 # RIL
 /data/misc/cutback(/.*)?                                    u:object_r:cutback_data_file:s0

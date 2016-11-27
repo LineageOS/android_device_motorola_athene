@@ -1,0 +1,2 @@
+allow sensors property_socket:sock_file write;
+allow sensors init:unix_stream_socket connectto;
