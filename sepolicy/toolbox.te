@@ -6,3 +6,4 @@ allow toolbox init:fifo_file read;
 allow toolbox persist_file:dir search;
 allow toolbox property_socket:sock_file write;
 allow toolbox persist_file:file getattr;
+allow toolbox init:fifo_file ioctl;
