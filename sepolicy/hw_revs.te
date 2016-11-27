@@ -9,3 +9,6 @@ allow hw_revs hw_revs_data_file:file create_file_perms;
 allow hw_revs system_file:file execute_no_trans;
 allow hw_revs sysfs:file { open read };
 allow hw_revs toolbox_exec:file { execute execute_no_trans getattr open read };
+allow hw_revs shell_exec:file getattr;
+allow hw_revs sysfs:dir { open read };
+allow hw_revs sysfs:file getattr;
