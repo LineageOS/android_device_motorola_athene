@@ -2,10 +2,7 @@ allow toolbox init:fifo_file { write getattr };
 allow toolbox self:capability chown;
 allow toolbox sysfs:file setattr;
 
-allow toolbox init:fifo_file read;
+allow toolbox init:fifo_file { read ioctl };
 allow toolbox persist_file:dir search;
 allow toolbox property_socket:sock_file write;
 allow toolbox persist_file:file getattr;
-allow toolbox init:unix_stream_socket connectto;
-allow toolbox manufacturedate_prop:property_service set;
-allow toolbox system_prop:property_service set;
