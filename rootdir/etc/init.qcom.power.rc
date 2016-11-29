@@ -16,6 +16,9 @@ on boot
     write /dev/cpuset/camera-daemon/cpus 4-7
 
 on enable-low-power
+
+    write /proc/sys/kernel/sched_boost 1
+
     # HMP scheduler settings
     write /proc/sys/kernel/sched_window_stats_policy 3
     write /proc/sys/kernel/sched_ravg_hist_size 3
@@ -164,8 +167,6 @@ on enable-low-power
     write /sys/module/lowmemorykiller/parameters/vmpressure_file_min 81250
     write /sys/module/lowmemorykiller/parameters/debug_level 0
     write /sys/module/lowmemorykiller/parameters/lmk_fast_run 0
-    
-    write /proc/sys/kernel/sched_boost 0
 
     # Set perfd properties
     rm /data/system/perfd/default_values
