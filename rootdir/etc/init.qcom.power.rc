@@ -8,10 +8,10 @@ on boot
 
     # update foreground cpuset now that processors are up
     # reserve CPU 4 for the top app
-    write /dev/cpuset/foreground/cpus 0-3,5-7
+    write /dev/cpuset/foreground/cpus 0-6
     write /dev/cpuset/foreground/boost/cpus 0-3
-    write /dev/cpuset/background/cpus 4
-    write /dev/cpuset/system-background/cpus 5-7
+    write /dev/cpuset/background/cpus 4-6
+    write /dev/cpuset/system-background/cpus 4-6
     write /dev/cpuset/top-app/cpus 0-7
     write /dev/cpuset/camera-daemon/cpus 4-7
 
