@@ -18,3 +18,4 @@ allow batt_health cache_file:file { getattr read };
 allow batt_health sysfs:dir { open read };
 allow batt_health cache_file:file { getattr read };
 allow batt_health sysfs:file { open read };
+allow batt_health cache_file:dir search;
