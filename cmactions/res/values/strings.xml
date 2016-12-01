@@ -27,6 +27,7 @@
     <string name="ir_wake_up_title">Wave</string>
     <string name="ir_wake_up_summary">Pulse notifications when you wave your hand across the screen</string>
 
+    <!-- Actions -->
     <string name="actions_title">Actions</string>
 
     <string name="camera_gesture_title">Double-twist</string>
@@ -45,6 +46,11 @@
 
     <string name="lift_to_silence_title">Pick up to stop ringing</string>
     <string name="lift_to_silence_summary">Lift the phone to silence incoming calls. It only works when your phone starts flat</string>
+
+    <!-- Fingerprint -->
+    <string name="fp_title">Fingerprint</string>
+    <string name="fp_home_title">Fingerprint home button</string>
+    <string name="fp_home_summary">Use your fingerprint reader as a HOME key</string>
 
 </resources>
 
