@@ -11,7 +11,7 @@
 /data/cam_socket[12]                                        u:object_r:camera_socket:s0
 
 # CMActions
-/sys/homebutton/enable  
+/sys/homebutton/enable			u:object_r:sysfs_homebutton:s0
 
 # CMHW
 /sys/devices/virtual/timed_output/vibrator/vtg_level        u:object_r:vibeamp_sysfs:s0
