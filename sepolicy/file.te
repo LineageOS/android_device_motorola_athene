@@ -21,4 +21,4 @@ type chr_file, file_type, data_file_type;
 type fps_data_file, file_type, data_file_type;
 type fpc_data_file, file_type, data_file_type;
 type sysfs_fpc, fs_type, sysfs_type;
-type fpc_socket, file_type;
+type sysfs_homebutton, fs_type, sysfs_type;

@@ -228,6 +228,9 @@ on boot
     chown radio radio /data/misc/radio/db_check_done
     chmod 0660 /data/misc/radio/db_check_done
 
+    # FPC home button permissions
+    chown system system /sys/homebutton/enable
+
     # STML0XX driver parameter permissions
     chown root mot_tcmd /sys/module/stml0xx/parameters/irq_disable
     chmod 0660 /sys/module/stml0xx/parameters/irq_disable
