@@ -16,7 +16,6 @@
 
 package com.cyanogenmod.settings.device;
 
-import android.app.ActionBar;
 import android.app.AlertDialog;
 import android.app.NotificationManager;
 import android.os.Bundle;
@@ -28,8 +27,6 @@ import android.preference.PreferenceActivity;
 import android.preference.PreferenceCategory;
 import android.preference.SwitchPreference;
 import android.text.TextUtils;
-import android.view.Menu;
-import android.view.MenuItem;
 
 import java.io.File;
 
@@ -50,14 +47,6 @@ public class TouchscreenGestureSettings extends PreferenceActivity {
                 findPreference(CATEGORY_AMBIENT_DISPLAY);
         if (ambientDisplayCat != null) {
             ambientDisplayCat.setEnabled(CMActionsSettings.isDozeEnabled(getContentResolver()));
-        }
-        final ActionBar actionBar = getActionBar();
-        actionBar.setDisplayHomeAsUpEnabled(true);
-        if (Device.isSurnia()){
-            //Check if we have to hide the chop chop entry
-            SwitchPreference chopChopPref = (SwitchPreference) findPreference("gesture_chop_chop");
-            PreferenceCategory mCategory = (PreferenceCategory) findPreference("actions_key");
-            mCategory.removePreference(chopChopPref);
         }
         mNotificationManager = (NotificationManager) getSystemService(Context.NOTIFICATION_SERVICE);
         mFlipPref = (SwitchPreference) findPreference("gesture_flip_to_mute");
@@ -127,14 +116,5 @@ public class TouchscreenGestureSettings extends PreferenceActivity {
         if (mNotificationManager.isNotificationPolicyAccessGranted() && mFlipClick) {
             mFlipPref.setChecked(true);
         }
-    }
-
-    @Override
-    public boolean onOptionsItemSelected(MenuItem item) {
-        if (item.getItemId() == android.R.id.home) {
-            onBackPressed();
-            return true;
-        }
-        return false;
     }
 }
