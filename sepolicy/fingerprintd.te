@@ -6,7 +6,7 @@ allow fingerprintd tee_device:chr_file { read write ioctl open };
 allow fingerprintd firmware_file:dir search;
 allow fingerprintd fpc_data_file:file { create unlink open append setattr };
 allow fingerprintd fps_data_file:file { create unlink open append setattr };
-allow fingerprintd fpc_data_file:dir { add_name remove_name write };
+allow fingerprintd fpc_data_file:dir { add_name remove_name write search };
 allow fingerprintd fpc_data_file:sock_file { create unlink };
 allow fingerprintd fps_data_file:dir { add_name getattr remove_name write };
 allow fingerprintd fps_data_file:file getattr;
