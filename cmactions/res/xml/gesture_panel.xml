@@ -70,4 +70,16 @@
 
     </PreferenceCategory>
 
+    <PreferenceCategory
+        android:key="fp_key"
+        android:title="@string/fp_title" >
+
+
+        <SwitchPreference
+            android:key="fp_home"
+            android:title="@string/fp_home_title"
+            android:summary="@string/fp_home_summary" />
+
+    </PreferenceCategory>
+
 </PreferenceScreen>
