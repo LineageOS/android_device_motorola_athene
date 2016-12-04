@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="apn_protocol_entries">
+        <item>IPv4</item>
+        <item>IPv6</item>
+        <item>IPv4/IPv6</item>
+    </string-array>
+    <string-array name="apn_protocol_values">
+        <item>IP</item>
+        <item>IPV6</item>
+        <item>IPV4V6</item>
+    </string-array>
+    <string-array name="apn_roaming_protocol_entries">
+        <item>IPv4</item>
+    </string-array>
+    <string-array name="apn_roaming_protocol_values">
+        <item>IP</item>
+    </string-array>
+</resources>
