@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="config_gpsParameters">
+        <item>XTRA_SERVER_1=http://xtrapath1.izatcloud.net/xtra2.bin</item>
+        <item>XTRA_SERVER_2=http://xtrapath2.izatcloud.net/xtra2.bin</item>
+        <item>XTRA_SERVER_3=http://xtrapath3.izatcloud.net/xtra2.bin</item>
+        <item>NTP_SERVER=north-america.pool.ntp.org</item>
+        <item>SUPL_MODE=1</item>
+        <item>SUPL_HOST=supl.iusacell.com</item>
+        <item>SUPL_PORT=7275</item>
+        <item>SUPL_VER=0x10000</item>
+        <item>LPP_PROFILE=2</item>
+        <item>NMEA_PROVIDER=0</item>
+        <item>A_GLONASS_POS_PROTOCOL_SELECT=0</item>
+        <item>ERR_ESTIMATE=0</item>
+        <item>INTERMEDIATE_POS=0</item>
+        <item>SUPL_ES=0</item>
+        <item>GPS_LOCK=2</item>
+    </string-array>
+    <integer-array name="config_tether_upstream_types">
+        <item>1</item>
+        <item>4</item>
+        <item>7</item>
+        <item>9</item>
+    </integer-array>
+    <string-array name="config_tether_apndata">
+        <item>Modem,modem.iusacellgsm.mx,,,iusacellgsm,iusacellgsm,,,,,334,050,1,DUN</item>
+    </string-array>
+    <string-array name="config_operatorConsideredNonRoaming">
+        <item>33403</item>
+        <item>334090</item>
+    </string-array>
+
+</resources>

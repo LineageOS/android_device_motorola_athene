@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <bool name="speedup_emergencycall_dial_from_apm">true</bool>
+</resources>

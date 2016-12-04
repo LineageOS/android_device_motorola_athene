@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="apn_protocol_entries">
+        <item>IPv4</item>
+    </string-array>
+    <string-array name="apn_protocol_values">
+        <item>IP</item>
+    </string-array>
+</resources>
