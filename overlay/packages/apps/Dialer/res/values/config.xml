@@ -15,5 +15,10 @@
 -->
 <resources>
     <bool name="call_recording_enabled">true</bool>
+
     <integer name="call_recording_audio_source">4</integer>
+
+    <!-- Determines the maximum number of buttons visible on the call card.  Any buttons over this
+         count are put into the overflow menu. -->
+    <integer name="call_card_max_buttons">6</integer>
 </resources>
