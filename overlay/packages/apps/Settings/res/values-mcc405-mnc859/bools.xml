@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <bool name="ftr_4637_lte_not_supported_in_slot2">true</bool>
+    <bool name="config_wfc_mode_supported">false</bool>
+</resources>
