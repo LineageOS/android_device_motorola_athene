@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <bool name="config_moto_custom_validate_and_save_apn_usc">true</bool>
+</resources>
