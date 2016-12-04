@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<EriFile VersionNumber="6" NumberOfEriEntries="3" EriFileType="1">
+    <CallPromptId Id="0" CallPromptText="CallPromptId0" />
+    <CallPromptId Id="1" CallPromptText="CallPromptId1" />
+    <CallPromptId Id="2" CallPromptText="CallPromptId2" />
+    <EriInfo RoamingIndicator="0" IconIndex="0" IconMode="0" EriText="Roaming" CallPromptId="0" AlertId="0" DataServiceSupport="1" />
+    <EriInfo RoamingIndicator="1" IconIndex="1" IconMode="0" EriText="Blue Wireless" CallPromptId="0" AlertId="0" DataServiceSupport="1" />
+    <EriInfo RoamingIndicator="2" IconIndex="2" IconMode="1" EriText="Roaming" CallPromptId="0" AlertId="0" DataServiceSupport="1" />
+</EriFile>
