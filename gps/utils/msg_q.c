@@ -1,4 +1,4 @@
-/* Copyright (c) 2011-2012, The Linux Foundation. All rights reserved.
+/* Copyright (c) 2011-2012,2014 The Linux Foundation. All rights reserved.
  *
  * Redistribution and use in source and binary forms, with or without
  * modification, are permitted provided that the following conditions are
@@ -29,8 +29,7 @@
 #include "msg_q.h"
 
 #define LOG_TAG "LocSvc_utils_q"
-#include "log_util.h"
-#include "platform_lib_includes.h"
+#include <platform_lib_includes.h>
 #include "linked_list.h"
 #include <stdio.h>
 #include <stdlib.h>
@@ -199,7 +198,7 @@ msq_q_err_type msg_q_snd(void* msg_q_data, void* msg_obj, void (*dealloc)(void*)
    msg_q* p_msg_q = (msg_q*)msg_q_data;
 
    pthread_mutex_lock(&p_msg_q->list_mutex);
-   LOC_LOGD("%s: Sending message with handle = 0x%08X\n", __FUNCTION__, msg_obj);
+   LOC_LOGV("%s: Sending message with handle = 0x%08X\n", __FUNCTION__, msg_obj);
 
    if( p_msg_q->unblocked )
    {
@@ -215,7 +214,7 @@ msq_q_err_type msg_q_snd(void* msg_q_data, void* msg_obj, void (*dealloc)(void*)
 
    pthread_mutex_unlock(&p_msg_q->list_mutex);
 
-   LOC_LOGD("%s: Finished Sending message with handle = 0x%08X\n", __FUNCTION__, msg_obj);
+   LOC_LOGV("%s: Finished Sending message with handle = 0x%08X\n", __FUNCTION__, msg_obj);
 
    return rv;
 }
@@ -242,7 +241,7 @@ msq_q_err_type msg_q_rcv(void* msg_q_data, void** msg_obj)
 
    msg_q* p_msg_q = (msg_q*)msg_q_data;
 
-   LOC_LOGD("%s: Waiting on message\n", __FUNCTION__);
+   LOC_LOGV("%s: Waiting on message\n", __FUNCTION__);
 
    pthread_mutex_lock(&p_msg_q->list_mutex);
 
@@ -263,7 +262,7 @@ msq_q_err_type msg_q_rcv(void* msg_q_data, void** msg_obj)
 
    pthread_mutex_unlock(&p_msg_q->list_mutex);
 
-   LOC_LOGD("%s: Received message 0x%08X rv = %d\n", __FUNCTION__, *msg_obj, rv);
+   LOC_LOGV("%s: Received message 0x%08X rv = %d\n", __FUNCTION__, *msg_obj, rv);
 
    return rv;
 }

@@ -1,4 +1,3 @@
-ifneq ($(QCPATH),)
 ifneq ($(BUILD_TINY_ANDROID),true)
 
 LOCAL_PATH := $(call my-dir)
@@ -19,11 +18,11 @@ LOCAL_SHARED_LIBRARIES := \
     libutils \
     libcutils \
     libqmi_cci \
-    libqmi_csi \
     libqmi_common_so \
     libloc_core \
     libgps.utils \
-    libloc_ds_api
+    libdl \
+    libloc_pla
 
 LOCAL_SRC_FILES = \
     LocApiV02.cpp \
@@ -53,11 +52,11 @@ LOCAL_C_INCLUDES := \
     $(TARGET_OUT_HEADERS)/qmi-framework/inc \
     $(TARGET_OUT_HEADERS)/qmi/inc \
     $(TARGET_OUT_HEADERS)/gps.utils \
-    $(TARGET_OUT_HEADERS)/libloc_ds_api
+    $(TARGET_OUT_HEADERS)/libloc_ds_api \
+    $(TARGET_OUT_HEADERS)/libloc_pla
 
 LOCAL_PRELINK_MODULE := false
 
 include $(BUILD_SHARED_LIBRARY)
 
 endif # not BUILD_TINY_ANDROID
-endif # QCPATH
