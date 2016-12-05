@@ -1,4 +1,4 @@
-/* Copyright (c) 2011-2015, The Linux Foundation. All rights reserved.
+/* Copyright (c) 2011-2016, The Linux Foundation. All rights reserved.
  *
  * Redistribution and use in source and binary forms, with or without
  * modification, are permitted provided that the following conditions are
@@ -31,7 +31,7 @@
 #include <stddef.h>
 
 #include <stdbool.h>
-#include <stdint.h>
+#include <inttypes.h>
 
 #include "qmi_client.h"
 #include "qmi_idl_lib.h"
@@ -95,7 +95,7 @@ typedef struct
 }locClientEventIndTableStructT;
 
 
-static locClientEventIndTableStructT locClientEventIndTable[]= {
+static const locClientEventIndTableStructT locClientEventIndTable[]= {
 
   // position report ind
   { QMI_LOC_EVENT_POSITION_REPORT_IND_V02,
@@ -222,6 +222,16 @@ static locClientEventIndTableStructT locClientEventIndTable[]= {
     sizeof(qmiLocEventGeofenceProximityIndMsgT_v02),
     QMI_LOC_EVENT_MASK_GEOFENCE_PROXIMITY_NOTIFICATION_V02},
 
+    //GNSS Measurement Indication
+   { QMI_LOC_EVENT_GNSS_MEASUREMENT_REPORT_IND_V02,
+     sizeof(qmiLocEventGnssSvMeasInfoIndMsgT_v02),
+     QMI_LOC_EVENT_MASK_GNSS_MEASUREMENT_REPORT_V02 },
+
+    //GNSS Measurement Indication
+   { QMI_LOC_EVENT_SV_POLYNOMIAL_REPORT_IND_V02,
+    sizeof(qmiLocEventGnssSvPolyIndMsgT_v02),
+    QMI_LOC_EVENT_MASK_GNSS_SV_POLYNOMIAL_REPORT_V02 },
+
   // for GDT
   { QMI_LOC_EVENT_GDT_UPLOAD_BEGIN_STATUS_REQ_IND_V02,
     sizeof(qmiLocEventGdtUploadBeginStatusReqIndMsgT_v02),
@@ -253,7 +263,20 @@ static locClientEventIndTableStructT locClientEventIndTable[]= {
   // Batching Status event
   { QMI_LOC_EVENT_BATCHING_STATUS_IND_V02,
     sizeof(qmiLocEventBatchingStatusIndMsgT_v02),
-    QMI_LOC_EVENT_MASK_BATCHING_STATUS_V02}
+    QMI_LOC_EVENT_MASK_BATCHING_STATUS_V02},
+
+  // TDP download
+  { QMI_LOC_EVENT_GDT_DOWNLOAD_BEGIN_REQ_IND_V02,
+    sizeof(qmiLocEventGdtDownloadBeginReqIndMsgT_v02),
+    0},
+
+  { QMI_LOC_EVENT_GDT_RECEIVE_DONE_IND_V02,
+    sizeof(qmiLocEventGdtReceiveDoneIndMsgT_v02),
+    0},
+
+  { QMI_LOC_EVENT_GDT_DOWNLOAD_END_REQ_IND_V02,
+    sizeof(qmiLocEventGdtDownloadEndReqIndMsgT_v02),
+    0}
 };
 
 /* table to relate the respInd Id with its size */
@@ -263,7 +286,7 @@ typedef struct
   size_t   respIndSize;
 }locClientRespIndTableStructT;
 
-static locClientRespIndTableStructT locClientRespIndTable[]= {
+static const locClientRespIndTableStructT locClientRespIndTable[]= {
 
   // get service revision ind
   { QMI_LOC_GET_SERVICE_REVISION_IND_V02,
@@ -581,7 +604,38 @@ static locClientRespIndTableStructT locClientRespIndTable[]= {
      sizeof(qmiLocInjectTimeZoneInfoIndMsgT_v02)},
 
    { QMI_LOC_QUERY_AON_CONFIG_IND_V02,
-     sizeof(qmiLocQueryAonConfigIndMsgT_v02)}
+     sizeof(qmiLocQueryAonConfigIndMsgT_v02)},
+
+    // for GTP
+   { QMI_LOC_GTP_AP_STATUS_IND_V02,
+     sizeof(qmiLocGtpApStatusIndMsgT_v02) },
+
+    // for GDT
+   { QMI_LOC_GDT_DOWNLOAD_BEGIN_STATUS_IND_V02,
+     sizeof(qmiLocGdtDownloadBeginStatusIndMsgT_v02) },
+
+   { QMI_LOC_GDT_DOWNLOAD_READY_STATUS_IND_V02,
+    sizeof(qmiLocGdtDownloadReadyStatusIndMsgT_v02) },
+
+   { QMI_LOC_GDT_RECEIVE_DONE_STATUS_IND_V02,
+    sizeof(qmiLocGdtReceiveDoneStatusIndMsgT_v02) },
+
+   { QMI_LOC_GDT_DOWNLOAD_END_STATUS_IND_V02,
+     sizeof(qmiLocGdtDownloadEndStatusIndMsgT_v02) },
+
+   { QMI_LOC_GET_SUPPORTED_FEATURE_IND_V02,
+     sizeof(qmiLocGetSupportedFeatureIndMsgT_v02) },
+
+   //Delete Gnss Service Data Resp Ind
+   { QMI_LOC_DELETE_GNSS_SERVICE_DATA_IND_V02,
+     sizeof(qmiLocDeleteGNSSServiceDataIndMsgT_v02) },
+
+   // for XTRA Client 2.0
+   { QMI_LOC_INJECT_XTRA_DATA_IND_V02,
+     sizeof(qmiLocInjectXtraDataIndMsgT_v02) },
+
+   { QMI_LOC_INJECT_XTRA_PCID_IND_V02,
+     sizeof(qmiLocInjectXtraPcidIndMsgT_v02) }
 };
 
 
@@ -663,7 +717,7 @@ static bool locClientGetSizeAndTypeByIndId (uint32_t indId, size_t *pIndSize,
         QMI_LOC service.
 */
 static void checkQmiMsgsSupported(
-  uint32_t*                reqIdArray,
+  const uint32_t*          reqIdArray,
   int                      reqIdArrayLength,
   qmiLocGetSupportMsgT_v02 *pResponse,
   uint64_t*                supportedMsg)
@@ -959,6 +1013,7 @@ static void locClientIndCb
               (locClientHandleType)pCallbackData,
               msg_id,
               respIndUnion,
+              indSize,
               pCallbackData->pClientCookie);
         }
       }
@@ -1445,6 +1500,61 @@ static bool validateRequest(
     case QMI_LOC_QUERY_AON_CONFIG_REQ_V02:
     {
         *pOutLen = sizeof(qmiLocQueryAonConfigReqMsgT_v02);
+        break;
+    }
+
+    case QMI_LOC_GTP_AP_STATUS_REQ_V02:
+    {
+        *pOutLen = sizeof(qmiLocGtpApStatusReqMsgT_v02);
+        break;
+    }
+
+    case QMI_LOC_GDT_DOWNLOAD_BEGIN_STATUS_REQ_V02:
+    {
+        *pOutLen = sizeof(qmiLocGdtDownloadBeginStatusReqMsgT_v02);
+        break;
+    }
+
+    case QMI_LOC_GDT_DOWNLOAD_READY_STATUS_REQ_V02:
+    {
+        *pOutLen = sizeof(qmiLocGdtDownloadReadyStatusReqMsgT_v02);
+        break;
+    }
+
+    case QMI_LOC_GDT_RECEIVE_DONE_STATUS_REQ_V02:
+    {
+        *pOutLen = sizeof(qmiLocGdtReceiveDoneStatusReqMsgT_v02);
+        break;
+    }
+
+    case QMI_LOC_GDT_DOWNLOAD_END_STATUS_REQ_V02:
+    {
+        *pOutLen = sizeof(qmiLocGdtDownloadEndStatusReqMsgT_v02);
+        break;
+    }
+
+    case QMI_LOC_GET_SUPPORTED_FEATURE_REQ_V02:
+    {
+        *pOutLen = sizeof(qmiLocGetSupportedFeatureReqMsgT_v02);
+        break;
+    }
+
+    case QMI_LOC_DELETE_GNSS_SERVICE_DATA_REQ_V02:
+    {
+      *pOutLen = sizeof(qmiLocDeleteGNSSServiceDataReqMsgT_v02);
+      break;
+    }
+
+    // XTRA Client 2.0
+    case QMI_LOC_INJECT_XTRA_DATA_REQ_V02:
+    {
+        *pOutLen = sizeof(qmiLocInjectXtraDataReqMsgT_v02);
+        break;
+    }
+
+    case QMI_LOC_INJECT_XTRA_PCID_REQ_V02:
+    {
+        *pOutLen = sizeof(qmiLocInjectXtraPcidReqMsgT_v02);
         break;
     }
 
@@ -2034,9 +2144,16 @@ locClientStatusEnumType locClientSupportMsgCheck(
   */
   static uint64_t supportedMsgChecked = 0;
 
+  // Validate input arguments
+  if(msgArray == NULL || supportedMsg == NULL) {
+
+    LOC_LOGE("%s:%d]: Input argument/s NULL", __func__, __LINE__);
+    return eLOC_CLIENT_FAILURE_INVALID_PARAMETER;
+  }
+
   if (isCheckedAlready) {
     // already checked modem
-    LOC_LOGV("%s:%d]: Already checked. The supportedMsgChecked is %lld\n",
+    LOC_LOGV("%s:%d]: Already checked. The supportedMsgChecked is %" PRId64 "\n",
              __func__, __LINE__, supportedMsgChecked);
     *supportedMsg = supportedMsgChecked;
     return eLOC_CLIENT_SUCCESS;
@@ -2096,7 +2213,7 @@ locClientStatusEnumType locClientSupportMsgCheck(
     // check every message listed in msgArray supported by modem or not
     checkQmiMsgsSupported(msgArray, msgArrayLength, &resp, &supportedMsgChecked);
 
-    LOC_LOGV("%s:%d]: supportedMsgChecked is %lld\n",
+    LOC_LOGV("%s:%d]: supportedMsgChecked is %" PRId64 "\n",
              __func__, __LINE__, supportedMsgChecked);
     *supportedMsg = supportedMsgChecked;
     isCheckedAlready = true;
@@ -2120,6 +2237,14 @@ locClientStatusEnumType locClientSupportMsgCheck(
 bool locClientGetSizeByRespIndId(uint32_t respIndId, size_t *pRespIndSize)
 {
   size_t idx = 0, respIndTableSize = 0;
+
+  // Validate input arguments
+  if(pRespIndSize == NULL)
+  {
+    LOC_LOGE("%s:%d]: size argument NULL !");
+    return false;
+  }
+
   respIndTableSize = (sizeof(locClientRespIndTable)/sizeof(locClientRespIndTableStructT));
   for(idx=0; idx<respIndTableSize; idx++ )
   {
@@ -2149,6 +2274,13 @@ bool locClientGetSizeByRespIndId(uint32_t respIndId, size_t *pRespIndSize)
 bool locClientGetSizeByEventIndId(uint32_t eventIndId, size_t *pEventIndSize)
 {
   size_t idx = 0, eventIndTableSize = 0;
+
+  // Validate input arguments
+  if(pEventIndSize == NULL)
+  {
+    LOC_LOGE("%s:%d]: size argument NULL !");
+    return false;
+  }
 
   // look in the event table
   eventIndTableSize =

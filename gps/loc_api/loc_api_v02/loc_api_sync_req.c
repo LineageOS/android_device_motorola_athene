@@ -1,4 +1,4 @@
-/* Copyright (c) 2011-2012, The Linux Foundation. All rights reserved.
+/* Copyright (c) 2011-2012, 2015-2016, The Linux Foundation. All rights reserved.
  *
  * Redistribution and use in source and binary forms, with or without
  * modification, are permitted provided that the following conditions are
@@ -157,7 +157,8 @@ SIDE EFFECTS
 void loc_sync_process_ind(
       locClientHandleType    client_handle, /* handle of the client */
       uint32_t               ind_id ,      /* ind id */
-      void                   *ind_payload_ptr /* payload              */
+      void                   *ind_payload_ptr, /* payload              */
+      uint32_t               ind_payload_size  /* payload size         */
 )
 {
 
@@ -188,22 +189,18 @@ void loc_sync_process_ind(
       if ( (loc_sync_array.slot_in_use[i]) && (slot->client_handle == client_handle)
             && (ind_id == slot->recv_ind_id) && (!slot->ind_has_arrived))
       {
-         // copy the payload to the slot waiting for this ind
-         size_t payload_size = 0;
-
          LOC_LOGV("%s:%d]: found slot %d selected for ind %u \n",
                        __func__, __LINE__, i, ind_id);
 
-         if(true == locClientGetSizeByRespIndId(ind_id, &payload_size) &&
-            NULL != slot->recv_ind_payload_ptr && NULL != ind_payload_ptr)
+         if( NULL != slot->recv_ind_payload_ptr &&
+                 NULL != ind_payload_ptr && ind_payload_size > 0 )
          {
-            LOC_LOGV("%s:%d]: copying ind payload size = %u \n",
-                          __func__, __LINE__, payload_size);
+            LOC_LOGV("%s:%d]: copying ind payload size = %zu \n",
+                          __func__, __LINE__, ind_payload_size);
 
-            memcpy(slot->recv_ind_payload_ptr, ind_payload_ptr, payload_size);
+            memcpy(slot->recv_ind_payload_ptr, ind_payload_ptr, ind_payload_size);
 
             consumed = true;
-
          }
          /* Received a callback while waiting, wake up thread to check it */
          if (slot->ind_is_waiting)
@@ -500,6 +497,7 @@ locClientStatusEnumType loc_sync_send_req
    locClientStatusEnumType status = eLOC_CLIENT_SUCCESS ;
    int select_id;
    int rc = 0;
+   int sendReqRetryRem = 5; // Number of retries remaining
 
    // Select the callback we are waiting for
    select_id = loc_sync_select_ind(client_handle, ind_id, req_id,
@@ -507,38 +505,48 @@ locClientStatusEnumType loc_sync_send_req
 
    if (select_id >= 0)
    {
-      status =  locClientSendReq (client_handle, req_id, req_payload);
-      LOC_LOGV("%s:%d]: select_id = %d,locClientSendReq returned %d\n",
-                    __func__, __LINE__, select_id, status);
+      // Loop to retry few times in case of failures
+      do
+      {
+         status =  locClientSendReq (client_handle, req_id, req_payload);
+         LOC_LOGV("%s:%d]: select_id = %d,locClientSendReq returned %d\n",
+                       __func__, __LINE__, select_id, status);
+
+         if (status == eLOC_CLIENT_SUCCESS )
+         {
+            // Wait for the indication callback
+            if (( rc = loc_sync_wait_for_ind( select_id,
+                                              timeout_msec / 1000,
+                                              ind_id) ) < 0)
+            {
+               if ( rc == -ETIMEDOUT)
+                  status = eLOC_CLIENT_FAILURE_TIMEOUT;
+               else
+                  status = eLOC_CLIENT_FAILURE_INTERNAL;
+
+               // Callback waiting failed
+               LOC_LOGE("%s:%d]: loc_api_wait_for_ind failed, err %d, "
+                        "select id %d, status %s", __func__, __LINE__, rc ,
+                        select_id, loc_get_v02_client_status_name(status));
+            }
+            else
+            {
+               status =  eLOC_CLIENT_SUCCESS;
+               LOC_LOGV("%s:%d]: success (select id %d)\n",
+                             __func__, __LINE__, select_id);
+            }
+         }
+
+      } while(( status == eLOC_CLIENT_FAILURE_ENGINE_BUSY ||
+                    status == eLOC_CLIENT_FAILURE_PHONE_OFFLINE ||
+                    status == eLOC_CLIENT_FAILURE_INTERNAL ) &&
+                sendReqRetryRem-- > 0);
 
       if (status != eLOC_CLIENT_SUCCESS )
       {
          loc_free_slot(select_id);
       }
-      else
-      {
-         // Wait for the indication callback
-         if (( rc = loc_sync_wait_for_ind( select_id,
-                                           timeout_msec / 1000,
-                                           ind_id) ) < 0)
-         {
-            if ( rc == -ETIMEDOUT)
-               status = eLOC_CLIENT_FAILURE_TIMEOUT;
-            else
-               status = eLOC_CLIENT_FAILURE_INTERNAL;
 
-            // Callback waiting failed
-            LOC_LOGE("%s:%d]: loc_api_wait_for_ind failed, err %d, "
-                     "select id %d, status %s", __func__, __LINE__, rc ,
-                     select_id, loc_get_v02_client_status_name(status));
-         }
-         else
-         {
-            status =  eLOC_CLIENT_SUCCESS;
-            LOC_LOGV("%s:%d]: success (select id %d)\n",
-                          __func__, __LINE__, select_id);
-         }
-      }
    } /* select id */
 
    return status;
