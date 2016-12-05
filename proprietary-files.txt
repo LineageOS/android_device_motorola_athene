@@ -72,7 +72,6 @@ bin/sensors.qcom
 bin/irsc_util
 bin/rmt_storage
 
-etc/flp.conf
 etc/acdbdata/General_cal.acdb
 etc/acdbdata/Global_cal.acdb
 etc/acdbdata/Headset_cal.acdb
@@ -81,7 +80,6 @@ etc/acdbdata/Speaker_cal.acdb
 etc/acdbdata/Bluetooth_cal.acdb
 etc/acdbdata/Hdmi_cal.acdb
 etc/motorola/ecc_db/qcril_mot_ecc_common.db
-etc/sap.conf
 etc/permissions/com.motorola.frameworks.core.addon.xml
 etc/permissions/qti_permissions.xml
 etc/permissions/qcrilhook.xml
@@ -112,7 +110,6 @@ etc/cne/wqeclient/VZW/VZW_profile2.xml
 etc/cne/wqeclient/VZW/VZW_profile4.xml
 etc/cne/wqeclient/VZW/VZW_profile6.xml
 etc/cne/wqeclient/VZW/VZW_profile3.xml
-etc/gps.conf
 etc/firmware/emmc_ffu_15_RC1BMB.fw
 etc/firmware/leia_pfp_470.fw
 etc/firmware/venus-v1.mbn
