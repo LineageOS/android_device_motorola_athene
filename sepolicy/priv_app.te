@@ -1,0 +1,1 @@
+allow priv_app exfat:dir rw_dir_perms;
