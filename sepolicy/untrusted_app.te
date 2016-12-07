@@ -13,3 +13,4 @@ allow untrusted_app rootfs:dir read;
 allow untrusted_app block_device:dir { open read };
 allow untrusted_app device:dir open;
 allow untrusted_app rootfs:dir open;
+allow untrusted_app sysfs:file { read open getattr };
