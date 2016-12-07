@@ -16,3 +16,4 @@ allow mmi-laser-sh rootfs:file { open read };
 allow mmi-laser-sh shell_exec:file getattr;
 allow mmi-laser-sh sysfs:file { getattr open };
 allow mmi-laser-sh toolbox_exec:file { execute execute_no_trans getattr open read };
+allow mmi-laser-sh rootfs:lnk_file getattr;

@@ -19,3 +19,4 @@ allow oem-hw-sh shell_exec:file getattr;
 allow oem-hw-sh system_file:file execute_no_trans;
 allow oem-hw-sh toolbox_exec:file { execute execute_no_trans getattr open read };
 allow oem-hw-sh rootfs:file open;
+allow oem-hw-sh rootfs:lnk_file getattr;
