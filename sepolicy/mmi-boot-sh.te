@@ -17,3 +17,4 @@ allow mmi-boot-sh proc:file { open read };
 allow mmi-boot-sh rootfs:file { open read };
 allow mmi-boot-sh shell_exec:file getattr;
 allow mmi-boot-sh toolbox_exec:file { execute execute_no_trans getattr open read };
+allow mmi-boot-sh rootfs:lnk_file getattr;
