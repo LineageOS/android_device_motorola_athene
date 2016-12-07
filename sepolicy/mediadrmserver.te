@@ -1,0 +1,3 @@
+allow mediadrmserver rootfs:lnk_file getattr;
+allow mediadrmserver firmware_file:dir search;
+allow mediadrmserver firmware_file:file { read open getattr };

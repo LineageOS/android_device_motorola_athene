@@ -14,3 +14,4 @@ allow fingerprintd sysfs_fpc:dir { open read search };
 allow fingerprintd sysfs_fpc:file { open read write };
 allow fingerprintd unlabeled:file { getattr open read };
 allow fingerprintd fpc_socket:sock_file unlink;
+allow fingerprintd fps_data_file:dir search;
