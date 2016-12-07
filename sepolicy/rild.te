@@ -7,3 +7,4 @@ allow rild fsg_file:dir { read open };
 allow rild system_server:unix_stream_socket { read write };
 allow rild sensorservice_service:service_manager find;
 allow rild unlabeled:dir { getattr open read };
+allow rild persist_file:dir search;
