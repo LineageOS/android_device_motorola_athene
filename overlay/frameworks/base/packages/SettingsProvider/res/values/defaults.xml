@@ -18,5 +18,6 @@
 -->
 <resources>
     <!-- Set the automatic brightness mode on by default -->
+    <bool name="def_bluetooth_on">false</bool>
     <bool name="def_screen_brightness_automatic_mode">true</bool>
 </resources>
