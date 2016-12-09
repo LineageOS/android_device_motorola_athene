@@ -81,6 +81,9 @@ persist.hwc.ptor.enable=true
 persist.mdpcomp_perfhint=50
 persist.metadata_dynfps.disable=true
 
+# Miracast broadcast screen
+persist.debug.wfd.enable=1
+
 # Data
 ro.use_data_netmgrd=true
 persist.data.netmgrd.qos.enable=true
