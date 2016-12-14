@@ -1,0 +1,38 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "5f681702_7f09912a",
+        "filename": "sepolicy/batt_health.te",
+        "patchSetId": 4
+      },
+      "lineNbr": 18,
+      "author": {
+        "id": 3671
+      },
+      "writtenOn": "2016-12-14T13:16:06Z",
+      "side": 1,
+      "message": "way too permissive",
+      "revId": "cec36ab2c2f9e78c63e6455a1e21372274c1f192",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "5f681702_5f0c953a",
+        "filename": "sepolicy/untrusted_app.te",
+        "patchSetId": 4
+      },
+      "lineNbr": 12,
+      "author": {
+        "id": 3671
+      },
+      "writtenOn": "2016-12-14T13:16:06Z",
+      "side": 1,
+      "message": "way too permissive",
+      "revId": "cec36ab2c2f9e78c63e6455a1e21372274c1f192",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    }
+  ]
+}
