@@ -13,14 +13,11 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-LOCAL_PATH := device/motorola/athene
+VENDOR_PATH := device/motorola/msm8952-common
 
 BOARD_VENDOR := motorola-qcom
 
-TARGET_SPECIFIC_HEADER_PATH := $(LOCAL_PATH)/include
-
-# Asserts
-TARGET_OTA_ASSERT_DEVICE := athene,athene_f,xt1621,xt1622,xt1625,xt1626,xt1640,xt1641,xt1642,xt1643,xt1644
+TARGET_SPECIFIC_HEADER_PATH := $(VENDOR_PATH)/include
 
 # Platform
 TARGET_BOARD_PLATFORM := msm8952
@@ -60,15 +57,12 @@ AUDIO_FEATURE_ENABLED_NEW_SAMPLE_RATE := true
 BOARD_USES_ALSA_AUDIO := true
 USE_CUSTOM_AUDIO_POLICY := 1
 
-# Needed for VoLTE
-AUDIO_FEATURE_ENABLED_MULTI_VOICE_SESSIONS := true
-
 # RIL
 BOARD_PROVIDES_RILD := true
 BOARD_PROVIDES_LIBRIL := true
 
 # Bluetooth
-BOARD_BLUETOOTH_BDROID_BUILDCFG_INCLUDE_DIR := $(LOCAL_PATH)/bluetooth
+BOARD_BLUETOOTH_BDROID_BUILDCFG_INCLUDE_DIR := $(VENDOR_PATH)/bluetooth
 BOARD_HAVE_BLUETOOTH := true
 BOARD_HAVE_BLUETOOTH_QCOM := true
 BLUETOOTH_HCI_USE_MCT := true
@@ -79,7 +73,7 @@ USE_DEVICE_SPECIFIC_CAMERA := true
 # CMHW
 BOARD_USES_CYANOGEN_HARDWARE := true
 BOARD_HARDWARE_CLASS += \
-    $(LOCAL_PATH)/cmhw \
+    $(VENDOR_PATH)/cmhw \
     hardware/cyanogen/cmhw
 
 # Display
@@ -108,8 +102,8 @@ BOARD_USERDATAIMAGE_PARTITION_SIZE := 27258650624 # 26619776 * 1024 mmcblk0p48
 TARGET_QCOM_NO_FM_FIRMWARE := true
 
 # Init
-TARGET_INIT_VENDOR_LIB := libinit_athene
-TARGET_RECOVERY_DEVICE_MODULES := libinit_athene
+TARGET_INIT_VENDOR_LIB := libinit_msm8952
+TARGET_RECOVERY_DEVICE_MODULES := libinit_msm8952
 TARGET_UNIFIED_DEVICE := true
 
 # GPS
@@ -126,11 +120,8 @@ TARGET_POWERHAL_VARIANT := qcom
 # CPU
 ENABLE_CPUSETS := true
 
-# Lights
-TARGET_PROVIDES_LIBLIGHT := true
-
 # Properties
-TARGET_SYSTEM_PROP += device/motorola/athene/system.prop
+TARGET_SYSTEM_PROP += $(VENDOR_PATH)/system.prop
 
 # Crypto
 TARGET_HW_DISK_ENCRYPTION := true
@@ -151,13 +142,13 @@ USE_SENSOR_MULTI_HAL := true
 
 # Recovery
 BOARD_HAS_NO_SELECT_BUTTON := true
-TARGET_RECOVERY_FSTAB := $(LOCAL_PATH)/ramdisk/fstab.qcom
+TARGET_RECOVERY_FSTAB := $(VENDOR_PATH)/ramdisk/fstab.qcom
 TARGET_USERIMAGES_USE_EXT4 := true
 TARGET_USERIMAGES_USE_F2FS := true
 
 # SELinux
 include device/qcom/sepolicy/sepolicy.mk
-BOARD_SEPOLICY_DIRS += $(LOCAL_PATH)/sepolicy
+BOARD_SEPOLICY_DIRS += $(VENDOR_PATH)/sepolicy
 
 # Wifi
 BOARD_HAS_QCOM_WLAN := true
