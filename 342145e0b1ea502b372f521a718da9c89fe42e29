@@ -1,0 +1,72 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "5f681702_d476ccd8",
+        "filename": "sepolicy/audioserver.te",
+        "patchSetId": 7
+      },
+      "lineNbr": 1,
+      "author": {
+        "id": 3671
+      },
+      "writtenOn": "2016-12-14T12:47:11Z",
+      "side": 1,
+      "message": "I\u0027d leave out all these rootfs:lnk_file getattr rules. It\u0027ll be handled globally.",
+      "revId": "342145e0b1ea502b372f521a718da9c89fe42e29",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "5f681702_b47190e1",
+        "filename": "sepolicy/sensors.te",
+        "patchSetId": 7
+      },
+      "lineNbr": 3,
+      "author": {
+        "id": 3671
+      },
+      "writtenOn": "2016-12-14T12:47:11Z",
+      "side": 1,
+      "message": "this is overly permissive. add property contexts to the props it\u0027s trying to set",
+      "revId": "342145e0b1ea502b372f521a718da9c89fe42e29",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "5f681702_14816490",
+        "filename": "sepolicy/system_server.te",
+        "patchSetId": 7
+      },
+      "lineNbr": 2,
+      "author": {
+        "id": 3671
+      },
+      "writtenOn": "2016-12-14T12:47:11Z",
+      "side": 1,
+      "message": "way too permissive",
+      "revId": "342145e0b1ea502b372f521a718da9c89fe42e29",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "5f681702_544c7c9d",
+        "filename": "sepolicy/untrusted_app.te",
+        "patchSetId": 7
+      },
+      "lineNbr": 16,
+      "author": {
+        "id": 3671
+      },
+      "writtenOn": "2016-12-14T12:47:11Z",
+      "side": 1,
+      "message": "way too permissive",
+      "revId": "342145e0b1ea502b372f521a718da9c89fe42e29",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    }
+  ]
+}
