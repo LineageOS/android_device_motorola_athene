@@ -1,3 +1,2 @@
 allow thermal-engine self:capability sys_nice;
 allow thermal-engine device:chr_file ioctl;
-allow thermal-engine thermal_device:chr_file { read write open };
