@@ -16,6 +16,24 @@
       "revId": "e9199bc65299c38046b94fff90ab7f08be2cdcbc",
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "5f681702_116e9694",
+        "filename": "msm8952.mk",
+        "patchSetId": 1
+      },
+      "lineNbr": 106,
+      "author": {
+        "id": 15775
+      },
+      "writtenOn": "2016-12-14T09:14:50Z",
+      "side": 1,
+      "message": "It\u0027s revert here : https://review.cyanogenmod.org/#/c/177007/1/msm8952.mk (wrong commits order displayed)",
+      "parentUuid": "5f681702_d1737e7f",
+      "revId": "e9199bc65299c38046b94fff90ab7f08be2cdcbc",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
     }
   ]
 }
