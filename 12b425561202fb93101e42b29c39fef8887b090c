@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "5f681702_f429489b",
+        "filename": "cmactions/src/com/cyanogenmod/settings/device/CMActionsService.java",
+        "patchSetId": 4
+      },
+      "lineNbr": 86,
+      "author": {
+        "id": 3671
+      },
+      "writtenOn": "2016-12-14T12:59:00Z",
+      "side": 1,
+      "message": "This is in no way related to \"using preference fragments\"",
+      "revId": "12b425561202fb93101e42b29c39fef8887b090c",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    }
+  ]
+}
