@@ -58,13 +58,32 @@ void target_ram() {
         property_set("ro.hwui.text_small_cache_height", "1024");
         property_set("ro.hwui.text_large_cache_width", "2048");
         property_set("ro.hwui.text_large_cache_height", "1024");
-    } else {
+    } else if (ISMATCH(ram, "3GB")) {
         property_set("dalvik.vm.heapstartsize", "8m");
         property_set("dalvik.vm.heapgrowthlimit", "288m");
         property_set("dalvik.vm.heapsize", "768m");
         property_set("dalvik.vm.heaptargetutilization", "0.75");
         property_set("dalvik.vm.heapminfree", "512k");
         property_set("dalvik.vm.heapmaxfree", "8m");
+
+        property_set("ro.hwui.texture_cache_size", "72");
+        property_set("ro.hwui.layer_cache_size", "48");
+        property_set("ro.hwui.r_buffer_cache_size", "8");
+        property_set("ro.hwui.path_cache_size", "32");
+        property_set("ro.hwui.gradient_cache_size", "1");
+        property_set("ro.hwui.drop_shadow_cache_size", "6");
+        property_set("ro.hwui.texture_cache_flushrate", "0.4");
+        property_set("ro.hwui.text_small_cache_width", "1024");
+        property_set("ro.hwui.text_small_cache_height", "1024");
+        property_set("ro.hwui.text_large_cache_width", "2048");
+        property_set("ro.hwui.text_large_cache_height", "1024");
+    } else if (ISMATCH(ram, "4GB")) {
+        property_set("dalvik.vm.heapstartsize", "8m");
+        property_set("dalvik.vm.heapgrowthlimit", "384m");
+        property_set("dalvik.vm.heapsize", "1024m");
+        property_set("dalvik.vm.heaptargetutilization", "0.25");
+        property_set("dalvik.vm.heapminfree", "4m");
+        property_set("dalvik.vm.heapmaxfree", "16m");
 
         property_set("ro.hwui.texture_cache_size", "72");
         property_set("ro.hwui.layer_cache_size", "48");
@@ -92,12 +111,33 @@ void num_sims() {
 	}
 }
 
+void set_wifi_carrier(){
+    char carrier[PROP_VALUE_MAX];
+    property_get("ro.boot.carrier", carrier);
+
+    if (ISMATCH(carrier, "retbr") || ISMATCH(carrier, "timbr") || ISMATCH(carrier, "oibr") || ISMATCH(carrier, "amxbr") || ISMATCH(carrier, "niibr")) {
+        property_set("ro.wifi.brazil", "true");
+        return;
+    }
+
+    if (ISMATCH(carrier, "perar") || ISMATCH(carrier, "retar") || ISMATCH(carrier, "tefar") || ISMATCH(carrier, "amxar")) {
+        property_set("ro.wifi.argentina", "true");
+        return;
+    }
+
+    if (ISMATCH(carrier, "retin")) {
+        property_set("ro.wifi.india", "true");
+        return;
+    }
+
+    property_set("ro.wifi.default", "true");
+}
+
 void vendor_load_properties()
 {
     char platform[PROP_VALUE_MAX];
     char device_boot[PROP_VALUE_MAX];
     char sku[PROP_VALUE_MAX];
-    char carrier[PROP_VALUE_MAX];
     char device[PROP_VALUE_MAX];
     char devicename[PROP_VALUE_MAX];
     char radio[PROP_VALUE_MAX];
@@ -111,7 +151,6 @@ void vendor_load_properties()
     property_set("ro.hw.device", device_boot);
 	
     property_get("ro.boot.hardware.sku", sku);
-    property_get("ro.boot.carrier", carrier);
 	
     property_get("ro.boot.radio", radio);
     property_set("ro.hw.radio", radio);
@@ -120,20 +159,21 @@ void vendor_load_properties()
     property_set("ro.build.product", "athene");
     target_ram();
     num_sims();
+    set_wifi_carrier();
 
     if (ISMATCH(device_boot, "athene_13mp")) {
         /* Moto G4 (XT162x) */
         property_set("ro.product.device", "athene");
-        property_set("ro.build.description", "athene-user 6.0.1 MPJ24.139-63 64 release-keys");
-        property_set("ro.build.fingerprint", "motorola/athene/athene:6.0.1/MPJ24.139-63/64:user/release-keys");
-        property_set("ro.product.model", "Moto G4");	
+        property_set("ro.build.description", "athene-user 6.0.1 MPJ24.139-23.4 4 release-keys");
+        property_set("ro.build.fingerprint", "motorola/athene/athene:6.0.1/MPJ24.139-23.4/4:user/release-keys");
+        property_set("ro.product.model", "Moto G⁴");	
         property_set("ro.telephony.default_network", "10");
     } else {
         /* Moto G4 Plus (XT164x) */
         property_set("ro.product.device", "athene_f");
-        property_set("ro.build.description", "athene_f-user 6.0.1 MPJ24.139-63 64 release-keys");
-        property_set("ro.build.fingerprint", "motorola/athene_f/athene_f:6.0.1/MPJ24.139-63/64:user/release-keys");
-        property_set("ro.product.model", "Moto G4 Plus");
+        property_set("ro.build.description", "athene_f-user 6.0.1 MPJ24.139-23.4 4 release-keys");
+        property_set("ro.build.fingerprint", "motorola/athene_f/athene_f:6.0.1/MPJ24.139-23.4/4:user/release-keys");
+        property_set("ro.product.model", "Moto G⁴ Plus");
         property_set("ro.telephony.default_network", "10,10");
     }
 	
@@ -143,14 +183,7 @@ void vendor_load_properties()
 	}
 	
 	if (ISMATCH(sku, "XT1621") || ISMATCH(sku, "XT1622") || ISMATCH(sku, "XT1640") || ISMATCH(sku, "XT1642") || ISMATCH(sku, "XT1643")) {
-		
-                if (ISMATCH(radio, "India")) {
-                    property_set("ro.radio.imei.sv", "6");
-                    property_set("persist.radio.is_wps_enabled", "true");
-                }
-                else {
-                    property_set("ro.radio.imei.sv", "3");
-                }
+		property_set("ro.radio.imei.sv", "3");
 	}
 	
 	if (ISMATCH(sku, "XT1626") || ISMATCH(sku, "XT1641")) {
@@ -163,4 +196,3 @@ void vendor_load_properties()
     strlcpy(devicename, device, sizeof(devicename));
     INFO("Found sku id: %s setting build properties for %s device\n", sku, devicename);
 }
-

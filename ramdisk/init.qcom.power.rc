@@ -44,8 +44,8 @@ on enable-low-power
     write /sys/class/devfreq/qcom,cpubw.51/governor "bw_hwmon"
     write /sys/class/devfreq/qcom,cpubw.51/bw_hwmon/cpu_io_percent 20
     write /sys/class/devfreq/qcom,cpubw.51/bw_hwmon/guard_band_mbps 30
-    write /sys/class/devfreq/qcom,gpubw.39/governor "bw_hwmon"
-    write /sys/class/devfreq/qcom,gpubw.39/bw_hwmon/io_percent 40
+    write /sys/class/devfreq/qcom,gpubw.38/governor "bw_hwmon"
+    write /sys/class/devfreq/qcom,gpubw.38/bw_hwmon/io_percent 40
 
     # disable thermal & BCL core_control to update interactive gov settings
     write /sys/module/msm_thermal/core_control/enabled 0
@@ -75,10 +75,10 @@ on enable-low-power
     write /sys/devices/system/cpu/cpu4/cpufreq/interactive/timer_rate 20000
     write /sys/devices/system/cpu/cpu4/cpufreq/interactive/hispeed_freq 806400
     write /sys/devices/system/cpu/cpu4/cpufreq/interactive/io_is_busy 0
-    write /sys/devices/system/cpu/cpu4/cpufreq/interactive/target_loads "1 806400:90"
+    write /sys/devices/system/cpu/cpu4/cpufreq/interactive/target_loads "1 800000:90"
     write /sys/devices/system/cpu/cpu4/cpufreq/interactive/min_sample_time 40000
     write /sys/devices/system/cpu/cpu4/cpufreq/interactive/sampling_down_factor 40000
-    write /sys/devices/system/cpu/cpu4/cpufreq/scaling_min_freq 806400
+    write /sys/devices/system/cpu/cpu4/cpufreq/scaling_min_freq 800000
 
     # re-enable thermal & BCL core_control now
     write /sys/module/msm_thermal/core_control/enabled 1
@@ -95,10 +95,6 @@ on enable-low-power
     write /sys/devices/system/cpu/cpu5/online 1
     write /sys/devices/system/cpu/cpu6/online 1
     write /sys/devices/system/cpu/cpu7/online 1
-
-    # Disable L2 GDHS to improve CPU stability
-    write /sys/module/lpm_levels/system/pwr/pwr-l2-gdhs/idle_enabled "N"
-    write /sys/module/lpm_levels/system/perf/perf-l2-gdhs/idle_enabled "N"
 
     # Enable Low power modes
     write /sys/module/lpm_levels/parameters/sleep_disabled 0
@@ -120,13 +116,17 @@ on enable-low-power
     write /sys/module/cpu_boost/parameters/input_boost_ms 40
 
     # Enable core control
+    insmod /system/lib/modules/core_ctl.ko
     write /sys/devices/system/cpu/cpu0/core_ctl/min_cpus 0
     write /sys/devices/system/cpu/cpu0/core_ctl/max_cpus 4
-    write /sys/devices/system/cpu/cpu0/core_ctl/busy_up_thres 68
-    write /sys/devices/system/cpu/cpu0/core_ctl/busy_down_thres 40
+    write /sys/devices/system/cpu/cpu0/core_ctl/busy_up_thres 72
+    write /sys/devices/system/cpu/cpu0/core_ctl/busy_down_thres 28
     write /sys/devices/system/cpu/cpu0/core_ctl/offline_delay_ms 100
     write /sys/devices/system/cpu/cpu0/core_ctl/is_big_cluster 1
     write /sys/devices/system/cpu/cpu0/core_ctl/task_thres 4
+
+    # RPS
+    write /sys/class/net/rmnet_ipa0/queues/rx-0/rps_cpus "f0"
 
     # Enable dynamic clock gating
     write /sys/module/lpm_levels/lpm_workarounds/dynamic_clock_gating 1
@@ -144,6 +144,9 @@ on enable-low-power
 
     write /sys/module/process_reclaim/parameters/pressure_max 70
     write /sys/module/process_reclaim/parameters/swap_opt_eff 30
+
+    write /sys/module/lowmemorykiller/parameters/enable_adaptive_lmk 1
+    write /sys/module/lowmemorykiller/parameters/vmpressure_file_min 53059
 
     write /proc/sys/kernel/sched_boost 0
 

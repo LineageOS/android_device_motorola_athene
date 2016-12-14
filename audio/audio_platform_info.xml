@@ -59,10 +59,10 @@
 <pcm_ids>
 <usecase name="USECASE_AUDIO_PLAYBACK_LOW_LATENCY" type="out" id="12"/>
 <usecase name="USECASE_AUDIO_RECORD_LOW_LATENCY" type="in" id="12"/>
-<usecase name="USECASE_VOICEMMODE1_CALL" type="in" id="34"/>
-<usecase name="USECASE_VOICEMMODE1_CALL" type="out" id="34"/>
-<usecase name="USECASE_VOICEMMODE2_CALL" type="in" id="35"/>
-<usecase name="USECASE_VOICEMMODE2_CALL" type="out" id="35"/>
+<usecase name="USECASE_VOICE_CALL" type="in" id="34"/>
+<usecase name="USECASE_VOICE_CALL" type="out" id="34"/>
+<usecase name="USECASE_VOICE2_CALL" type="in" id="35"/>
+<usecase name="USECASE_VOICE2_CALL" type="out" id="35"/>
 <usecase name="USECASE_VOLTE_CALL" type="out" id="15"/>
 <usecase name="USECASE_VOWLAN_CALL" type="out" id="16"/>
 <usecase name="USECASE_AUDIO_DSM_FEEDBACK" type="in" id="54"/>

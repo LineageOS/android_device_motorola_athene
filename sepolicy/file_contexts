@@ -1,11 +1,11 @@
 # Binaries
+/system/bin/akmd09912                                       u:object_r:akmd09912_exec:s0
 /system/bin/batt_health                                     u:object_r:batt_health_exec:s0
 /system/bin/charge_only_mode                                u:object_r:charge_only_exec:s0
 /system/bin/dbvc_atvc_property_set                          u:object_r:atvc_exec:s0
 /system/bin/hardware_revisions.sh                           u:object_r:hw_revs_exec:s0
+/system/bin/stml0xx_wrapper.sh                              u:object_r:stml0xx_exec:s0
 /system/bin/thermal-engine                                  u:object_r:thermal-engine_exec:s0
-/system/bin/motosh                                  u:object_r:sensors_exec:s0
-/system/bin/stm.*               u:object_r:sensors_exec:s0
 
 # Camera
 /data/cam_socket[12]                                        u:object_r:camera_socket:s0
@@ -28,7 +28,6 @@
 /dev/block/bootdevice/by-name/persist                       u:object_r:persist_block_device:s0
 /dev/block/bootdevice/by-name/utags                         u:object_r:utags_block_device:s0
 /dev/block/bootdevice/by-name/utagsBackup                   u:object_r:utags_block_device:s0
-/dev/block/bootdevice/by-name/hw                            u:object_r:hw_block_device:s0
 
 # RIL
 /data/misc/cutback(/.*)?                                    u:object_r:cutback_data_file:s0
@@ -38,18 +37,9 @@
 /dev/radio(/.*)?                                            u:object_r:radio_data_file:s0
 
 # Sensors
+/dev/akm09912                                               u:object_r:sensors_device:s0
+/dev/akm09912_dev                                           u:object_r:sensors_device:s0
 /dev/stml0xx                                                u:object_r:sensors_device:s0
 /dev/stml0xx_as                                             u:object_r:sensors_device:s0
 /dev/stml0xx_ms                                             u:object_r:sensors_device:s0
-
-# Laser
-/dev/laser                                      u:object_r:laser_device:s0
-
-# Thermal
-/dev/mmi_sys_temp                u:object_r:thermal_device:s0
-
-# FingerPrint Cards (FPC) implementation-specific items
-/data/fpc(/.*)?    u:object_r:fpc_data_file:s0
-/data/fpc/socket   u:object_r:fpc_socket:s0
-/data/\.fps(/.*)?    u:object_r:fps_data_file:s0
-/sys/devices/soc.0/7af8000.spi/spi_master/spi7/spi7.0(/.*)?  u:object_r:sysfs_fpc:s0
+/data/misc/akmd/akmd_set.txt                                u:object_r:sensors_data_file:s0
