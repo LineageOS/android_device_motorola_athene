@@ -1,0 +1,38 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "5f681702_f454a823",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 5
+      },
+      "lineNbr": 7,
+      "author": {
+        "id": 3671
+      },
+      "writtenOn": "2016-12-14T12:52:53Z",
+      "side": 1,
+      "message": "be nice to know where this hal came from, will be handy when you try to update it later.",
+      "revId": "a5ab1c2ddd59d3ce0344cdced1da3d8ec5ea6680",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "5f681702_145a044e",
+        "filename": "proprietary-files.txt",
+        "patchSetId": 5
+      },
+      "lineNbr": 247,
+      "author": {
+        "id": 3671
+      },
+      "writtenOn": "2016-12-14T12:52:53Z",
+      "side": 1,
+      "message": "so...you\u0027re building the gps hal but still shipping gps blobs? are you sure this commit is working as expected?",
+      "revId": "a5ab1c2ddd59d3ce0344cdced1da3d8ec5ea6680",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    }
+  ]
+}
