@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "5f681702_943bb4e9",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 5
+      },
+      "lineNbr": 7,
+      "author": {
+        "id": 3671
+      },
+      "writtenOn": "2016-12-14T12:55:03Z",
+      "side": 1,
+      "message": "what branch are you syncing to? that would be pretty nice to know later when you try to update this",
+      "revId": "5c71bf10085c344de01c0af373bbbb3689c09890",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    }
+  ]
+}
