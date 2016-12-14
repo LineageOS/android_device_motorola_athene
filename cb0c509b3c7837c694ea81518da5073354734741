@@ -1,0 +1,38 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "5f681702_946d7406",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 9
+      },
+      "lineNbr": 7,
+      "author": {
+        "id": 3671
+      },
+      "writtenOn": "2016-12-14T12:45:09Z",
+      "side": 1,
+      "message": "being a bit more descriptive about what/why this is being changed would be ideal",
+      "revId": "cb0c509b3c7837c694ea81518da5073354734741",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "5f681702_3466202b",
+        "filename": "device.mk",
+        "patchSetId": 9
+      },
+      "lineNbr": 148,
+      "author": {
+        "id": 3671
+      },
+      "writtenOn": "2016-12-14T12:45:09Z",
+      "side": 1,
+      "message": "changes here seem like unecessay/unrelated whitespace changes",
+      "revId": "cb0c509b3c7837c694ea81518da5073354734741",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    }
+  ]
+}
