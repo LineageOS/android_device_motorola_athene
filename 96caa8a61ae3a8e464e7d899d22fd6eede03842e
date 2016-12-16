@@ -1,0 +1,96 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "5f681702_573ab997",
+        "filename": "init/init_athene.cpp",
+        "patchSetId": 8
+      },
+      "lineNbr": 104,
+      "author": {
+        "id": 11883
+      },
+      "writtenOn": "2016-12-16T13:06:27Z",
+      "side": 1,
+      "message": "Whitespaces",
+      "range": {
+        "startLine": 104,
+        "startChar": 9,
+        "endLine": 104,
+        "endChar": 11
+      },
+      "revId": "96caa8a61ae3a8e464e7d899d22fd6eede03842e",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "5f681702_9744511d",
+        "filename": "init/init_athene.cpp",
+        "patchSetId": 8
+      },
+      "lineNbr": 104,
+      "author": {
+        "id": 11883
+      },
+      "writtenOn": "2016-12-16T13:06:27Z",
+      "side": 1,
+      "message": "Code isn\u0027t aligned\nYou should use 4 spaces instead of 8",
+      "range": {
+        "startLine": 85,
+        "startChar": 0,
+        "endLine": 104,
+        "endChar": 9
+      },
+      "revId": "96caa8a61ae3a8e464e7d899d22fd6eede03842e",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "5f681702_7737f5b1",
+        "filename": "init/init_athene.cpp",
+        "patchSetId": 8
+      },
+      "lineNbr": 150,
+      "author": {
+        "id": 11883
+      },
+      "writtenOn": "2016-12-16T13:06:27Z",
+      "side": 1,
+      "message": "Whitespaces",
+      "range": {
+        "startLine": 150,
+        "startChar": 64,
+        "endLine": 150,
+        "endChar": 68
+      },
+      "revId": "96caa8a61ae3a8e464e7d899d22fd6eede03842e",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "5f681702_b7418d0e",
+        "filename": "init/init_athene.cpp",
+        "patchSetId": 8
+      },
+      "lineNbr": 165,
+      "author": {
+        "id": 11883
+      },
+      "writtenOn": "2016-12-16T13:06:27Z",
+      "side": 1,
+      "message": "Code isn\u0027t aligned",
+      "range": {
+        "startLine": 161,
+        "startChar": 0,
+        "endLine": 165,
+        "endChar": 9
+      },
+      "revId": "96caa8a61ae3a8e464e7d899d22fd6eede03842e",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    }
+  ]
+}
