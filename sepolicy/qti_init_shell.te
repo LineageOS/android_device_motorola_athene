@@ -11,3 +11,7 @@ allow qti_init_shell utags_block_device:blk_file { open read };
 
 # Needed by init.mmi.touch.sh
 allow qti_init_shell blkid_exec:lnk_file { read };
+
+#bluetooth
+allow qti_init_shell bluetooth_loader_exec:file r_file_perms;
+allow qti_init_shell hci_attach_dev:chr_file rw_file_perms;
