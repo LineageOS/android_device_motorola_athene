@@ -1,0 +1,165 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "5f681702_61de0a40",
+        "filename": "sepolicy/mmi-laser-sh.te",
+        "patchSetId": 6
+      },
+      "lineNbr": 9,
+      "author": {
+        "id": 14088
+      },
+      "writtenOn": "2016-12-18T11:00:23Z",
+      "side": 1,
+      "message": "line 7",
+      "range": {
+        "startLine": 9,
+        "startChar": 0,
+        "endLine": 9,
+        "endChar": 45
+      },
+      "revId": "342c6cbe4cb251585adb8f3908ec68d483a1ea93",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "5f681702_41e14efe",
+        "filename": "sepolicy/mmi-laser-sh.te",
+        "patchSetId": 6
+      },
+      "lineNbr": 12,
+      "author": {
+        "id": 14088
+      },
+      "writtenOn": "2016-12-18T11:00:23Z",
+      "side": 1,
+      "message": "line 10",
+      "range": {
+        "startLine": 12,
+        "startChar": 0,
+        "endLine": 12,
+        "endChar": 42
+      },
+      "revId": "342c6cbe4cb251585adb8f3908ec68d483a1ea93",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "5f681702_a1e78212",
+        "filename": "sepolicy/mmi-laser-sh.te",
+        "patchSetId": 6
+      },
+      "lineNbr": 14,
+      "author": {
+        "id": 14088
+      },
+      "writtenOn": "2016-12-18T11:00:23Z",
+      "side": 1,
+      "message": "line 10",
+      "range": {
+        "startLine": 14,
+        "startChar": 0,
+        "endLine": 14,
+        "endChar": 42
+      },
+      "revId": "342c6cbe4cb251585adb8f3908ec68d483a1ea93",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "5f681702_81e24600",
+        "filename": "sepolicy/oem-hw-sh.te",
+        "patchSetId": 6
+      },
+      "lineNbr": 8,
+      "author": {
+        "id": 14088
+      },
+      "writtenOn": "2016-12-18T11:00:23Z",
+      "side": 1,
+      "message": "line 7",
+      "range": {
+        "startLine": 8,
+        "startChar": 0,
+        "endLine": 8,
+        "endChar": 42
+      },
+      "revId": "342c6cbe4cb251585adb8f3908ec68d483a1ea93",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "5f681702_e1f17acf",
+        "filename": "sepolicy/oem-hw-sh.te",
+        "patchSetId": 6
+      },
+      "lineNbr": 11,
+      "author": {
+        "id": 14088
+      },
+      "writtenOn": "2016-12-18T11:00:23Z",
+      "side": 1,
+      "message": "line 10",
+      "range": {
+        "startLine": 11,
+        "startChar": 0,
+        "endLine": 11,
+        "endChar": 46
+      },
+      "revId": "342c6cbe4cb251585adb8f3908ec68d483a1ea93",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "5f681702_c1ec3ef5",
+        "filename": "sepolicy/oem-hw-sh.te",
+        "patchSetId": 6
+      },
+      "lineNbr": 18,
+      "author": {
+        "id": 14088
+      },
+      "writtenOn": "2016-12-18T11:00:23Z",
+      "side": 1,
+      "message": "line 6",
+      "range": {
+        "startLine": 18,
+        "startChar": 0,
+        "endLine": 18,
+        "endChar": 40
+      },
+      "revId": "342c6cbe4cb251585adb8f3908ec68d483a1ea93",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "5f681702_21bd32d8",
+        "filename": "sepolicy/toolbox.te",
+        "patchSetId": 6
+      },
+      "lineNbr": 5,
+      "author": {
+        "id": 14088
+      },
+      "writtenOn": "2016-12-18T11:00:23Z",
+      "side": 1,
+      "message": "line 1",
+      "range": {
+        "startLine": 5,
+        "startChar": 0,
+        "endLine": 5,
+        "endChar": 44
+      },
+      "revId": "342c6cbe4cb251585adb8f3908ec68d483a1ea93",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    }
+  ]
+}
