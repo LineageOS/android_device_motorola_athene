@@ -1,0 +1,38 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "5f681702_21ea520e",
+        "filename": "proprietary-files.txt",
+        "patchSetId": 1
+      },
+      "lineNbr": 17,
+      "author": {
+        "id": 15775
+      },
+      "writtenOn": "2016-12-18T10:29:39Z",
+      "side": 1,
+      "message": "It was already added on a previous commit",
+      "revId": "3eb1a6763ac960e8eb841488b2ac6093509f93e6",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "5f681702_a19822c0",
+        "filename": "proprietary-files.txt",
+        "patchSetId": 1
+      },
+      "lineNbr": 244,
+      "author": {
+        "id": 15775
+      },
+      "writtenOn": "2016-12-18T10:29:39Z",
+      "side": 1,
+      "message": "Those 3 libs are build from source, don\u0027t use prebuilt ones.",
+      "revId": "3eb1a6763ac960e8eb841488b2ac6093509f93e6",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    }
+  ]
+}
