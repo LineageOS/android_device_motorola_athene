@@ -1,0 +1,50 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "5f681702_39f3ac75",
+        "filename": "sepolicy/batt_health.te",
+        "patchSetId": 1
+      },
+      "lineNbr": 20,
+      "author": {
+        "id": 15775
+      },
+      "writtenOn": "2016-12-18T07:45:34Z",
+      "side": 1,
+      "message": "Duplicate lines",
+      "range": {
+        "startLine": 19,
+        "startChar": 0,
+        "endLine": 20,
+        "endChar": 43
+      },
+      "revId": "3e995439e59249a295af61b8a21ae4e6f47d1a36",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "5f681702_59f02868",
+        "filename": "sepolicy/wcnss_service.te",
+        "patchSetId": 1
+      },
+      "lineNbr": 2,
+      "author": {
+        "id": 15775
+      },
+      "writtenOn": "2016-12-18T07:45:34Z",
+      "side": 1,
+      "message": "Duplicate",
+      "range": {
+        "startLine": 2,
+        "startChar": 36,
+        "endLine": 2,
+        "endChar": 43
+      },
+      "revId": "3e995439e59249a295af61b8a21ae4e6f47d1a36",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    }
+  ]
+}
