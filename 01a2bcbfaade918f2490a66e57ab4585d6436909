@@ -1,0 +1,211 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "5f681702_e1921a9e",
+        "filename": "sepolicy/mmi-laser-sh.te",
+        "patchSetId": 2
+      },
+      "lineNbr": 15,
+      "author": {
+        "id": 14088
+      },
+      "writtenOn": "2016-12-18T10:31:47Z",
+      "side": 1,
+      "message": "move actions line 1",
+      "range": {
+        "startLine": 15,
+        "startChar": 0,
+        "endLine": 15,
+        "endChar": 44
+      },
+      "revId": "01a2bcbfaade918f2490a66e57ab4585d6436909",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "5f681702_c18d5e7c",
+        "filename": "sepolicy/mmi-laser-sh.te",
+        "patchSetId": 2
+      },
+      "lineNbr": 16,
+      "author": {
+        "id": 14088
+      },
+      "writtenOn": "2016-12-18T10:31:47Z",
+      "side": 1,
+      "message": "same to line 2",
+      "range": {
+        "startLine": 16,
+        "startChar": 0,
+        "endLine": 16,
+        "endChar": 43
+      },
+      "revId": "01a2bcbfaade918f2490a66e57ab4585d6436909",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "5f681702_01ed9624",
+        "filename": "sepolicy/mmi-laser-sh.te",
+        "patchSetId": 2
+      },
+      "lineNbr": 17,
+      "author": {
+        "id": 14088
+      },
+      "writtenOn": "2016-12-18T10:31:47Z",
+      "side": 1,
+      "message": "same to line 13",
+      "range": {
+        "startLine": 17,
+        "startChar": 1,
+        "endLine": 17,
+        "endChar": 47
+      },
+      "revId": "01a2bcbfaade918f2490a66e57ab4585d6436909",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "5f681702_c1b43e38",
+        "filename": "sepolicy/oem-hw-sh.te",
+        "patchSetId": 2
+      },
+      "lineNbr": 21,
+      "author": {
+        "id": 14088
+      },
+      "writtenOn": "2016-12-18T10:31:47Z",
+      "side": 1,
+      "message": "move open to line 16",
+      "range": {
+        "startLine": 21,
+        "startChar": 0,
+        "endLine": 21,
+        "endChar": 33
+      },
+      "revId": "01a2bcbfaade918f2490a66e57ab4585d6436909",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "5f681702_e1b97a2e",
+        "filename": "sepolicy/toolbox.te",
+        "patchSetId": 2
+      },
+      "lineNbr": 5,
+      "author": {
+        "id": 14088
+      },
+      "writtenOn": "2016-12-18T10:31:47Z",
+      "side": 1,
+      "message": "same",
+      "range": {
+        "startLine": 5,
+        "startChar": 0,
+        "endLine": 5,
+        "endChar": 34
+      },
+      "revId": "01a2bcbfaade918f2490a66e57ab4585d6436909",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "5f681702_81aa46cf",
+        "filename": "sepolicy/toolbox.te",
+        "patchSetId": 2
+      },
+      "lineNbr": 9,
+      "author": {
+        "id": 14088
+      },
+      "writtenOn": "2016-12-18T10:31:47Z",
+      "side": 1,
+      "message": "move action to line 1",
+      "range": {
+        "startLine": 9,
+        "startChar": 0,
+        "endLine": 9,
+        "endChar": 35
+      },
+      "revId": "01a2bcbfaade918f2490a66e57ab4585d6436909",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "5f681702_019f56b4",
+        "filename": "sepolicy/untrusted_app.te",
+        "patchSetId": 2
+      },
+      "lineNbr": 14,
+      "author": {
+        "id": 14088
+      },
+      "writtenOn": "2016-12-18T10:31:47Z",
+      "side": 1,
+      "message": "device:dir  already in line 7",
+      "range": {
+        "startLine": 14,
+        "startChar": 0,
+        "endLine": 14,
+        "endChar": 36
+      },
+      "revId": "01a2bcbfaade918f2490a66e57ab4585d6436909",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "5f681702_816526e4",
+        "filename": "sepolicy/untrusted_app.te",
+        "patchSetId": 2
+      },
+      "lineNbr": 15,
+      "author": {
+        "id": 14088
+      },
+      "writtenOn": "2016-12-18T10:31:47Z",
+      "side": 1,
+      "message": "rootfs:dir already in line 12",
+      "range": {
+        "startLine": 15,
+        "startChar": 0,
+        "endLine": 15,
+        "endChar": 36
+      },
+      "revId": "01a2bcbfaade918f2490a66e57ab4585d6436909",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "5f681702_41a94edd",
+        "filename": "sepolicy/wcnss_service.te",
+        "patchSetId": 2
+      },
+      "lineNbr": 3,
+      "author": {
+        "id": 14088
+      },
+      "writtenOn": "2016-12-18T10:31:47Z",
+      "side": 1,
+      "message": "move actions to line 2",
+      "range": {
+        "startLine": 3,
+        "startChar": 0,
+        "endLine": 3,
+        "endChar": 60
+      },
+      "revId": "01a2bcbfaade918f2490a66e57ab4585d6436909",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    }
+  ]
+}
