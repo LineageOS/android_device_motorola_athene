@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "5f681702_e1c05a7e",
+        "filename": "BoardConfig.mk",
+        "patchSetId": 1
+      },
+      "lineNbr": 106,
+      "author": {
+        "id": 14088
+      },
+      "writtenOn": "2016-12-18T10:34:23Z",
+      "side": 1,
+      "message": "creaete a follow up and remove the tabs",
+      "range": {
+        "startLine": 103,
+        "startChar": 0,
+        "endLine": 106,
+        "endChar": 71
+      },
+      "revId": "66adc2c8c30af85dbaccc42c91838ca1c0a85f8b",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    }
+  ]
+}
