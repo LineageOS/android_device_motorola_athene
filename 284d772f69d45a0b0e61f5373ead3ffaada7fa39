@@ -1,0 +1,96 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "5f681702_a1ddc271",
+        "filename": "sepolicy/fingerprintd.te",
+        "patchSetId": 3
+      },
+      "lineNbr": 8,
+      "author": {
+        "id": 14088
+      },
+      "writtenOn": "2016-12-18T10:31:47Z",
+      "side": 1,
+      "message": "duplicated",
+      "range": {
+        "startLine": 7,
+        "startChar": 0,
+        "endLine": 8,
+        "endChar": 76
+      },
+      "revId": "284d772f69d45a0b0e61f5373ead3ffaada7fa39",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "5f681702_81d8867f",
+        "filename": "sepolicy/fingerprintd.te",
+        "patchSetId": 3
+      },
+      "lineNbr": 11,
+      "author": {
+        "id": 14088
+      },
+      "writtenOn": "2016-12-18T10:31:47Z",
+      "side": 1,
+      "message": "duplicated line 9",
+      "range": {
+        "startLine": 11,
+        "startChar": 0,
+        "endLine": 11,
+        "endChar": 76
+      },
+      "revId": "284d772f69d45a0b0e61f5373ead3ffaada7fa39",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "5f681702_e1e7ba3f",
+        "filename": "sepolicy/fingerprintd.te",
+        "patchSetId": 3
+      },
+      "lineNbr": 12,
+      "author": {
+        "id": 14088
+      },
+      "writtenOn": "2016-12-18T10:31:47Z",
+      "side": 1,
+      "message": "see line 7",
+      "range": {
+        "startLine": 12,
+        "startChar": 0,
+        "endLine": 12,
+        "endChar": 46
+      },
+      "revId": "284d772f69d45a0b0e61f5373ead3ffaada7fa39",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "5f681702_41f78ef6",
+        "filename": "sepolicy/hw_revs.te",
+        "patchSetId": 3
+      },
+      "lineNbr": 14,
+      "author": {
+        "id": 14088
+      },
+      "writtenOn": "2016-12-18T10:31:47Z",
+      "side": 1,
+      "message": "move action to line 10",
+      "range": {
+        "startLine": 14,
+        "startChar": 0,
+        "endLine": 14,
+        "endChar": 33
+      },
+      "revId": "284d772f69d45a0b0e61f5373ead3ffaada7fa39",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    }
+  ]
+}
