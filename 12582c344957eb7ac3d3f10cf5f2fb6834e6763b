@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "5f681702_64ac58a0",
+        "filename": "system.prop",
+        "patchSetId": 1
+      },
+      "lineNbr": 85,
+      "author": {
+        "id": 15775
+      },
+      "writtenOn": "2016-12-18T14:26:04Z",
+      "side": 1,
+      "message": "May be better to use something like this : https://review.cyanogenmod.org/#/c/61246/1/overlay/frameworks/base/core/res/res/values/config.xml",
+      "revId": "12582c344957eb7ac3d3f10cf5f2fb6834e6763b",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    }
+  ]
+}
