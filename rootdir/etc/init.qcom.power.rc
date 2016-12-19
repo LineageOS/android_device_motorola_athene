@@ -144,7 +144,7 @@ on enable-low-power
     write /sys/module/msm_thermal/core_control/enabled 1
 
     # RPS
- -  write /sys/class/net/rmnet_ipa0/queues/rx-0/rps_cpus "f0"
+    write /sys/class/net/rmnet_ipa0/queues/rx-0/rps_cpus "f0"
 
     # Enable dynamic clock gating
     write /sys/module/lpm_levels/lpm_workarounds/dynamic_clock_gating 1
