@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "5f681702_15503032",
+        "filename": "cmactions/res/values/strings.xml",
+        "patchSetId": 1
+      },
+      "lineNbr": 22,
+      "author": {
+        "id": 7230
+      },
+      "writtenOn": "2016-12-19T16:28:50Z",
+      "side": 1,
+      "message": "These should be moved (read added) to android_packages_resources_devicesettings as well, else they\u0027ll never get translated.",
+      "range": {
+        "startLine": 19,
+        "startChar": 4,
+        "endLine": 22,
+        "endChar": 85
+      },
+      "revId": "692bd2a0534121df70cdc783aa3c5be186e56a11",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    }
+  ]
+}
