@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "5f681702_6a6edf01",
+        "filename": "sepolicy/kernel.te",
+        "patchSetId": 2
+      },
+      "lineNbr": 31,
+      "author": {
+        "id": 15775
+      },
+      "writtenOn": "2016-12-19T08:20:14Z",
+      "side": 1,
+      "message": "Duplicate one",
+      "revId": "204976cf51f01b9ce8fe8c63700d7bbbcb166c03",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    }
+  ]
+}
