@@ -1,0 +1,55 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "5f681702_b53cdcc8",
+        "filename": "sepolicy/file.te",
+        "patchSetId": 3
+      },
+      "lineNbr": 17,
+      "author": {
+        "id": 15775
+      },
+      "writtenOn": "2016-12-19T09:09:00Z",
+      "side": 1,
+      "message": "You can remove that comment",
+      "revId": "132d8b00c38ff416250bb60fb783ed287603c8e5",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "5f681702_953720e4",
+        "filename": "sepolicy/file_contexts",
+        "patchSetId": 3
+      },
+      "lineNbr": 14,
+      "author": {
+        "id": 15775
+      },
+      "writtenOn": "2016-12-19T09:09:00Z",
+      "side": 1,
+      "message": "Unwanted tabs",
+      "revId": "132d8b00c38ff416250bb60fb783ed287603c8e5",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "5f681702_d53198ee",
+        "filename": "sepolicy/untrusted_app.te",
+        "patchSetId": 3
+      },
+      "lineNbr": 13,
+      "author": {
+        "id": 15775
+      },
+      "writtenOn": "2016-12-19T09:09:00Z",
+      "side": 1,
+      "message": "I think we\u0027ll have to remove this one (whole file)",
+      "revId": "132d8b00c38ff416250bb60fb783ed287603c8e5",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    }
+  ]
+}
