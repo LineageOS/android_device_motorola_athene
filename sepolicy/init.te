@@ -1,26 +1,17 @@
 # Unsure what init is doing here
 allow init app_data_file:dir setattr;
+allow init block_device:blk_file write;
 allow init cid_block_device:blk_file setattr;
 allow init clogo_block_device:blk_file setattr;
-allow init hob_block_device:blk_file setattr;
-allow init logs_block_device:blk_file setattr;
-allow init utags_block_device:blk_file setattr;
-
 allow init firmware_file:dir mounton;
 allow init fsg_file:dir mounton;
+allow init hob_block_device:blk_file setattr;
+allow init logs_block_device:blk_file setattr;
+allow init property_socket:sock_file write;
 allow init pstorefs:dir mounton;
-
+allow init self:netlink_route_socket { bind create setopt };
+allow init self:tcp_socket { create ioctl };
+allow init sensors_device:chr_file { write ioctl };
 allow init socket_device:sock_file { create setattr };
 allow init thermal_device:chr_file ioctl;
-
-allow init property_socket:sock_file write;
-allow init sensors_device:chr_file { write ioctl };
-
-allow init self:netlink_route_socket create;
-allow init self:tcp_socket create;
-
-allow init block_device:blk_file write;
-allow init self:netlink_route_socket setopt;
-allow init self:tcp_socket ioctl;
-allow init utags_block_device:blk_file write;
-allow init self:netlink_route_socket bind;
+allow init utags_block_device:blk_file { setattr write };
