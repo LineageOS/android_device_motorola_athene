@@ -1,18 +1,16 @@
 allow mm-qcamerad debug_prop:property_service set;
+allow mm-qcamerad device:chr_file ioctl;
 allow mm-qcamerad init:unix_stream_socket connectto;
-allow mm-qcamerad property_socket:sock_file write;
+allow mm-qcamerad laser_device:chr_file { ioctl read write open };
 allow mm-qcamerad persist_file:dir search;
 allow mm-qcamerad persist_file:file r_file_perms;
+allow mm-qcamerad property_socket:sock_file write;
 allow mm-qcamerad qdsp_device:chr_file r_file_perms;
+allow mm-qcamerad shell_exec:file { read execute open execute_no_trans };
 allow mm-qcamerad sysfs:file write;
-allow mm-qcamerad system_data_file:dir w_dir_perms;
+allow mm-qcamerad system_data_file:dir { read w_dir_perms };
 allow mm-qcamerad system_data_file:file open;
 allow mm-qcamerad system_server:unix_stream_socket { read write };
-allow mm-qcamerad device:chr_file ioctl;
-allow mm-qcamerad shell_exec:file { read execute open execute_no_trans };
-allow mm-qcamerad system_data_file:dir read;
-allow mm-qcamerad laser_device:chr_file { read write open };
-allow mm-qcamerad laser_device:chr_file ioctl;
 
 allow servicemanager mm-qcamerad:dir search;
 allow servicemanager mm-qcamerad:file { open read };
