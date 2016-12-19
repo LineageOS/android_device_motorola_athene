@@ -1,6 +1,6 @@
 allow toolbox init:fifo_file { write getattr read ioctl };
+allow toolbox persist_file:dir search;
+allow toolbox persist_file:file getattr;
+allow toolbox property_socket:sock_file write;
 allow toolbox self:capability chown;
 allow toolbox sysfs:file setattr;
-allow toolbox persist_file:dir search;
-allow toolbox property_socket:sock_file write;
-allow toolbox persist_file:file getattr;
