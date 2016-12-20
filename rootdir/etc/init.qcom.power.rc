@@ -16,7 +16,6 @@ on boot
     write /dev/cpuset/camera-daemon/cpus 4-7
 
 on enable-low-power
-
     write /proc/sys/kernel/sched_boost 1
 
     # HMP scheduler settings
@@ -103,7 +102,6 @@ on enable-low-power
     write /sys/devices/system/cpu/cpu1/online 1
     write /sys/devices/system/cpu/cpu2/online 1
     write /sys/devices/system/cpu/cpu3/online 1
-    write /sys/devices/system/cpu/cpu4/online 1
     write /sys/devices/system/cpu/cpu5/online 1
     write /sys/devices/system/cpu/cpu6/online 1
     write /sys/devices/system/cpu/cpu7/online 1
@@ -159,7 +157,6 @@ on enable-low-power
     write /sys/module/process_reclaim/parameters/enable_process_reclaim 1
     write /sys/module/process_reclaim/parameters/pressure_min 10
     write /sys/module/process_reclaim/parameters/per_swap_size 1024
-
     write /sys/module/process_reclaim/parameters/pressure_max 70
     write /sys/module/process_reclaim/parameters/swap_opt_eff 30
 
@@ -177,4 +174,5 @@ on property:init.svc.recovery=running
     trigger enable-low-power
 
 on property:dev.bootcomplete=1
+    write /sys/block/dm-0/queue/read_ahead_kb 512
     setprop sys.io.scheduler "bfq"
