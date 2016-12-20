@@ -29,9 +29,6 @@ import init.qcom.power.rc
 import init.mmi.usb.rc
 
 on early-init
-    # boot with max freq, will be reset in post_boot script
-    write /sys/devices/system/cpu/cpu0/cpufreq/scaling_min_freq 1209600
-
     mount debugfs debugfs /sys/kernel/debug
     chmod 0755 /sys/kernel/debug
 
@@ -48,6 +45,7 @@ on early-init
 
 on init
     start qfintverify
+
     # Set permissions for persist partition
     mkdir /persist 0771 system system
 
@@ -70,7 +68,7 @@ on init
     write /proc/sys/kernel/core_pattern "|/system/bin/coredump %e %p %t"
     write /proc/self/coredump_filter "0x7f"
 
-    #ESDFS
+    # ESDFS
     chown mot_esdfs root /proc/fs/esdfs/packages
 
     write /sys/module/qpnp_rtc/parameters/poweron_alarm 1
@@ -150,36 +148,13 @@ on boot
     #Create NETMGR daemon socket area
     mkdir /dev/socket/netmgr 0750 radio radio
 
-    setprop wifi.interface wlan0
-
-#   Define TCP buffer sizes for various networks
-#   ReadMin, ReadInitial, ReadMax, WriteMin, WriteInitial, WriteMax,
-    setprop net.tcp.buffersize.wifi    524288,2097152,4194304,262144,524288,1048576
-
-    setprop ro.telephony.call_ring.multiple false
-
     #Remove SUID bit for iproute2 ip tool
     chmod 0755 /system/bin/ip
 
     chmod 0444 /sys/devices/platform/msm_hsusb/gadget/usb_state
 
-#   Define TCP buffer sizes for various networks
-#   ReadMin, ReadInitial, ReadMax, WriteMin, WriteInitial, WriteMax,
-    setprop net.tcp.buffersize.default 4096,87380,524288,4096,16384,110208
-    setprop net.tcp.buffersize.lte     2097152,4194304,8388608,262144,524288,1048576
-    setprop net.tcp.buffersize.umts    4094,87380,110208,4096,16384,110208
-    setprop net.tcp.buffersize.hspa    4094,87380,1220608,4096,16384,1220608
-    setprop net.tcp.buffersize.hsupa   4094,87380,1220608,4096,16384,1220608
-    setprop net.tcp.buffersize.hsdpa   4094,87380,1220608,4096,16384,1220608
-    setprop net.tcp.buffersize.hspap   4094,87380,1220608,4096,16384,1220608
-    setprop net.tcp.buffersize.edge    4093,26280,35040,4096,16384,35040
-    setprop net.tcp.buffersize.gprs    4092,8760,11680,4096,8760,11680
-    setprop net.tcp.buffersize.evdo    4094,87380,524288,4096,16384,262144
-
-    setprop net.tcp.2g_init_rwnd 10
-
-#   Assign TCP buffer thresholds to be ceiling value of technology maximums
-#   Increased technology maximums should be reflected here.
+    # Assign TCP buffer thresholds to be ceiling value of technology maximums
+    # Increased technology maximums should be reflected here.
     write /proc/sys/net/core/rmem_max  8388608
     write /proc/sys/net/core/wmem_max  8388608
 
@@ -213,10 +188,6 @@ on boot
     # an ack packet comes out of order
     write /proc/sys/net/netfilter/nf_conntrack_tcp_be_liberal 1
 
-    # Set the console loglevel to < KERN_INFO
-    # Set the default message loglevel to KERN_INFO
-    write /proc/sys/kernel/printk "6 6 1 7"
-
     # Allow access for CCID command/response timeout configuration
     chown system system /sys/module/ccid_bridge/parameters/bulk_msg_timeout
 
@@ -245,9 +216,9 @@ on boot
     chown compass compass /dev/stml0xx_akm
     chmod 0660 /dev/stml0xx_akm
 
-    # restore default console_loglevel to KERN_DEBUG
-    # restore default_message_loglevel to KERN_WARNING
-    write /proc/sys/kernel/printk "7 4 1 7"
+    # Set the console loglevel to < KERN_INFO
+    # Set the default message loglevel to KERN_INFO
+    write /proc/sys/kernel/printk "6 6 1 7"
 
     # Change ownership and permission for vibrator
     chown system system /sys/class/timed_output/vibrator/enable
@@ -287,11 +258,6 @@ on boot
     # set permission for HBM feature
     chown system system /sys/class/graphics/fb0/hbm
 
-    # Assign TCP buffer thresholds to be ceiling value of technology maximums
-    # Increased technology maximums should be reflected here.
-    write /proc/sys/net/core/rmem_max  8388608
-    write /proc/sys/net/core/wmem_max  8388608
-
     # Quiet binder logs
     write /sys/module/binder/parameters/debug_mask 0x5
 
@@ -313,7 +279,6 @@ on boot
     write /sys/devices/soc.0/78b8000.i2c/i2c-4/4-0020/input/input0/fw_name PR1702898-s3528t_00260005_00380008.img
     write /sys/devices/soc.0/78b8000.i2c/i2c-4/4-0020/input/input0/update_fw 1
 
-    start rmt_storage
     # access permission for secure touch
     chmod 0660 /sys/devices/soc.0/78b7000.i2c/i2c-3/3-0020/input/input0/secure_touch_enable
     chmod 0440 /sys/devices/soc.0/78b7000.i2c/i2c-3/3-0020/input/input0/secure_touch
@@ -323,7 +288,6 @@ on boot
     chown system drmrpc /sys/devices/soc.0/78b7000.i2c/i2c-3/3-0020/input/input0/secure_touch
     chown system drmrpc /sys/devices/soc.0/78b8000.i2c/i2c-4/4-0020/input/input0/secure_touch_enable
     chown system drmrpc /sys/devices/soc.0/78b8000.i2c/i2c-4/4-0020/input/input0/secure_touch
-    write /proc/sys/kernel/sched_boost 1
 
 on fs
     wait /dev/block/bootdevice
@@ -383,7 +347,6 @@ on post-fs
     chmod 0600 /persist/whisper/whisper_only/vector0.bin
 
 on post-fs-data
-
     mkdir /data/tombstones 0771 system system
     mkdir /tombstones/modem 0771 system system
     mkdir /tombstones/lpass 0771 system system
@@ -437,6 +400,7 @@ on post-fs-data
     # We chown/chmod /persist again so because mount is run as root + defaults
     chown system system /persist
     chmod 0771 /persist
+
     chmod 0664 /sys/devices/platform/msm_sdcc.1/polling
     chmod 0664 /sys/devices/platform/msm_sdcc.2/polling
     chmod 0664 /sys/devices/platform/msm_sdcc.3/polling
@@ -628,11 +592,16 @@ on property:persist.sys.ssr.enable_ramdumps=0
     write /sys/module/subsystem_restart/parameters/enable_ramdumps 0
 
 on property:sys.boot_completed=1
-    write /dev/kmsg "Boot completed "
-    write /sys/block/dm-0/queue/read_ahead_kb 128
+    start batt_health
+    start emmc_ffu
+    start mbm_spy
+    start mmi-laser-sh
+    start qe
 
     # CPE fw_name used by sound trigger HAL
     chown media audio /sys/kernel/wcd_cpe0/fw_name
+
+    write /dev/kmsg "Boot completed "
 
 on property:persist.radio.atfwd.start=false
     stop atfwd
@@ -952,9 +921,6 @@ service mmi-laser-sh  /init.mmi.laser.sh
     oneshot
     disabled
 
-on property:sys.boot_completed=1
-    start mmi-laser-sh
-
 service mmi-touch-sh /system/bin/sh /init.mmi.touch.sh
     class core
     user root
@@ -997,9 +963,6 @@ service batt_health /system/bin/batt_health
     group mot_pwric cache net_admin log
     disabled
 
-on property:sys.boot_completed=1
-    start batt_health
-
 service charge_only_mode /system/bin/charge_only_mode
     user root
     group graphics system input
@@ -1024,9 +987,6 @@ service qe_broadcast /xbin/qe /system -b
 on property:persist.qe.trigger=1
     start qe_broadcast
 
-on property:sys.boot_completed=1
-    start qe
-
 on property:ro.bootmode=factory
     start ftmipcd
 
@@ -1043,9 +1003,6 @@ service mbm_spy /system/bin/mbm_spy
     oneshot
     disabled
 
-on property:sys.boot_completed=1
-    start mbm_spy
-
 on property:ro.secure=0
     # disable dmesg restrict for insecure builds
     write /proc/sys/kernel/dmesg_restrict 0
@@ -1055,7 +1012,6 @@ on property:ro.debuggable=1
     write /proc/sys/kernel/dmesg_restrict 0
     # enable group read/write to /dev/log/kernel
     chmod 0660 /dev/log/kernel
-    chmod 0664 /sys/devices/system/cpu/cpu0/cpufreq/scaling_max_freq
 
 service hw_revs /system/bin/hardware_revisions.sh
     class late_start
@@ -1083,9 +1039,6 @@ service emmc_ffu /system/bin/emmc_ffu.sh
     class core
     oneshot
     disabled
-
-on property:sys.boot_completed=1
-    start emmc_ffu
 
 on property:sys.wifi.tethering=true
     write /sys/class/net/wlan0/queues/rx-0/rps_cpus ${sys.usb.rps_mask}
@@ -1201,7 +1154,6 @@ on charger
     wait /dev/block/bootdevice/by-name/system
     mount ext4 /dev/block/bootdevice/by-name/system /system ro barrier=1
     load_all_props
-    setprop persist.sys.usb.config mass_storage
     setprop persist.sys.usb.config mass_storage
 
     trigger early-fs

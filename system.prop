@@ -65,6 +65,7 @@ persist.radio.custom_ecc=1
 mdc_initial_max_retry=10
 persist.radio.sar_sensor=1
 persist.radio.call.audio.output=0
+ro.telephony.call_ring.multiple=false
 
 # Display
 debug.sf.hw=1
@@ -94,8 +95,7 @@ persist.timed.enable=true
 ro.qualcomm.cabl=0
 
 # SDCard
-persist.fuse_sdcard=true
-persist.esdfs_sdcard=true
+ro.sys.sdcardfs=true
 
 # Audio
 af.fast_track_multiplier=1
@@ -242,15 +242,16 @@ persist.sys.ssr.restart_level=ALL_ENABLE
 # DRM
 drm.service.enabled=true
 
+# Wi-fi
+net.tcp.2g_init_rwnd=10
+wifi.interface=wlan0
+
 # Play Store
 ro.com.google.clientidbase=android-motorola
 ro.com.google.clientidbase.ms=android-motorola
 ro.com.google.clientidbase.am=android-motorola
 ro.com.google.clientidbase.gmm=android-motorola
 ro.com.google.clientidbase.yt=android-motorola
-
-# SDCard
-ro.sys.sdcardfs=true
 
 #Enable delay service restart
 ro.am.reschedule_service=true
