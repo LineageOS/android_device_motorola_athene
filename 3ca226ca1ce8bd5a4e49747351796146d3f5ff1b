@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "5f681702_5b82d750",
+        "filename": "system.prop",
+        "patchSetId": 1
+      },
+      "lineNbr": 98,
+      "author": {
+        "id": 12592
+      },
+      "writtenOn": "2016-12-20T04:45:47Z",
+      "side": 0,
+      "message": "I believe we can remove these now that we are using sdcardfs. Hopefully someone else can confirm/deny this.",
+      "range": {
+        "startLine": 97,
+        "startChar": 0,
+        "endLine": 98,
+        "endChar": 25
+      },
+      "revId": "3ca226ca1ce8bd5a4e49747351796146d3f5ff1b",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    }
+  ]
+}

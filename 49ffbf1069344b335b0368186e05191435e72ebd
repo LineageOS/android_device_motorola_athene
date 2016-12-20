@@ -1,0 +1,50 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "5f681702_bb984bc0",
+        "filename": "rootdir/etc/init.qcom.power.rc",
+        "patchSetId": 1
+      },
+      "lineNbr": 177,
+      "author": {
+        "id": 12592
+      },
+      "writtenOn": "2016-12-20T04:45:47Z",
+      "side": 1,
+      "message": "I did bump to 512, let me know if this is not preferred.",
+      "range": {
+        "startLine": 177,
+        "startChar": 46,
+        "endLine": 177,
+        "endChar": 49
+      },
+      "revId": "49ffbf1069344b335b0368186e05191435e72ebd",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "5f681702_9b93cfa3",
+        "filename": "rootdir/etc/init.qcom.rc",
+        "patchSetId": 1
+      },
+      "lineNbr": 604,
+      "author": {
+        "id": 12592
+      },
+      "writtenOn": "2016-12-20T04:45:47Z",
+      "side": 1,
+      "message": "This looks a little ugly, but less ugly than before?",
+      "range": {
+        "startLine": 600,
+        "startChar": 0,
+        "endLine": 604,
+        "endChar": 12
+      },
+      "revId": "49ffbf1069344b335b0368186e05191435e72ebd",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    }
+  ]
+}
