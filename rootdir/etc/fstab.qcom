@@ -5,7 +5,7 @@
 #TODO: Add 'check' as fs_mgr_flags with data partition.
 # Currently we dont have e2fsck compiled. So fs check would failed.
 
-#<src>                                      <mnt_point>         <type>  <mnt_flags and options>                                            <fs_mgr_flags>
+#<src>                                       <mnt_point>         <type>  <mnt_flags and options>                                            <fs_mgr_flags>
 /dev/block/bootdevice/by-name/system         /system             ext4    ro,barrier=1                                                       wait
 /dev/block/bootdevice/by-name/userdata       /data               f2fs    rw,nosuid,nodev,noatime,nodiratime,inline_xattr,inline_data        wait,check,formattable,encryptable=/dev/block/bootdevice/by-name/metadata
 /dev/block/bootdevice/by-name/userdata       /data               ext4    nosuid,nodev,barrier=1,noauto_da_alloc                             wait,check,formattable,encryptable=/dev/block/bootdevice/by-name/metadata
@@ -19,3 +19,4 @@
 
 /devices/soc.0/7864900.sdhci/mmc_host*       auto                auto    nosuid,nodev                                                       wait,voldmanaged=sdcard1:auto,encryptable=userdata
 /devices/platform/msm_hsusb*                 auto                auto    nosuid,nodev                                                       wait,voldmanaged=usb:auto
+/dev/block/zram0                             none                swap    defaults                                                           zramsize=536870912,zramstreams=4
