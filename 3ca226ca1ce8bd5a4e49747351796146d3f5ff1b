@@ -19,6 +19,41 @@
     },
     {
       "key": {
+        "uuid": "5f681702_b613425c",
+        "filename": "rootdir/etc/init.qcom.power.rc",
+        "patchSetId": 1
+      },
+      "lineNbr": 106,
+      "author": {
+        "id": 12592
+      },
+      "writtenOn": "2016-12-20T11:51:56Z",
+      "side": 0,
+      "message": "L84.",
+      "parentUuid": "5f681702_5b12d7b2",
+      "revId": "3ca226ca1ce8bd5a4e49747351796146d3f5ff1b",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "5f681702_960e0630",
+        "filename": "rootdir/etc/init.qcom.rc",
+        "patchSetId": 1
+      },
+      "lineNbr": 1204,
+      "author": {
+        "id": 12592
+      },
+      "writtenOn": "2016-12-20T11:51:56Z",
+      "side": 0,
+      "message": "Here\u0027s the duplicate removed line I was referencing. It was late and I could\u0027ve come up with a better way to word it. The line below is duplicated, probably copy pasted by accident.",
+      "revId": "3ca226ca1ce8bd5a4e49747351796146d3f5ff1b",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "5f681702_5b82d750",
         "filename": "system.prop",
         "patchSetId": 1

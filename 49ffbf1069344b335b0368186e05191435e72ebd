@@ -66,6 +66,24 @@
     },
     {
       "key": {
+        "uuid": "5f681702_560d8e35",
+        "filename": "rootdir/etc/init.qcom.rc",
+        "patchSetId": 1
+      },
+      "lineNbr": 78,
+      "author": {
+        "id": 12592
+      },
+      "writtenOn": "2016-12-20T11:51:56Z",
+      "side": 1,
+      "message": "If performance is already set, then this line:\n\nwrite /sys/devices/system/cpu/cpu0/cpufreq/scaling_min_freq 1209600\n\nIs unnecessary as performance locks at the max frequency. I will push another patchset removing this section.",
+      "parentUuid": "5f681702_bb284be2",
+      "revId": "49ffbf1069344b335b0368186e05191435e72ebd",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "5f681702_9b23cf05",
         "filename": "rootdir/etc/init.qcom.rc",
         "patchSetId": 1
@@ -77,6 +95,24 @@
       "writtenOn": "2016-12-20T07:21:19Z",
       "side": 1,
       "message": "Are you sure this is not OEM specific and all deices use same values ?",
+      "revId": "49ffbf1069344b335b0368186e05191435e72ebd",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "5f681702_760a4a21",
+        "filename": "rootdir/etc/init.qcom.rc",
+        "patchSetId": 1
+      },
+      "lineNbr": 162,
+      "author": {
+        "id": 12592
+      },
+      "writtenOn": "2016-12-20T11:51:56Z",
+      "side": 1,
+      "message": "We set them in our personal overlay! :D Check:\n\nhttps://github.com/CyanogenMod/android_device_motorola_athene/blob/cm-14.1/overlay/frameworks/base/core/res/res/values/config.xml#L153\n\nThe wifi buffer is set a few lines later",
+      "parentUuid": "5f681702_9b23cf05",
       "revId": "49ffbf1069344b335b0368186e05191435e72ebd",
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
       "unresolved": false
@@ -123,6 +159,24 @@
     },
     {
       "key": {
+        "uuid": "5f681702_fb08032d",
+        "filename": "system.prop",
+        "patchSetId": 1
+      },
+      "lineNbr": 68,
+      "author": {
+        "id": 12592
+      },
+      "writtenOn": "2016-12-20T11:51:56Z",
+      "side": 1,
+      "message": "It\u0027s set in L150 of init.qcom.rc",
+      "parentUuid": "5f681702_db4427ba",
+      "revId": "49ffbf1069344b335b0368186e05191435e72ebd",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "5f681702_1b185fd1",
         "filename": "system.prop",
         "patchSetId": 1
@@ -134,6 +188,24 @@
       "writtenOn": "2016-12-20T07:21:19Z",
       "side": 1,
       "message": "I don\u0027t think this is needed (both)",
+      "revId": "49ffbf1069344b335b0368186e05191435e72ebd",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "5f681702_3600d201",
+        "filename": "system.prop",
+        "patchSetId": 1
+      },
+      "lineNbr": 247,
+      "author": {
+        "id": 12592
+      },
+      "writtenOn": "2016-12-20T11:51:56Z",
+      "side": 1,
+      "message": "Both of these are set in init.qcom.rc as well. L179 and L53 respectively.",
+      "parentUuid": "5f681702_1b185fd1",
       "revId": "49ffbf1069344b335b0368186e05191435e72ebd",
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
       "unresolved": false
