@@ -25,6 +25,64 @@
     },
     {
       "key": {
+        "uuid": "5f681702_7b0fd388",
+        "filename": "rootdir/etc/init.qcom.power.rc",
+        "patchSetId": 1
+      },
+      "lineNbr": 177,
+      "author": {
+        "id": 15775
+      },
+      "writtenOn": "2016-12-20T07:21:19Z",
+      "side": 1,
+      "message": "It\u0027s ok",
+      "parentUuid": "5f681702_bb984bc0",
+      "range": {
+        "startLine": 177,
+        "startChar": 46,
+        "endLine": 177,
+        "endChar": 49
+      },
+      "revId": "49ffbf1069344b335b0368186e05191435e72ebd",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "5f681702_bb284be2",
+        "filename": "rootdir/etc/init.qcom.rc",
+        "patchSetId": 1
+      },
+      "lineNbr": 78,
+      "author": {
+        "id": 15775
+      },
+      "writtenOn": "2016-12-20T07:21:19Z",
+      "side": 1,
+      "message": "Performance is already the default governor, it then switches to interactive by the power part.",
+      "revId": "49ffbf1069344b335b0368186e05191435e72ebd",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "5f681702_9b23cf05",
+        "filename": "rootdir/etc/init.qcom.rc",
+        "patchSetId": 1
+      },
+      "lineNbr": 162,
+      "author": {
+        "id": 15775
+      },
+      "writtenOn": "2016-12-20T07:21:19Z",
+      "side": 1,
+      "message": "Are you sure this is not OEM specific and all deices use same values ?",
+      "revId": "49ffbf1069344b335b0368186e05191435e72ebd",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "5f681702_9b93cfa3",
         "filename": "rootdir/etc/init.qcom.rc",
         "patchSetId": 1
@@ -42,6 +100,40 @@
         "endLine": 604,
         "endChar": 12
       },
+      "revId": "49ffbf1069344b335b0368186e05191435e72ebd",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "5f681702_db4427ba",
+        "filename": "system.prop",
+        "patchSetId": 1
+      },
+      "lineNbr": 68,
+      "author": {
+        "id": 15775
+      },
+      "writtenOn": "2016-12-20T07:21:19Z",
+      "side": 1,
+      "message": "Why this one ?",
+      "revId": "49ffbf1069344b335b0368186e05191435e72ebd",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "5f681702_1b185fd1",
+        "filename": "system.prop",
+        "patchSetId": 1
+      },
+      "lineNbr": 247,
+      "author": {
+        "id": 15775
+      },
+      "writtenOn": "2016-12-20T07:21:19Z",
+      "side": 1,
+      "message": "I don\u0027t think this is needed (both)",
       "revId": "49ffbf1069344b335b0368186e05191435e72ebd",
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
       "unresolved": false
