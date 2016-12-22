@@ -1,4 +1,4 @@
 allow wcnss_service persist_file:dir search;
 allow wcnss_service sdcardfs:dir search;
 allow wcnss_service self:capability { dac_override net_raw chown fowner fsetid };
-allow wcnss_service wifi_data_file:dir { read setattr };
+allow wcnss_service wifi_data_file:dir { read setattr create };
