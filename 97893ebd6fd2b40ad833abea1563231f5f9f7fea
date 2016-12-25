@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "5f681702_e47692a4",
+        "filename": "cmactions/res/xml/gesture_panel.xml",
+        "patchSetId": 2
+      },
+      "lineNbr": 81,
+      "author": {
+        "id": 7880
+      },
+      "writtenOn": "2016-12-25T12:35:25Z",
+      "side": 1,
+      "message": "You need to update the names of these as well",
+      "range": {
+        "startLine": 80,
+        "startChar": 0,
+        "endLine": 81,
+        "endChar": 53
+      },
+      "revId": "97893ebd6fd2b40ad833abea1563231f5f9f7fea",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    }
+  ]
+}
