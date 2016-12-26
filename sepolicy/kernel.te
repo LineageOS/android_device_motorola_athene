@@ -15,7 +15,6 @@ allow kernel logd:process setsched;
 allow kernel mediacodec:process setsched;
 allow kernel mediaextractor:process setsched;
 allow kernel mm-qcamerad:process setsched;
-allow kernel msm_irqbalanced:process setsched;
 allow kernel netmgrd:process setsched;
 allow kernel perfd:process setsched;
 allow kernel perfprofd:process setsched;
