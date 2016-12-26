@@ -908,7 +908,6 @@ bin/hardware_revisions.sh
 bin/irsc_util
 bin/motobox
 bin/motosh
-bin/msm_irqbalance
 bin/tcmd
 bin/tcmdhelp
 bin/tftp_server
