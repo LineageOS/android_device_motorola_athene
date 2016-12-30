@@ -247,6 +247,8 @@ on boot
     chmod 0664 /sys/devices/w1_bus_master1/w1_master_search
 
     # Change the ownership of the charging LED interface
+    chown system system /sys/class/leds/charging/blink
+    chmod 0664 /sys/class/leds/charging/blink
     chown system system /sys/class/leds/charging/brightness
     chmod 0664 /sys/class/leds/charging/brightness
 
