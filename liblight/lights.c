@@ -25,18 +25,16 @@
 
 /******************************************************************************/
 
-#define LED_LIGHT_OFF 0
-#define LED_LIGHT_ON 255
-
 static pthread_once_t g_init = PTHREAD_ONCE_INIT;
 static pthread_mutex_t g_lock = PTHREAD_MUTEX_INITIALIZER;
 static struct light_state_t g_battery;
-
-char const*const CHARGING_LED_FILE
-        = "/sys/class/leds/charging/brightness";
+static struct light_state_t g_notification;
 
 char const*const LCD_FILE
         = "/sys/class/leds/lcd-backlight/brightness";
+
+char const*const LED_FILE
+        = "/sys/class/leds/charging/blink";
 
 /**
  * device methods
@@ -71,6 +69,28 @@ write_int(char const* path, int value)
 }
 
 static int
+write_str(char const* path, char *value)
+{
+    int fd;
+    static int already_warned = 0;
+
+    fd = open(path, O_RDWR);
+    if (fd >= 0) {
+        char buffer[PAGE_SIZE];
+        int bytes = sprintf(buffer, "%s\n", value);
+        int amt = write(fd, buffer, bytes);
+        close(fd);
+        return amt == -1 ? -errno : 0;
+    } else {
+        if (already_warned == 0) {
+            ALOGE("write_str failed to open %s\n", path);
+            already_warned = 1;
+        }
+        return -errno;
+    }
+}
+
+static int
 is_lit(struct light_state_t const* state)
 {
     return state->color & 0x00ffffff;
@@ -97,22 +117,21 @@ set_light_backlight(__attribute__((unused)) struct light_device_t* dev,
 }
 
 static int
-set_speaker_light_locked(struct light_state_t const* state)
-{
-    int brightness_level;
-
-    if (is_lit(state))
-        brightness_level = LED_LIGHT_ON;
-    else
-        brightness_level = LED_LIGHT_OFF;
-
-    return write_int(CHARGING_LED_FILE, brightness_level);
-}
-
-static int
 handle_speaker_battery_locked()
 {
-    return set_speaker_light_locked(&g_battery);
+    int err = 0;
+    //We want to see the notifications if there is any
+    if (is_lit(&g_notification)) {
+        //set blinking 1000ms ON and 500ms OFF as default
+        err = write_str(LED_FILE, "1000,500");
+    }else if (is_lit(&g_battery)) {
+        //Turn on the led
+        err = write_str(LED_FILE, "1000,0");
+    }else {
+        //Nothing to notify.turning led off
+        err = write_str(LED_FILE, "0,0");
+    }
+    return err;
 }
 
 static int
@@ -127,7 +146,17 @@ set_light_battery(__attribute__((unused)) struct light_device_t* dev,
     return err;
 }
 
-
+static int
+set_light_notifications(__attribute__((unused)) struct light_device_t* dev,
+        struct light_state_t const* state)
+{
+    int err = 0;
+    pthread_mutex_lock(&g_lock);
+    g_notification = *state;
+    err = handle_speaker_battery_locked();
+    pthread_mutex_unlock(&g_lock);
+    return err;
+}
 
 /** Close the lights device */
 static int
@@ -157,6 +186,8 @@ static int open_lights(const struct hw_module_t* module, char const* name,
         set_light = set_light_backlight;
     else if (0 == strcmp(LIGHT_ID_BATTERY, name))
         set_light = set_light_battery;
+    else if (0 == strcmp(LIGHT_ID_NOTIFICATIONS, name))
+        set_light = set_light_notifications;
     else
         return -EINVAL;
 
@@ -188,6 +219,6 @@ struct hw_module_t HAL_MODULE_INFO_SYM = {
     .version_minor = 0,
     .id = LIGHTS_HARDWARE_MODULE_ID,
     .name = "MSM8952 lights Module",
-    .author = "Google, Inc., dhacker29",
+    .author = "Google, Inc., dhacker29, Alberto97, rahulsnair",
     .methods = &lights_module_methods,
 };
