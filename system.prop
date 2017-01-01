@@ -47,7 +47,6 @@ persist.rcs.supported=0
 persist.rmnet.mux=enabled
 persist.eab.supported=0
 persist.vt.supported=0
-telephony.lteOnCdmaDevice=1
 persist.ims.volte=true
 persist.ims.vt=false
 persist.ims.vt.epdg=false
