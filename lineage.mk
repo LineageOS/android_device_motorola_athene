@@ -1,4 +1,5 @@
 # Copyright (C) 2015 The CyanogenMod Project
+#           (C) 2017 The LineageOS Project
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -24,7 +25,7 @@ TARGET_BOOTANIMATION_HALF_RES := true
 
 ## Device identifier. This must come after all inclusions
 PRODUCT_DEVICE := athene
-PRODUCT_NAME := cm_athene
+PRODUCT_NAME := lineage_athene
 PRODUCT_BRAND := Motorola
 PRODUCT_MANUFACTURER := Motorola
 PRODUCT_RELEASE_NAME := athene
