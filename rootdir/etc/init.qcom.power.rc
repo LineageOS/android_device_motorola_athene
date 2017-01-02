@@ -8,10 +8,10 @@ on boot
 
     # update foreground cpuset now that processors are up
     # reserve CPU 4 for the top app
-    write /dev/cpuset/foreground/cpus 0-6
+    write /dev/cpuset/foreground/cpus 0-3,5-7
     write /dev/cpuset/foreground/boost/cpus 0-3
-    write /dev/cpuset/background/cpus 4-6
-    write /dev/cpuset/system-background/cpus 4-6
+    write /dev/cpuset/background/cpus 4
+    write /dev/cpuset/system-background/cpus 5-7
     write /dev/cpuset/top-app/cpus 0-7
     write /dev/cpuset/camera-daemon/cpus 4-7
 
@@ -69,12 +69,12 @@ on enable-low-power
     # enable governor for perf cluster
     write /sys/devices/system/cpu/cpu0/online 1
     write /sys/devices/system/cpu/cpu0/cpufreq/scaling_governor "interactive"
-    write /sys/devices/system/cpu/cpu0/cpufreq/interactive/above_hispeed_delay "19000 1094400:39000"
-    write /sys/devices/system/cpu/cpu0/cpufreq/interactive/go_hispeed_load 85
+    write /sys/devices/system/cpu/cpu0/cpufreq/interactive/above_hispeed_delay "19000 1516800:39000"
+    write /sys/devices/system/cpu/cpu0/cpufreq/interactive/go_hispeed_load 98
     write /sys/devices/system/cpu/cpu0/cpufreq/interactive/timer_rate 20000
-    write /sys/devices/system/cpu/cpu0/cpufreq/interactive/hispeed_freq 1094400
+    write /sys/devices/system/cpu/cpu0/cpufreq/interactive/hispeed_freq 1516800
     write /sys/devices/system/cpu/cpu0/cpufreq/interactive/io_is_busy 0
-    write /sys/devices/system/cpu/cpu0/cpufreq/interactive/target_loads "1 960000:85 1094400:90 1344000:80"
+    write /sys/devices/system/cpu/cpu0/cpufreq/interactive/target_loads "1 960000:85 1094400:88 1344000:92 1440000:95 1516800:98"
     write /sys/devices/system/cpu/cpu0/cpufreq/interactive/min_sample_time 40000
     write /sys/devices/system/cpu/cpu0/cpufreq/interactive/sampling_down_factor 40000
     write /sys/devices/system/cpu/cpu0/cpufreq/scaling_min_freq 960000
@@ -85,14 +85,15 @@ on enable-low-power
     write /sys/devices/system/cpu/cpu4/cpufreq/interactive/above_hispeed_delay 39000
     write /sys/devices/system/cpu/cpu4/cpufreq/interactive/go_hispeed_load 90
     write /sys/devices/system/cpu/cpu4/cpufreq/interactive/timer_rate 20000
-    write /sys/devices/system/cpu/cpu4/cpufreq/interactive/hispeed_freq 806400
+    write /sys/devices/system/cpu/cpu4/cpufreq/interactive/hispeed_freq 1209600
     write /sys/devices/system/cpu/cpu4/cpufreq/interactive/io_is_busy 0
-    write /sys/devices/system/cpu/cpu4/cpufreq/interactive/target_loads "1 800000:90"
+    write /sys/devices/system/cpu/cpu4/cpufreq/interactive/target_loads "1 806400:70 998400:83 1094400:88 1209600:90"
     write /sys/devices/system/cpu/cpu4/cpufreq/interactive/min_sample_time 40000
     write /sys/devices/system/cpu/cpu4/cpufreq/interactive/sampling_down_factor 40000
-    write /sys/devices/system/cpu/cpu4/cpufreq/scaling_min_freq 800000
+    write /sys/devices/system/cpu/cpu4/cpufreq/scaling_min_freq 806400
 
     #BCL core_control now
+    write /sys/module/msm_thermal/core_control/enabled 1
     write /sys/devices/soc.0/qcom,bcl.57/mode "disable"
     write /sys/devices/soc.0/qcom,bcl.57/hotplug_mask 12
     write /sys/devices/soc.0/qcom,bcl.57/hotplug_soc_mask 15
@@ -102,6 +103,7 @@ on enable-low-power
     write /sys/devices/system/cpu/cpu1/online 1
     write /sys/devices/system/cpu/cpu2/online 1
     write /sys/devices/system/cpu/cpu3/online 1
+    write /sys/devices/system/cpu/cpu4/online 1
     write /sys/devices/system/cpu/cpu5/online 1
     write /sys/devices/system/cpu/cpu6/online 1
     write /sys/devices/system/cpu/cpu7/online 1
@@ -137,9 +139,6 @@ on enable-low-power
     write /sys/devices/system/cpu/cpu4/core_ctl/busy_down_thres 5
     write /sys/devices/system/cpu/cpu4/core_ctl/offline_delay_ms 5000
     write /sys/devices/system/cpu/cpu4/core_ctl/not_preferred 1
-
-    # Re-enable thermal
-    write /sys/module/msm_thermal/core_control/enabled 1
 
     # RPS
     write /sys/class/net/rmnet_ipa0/queues/rx-0/rps_cpus "f0"
