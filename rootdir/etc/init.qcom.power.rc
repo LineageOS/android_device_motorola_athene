@@ -7,17 +7,18 @@ on boot
     chmod 0664 /dev/cpuset/camera-daemon/tasks
 
     # update foreground cpuset now that processors are up
-    # reserve CPU 4 for the top app
+    # reserve CPU 7 for the top app
     write /dev/cpuset/foreground/cpus 0-6
     write /dev/cpuset/foreground/boost/cpus 0-3
     write /dev/cpuset/background/cpus 4-6
     write /dev/cpuset/system-background/cpus 4-6
-    write /dev/cpuset/top-app/cpus 0-7
+    write /dev/cpuset/top-app/cpus 7
     write /dev/cpuset/camera-daemon/cpus 4-7
 
-on enable-low-power
+    # Enable sched boost
     write /proc/sys/kernel/sched_boost 1
 
+on enable-low-power
     # HMP scheduler settings
     write /proc/sys/kernel/sched_window_stats_policy 3
     write /proc/sys/kernel/sched_ravg_hist_size 3
@@ -25,14 +26,14 @@ on enable-low-power
 
     # HMP Task packing settings
     write /proc/sys/kernel/sched_small_task 20
-    write /sys/devices/system/cpu/cpu0/sched_mostly_idle_load 30
-    write /sys/devices/system/cpu/cpu1/sched_mostly_idle_load 30
-    write /sys/devices/system/cpu/cpu2/sched_mostly_idle_load 30
-    write /sys/devices/system/cpu/cpu3/sched_mostly_idle_load 30
-    write /sys/devices/system/cpu/cpu4/sched_mostly_idle_load 30
-    write /sys/devices/system/cpu/cpu5/sched_mostly_idle_load 30
-    write /sys/devices/system/cpu/cpu6/sched_mostly_idle_load 30
-    write /sys/devices/system/cpu/cpu7/sched_mostly_idle_load 30
+    write /sys/devices/system/cpu/cpu0/sched_mostly_idle_load 29
+    write /sys/devices/system/cpu/cpu1/sched_mostly_idle_load 29
+    write /sys/devices/system/cpu/cpu2/sched_mostly_idle_load 29
+    write /sys/devices/system/cpu/cpu3/sched_mostly_idle_load 29
+    write /sys/devices/system/cpu/cpu4/sched_mostly_idle_load 29
+    write /sys/devices/system/cpu/cpu5/sched_mostly_idle_load 29
+    write /sys/devices/system/cpu/cpu6/sched_mostly_idle_load 29
+    write /sys/devices/system/cpu/cpu7/sched_mostly_idle_load 29
 
     write /sys/devices/system/cpu/cpu0/sched_mostly_idle_nr_run 3
     write /sys/devices/system/cpu/cpu1/sched_mostly_idle_nr_run 3
@@ -71,7 +72,7 @@ on enable-low-power
     write /sys/devices/system/cpu/cpu0/cpufreq/scaling_governor "interactive"
     write /sys/devices/system/cpu/cpu0/cpufreq/interactive/above_hispeed_delay "19000 1094400:39000"
     write /sys/devices/system/cpu/cpu0/cpufreq/interactive/go_hispeed_load 85
-    write /sys/devices/system/cpu/cpu0/cpufreq/interactive/timer_rate 20000
+    write /sys/devices/system/cpu/cpu0/cpufreq/interactive/timer_rate 50000
     write /sys/devices/system/cpu/cpu0/cpufreq/interactive/hispeed_freq 1094400
     write /sys/devices/system/cpu/cpu0/cpufreq/interactive/io_is_busy 0
     write /sys/devices/system/cpu/cpu0/cpufreq/interactive/target_loads "1 960000:85 1094400:90 1344000:80"
@@ -84,15 +85,16 @@ on enable-low-power
     write /sys/devices/system/cpu/cpu4/cpufreq/scaling_governor "interactive"
     write /sys/devices/system/cpu/cpu4/cpufreq/interactive/above_hispeed_delay 39000
     write /sys/devices/system/cpu/cpu4/cpufreq/interactive/go_hispeed_load 90
-    write /sys/devices/system/cpu/cpu4/cpufreq/interactive/timer_rate 20000
+    write /sys/devices/system/cpu/cpu4/cpufreq/interactive/timer_rate 50000
     write /sys/devices/system/cpu/cpu4/cpufreq/interactive/hispeed_freq 806400
     write /sys/devices/system/cpu/cpu4/cpufreq/interactive/io_is_busy 0
-    write /sys/devices/system/cpu/cpu4/cpufreq/interactive/target_loads "1 800000:90"
+    write /sys/devices/system/cpu/cpu4/cpufreq/interactive/target_loads "1 806400:90"
     write /sys/devices/system/cpu/cpu4/cpufreq/interactive/min_sample_time 40000
     write /sys/devices/system/cpu/cpu4/cpufreq/interactive/sampling_down_factor 40000
-    write /sys/devices/system/cpu/cpu4/cpufreq/scaling_min_freq 800000
+    write /sys/devices/system/cpu/cpu4/cpufreq/scaling_min_freq 806400
 
-    #BCL core_control now
+    # enable thermal & BCL core_control now
+    write /sys/module/msm_thermal/core_control/enabled 1
     write /sys/devices/soc.0/qcom,bcl.57/mode "disable"
     write /sys/devices/soc.0/qcom,bcl.57/hotplug_mask 12
     write /sys/devices/soc.0/qcom,bcl.57/hotplug_soc_mask 15
@@ -102,6 +104,7 @@ on enable-low-power
     write /sys/devices/system/cpu/cpu1/online 1
     write /sys/devices/system/cpu/cpu2/online 1
     write /sys/devices/system/cpu/cpu3/online 1
+    write /sys/devices/system/cpu/cpu4/online 1
     write /sys/devices/system/cpu/cpu5/online 1
     write /sys/devices/system/cpu/cpu6/online 1
     write /sys/devices/system/cpu/cpu7/online 1
@@ -132,9 +135,6 @@ on enable-low-power
     write /sys/devices/system/cpu/cpu0/core_ctl/busy_down_thres 40
     write /sys/devices/system/cpu/cpu0/core_ctl/offline_delay_ms 100
     write /sys/devices/system/cpu/cpu0/core_ctl/is_big_cluster 1
-
-    # Re-enable thermal
-    write /sys/module/msm_thermal/core_control/enabled 1
 
     # RPS
     write /sys/class/net/rmnet_ipa0/queues/rx-0/rps_cpus "f0"
