@@ -1,2 +1,5 @@
+allow sensors devpts:chr_file { read write };
 allow sensors init:unix_stream_socket connectto;
 allow sensors property_socket:sock_file write;
+allow sensors shell:fd use;
+allow sensors system_prop:property_service set;
