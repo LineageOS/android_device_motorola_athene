@@ -22,6 +22,52 @@
       "revId": "8d226414603715714e962c9a72a632b3a85f3f19",
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "fa3479d7_67d81054",
+        "filename": "rootdir/etc/init.qcom.power.rc",
+        "patchSetId": 6
+      },
+      "lineNbr": 26,
+      "author": {
+        "id": 15154
+      },
+      "writtenOn": "2017-01-04T16:01:27Z",
+      "side": 1,
+      "message": "this value is used in stock nougat",
+      "range": {
+        "startLine": 26,
+        "startChar": 62,
+        "endLine": 26,
+        "endChar": 64
+      },
+      "revId": "8d226414603715714e962c9a72a632b3a85f3f19",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "fa3479d7_47dd0c42",
+        "filename": "rootdir/etc/init.qcom.power.rc",
+        "patchSetId": 6
+      },
+      "lineNbr": 72,
+      "author": {
+        "id": 15154
+      },
+      "writtenOn": "2017-01-04T16:01:27Z",
+      "side": 1,
+      "message": "also from stock nougat",
+      "range": {
+        "startLine": 72,
+        "startChar": 70,
+        "endLine": 72,
+        "endChar": 75
+      },
+      "revId": "8d226414603715714e962c9a72a632b3a85f3f19",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
     }
   ]
 }
