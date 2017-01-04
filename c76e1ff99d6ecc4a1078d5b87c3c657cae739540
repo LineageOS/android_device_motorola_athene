@@ -22,6 +22,30 @@
       "revId": "c76e1ff99d6ecc4a1078d5b87c3c657cae739540",
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "fa3479d7_cc6123d5",
+        "filename": "rootdir/etc/init.qcom.power.rc",
+        "patchSetId": 3
+      },
+      "lineNbr": 139,
+      "author": {
+        "id": 7880
+      },
+      "writtenOn": "2017-01-04T07:19:20Z",
+      "side": 1,
+      "message": "The entire little cluster core_ctl configuration is useless.",
+      "parentUuid": "fa3479d7_4c6e53cb",
+      "range": {
+        "startLine": 138,
+        "startChar": 4,
+        "endLine": 139,
+        "endChar": 58
+      },
+      "revId": "c76e1ff99d6ecc4a1078d5b87c3c657cae739540",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
     }
   ]
 }
