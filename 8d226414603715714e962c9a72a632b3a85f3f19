@@ -68,6 +68,23 @@
       "revId": "8d226414603715714e962c9a72a632b3a85f3f19",
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "fa3479d7_87889423",
+        "filename": "rootdir/etc/init.qcom.power.rc",
+        "patchSetId": 6
+      },
+      "lineNbr": 94,
+      "author": {
+        "id": 15791
+      },
+      "writtenOn": "2017-01-04T17:18:22Z",
+      "side": 1,
+      "message": "You should keep the thermal comment",
+      "revId": "8d226414603715714e962c9a72a632b3a85f3f19",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
     }
   ]
 }
