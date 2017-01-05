@@ -22,6 +22,30 @@
       "revId": "7982b2d72a76a15171e5fdaa929db07f4f9ec8b2",
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "fa3479d7_4fcac2a2",
+        "filename": "device.mk",
+        "patchSetId": 1
+      },
+      "lineNbr": 172,
+      "author": {
+        "id": 16713
+      },
+      "writtenOn": "2017-01-05T12:21:05Z",
+      "side": 1,
+      "message": "oh wait tab :P",
+      "parentUuid": "fa3479d7_8fd0aa54",
+      "range": {
+        "startLine": 172,
+        "startChar": 0,
+        "endLine": 172,
+        "endChar": 2
+      },
+      "revId": "7982b2d72a76a15171e5fdaa929db07f4f9ec8b2",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
     }
   ]
 }
