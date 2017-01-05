@@ -162,10 +162,14 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     lights.msm8952
 
+# LiveDisplay native
+PRODUCT_PACKAGES += \
+    libjni_livedisplay
+
 # OEM
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/vhw.xml:system/etc/vhw.xml
-	 
+
 # Media
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/media_codecs.xml:system/etc/media_codecs.xml \
