@@ -792,6 +792,9 @@ vendor/lib/lib-rcsimssjni.so
 vendor/lib/libimsmedia_jni.so
 vendor/lib/libNimsWrap.so
 
+# IPA
+bin/ipacm-diag
+
 # Keystore
 vendor/lib/hw/keystore.msm8952.so
 
