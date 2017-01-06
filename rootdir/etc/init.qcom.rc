@@ -201,6 +201,7 @@ on boot
 
     # FPC home button permissions
     chown system system /sys/homebutton/enable
+    chown system system /sys/homebutton/enable_wakeup
 
     # STML0XX driver parameter permissions
     chown root mot_tcmd /sys/module/stml0xx/parameters/irq_disable
