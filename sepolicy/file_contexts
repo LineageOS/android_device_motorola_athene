@@ -12,6 +12,7 @@
 
 # CMActions
 /sys/homebutton/enable                                      u:object_r:sysfs_homebutton:s0
+/sys/homebutton/enable_wakeup                               u:object_r:sysfs_homebutton:s0
 
 # CMHW
 /sys/devices/virtual/timed_output/vibrator/vtg_level        u:object_r:vibeamp_sysfs:s0
