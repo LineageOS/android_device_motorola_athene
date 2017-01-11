@@ -34,7 +34,7 @@
     <bool name="doze_proximity_check_before_pulse_intent">true</bool>
 
     <!-- Doze: when to pulse after a buzzworthy notification arrives -->
-    <string name="doze_pulse_schedule" translatable="false">5s,15s,30s,60s</string>
+    <string name="doze_pulse_schedule" translatable="false">10s,30s,60s</string>
 
     <!-- Doze: pulse parameter - once faded in, how long does it stay visible? -->
     <integer name="doze_pulse_duration_visible">3000</integer>
