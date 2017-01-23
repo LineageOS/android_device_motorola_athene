@@ -1,0 +1,1 @@
+allow radio persist_file:dir rw_dir_perms;

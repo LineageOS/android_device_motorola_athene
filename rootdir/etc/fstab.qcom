@@ -12,7 +12,7 @@
 /dev/block/bootdevice/by-name/cache          /cache              ext4    rw,nosuid,nodev,noatime,barrier=1,data=ordered                     wait,check,formattable
 /dev/block/bootdevice/by-name/fsg            /fsg                ext4    ro,nosuid,nodev,barrier=0,context=u:object_r:fsg_file:s0           wait
 /dev/block/bootdevice/by-name/modem          /firmware           ext4    ro,nosuid,nodev,barrier=0,context=u:object_r:firmware_file:s0      wait
-/dev/block/bootdevice/by-name/persist        /persist            ext4    nosuid,nodev,barrier=1,noatime,noauto_da_alloc                     wait
+/dev/block/bootdevice/by-name/persist        /persist            ext4    nosuid,nodev,barrier=1,noatime,noauto_da_alloc,defcontext=u:object_r:persist_file:s0                     wait
 /dev/block/bootdevice/by-name/boot           /boot               emmc    defaults                                                           recoveryonly
 /dev/block/bootdevice/by-name/recovery       /recovery           emmc    defaults                                                           recoveryonly
 /dev/block/bootdevice/by-name/misc           /misc               emmc    defaults                                                           defaults

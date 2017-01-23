@@ -1,4 +1,5 @@
 allow qti_init_shell apk_data_file:file { write };
+allow qti_init_shell bluetooth_loader_exec:file { open read };
 allow qti_init_shell hw_revs_data_file:dir { write getattr setattr search read remove_name open add_name };
 allow qti_init_shell hw_revs_data_file:file { write getattr setattr create unlink open append };
 allow qti_init_shell hw_revs_exec:file r_file_perms;
