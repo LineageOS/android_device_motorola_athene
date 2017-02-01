@@ -144,7 +144,7 @@ camera.lowpower.record.enable=1
 camera.display.lmax=1280x720
 camera.display.umax=1920x1080
 persist.camera.HAL3.enabled=1
-camera.hal1.packagelist=com.skype.raider,com.google.android.talk
+camera.hal1.packagelist=com.skype.raider,com.google.android.talk,com.whatsapp,com.snapchat.android,com.instagram.android
 
 # CNE
 persist.cne.feature=1
