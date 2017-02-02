@@ -1,5 +1,6 @@
 /*
- * Copyright (C) 2015 The CyanogenMod Project
+ * Copyright (C) 2015-2016 The CyanogenMod Project
+ * Copyright (C) 2017 The LineageOS Project
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -34,7 +35,6 @@ import org.cyanogenmod.internal.util.FileUtils;
 import org.cyanogenmod.internal.util.ScreenType;
 
 public class TouchscreenGesturePreferenceFragment extends PreferenceFragment {
-    private static final String CATEGORY_AMBIENT_DISPLAY = "ambient_display_key";
     private SwitchPreference mFlipPref;
     private NotificationManager mNotificationManager;
     private boolean mFlipClick = false;
@@ -42,11 +42,6 @@ public class TouchscreenGesturePreferenceFragment extends PreferenceFragment {
     @Override
     public void onCreatePreferences(Bundle savedInstanceState, String rootKey) {
         addPreferencesFromResource(R.xml.gesture_panel);
-        PreferenceCategory ambientDisplayCat = (PreferenceCategory)
-                findPreference(CATEGORY_AMBIENT_DISPLAY);
-        if (ambientDisplayCat != null) {
-            ambientDisplayCat.setEnabled(CMActionsSettings.isDozeEnabled(getActivity().getContentResolver()));
-        }
         mNotificationManager = (NotificationManager) getActivity().getSystemService(Context.NOTIFICATION_SERVICE);
         mFlipPref = (SwitchPreference) findPreference("gesture_flip_to_mute");
         mFlipPref.setOnPreferenceClickListener(new Preference.OnPreferenceClickListener() {
