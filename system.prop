@@ -206,6 +206,8 @@ dalvik.vm.isa.arm.variant=cortex-a53
 ro.vendor.gt_library=libqti-gt.so
 ro.vendor.at_library=libqti-at.so
 sys.games.gt.prof=0
+ro.core_ctl_min_cpu=2
+ro.core_ctl_max_cpu=4
 ro.vendor.extension_library=libqti-perfd-client.so
 
 # Fingerprint
