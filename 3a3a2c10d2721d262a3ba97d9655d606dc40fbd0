@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "5a2585a7_22179453",
+        "filename": "rootdir/etc/init.qcom.power.rc",
+        "patchSetId": 1
+      },
+      "lineNbr": 155,
+      "author": {
+        "id": 15775
+      },
+      "writtenOn": "2017-02-12T08:09:52Z",
+      "side": 1,
+      "message": "I don\u0027t think this should be disable",
+      "revId": "3a3a2c10d2721d262a3ba97d9655d606dc40fbd0",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    }
+  ]
+}
