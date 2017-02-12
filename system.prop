@@ -182,6 +182,10 @@ vidc.enc.narrow.searchrange=1
 media.camera.ts.monotonic=1
 mm.enable.sec.smoothstreaming=false
 
+# Miracast
+persist.debug.wfd.enable=1
+persist.sys.wft.enable=0
+
 # GPS
 persist.mot.gps.conf.from.sim=true
 persist.mot.gps.smart_battery=1
