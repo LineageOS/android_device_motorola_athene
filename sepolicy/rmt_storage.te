@@ -6,4 +6,5 @@ allow rmt_storage fsg_file:lnk_file read;
 allow rmt_storage init:unix_stream_socket connectto;
 allow rmt_storage property_socket:sock_file write;
 allow rmt_storage rmtfs_prop:property_service set;
+allow rmt_storage self:capability net_raw;
 allow rmt_storage unlabeled:file { open read };
