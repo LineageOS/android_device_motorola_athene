@@ -236,6 +236,14 @@ PRODUCT_COPY_FILES += \
 # Stlport
 PRODUCT_PACKAGES += \
     libstlport
+    
+ # OMS MASQUERADE
+PRODUCT_PACKAGES += \
+   masquerade
+
+PRODUCT_PROPERTY_OVERRIDES := \
+    ro.substratum.verified=true   
+    
 
 # Thermal
 PRODUCT_COPY_FILES += \
