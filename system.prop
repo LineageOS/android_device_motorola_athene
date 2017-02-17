@@ -216,9 +216,6 @@ persist.qfp=false
 # DEX
 ro.sys.fw.dex2oat_thread_count=4
 
-# FRP
-ro.frp.pst=/dev/block/bootdevice/by-name/frp
-
 persist.dpm.feature=0
 
 # USB
