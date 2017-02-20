@@ -79,7 +79,7 @@ void vendor_load_properties()
         property_set("ro.build.description", "athene_f-user 7.0 NPJ25.93-14 16 release-keys");
         property_set("ro.build.fingerprint", "motorola/athene_f/athene_f:7.0/NPJ25.93-14/16:user/release-keys");
         property_set("ro.product.model", "Moto G4 Plus");
-        property_set("ro.telephony.default_network", "10,10");
+        property_set("ro.telephony.default_network", "10,0");
     }
 
     if (sku == "XT1625" || sku == "XT1644") {
@@ -89,7 +89,7 @@ void vendor_load_properties()
 
     if (sku == "XT1621" || sku == "XT1622" || sku == "XT1640" || sku == "XT1642" || sku == "XT1643") {
         if (radio == "India") {
-            property_set("ro.radio.imei.sv", "6");
+            property_set("ro.radio.imei.sv", "8");
             property_set("persist.radio.is_wps_enabled", "true");
         } else {
             property_set("ro.radio.imei.sv", "3");
@@ -130,8 +130,8 @@ static void target_ram(void) {
         property_set("ro.hwui.text_large_cache_height", "1024");
     } else {
         property_set("dalvik.vm.heapstartsize", "8m");
-        property_set("dalvik.vm.heapgrowthlimit", "288m");
-        property_set("dalvik.vm.heapsize", "768m");
+        property_set("dalvik.vm.heapgrowthlimit", "192m");
+        property_set("dalvik.vm.heapsize", "384m");
         property_set("dalvik.vm.heaptargetutilization", "0.75");
         property_set("dalvik.vm.heapminfree", "512k");
         property_set("dalvik.vm.heapmaxfree", "8m");
@@ -146,7 +146,7 @@ static void target_ram(void) {
         property_set("ro.hwui.text_small_cache_width", "1024");
         property_set("ro.hwui.text_small_cache_height", "1024");
         property_set("ro.hwui.text_large_cache_width", "2048");
-        property_set("ro.hwui.text_large_cache_height", "1024");
+        property_set("ro.hwui.text_large_cache_height", "2048");
     }
 }
 
