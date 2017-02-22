@@ -30,6 +30,7 @@ import init.mmi.usb.rc
 
 on early-init
     mount debugfs debugfs /sys/kernel/debug
+    chown system system /sys/kernel/debug
     chmod 0755 /sys/kernel/debug
 
     mkdir /firmware 0771 system system
