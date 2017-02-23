@@ -251,6 +251,10 @@ ro.am.reschedule_service=true
 # XLAT
 persist.net.doxlat=true
 
+# Miracast
+ persist.debug.wfd.enable=1
+ persist.sys.wft.enable=0
+
 #
 # ADDITIONAL_BUILD_PROPERTIES
 #
