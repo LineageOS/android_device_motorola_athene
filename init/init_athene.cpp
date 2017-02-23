@@ -82,10 +82,12 @@ void vendor_load_properties()
         property_set("ro.telephony.default_network", "10,0");
     }
 
-    if (sku == "XT1625" || sku == "XT1644") {
+   if (sku == "XT1625" || sku == "XT1644") {
+       property_set("net.tethering.noprovisioning", "true");
         property_set("persist.radio.is_wps_enabled", "true");
         property_set("ro.radio.imei.sv", "4");
-    }
+        property_set("tether_dun_required", "0");
+   }
 
     if (sku == "XT1621" || sku == "XT1622" || sku == "XT1640" || sku == "XT1642" || sku == "XT1643") {
         if (radio == "India") {
