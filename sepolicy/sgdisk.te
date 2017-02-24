@@ -1,0 +1,1 @@
+allow sgdisk userdata_block_device:blk_file read;
