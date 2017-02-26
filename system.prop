@@ -101,6 +101,7 @@ audio.offload.multiple.enabled=false
 audio.offload.pcm.16bit.enable=false
 audio.offload.pcm.24bit.enable=false
 audio.offload.video=false
+ro.audio.offload_wakelock=false
 persist.audio.calfile0=/etc/acdbdata/Bluetooth_cal.acdb
 persist.audio.calfile1=/etc/acdbdata/General_cal.acdb
 persist.audio.calfile2=/etc/acdbdata/Global_cal.acdb
