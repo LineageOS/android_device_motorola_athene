@@ -24,4 +24,10 @@
        3 = right side
   -->
   <integer name="config_fingerprintSensorLocation">1</integer>
+
+  <!-- Does the device allow updating the recovery. -->
+  <bool name="config_enableRecoveryUpdater">false</bool>
+
+  <!-- Enable Google move gestures. -->
+  <bool name="config_gesture_settings_enabled">true</bool>
 </resources>
