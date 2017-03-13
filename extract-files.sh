@@ -50,7 +50,7 @@ else
 fi
 
 # Initialize the helper
-setup_vendor "$DEVICE_COMMON" "$VENDOR" "$CM_ROOT" true
+setup_vendor "$DEVICE" "$VENDOR" "$CM_ROOT" true
 extract "$MY_DIR"/proprietary-files.txt "$SRC"
 
 if [ -s "$MY_DIR"/../$DEVICE/proprietary-files.txt ]; then
