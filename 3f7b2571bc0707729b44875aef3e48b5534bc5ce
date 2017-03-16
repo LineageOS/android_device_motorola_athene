@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "ba57610f_1e4bd22c",
+        "filename": "overlay/packages/apps/Settings/res/values/config.xml",
+        "patchSetId": 3
+      },
+      "lineNbr": 29,
+      "author": {
+        "id": 13648
+      },
+      "writtenOn": "2017-03-16T12:21:40Z",
+      "side": 1,
+      "message": "This still doesn\u0027t belong here...",
+      "range": {
+        "startLine": 28,
+        "startChar": 0,
+        "endLine": 29,
+        "endChar": 56
+      },
+      "revId": "3f7b2571bc0707729b44875aef3e48b5534bc5ce",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    }
+  ]
+}
