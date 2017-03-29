@@ -265,3 +265,8 @@ ro.config.alarm_alert=Oxygen.ogg
 ro.config.ringtone=Moto.ogg
 ro.config.notification_sound=Moto.ogg
 ro.cutoff_voltage_mv=3200
+
+ # Miracast
+ persist.debug.wfd.enable=1
+ persist.sys.wft.enable=0
+
