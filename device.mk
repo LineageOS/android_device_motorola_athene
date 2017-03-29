@@ -153,6 +153,12 @@ PRODUCT_COPY_FILES += \
 PRODUCT_PACKAGES += \
     keystore.msm8952
 
+# Enable Google Assistant
+PRODUCT_PROPERTY_OVERRIDES += \
+   ro.opa.eligible_device=true
+
+
+
 # Lights
 PRODUCT_PACKAGES += \
     lights.msm8952
