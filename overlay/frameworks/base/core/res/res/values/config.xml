@@ -324,6 +324,19 @@
           that can be set by the user. -->
     <integer name="config_screenBrightnessDoze">17</integer>
 
+    <!-- When the screen is turned on, the previous estimate of the ambient light level at the time
+         the screen was turned off is restored and is used to determine the initial screen
+         brightness.
+
+         If this flag is true, then the ambient light level estimate will be promptly recomputed
+         after the warm-up interface and the screen brightness will be adjusted immediately.
+
+         If this flag is false, then the ambient light level estimate will be adjusted more
+         gradually in the same manner that normally happens when the screen is on according to the
+         brightening or dimming debounce thresholds.  As a result, it may take somewhat longer to
+         adapt to the environment.  This mode may be better suited for watches. -->
+    <bool name="config_autoBrightnessResetAmbientLuxAfterWarmUp">false</bool>
+
     <!-- ComponentName of a dream to show whenever the system would otherwise have
          gone to sleep.  When the PowerManager is asked to go to sleep, it will instead
          try to start this dream if possible.  The dream should typically call startDozing()
