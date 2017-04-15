@@ -38,5 +38,8 @@
 
     <!-- Doze: pulse parameter - delay to wait for the screen to wake up after an intent -->
     <integer name="doze_pulse_delay_in_intent">0</integer>
+  
+    <!-- Control whether to show VoLTE icon in statusbar when ims is registered.-->
+    <bool name="config_showVolteIcon">true</bool>
 
 </resources>
