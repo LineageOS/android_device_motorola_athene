@@ -1,0 +1,50 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "1a486d77_ff5fb170",
+        "filename": "system.prop",
+        "patchSetId": 1
+      },
+      "lineNbr": 74,
+      "author": {
+        "id": 16713
+      },
+      "writtenOn": "2017-05-13T08:55:03Z",
+      "side": 1,
+      "message": "it is 480",
+      "range": {
+        "startLine": 74,
+        "startChar": 18,
+        "endLine": 74,
+        "endChar": 21
+      },
+      "revId": "de102c906a37175682abc572ab14f806399a8d92",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "1a486d77_3f666952",
+        "filename": "system.prop",
+        "patchSetId": 1
+      },
+      "lineNbr": 162,
+      "author": {
+        "id": 16713
+      },
+      "writtenOn": "2017-05-13T08:55:03Z",
+      "side": 1,
+      "message": "we are setting these based on variant. Check init/init_athene.cpp",
+      "range": {
+        "startLine": 151,
+        "startChar": 0,
+        "endLine": 162,
+        "endChar": 36
+      },
+      "revId": "de102c906a37175682abc572ab14f806399a8d92",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    }
+  ]
+}
