@@ -70,12 +70,8 @@ debug.mdpcomp.logs=0
 dev.pm.dyn_samplingrate=1
 persist.demo.hdmirotationlock=false
 debug.enable.sglscale=1
-ro.opengles.version=196610
-persist.hwc.enable_vds=1
+ro.opengles.version=196609
 ro.sf.lcd_density=480
-persist.hwc.ptor.enable=true
-persist.mdpcomp_perfhint=50
-persist.metadata_dynfps.disable=true
 
 # Data
 ro.use_data_netmgrd=true
@@ -154,6 +150,12 @@ persist.cne.logging.qxdm=0
 
 # HWUI
 ro.hwui.texture_cache_size=40
+
+# set max background services
+ro.config.max_starting_bg=8
+
+#Enable B service adj transition by default
+ro.sys.fw.bservice_enable=true
 
 # Media
 mm.enable.smoothstreaming=false
@@ -261,7 +263,4 @@ ro.mot.build.version.sdk_int=24
 ro.mot.build.product.increment=24
 ro.mot.build.version.release=24.24
 ro.mot.ignore_csim_appid=true
-ro.config.alarm_alert=Oxygen.ogg
-ro.config.ringtone=Moto.ogg
-ro.config.notification_sound=Moto.ogg
 ro.cutoff_voltage_mv=3200
