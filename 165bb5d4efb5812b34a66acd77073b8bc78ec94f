@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "1a486d77_42314e59",
+        "filename": "system.prop",
+        "patchSetId": 2
+      },
+      "lineNbr": 167,
+      "author": {
+        "id": 15775
+      },
+      "writtenOn": "2017-05-13T17:19:39Z",
+      "side": 1,
+      "message": "Are you sure this is actually used by lineage ?",
+      "range": {
+        "startLine": 154,
+        "startChar": 0,
+        "endLine": 167,
+        "endChar": 39
+      },
+      "revId": "165bb5d4efb5812b34a66acd77073b8bc78ec94f",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    }
+  ]
+}
