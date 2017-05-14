@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "1a486d77_48d16d56",
+        "filename": "BoardConfig.mk",
+        "patchSetId": 1
+      },
+      "lineNbr": 134,
+      "author": {
+        "id": 16713
+      },
+      "writtenOn": "2017-05-14T13:13:32Z",
+      "side": 1,
+      "message": "Michael , Applies to msm8952?",
+      "range": {
+        "startLine": 134,
+        "startChar": 0,
+        "endLine": 134,
+        "endChar": 26
+      },
+      "revId": "9a223838273f5e8942a3aae40e1f8d24ab438b5e",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    }
+  ]
+}
