@@ -101,10 +101,6 @@ PRODUCT_COPY_FILES +=  \
     $(LOCAL_PATH)/audio/surround_sound_3mic/surround_sound_rec_5.1.cfg:system/etc/surround_sound_3mic/surround_sound_rec_5.1.cfg \
     $(LOCAL_PATH)/audio/surround_sound_3mic/surround_sound_rec_AZ.cfg:system/etc/surround_sound_3mic/surround_sound_rec_AZ.cfg
 
-# Browser
-PRODUCT_PACKAGES += \
-    Gello
-
 # Camera
 PRODUCT_PACKAGES += \
     libbson \
