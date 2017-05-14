@@ -112,11 +112,11 @@ static void target_ram(void) {
     ram = property_get("ro.boot.ram");
 
     if (ram == "2GB") {
-        property_set("dalvik.vm.heapstartsize", "16m");
+        property_set("dalvik.vm.heapstartsize", "8m");
         property_set("dalvik.vm.heapgrowthlimit", "192m");
-        property_set("dalvik.vm.heapsize", "512m");
+        property_set("dalvik.vm.heapsize", "384m");
         property_set("dalvik.vm.heaptargetutilization", "0.75");
-        property_set("dalvik.vm.heapminfree", "2m");
+        property_set("dalvik.vm.heapminfree", "512k");
         property_set("dalvik.vm.heapmaxfree", "8m");
 
         property_set("ro.hwui.texture_cache_size", "72");
