@@ -254,9 +254,6 @@ on boot
     chown system system /sys/class/leds/charging/brightness
     chmod 0664 /sys/class/leds/charging/brightness
 
-    # Turn on LED on full battery
-    write /sys/class/leds/charging/trigger "battery-full"
-
     # Change permission for backlight
     chmod 0664 /sys/class/leds/lcd-backlight/brightness
 
