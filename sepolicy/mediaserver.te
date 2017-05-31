@@ -1,3 +1,7 @@
 allow mediaserver audiod:binder call;
 allow mediaserver audio_device:chr_file { ioctl open read write };
 allow mediaserver socket_device:sock_file write;
+
+allow mediaserver sensorservice_service:service_manager find;
+binder_call(mediaserver, servicemanager);
+binder_call(mediaserver, sensorservice_service);
