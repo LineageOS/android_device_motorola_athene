@@ -83,8 +83,7 @@ PRODUCT_PACKAGES += \
 # Audio
 PRODUCT_PACKAGES += \
     audio.primary.msm8952
-	
-	
+
 PRODUCT_COPY_FILES +=  \
     $(LOCAL_PATH)/audio/audio_effects.conf:system/vendor/etc/audio_effects.conf \
     $(LOCAL_PATH)/audio/audio_platform_info.xml:system/etc/audio_platform_info.xml \
@@ -129,6 +128,10 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     FMRadio \
     libfmjni
+
+# For android_filesystem_config.h
+PRODUCT_PACKAGES += \
+    fs_config_files
 
 # GPS
 PRODUCT_PACKAGES += \
