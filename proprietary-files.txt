@@ -1,5 +1,46 @@
 # Proprietary files for athene
 
+# Reversed from existing makefiles; needs resolving
+-vendor/app/colorservice/colorservice.apk
+-vendor/app/ims/ims.apk
+-vendor/app/imssettings/imssettings.apk
+-priv-app/AttPhoneExt/AttPhoneExt.apk
+-priv-app/CarrierServices/CarrierServices.apk
+-priv-app/CarrierSettingsExt/CarrierSettingsExt.apk
+-priv-app/ConnMO/ConnMO.apk
+-priv-app/CoreSettingsExt/CoreSettingsExt.apk
+-priv-app/DCMO/DCMO.apk
+-priv-app/DiagMon/DiagMon.apk
+-priv-app/DMService/DMService.apk
+-priv-app/atfwd/atfwd.apk
+-priv-app/SprintDM/SprintDM.apk
+-app/DMConfigUpdateLight/DMConfigUpdateLight.apk
+# bin/ipacm-diag
+bin/ATFWD-daemon
+bin/cnss_diag
+bin/msm_irqbalance
+etc/permissions/com.motorola.android.settings.shared.xml:system/etc/permissions/com.motorola.android.settings.shared.xml
+etc/permissions/com.motorola.camerabgproc_library.xml:system/etc/permissions/com.motorola.camerabgproc_library.xml
+etc/permissions/com.motorola.frameworks.core.addon.xml:system/etc/permissions/com.motorola.frameworks.core.addon.xml
+etc/permissions/com.motorola.hw.sensorhub.xml:system/etc/permissions/com.motorola.hw.sensorhub.xml
+etc/permissions/com.motorola.imager.access.xml:system/etc/permissions/com.motorola.imager.access.xml
+etc/permissions/com.motorola.imager.athene.xml:system/etc/permissions/com.motorola.imager.athene.xml
+etc/permissions/com.motorola.motosignature.xml:system/etc/permissions/com.motorola.motosignature.xml
+etc/permissions/com.motorola.slpc.xml:system/etc/permissions/com.motorola.slpc.xml
+framework/com.qti.snapdragon.sdk.display.jar
+framework/com.motorola.android.dropboxhelper.jar:system/framework/com.motorola.android.dropboxhelper.jar
+framework/com.motorola.android.settings.shared.jar:system/framework/com.motorola.android.settings.shared.jar
+framework/com.motorola.camerabgproc.jar:system/framework/com.motorola.camerabgproc.jar
+framework/com.motorola.frameworks.core.addon.jar:system/framework/com.motorola.frameworks.core.addon.jar
+framework/com.motorola.imager.athene.jar:system/framework/com.motorola.imager.athene.jar
+# framework/qti-telephony-common.jar
+# lib/hw/gps.default.so
+# lib/libloc_eng.so
+vendor/lib/libuiblur.so
+lib/libuiblur.so
+# vendor/lib/libloc_xtra.so
+
+
 # Actuator
 vendor/lib/libactuator_ad5816g.so
 vendor/lib/libactuator_ad5823.so
@@ -79,7 +120,7 @@ vendor/lib/libbtnv.so
 
 # Camera
 bin/mm-qcamera-daemon
-lib/hw/camera.msm8952.so
+lib/hw/camera.vendor.msm8952.so
 lib/libcamerabgproc-jni.so
 lib/libcamerabgprocservice.so
 lib/libmm-qcamera.so
@@ -676,7 +717,6 @@ framework/embmslibrary.jar
 framework/izat.xt.srv.jar
 framework/qmapbridge.jar
 framework/QPerformance.jar
-framework/qti-telephony-common.jar
 framework/rcsservice.jar
 framework/tcmclient.jar
 framework/tcmiface.jar
@@ -728,7 +768,6 @@ vendor/lib/libRSDriver_adreno.so
 vendor/lib/librs_adreno.so
 vendor/lib/librs_adreno_sha1.so
 vendor/lib/libscale.so
-vendor/lib/libuiblur.so
 
 # GPS
 bin/gpsone_daemon
@@ -737,10 +776,8 @@ etc/permissions/com.qualcomm.location.vzw_library.xml
 etc/permissions/com.qualcomm.location.xml
 framework/com.qti.location.sdk.jar
 framework/com.qualcomm.location.vzw_library.jar
-lib/hw/gps.default.so
 lib/libloc_api_v02.so
 lib/libloc_ds_api.so
-lib/libloc_eng.so
 vendor/lib/libalarmservice_jni.so
 vendor/lib/libasn1cper.so
 vendor/lib/libasn1crt.so
@@ -751,7 +788,6 @@ vendor/lib/libizat_core.so
 vendor/lib/liblocationservice.so
 vendor/lib/liblocationservice_glue.so
 vendor/lib/libloc_ext.so
-vendor/lib/libloc_xtra.so
 vendor/lib/liblowi_client.so
 vendor/lib/liblowi_wifihal.so
 vendor/lib/liblowi_wifihal_nl.so
@@ -794,7 +830,6 @@ vendor/lib/libimsmedia_jni.so
 vendor/lib/libNimsWrap.so
 
 # IPA
-bin/ipacm-diag
 
 # Keystore
 vendor/lib/hw/keystore.msm8952.so
