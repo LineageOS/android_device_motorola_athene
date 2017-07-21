@@ -20,6 +20,8 @@ set -e
 export DEVICE=athene
 export VENDOR=motorola
 
+INITIAL_COPYRIGHT_YEAR=2016
+
 # Load extractutils and do some sanity checks
 MY_DIR="${BASH_SOURCE%/*}"
 if [[ ! -d "$MY_DIR" ]]; then MY_DIR="$PWD"; fi
@@ -33,28 +35,15 @@ if [ ! -f "$HELPER" ]; then
 fi
 . "$HELPER"
 
-# Initialize the helper for common
-setup_vendor "$DEVICE_COMMON" "$VENDOR" "$CM_ROOT" "true"
+# Reinitialize the helper for device
+setup_vendor "$DEVICE" "$VENDOR" "$CM_ROOT"
 
 # Copyright headers and guards
-write_headers "athene"
+write_headers
 
-# The standard common blobs
-write_makefiles "$MY_DIR"/proprietary-files.txt
+# The standard device blobs
+write_makefiles "$MY_DIR"/../$DEVICE/proprietary-files.txt
 
 # We are done!
 write_footers
 
-if [ -s "$MY_DIR"/../$DEVICE/proprietary-files.txt ]; then
-    # Reinitialize the helper for device
-    setup_vendor "$DEVICE" "$VENDOR" "$CM_ROOT"
-
-    # Copyright headers and guards
-    write_headers
-
-    # The standard device blobs
-    write_makefiles "$MY_DIR"/../$DEVICE/proprietary-files.txt
-
-    # We are done!
-    write_footers
-fi
