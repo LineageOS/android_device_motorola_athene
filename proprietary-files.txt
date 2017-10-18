@@ -898,14 +898,11 @@ vendor/lib/libxtadapter.so
 vendor/lib/libxt_native.so
 
 # Moto
-bin/batt_health
 bin/charge_only_mode
 bin/cnd
-bin/dbvc_atvc_property_set
 bin/dun-server
 bin/ftmdaemon
 bin/ftmipcd
-bin/hardware_revisions.sh
 bin/irsc_util
 bin/motobox
 bin/motosh

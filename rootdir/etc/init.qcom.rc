@@ -339,7 +339,6 @@ on post-fs
     mkdir /persist/bt 0755 mot_tcmd bluetooth
     mkdir /persist/wmdrm 0775 mot_drm mot_drm
     mkdir /persist/security 02770 mot_tpapi mot_tpapi
-    mkdir /persist/batt_health 0755 mot_pwric mot_pwric
     mkdir /persist/mdm 0770 radio radio
 
     chown mot_tcmd mot_tcmd /persist/factory/fti
@@ -584,7 +583,6 @@ on property:persist.sys.ssr.enable_ramdumps=0
     write /sys/module/subsystem_restart/parameters/enable_ramdumps 0
 
 on property:sys.boot_completed=1
-    start batt_health
     start emmc_ffu
     start mbm_spy
     start mmi-laser-sh
@@ -943,12 +941,6 @@ on property:hw.touch.status="dead"
 on property:hw.touch.status="ready"
     # start touch-ready-sh
 
-service batt_health /system/bin/batt_health
-    class late_start
-    user mot_pwric
-    group mot_pwric cache net_admin log
-    disabled
-
 service charge_only_mode /system/bin/charge_only_mode
     user root
     group graphics system input
@@ -998,12 +990,6 @@ on property:ro.debuggable=1
     write /proc/sys/kernel/dmesg_restrict 0
     # enable group read/write to /dev/log/kernel
     chmod 0660 /dev/log/kernel
-
-service hw_revs /system/bin/hardware_revisions.sh
-    class late_start
-    user system
-    group system
-    oneshot
 
 service dropboxd /system/bin/dropboxd
     class late_start
@@ -1154,5 +1140,4 @@ on charger
 on moto-charger
     setprop ro.board.platform msm8952
     start charge_only_mode
-    start batt_health
     start thermal-com
