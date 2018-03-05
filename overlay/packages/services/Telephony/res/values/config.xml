@@ -20,7 +20,9 @@
          the com.android.internal.telephony.Phone interface (false). -->
     <bool name="send_mic_mute_to_AudioManager">true</bool>
 
-    <!-- Show enabled lte option for lte device -->
+     <!-- Show available options for lte device -->
     <bool name="config_enabled_lte" translatable="false">true</bool>
+    <bool name="config_enabled_wcdma" translatable="false">true</bool>
+    <bool name="config_enabled_gsm" translatable="false">true</bool> 
 
 </resources>
