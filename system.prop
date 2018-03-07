@@ -264,3 +264,4 @@ ro.mot.build.product.increment=24
 ro.mot.build.version.release=24.24
 ro.mot.ignore_csim_appid=true
 ro.cutoff_voltage_mv=3200
+ro.telephony.default_network=3
