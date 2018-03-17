@@ -22,5 +22,11 @@
 
     <!-- Show enabled lte option for lte device -->
     <bool name="config_enabled_lte" translatable="false">true</bool>
+  
+    <!-- The RadioAccessFamilies supported by the device.	
+         Empty is viewed as "all".  Only used on devices which	
+         don't support RIL_REQUEST_GET_RADIO_CAPABILITY	
+         format is UMTS|LTE|... -->	
+    <string translatable="false" name="config_radio_access_family">GSM|WCDMA|LTE</string>
 
 </resources>
