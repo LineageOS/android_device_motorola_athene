@@ -257,10 +257,10 @@ persist.net.doxlat=true
 #
 # ADDITIONAL_BUILD_PROPERTIES
 #
-ro.build.version.qcom=LA.BR.1.3.3-02720-8976.0
+ro.build.version.qcom=LA.BR.1.3.6-01710-8976.0
 ro.mot.build.customerid=retail
-ro.mot.build.version.sdk_int=24
-ro.mot.build.product.increment=24
-ro.mot.build.version.release=24.24
+ro.mot.build.version.sdk_int=25
+ro.mot.build.product.increment=236
+ro.mot.build.version.release=25.236
 ro.mot.ignore_csim_appid=true
 ro.cutoff_voltage_mv=3200
